@@ -1,0 +1,75 @@
+# GitHub → Cloudflare Workers + D1
+
+GitHub uchováva zdrojové súbory. GitHub Pages spúšťa statické stránky; serverové API, administrácia a D1 tohto projektu vyžadujú Cloudflare Workers. Samostatný SQL súbor v repozitári nie je bežiaca databáza.
+
+## 1. Zostavenie
+
+Po naklonovaní repozitára:
+
+```sh
+npm ci
+npm run typecheck
+npm test
+npm run build
+npx wrangler login
+```
+
+Použite pribalený lockfile; samotný priečinok `dist/client` nestačí na celý web. Produkčný server vzniká v `dist/server/index.js` a statické súbory v `dist/client`.
+
+## 2. Nová produkčná databáza
+
+```sh
+npx wrangler d1 create envi-set-public
+```
+
+V `deploy/wrangler.production.json` nahraďte zástupné `database_id` skutočným ID vytvorenej databázy. Skontrolujte názov Workera a `database_name`. ID databázy nie je heslo, prístup riadi Cloudflare účet. Zachovajte `binding: "DB"`.
+
+Do `vars.SITE_URL` uveďte finálny HTTPS origin bez podstránky, napríklad vlastnú doménu alebo pridelenú `workers.dev` adresu. Nie je potrebné kupovať doménu, ak na prvé spustenie stačí adresa poskytovateľa. Potom aplikujte migrácie a verejné články do NOVO vytvorenej databázy:
+
+```sh
+npx wrangler d1 migrations apply DB --remote --config deploy/wrangler.production.json
+npx wrangler d1 execute DB --remote --config deploy/wrangler.production.json --file data/public-posts.sql
+```
+
+Migrácie vytvoria tabuľky posts, post_redirects, messages, sessions a rate_limits. Import prenesie iba tri publikované články. Nekopírujte `.wrangler`, `database.sql`, súkromné kontaktné správy ani existujúce prihlasovacie relácie. D1 je hostovaná SQLite databáza; MySQL/PostgreSQL nie sú pri tomto kóde priamou náhradou.
+
+## 3. Produkčná administrácia
+
+Vytvorte nové silné heslo a nastavte samostatné serverové Secrets:
+
+- `ADMIN_USERNAME`
+- `ADMIN_PASSWORD_SALT`
+- `ADMIN_PASSWORD_HASH`
+
+Hash musí zodpovedať PBKDF2 SHA-256, 100 000 iterácií, 32 bajtov, hex — implementácia je v `scripts/setup-admin.mjs`. Tento skript načíta vlastné heslo z dočasnej premennej `ENVI_ADMIN_PASSWORD` (aspoň 14 znakov) a meno interaktívne. Vytvorí iba ignorovanú lokálnu `.dev.vars` a odmietne prepísať existujúcu. Na prípravu produkčných údajov ho použite v samostatnom súkromnom klone; po použití vyčistite dočasnú premennú. Nepoužite prezentačné heslo ani lokálny testovací účet.
+
+Hodnoty zo súkromnej konfigurácie vložte cez Cloudflare dashboard alebo interaktívne príkazy (nezadávajte ich ako argument príkazu ani do repozitára):
+
+```sh
+npx wrangler secret put ADMIN_USERNAME --config deploy/wrangler.production.json
+npx wrangler secret put ADMIN_PASSWORD_SALT --config deploy/wrangler.production.json
+npx wrangler secret put ADMIN_PASSWORD_HASH --config deploy/wrangler.production.json
+```
+
+Wrangler môže pri prvom nastavení tajomstiev ponúknuť vytvorenie Workera. Tieto príkazy menia vzdialený účet; v rámci exportu sa nespustili. Bez hodnôt aplikácia administrátorské prihlásenie odmietne.
+
+## 4. Nasadenie
+
+Po doplnení kontaktov, domény, databázy a Secrets:
+
+```sh
+npm run build
+npx wrangler deploy --config deploy/wrangler.production.json
+```
+
+Použite túto explicitnú produkčnú konfiguráciu. Automaticky generovaná `dist/server/wrangler.json` je určená pre lokálny náhľad a obsahuje zástupnú databázu. Nevykonávajte produkčné nasadenie s jej zástupným ID.
+
+GitHub môže byť neskôr pripojený k Cloudflare Workers Builds. Najprv však overte prvé nasadenie a nastavenia účtu; automatické publikovanie každého pushu tento balík nezapína.
+
+## 5. Kontakt a kontrola po spustení
+
+Formulár uloží dopyt do `messages`. Voliteľné `CONTACT_NOTIFICATION_URL` a `CONTACT_NOTIFICATION_TOKEN` patria do Secrets. Adaptér odošle HTTPS službe iba ID dopytu, nie celý obsah. Pre skutočné e-maily treba doplniť príjemcu, poskytovateľa a funkčné spracovanie notifikácie; odpoveď adaptéra 2xx sama nepotvrdzuje doručenie e-mailu.
+
+Na finálnej doméne skontrolujte články, služby, kontaktný formulár, prihlásenie/odhlásenie, anonymné odmietnutie `/api/admin/posts`, HTTPS, `robots.txt`, sitemap a canonical URL. Overte, že nový dopyt vidí iba administrátor, a nastavte zálohovanie D1. Verejné cloudové nasadenie ani doručenie e-mailov pri lokálnom exporte nebolo overené.
+
+Oficiálne zdroje: [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), [D1 príkazy](https://developers.cloudflare.com/workers/wrangler/commands/d1/), [Wrangler konfigurácia](https://developers.cloudflare.com/workers/wrangler/configuration/), [Secrets](https://developers.cloudflare.com/workers/configuration/secrets/).

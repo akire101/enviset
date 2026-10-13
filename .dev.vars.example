@@ -1,0 +1,7 @@
+# Local development only. Production values belong in hosting Secrets.
+ADMIN_USERNAME=
+ADMIN_PASSWORD_SALT=
+ADMIN_PASSWORD_HASH=
+SITE_URL=
+CONTACT_NOTIFICATION_URL=
+CONTACT_NOTIFICATION_TOKEN=
