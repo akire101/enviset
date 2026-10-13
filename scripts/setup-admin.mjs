@@ -1,0 +1,12 @@
+import {randomBytes,pbkdf2Sync} from 'node:crypto';
+import {writeFileSync,existsSync} from 'node:fs';
+import {createInterface} from 'node:readline/promises';
+const file=new URL('../.dev.vars',import.meta.url);
+if(existsSync(file))throw new Error('.dev.vars už existuje. Obnovu prístupu vykonajte vedomou výmenou hash a salt.');
+const terminal=createInterface({input:process.stdin,output:process.stdout});
+const username=await terminal.question('Meno administrátora: ');
+terminal.close();const password=process.env.ENVI_ADMIN_PASSWORD;
+if(!username||!password||password.length<14)throw new Error('Vyžaduje sa meno a ENVI_ADMIN_PASSWORD s aspoň 14 znakmi.');
+const salt=randomBytes(32).toString('hex');const hash=pbkdf2Sync(password,salt,100000,32,'sha256').toString('hex');
+writeFileSync(file,`ADMIN_USERNAME=${JSON.stringify(username)}\nADMIN_PASSWORD_SALT=${salt}\nADMIN_PASSWORD_HASH=${hash}\n`);
+console.log('Samostatný lokálny administrátor je nastavený.');

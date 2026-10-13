@@ -1,0 +1,4 @@
+import type { Metadata } from 'next';
+import { env } from 'cloudflare:workers';
+export function siteUrl(){const value=env.SITE_URL;if(!value)return null;try{const url=new URL(value);if(url.protocol!=='https:'||url.username||url.password||url.pathname!=='/'||url.search||url.hash||/localhost|\.invalid$|\.test$|^example\./.test(url.hostname))return null;return url.origin;}catch{return null;}}
+export function pageMetadata(title:string,description:string,path:string):Metadata { const base=siteUrl();return {title,description,alternates:base?{canonical:base+path}:undefined,openGraph:{title:`${title} | ENVI SET`,description,type:'website',locale:'sk_SK',...(base?{url:base+path,images:[{url:base+'/images/forest.webp',width:968,height:468}]}:{})},twitter:{card:'summary_large_image',title,description},robots:{index:!!base,follow:!!base}}; }
