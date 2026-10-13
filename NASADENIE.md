@@ -1,5 +1,29 @@
 # GitHub → Cloudflare Workers + D1
 
+## Aktuálne nasadenie (13. 10. 2026)
+
+- Verejný web: https://envi-set-public.akire101.workers.dev
+- Repozitár: https://github.com/akire101/enviset, produkčná vetva `main`.
+- Cloudflare Worker aj D1: `envi-set-public`. Existujúca databáza je v jurisdikcii EU; jej ID je už v produkčnej konfigurácii. Nevytvárajte ďalšiu databázu pri každej aktualizácii.
+- Workers Builds je pripojený ku GitHubu. Push na `main` automaticky spúšťa kontrolu typov, testy, zostavenie, nové migrácie, import troch verejných článkov cez `INSERT OR IGNORE` a nasadenie. Existujúce články ani kontaktné správy sa pri aktualizácii neprepisujú.
+- Build používa `NODE_VERSION=24`, koreň `/`, vypnuté preview builds a token `enviset-builds-cloudflare` obmedzený na Workers Scripts:Edit a D1:Edit pre jediný účet. Token je uložený v Cloudflare, nie v repozitári.
+
+### Rýchla aktualizácia
+
+1. Upravte súbory v pracovnom klone tohto repozitára, nie v uloženej zákazníckej zálohe.
+2. Spustite `npm ci`, `npm run typecheck`, `npm test` a `npm run build`.
+3. Skontrolujte `git diff`; pridajte len zamýšľané súbory, vytvorte commit a vykonajte `git push origin main`.
+4. V Cloudflare otvorte Worker `envi-set-public` → Deployments a počkajte na úspešný build nového commitu. Lokálne prihlasovanie cez Wrangler pri tomto postupe netreba.
+5. Overte verejnú stránku, `/blog` a detail článku. D1 sa zachováva medzi nasadeniami.
+
+Na návrat k staršiemu kódu použite `git revert` príslušného commitu a push. Návrat kódu automaticky nevracia databázové migrácie; pred zmenou existujúcich dát urobte samostatnú zálohu D1.
+
+### Ešte nedokončené prevádzkové nastavenia
+
+Verejný web a databáza fungujú. Produkčné administrátorské Secrets ešte nie sú nastavené; prihlásenie preto zostáva uzavreté. Kontakt ukladá dopyty do D1, e-mail sa neodosiela. Treba doplniť skutočné firemné kontakty a dokončiť informácie o ochrane súkromia. `SITE_URL` zostáva prázdne a indexácia vypnutá do dokončenia týchto údajov; web je napriek tomu dostupný priamym odkazom. Potom nastavte `SITE_URL` na verejný HTTPS origin a overte canonical, sitemap a robots.txt.
+
+Nasledujúce časti opisujú aj ručnú obnovu v novom účte. Kroky vytvorenia databázy neopakujte pre existujúce nasadenie.
+
 GitHub uchováva zdrojové súbory. GitHub Pages spúšťa statické stránky; serverové API, administrácia a D1 tohto projektu vyžadujú Cloudflare Workers. Samostatný SQL súbor v repozitári nie je bežiaca databáza.
 
 ## 1. Zostavenie
@@ -64,7 +88,7 @@ npx wrangler deploy --config deploy/wrangler.production.json
 
 Použite túto explicitnú produkčnú konfiguráciu. Automaticky generovaná `dist/server/wrangler.json` je určená pre lokálny náhľad a obsahuje zástupnú databázu. Nevykonávajte produkčné nasadenie s jej zástupným ID.
 
-GitHub môže byť neskôr pripojený k Cloudflare Workers Builds. Najprv však overte prvé nasadenie a nastavenia účtu; automatické publikovanie každého pushu tento balík nezapína.
+Tento repozitár je už pripojený k Cloudflare Workers Builds podľa nastavení vyššie. Pri bežnej aktualizácii stačí push na `main`.
 
 ## 5. Kontakt a kontrola po spustení
 

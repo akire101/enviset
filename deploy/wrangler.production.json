@@ -1,5 +1,7 @@
 {
   "name": "envi-set-public",
+  "workers_dev": true,
+  "preview_urls": false,
   "account_id": "edc8c2fc7afe35ffd3ecbbd77a40c430",
   "main": "../dist/server/index.js",
   "compatibility_date": "2026-05-15",
@@ -12,7 +14,6 @@
     "binding": "DB",
     "database_name": "envi-set-public",
     "database_id": "44c87c09-c518-4069-8595-d64e7b959bc3",
-    "jurisdiction": "eu",
     "migrations_dir": "../drizzle"
   }]
 }
