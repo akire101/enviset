@@ -1,6 +1,6 @@
 # ENVI SET — zákaznícka verzia 1
 
-Verejný náhľad: **https://envi-set-public.akire101.workers.dev**. GitHub je pripojený ku Cloudflare Workers Builds; aktualizácie vetvy `main` sa nasadzujú automaticky. Aktuálny stav, zostávajúce nastavenia administrácie/e-mailov a postup aktualizácie sú v [NASADENIE.md](NASADENIE.md). Nasledujúci opis pôvodného exportu zostáva ako podklad na obnovu.
+Verejný náhľad: **https://envi-set-public.akire101.workers.dev**. GitHub je pripojený ku Cloudflare Workers Builds; aktualizácie vetvy `main` sa nasadzujú automaticky. Produkčné prihlásenie a správa článkov na `/admin` sú funkčné. Aktuálny stav, návod pre administrátora, zostávajúce nastavenia e-mailov a postup aktualizácie sú v [NASADENIE.md](NASADENIE.md). Nasledujúci opis pôvodného exportu zostáva ako podklad na obnovu.
 
 Čistý zdrojový export `ENVISET_verzia1zakaznik` z 13. 10. 2026. Dizajn a obsah zostali zachované. Číslo zákazníckej verzie označuje uloženú prezentáciu; pôvodné interné číslo balíka je 0.1.0.
 

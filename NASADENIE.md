@@ -20,7 +20,13 @@ Na návrat k staršiemu kódu použite `git revert` príslušného commitu a pus
 
 ### Ešte nedokončené prevádzkové nastavenia
 
-Verejný web a databáza fungujú. Produkčné administrátorské Secrets ešte nie sú nastavené; prihlásenie preto zostáva uzavreté. Kontakt ukladá dopyty do D1, e-mail sa neodosiela. Treba doplniť skutočné firemné kontakty a dokončiť informácie o ochrane súkromia. `SITE_URL` zostáva prázdne a indexácia vypnutá do dokončenia týchto údajov; web je napriek tomu dostupný priamym odkazom. Potom nastavte `SITE_URL` na verejný HTTPS origin a overte canonical, sitemap a robots.txt.
+Verejný web, databáza aj produkčné prihlásenie do `/admin` fungujú. Administrátorské údaje sú uložené ako šifrované Cloudflare Secrets. Dňa 13. 10. 2026 bolo cez produkčné rozhranie overené prihlásenie, vytvorenie a úprava neverejného konceptu aj zachovanie úpravy po obnovení stránky. Verejná adresa konceptu vracia 404 a administrátorské API bez prihlásenia vracia 401. Pri bežnom nasadení existujúce Secrets znovu nevytvárajte a nikdy ich nepridávajte do GitHubu.
+
+Kontakt ukladá dopyty do D1, e-mail sa neodosiela. Treba doplniť skutočné firemné kontakty a dokončiť informácie o ochrane súkromia. `SITE_URL` zostáva prázdne a indexácia vypnutá do dokončenia týchto údajov; web je napriek tomu dostupný priamym odkazom. Potom nastavte `SITE_URL` na verejný HTTPS origin a overte canonical, sitemap a robots.txt.
+
+### Pridanie a úprava článku
+
+Otvorte `/admin` a prihláste sa. Cez **Nový článok** vyplňte názov, úvod a obsah; ponechajte **Koncept – iba administrátor** a kliknite na **Uložiť článok**. Na zverejnenie vyberte **Zverejnený – viditeľný na blogu** a znovu uložte. Existujúci článok vyberte zo zoznamu vľavo. Možnosť archívu článok skryje a umožňuje neskoršie obnovenie.
 
 Nasledujúce časti opisujú aj ručnú obnovu v novom účte. Kroky vytvorenia databázy neopakujte pre existujúce nasadenie.
 
@@ -59,7 +65,7 @@ Migrácie vytvoria tabuľky posts, post_redirects, messages, sessions a rate_lim
 
 ## 3. Produkčná administrácia
 
-Vytvorte nové silné heslo a nastavte samostatné serverové Secrets:
+Nasledujúci postup slúži pre nové nasadenie alebo vedomú zmenu prihlasovania. V aktuálnej produkcii sú Secrets už nastavené. Pre nové nasadenie vytvorte silné heslo a nastavte samostatné serverové Secrets:
 
 - `ADMIN_USERNAME`
 - `ADMIN_PASSWORD_SALT`
