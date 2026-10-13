@@ -11,7 +11,7 @@
 ### Rýchla aktualizácia
 
 1. Upravte súbory v pracovnom klone tohto repozitára, nie v uloženej zákazníckej zálohe.
-2. Spustite `npm ci`, `npm run typecheck`, `npm test` a `npm run build`.
+2. Aktualizujte zákaznícky prehľad v `README.md`: dátum, pridané a vylepšené funkcie, celkový stav, overenie a otvorené obmedzenia. Zachovajte staršie datované záznamy a rešpektujte `AGENTS.md`. Potom spustite `npm ci`, `npm run typecheck`, `npm test` a `npm run build`.
 3. Skontrolujte `git diff`; pridajte len zamýšľané súbory, vytvorte commit a vykonajte `git push origin main`.
 4. V Cloudflare otvorte Worker `envi-set-public` → Deployments a počkajte na úspešný build nového commitu. Lokálne prihlasovanie cez Wrangler pri tomto postupe netreba.
 5. Overte verejnú stránku, `/blog` a detail článku. D1 sa zachováva medzi nasadeniami.
