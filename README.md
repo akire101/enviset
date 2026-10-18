@@ -1,22 +1,22 @@
-﻿# ENVI SET – funkcie webu, bezpečnosť a SEO
+# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 14. 10. 2026.** Zoznámte sa s možnosťami webu ENVI SET, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 18. 10. 2026. Verzia v2.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-- [Otvoriť web ENVI SET](https://envi-set-public.akire101.workers.dev)
+- [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- [Kontrola pôvodného odovzdaného balíka](OVERENIE-EXPORTU.md) a [zoznam jeho súborov](EXPORT-MANIFEST.json) – podklady k odovzdaniu prvej verzie.
+- Aktuálne vydanie: **v2 – 18. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
-Slovenský firemný web ENVI SET predstavuje poradenstvo a manažment odpadového hospodárstva, vysvetľuje spoluprácu, publikuje praktické články a prijíma dopyty na bezplatnú úvodnú konzultáciu. Administrátor spravuje články a správy cez prehliadač.
+Slovenský firemný web ENVI set predstavuje poradenstvo a manažment odpadového hospodárstva, vysvetľuje spoluprácu, publikuje praktické články a prijíma dopyty na bezplatnú úvodnú konzultáciu. Administrátor spravuje články a správy cez prehliadač.
 
 | Oblasť | Možnosti | Stav |
 |---|---|---|
 | Firemná prezentácia | Domov, O nás, služby, odvetvia, spolupráca, časté otázky, kontakt | Súčasť webu |
-| Služby | Šesť samostatných stránok služieb | Súčasť webu |
-| Blog / poradňa | Kategórie, vyhľadávanie, stránkovanie, detail a súvisiace články | Súčasť webu; pri odovzdaní boli pripravené tri publikované články |
+| Služby | Deväť detailov služieb, osem položiek celoročného servisu a osem jednorazových služieb | Súčasť webu |
+| Blog / poradňa | Kategórie, vyhľadávanie, stránkovanie, detail a súvisiace články | Súčasť webu; import obsahuje tri pôvodné a päť nových článkov; existujúce úpravy sa neprepisujú |
 | Administrácia | Editor, koncepty, publikovanie, archív a stiahnutie zálohy článkov | Prihlásenie a úpravy konceptu na verejnom webe overené 13. 10. 2026 |
 | Dopyty | Formulár a súkromná schránka administrátora | Ukladajú sa do databázy |
 | E-mailové oznámenia | Pripravené prepojenie s e-mailovou službou | Zatiaľ nenastavené; web neposiela e-maily |
@@ -31,11 +31,11 @@ Slovenský firemný web ENVI SET predstavuje poradenstvo a manažment odpadovéh
 
 - Úvodná stránka vysvetľuje zameranie firmy, predstavuje služby a vedie ku konzultácii.
 - **O nás** opisuje vznik spoločnosti, skúsenosti a prístup k zákazníkom.
-- Štyri kroky spolupráce: úvodné stretnutie, vstupná analýza, nastavenie systému a priebežná podpora.
+- Štyri kroky spolupráce na súvislej zvislej časovej osi: osobné stretnutie, vstupná odborná analýza, dodanie a vysvetlenie dokumentácie, celoročný odborný servis.
 - Hodnoty: odbornosť, osobný prístup, zrozumiteľnosť, pripravenosť na kontrolu a dlhodobé partnerstvo.
 - Osem odvetví: výroba, autoservisy, stavebníctvo, obchod, kancelárie, gastro, sklady a logistika, remeselné prevádzky.
 - Odkazy z odvetví a detailov služieb predvyplnia príslušnú tému kontaktného formulára.
-- Päť rozbaľovacích odpovedí na časté otázky o službách, cene, konzultácii, nebezpečných odpadoch a fyzickom odvoze.
+- Deväť rozbaľovacích odpovedí z dodaných podkladov: evidencia, zberová spoločnosť, malé množstvá odpadov, existujúca dokumentácia, identifikácia odpadov, menšie firmy, cena, priebežné povinnosti a začiatok spolupráce.
 - Výzvy na konzultáciu prepájajú služby, blog a kontakt.
 
 | Služba | Obsah samostatnej stránky |
@@ -43,9 +43,12 @@ Slovenský firemný web ENVI SET predstavuje poradenstvo a manažment odpadovéh
 | Odborná dokumentácia | Posúdenie a príprava dokumentov, identifikačné listy nebezpečných odpadov (ILNO), havarijné opatrenia a prevádzkové poriadky |
 | Evidencia odpadov | Zmapovanie a zaradenie odpadov, zber podkladov a vedenie evidencie |
 | Ohlasovacie povinnosti | Posúdenie povinností, kontrola podkladov, príprava a spôsob podania ohlásení |
-| Kontrola a poradenstvo | Posúdenie prevádzky, nedostatky, odporúčania a priebežné konzultácie |
-| Nebezpečné odpady | Identifikácia, označovanie, zhromažďovanie, evidencia a dokumentácia |
+| Kontrola prevádzok | Posúdenie prevádzky, nedostatky, odporúčania a priebežné konzultácie |
+| Ostatné a nebezpečné odpady | Identifikácia, označovanie, zhromažďovanie, evidencia a dokumentácia |
 | Riešenia pre firmy | Nastavenie systému podľa činnosti konkrétnej prevádzky |
+| Odborné poradenstvo | Praktické otázky, zaradenie odpadu, evidencia, doklady a zmeny činnosti |
+| Legislatívny servis | Sledovanie dôležitých zmien a ich vplyvu na firmu |
+| Dlhodobá spolupráca | Vstupná analýza, nastavenie systému a podpora počas roka |
 
 Na každej stránke služby sa návštevník dozvie, čo služba zahŕňa, komu je určená a čo si pripraviť na konzultáciu. Nájde tu postup spolupráce, odpovede na tri časté otázky, súvisiace služby a odkaz na kontakt. Pri nebezpečných odpadoch sú uvedené aj príklady. Odkazy na Slov-Lex vedú na zákon o odpadoch a Katalóg odpadov. Konkrétne povinnosti firmy sa posudzujú individuálne; web sám nevedie zákonnú evidenciu ani nepodáva ohlásenia úradom.
 
@@ -56,22 +59,22 @@ Na každej stránke služby sa návštevník dozvie, čo služba zahŕňa, komu 
 | Domov | `/` |
 | O nás | `/o-nas` |
 | Prehľad služieb | `/sluzby` |
-| Jednotlivé služby | `/sluzby/odborna-dokumentacia`, `/sluzby/evidencia-odpadov`, `/sluzby/ohlasovacie-povinnosti`, `/sluzby/kontrola-a-poradenstvo`, `/sluzby/nebezpecne-odpady`, `/sluzby/riesenia-pre-firmy` |
+| Jednotlivé služby | `/sluzby/odborna-dokumentacia`, `/sluzby/evidencia-odpadov`, `/sluzby/ohlasovacie-povinnosti`, `/sluzby/kontrola-a-poradenstvo`, `/sluzby/nebezpecne-odpady`, `/sluzby/riesenia-pre-firmy`, `/sluzby/odborne-poradenstvo`, `/sluzby/legislativny-servis`, `/sluzby/dlhodoba-spolupraca` |
 | Blog / poradňa a články | `/blog` a `/blog/adresa-clanku` |
 | Kontakt | `/kontakt` |
 | Informácie o spracúvaní osobných údajov | `/ochrana-sukromia` |
 | Administrácia | `/admin` |
 
-Úvodná stránka ponúka štyri hlavné karty služieb; všetkých šesť služieb je dostupných v menu a na stránke Služby. Na sekcie odvetví, spolupráce a častých otázok možno prejsť priamo odkazom.
+Úvodná stránka ponúka sedem oblastí služieb. V menu a na stránke Služby je deväť samostatných detailov. Prehľad služieb navyše obsahuje osem položiek celoročného servisu a osem jednorazových služieb. Na sekcie odvetví, spolupráce a častých otázok možno prejsť priamo odkazom.
 
 ### Vzhľad, navigácia a prístupnosť
 
 - Navigácia Domov, O nás, Služby, Blog / Poradňa a Kontakt, s označením aktuálnej stránky.
 - Horné menu zostáva dostupné aj pri posúvaní stránky.
-- Rozšírené menu všetkých šiestich služieb, konzultácie a sekcií úvodnej stránky.
+- Rozšírené menu všetkých deviatich služieb, konzultácie a sekcií úvodnej stránky.
 - Na počítači otvorenie služieb myšou; dostupné sú aj kliknutie, dotyk a klávesnica.
 - Zatvorenie kliknutím mimo menu, presunom klávesnicového výberu mimo navigácie alebo klávesom Escape; šípka nadol otvorí odkazy služieb.
-- Mobilné menu a prispôsobenie kariet, formulárov, rozloženia a textov menším obrazovkám.
+- Mobilné menu a prispôsobenie kariet, formulárov, rozloženia a textov menším obrazovkám. Pevné tlačidlá Zavolať a Poslať dopyt sú na mobile dostupné v dolnej lište.
 - Lokálne WebP fotografie, lokálne písmo Manrope, ikony, jemné prechody a efekty pri prejdení myšou.
 - Odkaz „Preskočiť na obsah“, viditeľné označenie prvku vybraného klávesnicou, popisky formulárov a hlásenia použiteľné aj s čítačkou obrazovky.
 - Rešpektovanie systémového obmedzenia animácií (`prefers-reduced-motion`).
@@ -132,15 +135,18 @@ Administrácia používa jeden účet. Neobsahuje samostatné používateľské 
 
 ## Kontaktný formulár
 
-- Povinné meno, platný e-mail, správa a potvrdenie oboznámenia sa s informáciami o spracúvaní údajov.
-- Nepovinná spoločnosť a telefón; výber služby a odvetvia.
+V2 pridáva nepovinné IČO (osem číslic, ak bolo pridelené) a rozbaľovací dopyt na individuálnu cenovú ponuku: počet prevádzok, približný počet dokladov za rok a požadované služby. Číselná kalkulácia sa nezobrazuje, pretože cenník nebol dodaný. Údaje sa kontrolujú na serveri a ukladajú do textu dopytu, takže zostávajú dostupné v existujúcej schránke administrátora bez zmeny databázovej schémy.
+
+
+- V prehliadači povinná kontaktná osoba, platný e-mail, firma, telefón, správa a potvrdenie oboznámenia sa s informáciami o spracúvaní údajov. Server zachováva kompatibilitu so staršími dopytmi, v ktorých firma a telefón mohli byť prázdne.
+- Výber služby a odvetvia, nepovinné IČO a podklady k individuálnej cenovej ponuke.
 - Kontrola údajov v prehliadači aj na serveri; správa má 15 až 5 000 znakov, ostatné polia vlastné limity.
 - Počas odosielania zablokuje tlačidlo; pri chybe zobrazí vysvetlenie.
 - Po uložení zobrazí potvrdenie, skrátenú referenciu dopytu a možnosť napísať ďalšiu správu.
 - Pri opakovanom pokuse o odoslanie používa rovnakú referenciu, aby sa dopyt neuložil dvakrát.
 - Skryté pole pre robotov (honeypot) a serverový limit požiadaviek obmedzujú zneužitie.
 
-Kontaktná stránka dokáže zobraziť telefón, e-mail a adresu firmy. Po doplnení údajov bude telefón klikateľný na volanie a e-mail na otvorenie e-mailovej aplikácie. Kým údaje chýbajú, tieto kontakty sa nezobrazujú. Vo výbere odvetví je aj možnosť „Iné odvetvie“; neznáma hodnota v odkaze sa nepredvyplní. Informácie o ochrane súkromia sa z formulára otvárajú v novej karte.
+Kontaktná stránka zobrazuje ENVI set, s.r.o., adresu Na pažiti 811/19, 911 05 Trenčín, IČO 56 090 552 a DIČ 2122206801. Telefón +421 902 469 908 je klikateľný na volanie, enviset@enviset.sk otvára e-mailovú aplikáciu. Vložená Google mapa a odkaz na Mapy používajú dodanú adresu. Vo výbere odvetví je aj možnosť „Iné odvetvie“; neznáma hodnota v odkaze sa nepredvyplní. Informácie o ochrane súkromia sa z formulára otvárajú v novej karte.
 
 Potvrdenie odoslania znamená, že sa správa uložila do schránky administrátora. E-mailové oznámenie zatiaľ nie je nastavené. Odoslaním nevzniká objednávka platených služieb.
 
@@ -195,7 +201,7 @@ SEO znamená úpravy, ktoré pomáhajú vyhľadávačom pochopiť obsah webu a n
 ### Obsah a štruktúra
 
 - Samostatné čitateľné adresy služieb a článkov, slovenský jazyk dokumentu (`lang="sk"`).
-- Vlastné titulky a popisy verejných stránok, značka ENVI SET v titulkoch, nadpisy, odseky a interné odkazy.
+- Vlastné titulky a popisy verejných stránok, značka ENVI set v titulkoch, nadpisy, odseky a interné odkazy.
 - SEO titulok a popis v editore; pri nevyplnení sa použije názov a perex článku.
 - Trvalé presmerovania pôvodných adries článkov a skutočné 404 pre nedostupný obsah.
 - Dátum publikovania, súvisiace čítanie a prepojenie článkov na konzultáciu.
@@ -205,7 +211,7 @@ SEO znamená úpravy, ktoré pomáhajú vyhľadávačom pochopiť obsah webu a n
 | Prvok | Čo zabezpečuje |
 |---|---|
 | Hlavná adresa stránky (canonical) | Určuje, ktorú HTTPS adresu má vyhľadávač považovať za hlavnú; aktivuje sa nastavením adresy webu v SITE_URL |
-| Mapa stránok (sitemap) | Súbor /sitemap.xml priebežne uvádza hlavné stránky, šesť služieb a publikované články; pri článkoch aj poslednú úpravu |
+| Mapa stránok (sitemap) | Súbor /sitemap.xml priebežne uvádza hlavné stránky, deväť služieb a publikované články; pri článkoch aj poslednú úpravu |
 | Pravidlá pre vyhľadávače (robots.txt) | Po aktivácii povoľujú verejný obsah, odkazujú na mapu stránok a vylučujú admin, serverové rozhrania a ochranu súkromia |
 | Náhľady pri zdieľaní | Open Graph obsahuje titulok, popis, typ a slovenský jazyk; s nastavenou adresou aj odkaz a obrázok. Údaje pre Twitter/X obsahujú titulok, popis a požiadavku na veľký náhľad |
 | Údaje o webe (WebSite) | Strojovo čitateľný názov, adresa a opis webu pre vyhľadávače |
@@ -221,7 +227,7 @@ Obrázky vo formáte WebP majú uvedené rozmery a textový opis podľa účelu.
 
 Údaje o webe, článkoch a hierarchii služieb sa zapisujú vo formáte JSON-LD. Všetky tri typy závisia od platného SITE_URL; nastavenie odmieta neplatnú adresu, adresu bez HTTPS a vybrané testovacie domény.
 
-Pred povolením vyhľadávačov treba doplniť firemné údaje a informácie o súkromí, potvrdiť finálnu HTTPS adresu a práva k fotografiám. Správca potom nastaví SITE_URL a skontroluje údaje pre vyhľadávače, robots a mapu stránok. Google Search Console ani meranie návštevnosti zatiaľ nie sú zapojené. Zaradenie do Google a merania rýchlosti Lighthouse/Core Web Vitals neboli v rámci tejto kontroly overované. Doplnkové schémy Organization, LocalBusiness a FAQPage web zatiaľ nepoužíva.
+Firemné údaje sú doplnené. Pred povolením vyhľadávačov treba dokončiť informácie o súkromí, potvrdiť finálnu HTTPS adresu a práva k fotografiám. Správca potom nastaví SITE_URL a skontroluje údaje pre vyhľadávače, robots a mapu stránok. Google Search Console ani meranie návštevnosti zatiaľ nie sú zapojené. Zaradenie do Google a merania rýchlosti Lighthouse/Core Web Vitals neboli v rámci tejto kontroly overované. Doplnkové schémy Organization, LocalBusiness a FAQPage web zatiaľ nepoužíva.
 
 ## Všetky prepojenia a údaje
 
@@ -234,19 +240,19 @@ Pred povolením vyhľadávačov treba doplniť firemné údaje a informácie o s
 | Služba / odvetvie → kontakt | URL parametre predvyplnia známe hodnoty vo formulári |
 | Sprievodca → služby / kontakt | Pripravené odpovede odkazujú na verejné stránky |
 | Schránka → e-mailová aplikácia | Klikateľná e-mailová adresa pre ručné odpovedanie |
-| Kontakt → telefón / e-mail | Po doplnení firemných údajov umožní kliknutím zavolať alebo otvoriť e-mailovú aplikáciu |
+| Kontakt → telefón / e-mail | Umožňuje kliknutím zavolať alebo otvoriť e-mailovú aplikáciu |
 | Detail služby → Slov-Lex | Verejné odkazy na zákon o odpadoch a Katalóg odpadov, bez odosielania evidencie |
 | Voliteľné e-mailové oznámenie | Zatiaľ nenastavené prepojenie cez HTTPS s prístupovým kľúčom; službe odovzdáva iba oznámenie a ID dopytu. Po 5 sekundách čakanie ukončí; prijatie službou ešte nepotvrdzuje doručenie e-mailu |
 
 **Prepojenia, ktoré web zatiaľ nemá:** platby, rezervácie termínov, systém správy zákazníkov (CRM), účtovníctvo, elektronické podania úradom, newsletter a analytické či reklamné nástroje. Pomocné súbory pôvodného vývojového prostredia nepridávajú tieto služby do zákazníckeho webu; neaktivujú ani prihlásenie cez ChatGPT.
 
-Aplikácia nezapína analytické ani reklamné cookies. Admin používa nevyhnutnú prihlasovaciu cookie. Chat sa neposiela na server. Kontaktné údaje sú dostupné prihlásenému administrátorovi. Informácie o ochrane súkromia sú pracovné; technické opatrenia samy osebe nepotvrdzujú úplný súlad s GDPR.
+Aplikácia nezapína vlastné analytické ani reklamné cookies. Na kontaktnej stránke sa načítava vložená Google mapa, ktorá vytvára spojenie s poskytovateľom mapy a môže spracúvať technické údaje pripojenia. Admin používa nevyhnutnú prihlasovaciu cookie. Chat sa neposiela na server. Kontaktné údaje sú dostupné prihlásenému administrátorovi. Informácie o ochrane súkromia sú pracovné; technické opatrenia samy osebe nepotvrdzujú úplný súlad s GDPR.
 
 Ak bude e-mailové prepojenie neskôr zapnuté, správa sa najprv uloží do databázy. Prípadný výpadok oznamovacej služby už uložený dopyt neodstráni. Opakované odoslanie s rovnakou referenciou nevytvorí ďalší dopyt ani ďalšie oznámenie; automatické opakovanie neúspešného oznámenia zatiaľ nie je k dispozícii.
 
 ## Prevádzka a aktualizácie
 
-Zdrojové súbory sú uložené na GitHube, web beží v Cloudflare Workers a údaje v databáze D1. Pri bežnej aktualizácii sa zachovajú články, správy aj prihlasovacie nastavenia. Opakovaný import troch pôvodných článkov neprepisuje ich neskoršie úpravy. Samotná služba GitHub Pages na spustenie webu s touto administráciou a databázou nestačí.
+Zdrojové súbory sú uložené na GitHube, web beží v Cloudflare Workers a údaje v databáze D1. Pri bežnej aktualizácii sa zachovajú články, správy aj prihlasovacie nastavenia. Import troch pôvodných a piatich nových verejných článkov používa INSERT OR IGNORE a neprepisuje existujúce články, správy ani prihlasovacie údaje. Samotná služba GitHub Pages na spustenie webu s touto administráciou a databázou nestačí.
 
 Správca môže vrátiť staršiu verziu zdrojových súborov. Tento krok však sám neobnoví staršie údaje databázy; tie potrebujú samostatnú zálohu. Pôvodný odovzdaný balík neobsahuje súkromné správy, prihlasovacie relácie, heslá ani pracovnú databázu. Postupy sú v [NASADENIE.md](NASADENIE.md).
 
@@ -256,13 +262,24 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 
 ## Čo ešte treba dokončiť
 
-1. Skutočný telefón, e-mail, adresa, obchodné meno a IČO v app/content.ts.
-2. Informácie o prevádzkovateľovi, právnom základe, príjemcoch a dobe uchovávania údajov.
+1. Referencie a logá skutočných zákazníkov po dodaní a schválení podkladov.
+2. Dokončenie právneho základu, príjemcov a doby uchovávania osobných údajov; identifikačné a kontaktné údaje prevádzkovateľa sú doplnené.
 3. Ak sú požadované e-maily: poskytovateľ, príjemca, notifikačná služba a test skutočného doručenia.
 4. Finálna doména a práva k fotografiám; aktivácia a overenie indexácie cez SITE_URL.
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 18. 10. 2026 – v2, zákaznícke texty a nový postup spolupráce
+
+**Pridané:** kontaktné a identifikačné údaje, Google mapa, tri nové detaily služieb, celoročné a jednorazové služby, deväť FAQ, päť verejných článkov, IČO a podklady na individuálnu ponuku, mobilné tlačidlá Zavolať a Poslať dopyt.
+
+**Vylepšené:** preferovaný úvodný text a značka ENVI set. Postup spolupráce má jednu zvislú os 01–04 s nadpisom vľavo; poradie zostáva rovnaké na počítači aj mobile. Odstránené sú nepotrebné pôvodné exportné manifesty a tri nepoužívané ukážkové obrázky. Ignorovanie súborov chráni lokálne zálohy a prílohy pred náhodným pridaním.
+
+**Celkový stav a overenie:** zdroje vychádzajú z uloženej v2 z 18. 10. 2026. Lokálne boli overené typy, sedem automatizovaných testov, zostavenie a poradie krokov na počítači aj mobile. Existujúca produkčná databáza a konfigurácia prihlasovania zostávajú zachované; verejné články sa pridávajú bez prepisovania existujúcich záznamov. Výsledok nového verejného nasadenia sa kontroluje po nahraní na GitHub.
+
+**Otvorené:** skutočné zákaznícke referencie, dokončenie informácií o súkromí, e-mailové doručovanie a aktivácia indexácie po dokončení prevádzkových nastavení.
+
 
 ### 14. 10. 2026 – kontrola úplnosti a jazyková úprava
 

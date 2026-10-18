@@ -35,3 +35,26 @@ Spíšte si otázky
 
 Čo bude nasledovať
 Prejdeme si aktuálny stav a dohodneme ďalšie kroky. Úvodné stretnutie je bezplatné; rozsah ďalšej spolupráce a cenu si dohodneme individuálne.','Praktické tipy','/images/hills.webp','published',1791841369447,1791844364461,1791844364461,'','','');
+
+-- V2, 18. 10. 2026: five supplied public articles; preserve existing rows.
+INSERT OR IGNORE INTO posts (id,slug,title,excerpt,content,category,image,image_alt,status,created_at,updated_at,published_at) VALUES ('client-20261018-0','odpadove-hospodarstvo-v-praxi','Odpadové hospodárstvo v praxi: Na čo by firmy nemali zabúdať','Odpadové hospodárstvo je súčasťou každodenného fungovania mnohých podnikateľských subjektov. Napriek tomu sa mu často venuje pozornosť až vtedy, keď vznikne problém.','Odpadové hospodárstvo je súčasťou každodenného fungovania mnohých podnikateľských subjektov. Napriek tomu sa mu často venuje pozornosť až vtedy, keď vznikne problém.
+
+Priebežná evidencia, správne zatriedenie odpadov a prehľad o odovzdaných množstvách môžu pomôcť predchádzať zbytočným komplikáciám.
+
+Každá spoločnosť by mala poznať svoje povinnosti a priebežne sledovať, či jej nastavené procesy zodpovedajú aktuálnym požiadavkám.','Pre firmy','/images/meadow.webp','Lúka vo večernom slnku','published',1792350193647,1792350193647,1792350193647);
+INSERT OR IGNORE INTO posts (id,slug,title,excerpt,content,category,image,image_alt,status,created_at,updated_at,published_at) VALUES ('client-20261018-1','preco-je-spravne-zatriedenie-odpadu-dolezite','Prečo je správne zatriedenie odpadu také dôležité?','Správne zatriedenie odpadu je základom pre jeho evidenciu a ďalšie nakladanie. Nesprávne určený druh odpadu môže viesť k nepresnostiam v evidencii a k problémom pri kontrole od SIŽP.','Správne zatriedenie odpadu je základom pre jeho evidenciu a ďalšie nakladanie. Nesprávne určený druh odpadu môže viesť k nepresnostiam v evidencii a k problémom pri kontrole od SIŽP.
+
+Pri určovaní druhu odpadu je potrebné zohľadniť jeho pôvod, zloženie a vlastnosti. Ak si firma nie je istá správnym zatriedením, mala by si vyžiadať odborné posúdenie.','Praktické tipy','/images/valley.webp','Zelené údolie pod horským hrebeňom','published',1792350193648,1792350193648,1792350193648);
+INSERT OR IGNORE INTO posts (id,slug,title,excerpt,content,category,image,image_alt,status,created_at,updated_at,published_at) VALUES ('client-20261018-2','doklady-o-odovzdani-odpadu','Doklady o odovzdaní odpadu: Prečo ich treba kontrolovať?','Doklady o odovzdaní odpadu predstavujú dôležitý podklad pre evidenciu a preukazovanie nakladania s odpadmi. Údaje v nich by mali zodpovedať skutočnému odovzdaniu odpadu.','Doklady o odovzdaní odpadu predstavujú dôležitý podklad pre evidenciu a preukazovanie nakladania s odpadmi. Údaje v nich by mali zodpovedať skutočnému odovzdaniu odpadu.
+
+Pri kontrole dokladov sa oplatí venovať pozornosť najmä identifikácii odpadu, množstvu, dátumu, údajom o odovzdávajúcich a preberajúcich subjektoch a ďalším relevantným údajom.
+
+Ak doklad obsahuje neúplné alebo nejasné informácie, je vhodné požiadať o jeho doplnenie alebo vysvetlenie.','Praktické tipy','/images/hills.webp','Zelené kopce a krajina','published',1792350193649,1792350193649,1792350193649);
+INSERT OR IGNORE INTO posts (id,slug,title,excerpt,content,category,image,image_alt,status,created_at,updated_at,published_at) VALUES ('client-20261018-3','nebezpecne-odpady-vo-firme','Nebezpečné odpady vo firme: Čo si treba všímať?','Pri nebezpečných odpadoch je potrebné venovať osobitnú pozornosť ich identifikácii, zhromažďovaniu, označovaniu a odovzdávaniu.','Pri nebezpečných odpadoch je potrebné venovať osobitnú pozornosť ich identifikácii, zhromažďovaniu, označovaniu a odovzdávaniu.
+
+Spoločnosť by mala vedieť, aké nebezpečné odpady pri jej činnosti vznikajú, ako s nimi bezpečne nakladať a aké požiadavky sa na ne vzťahujú.
+
+Dôležité je nespoliehať sa iba na vzhľad obalu alebo na predpoklad, že prázdna nádoba už nemôže predstavovať problém. Rozhodujúce sú vlastnosti zvyškov a príslušné pravidlá pre daný odpad.','Nebezpečné odpady','/images/forest.webp','Les a horské hrebene v rannom opare','published',1792350193650,1792350193650,1792350193650);
+INSERT OR IGNORE INTO posts (id,slug,title,excerpt,content,category,image,image_alt,status,created_at,updated_at,published_at) VALUES ('client-20261018-4','odpady-a-zodpovedne-podnikanie','Odpadové hospodárstvo ako súčasť zodpovedného podnikania','Zodpovedný prístup k odpadom nie je len otázkou ochrany pred pokutami. Pomáha firmám lepšie poznať svoje procesy, sledovať vznikajúce odpady a hľadať možnosti efektívnejšieho využívania zdrojov.','Zodpovedný prístup k odpadom nie je len otázkou ochrany pred pokutami. Pomáha firmám lepšie poznať svoje procesy, sledovať vznikajúce odpady a hľadať možnosti efektívnejšieho využívania zdrojov.
+
+Prehľadné odpadové hospodárstvo môže prispieť k lepšej organizácii práce a k zodpovednejšiemu prístupu k životnému prostrediu.','Pre firmy','/images/meadow.webp','Lúka vo večernom slnku','published',1792350193651,1792350193651,1792350193651);

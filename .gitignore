@@ -27,3 +27,18 @@ drafts.sql
 backup*.sql
 TEST-RESULTS.json
 .DS_Store
+
+# Local snapshots, customer attachments and verification artifacts
+/backups/
+/qa-*/
+/reference/
+/ENVISET*/
+*.docx
+*.zip
+*.7z
+*.bak
+TEST-RESULTS*.json
+BACKUP-MANIFEST*.json
+source-sha256.json
+source-document.txt
+/scripts/client-posts-*.sql

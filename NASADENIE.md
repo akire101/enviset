@@ -1,11 +1,17 @@
 # GitHub → Cloudflare Workers + D1
 
-## Aktuálne nasadenie (13. 10. 2026)
+## Aktualizácia v2 (18. 10. 2026)
+
+Zdrojová verzia v2 je uložená v Git-e pod označením `v2-2026-10-18`; toto označenie sa vytvorí pri nahraní vydania. Základom je uložený zákaznícky stav z 18. 10. 2026. Nasledujúce nastavenie Workera, databázy a Secrets sa pri aktualizácii zachováva. Súbor `/version.json` umožňuje overiť vydanie na verejnom webe. Nahrávanie ďalších verzií vykonávajte iba na výslovný pokyn vlastníka.
+
+Do GitHubu patria zdroje, verejné médiá, závislosti opísané v package-lock.json a bezpečné importy verejných článkov. Nepatria tam node_modules, dist, .wrangler, heslá, lokálne prihlasovacie údaje, súkromná databáza, zákaznícke dopyty, zálohy ani dodané pracovné DOCX súbory. Lokálny obsah databázy sa nikdy nenahráva ako produkčný export.
+
+## Existujúce nasadenie (nastavené 13. 10. 2026)
 
 - Verejný web: https://envi-set-public.akire101.workers.dev
 - Repozitár: https://github.com/akire101/enviset, produkčná vetva `main`.
 - Cloudflare Worker aj D1: `envi-set-public`. Existujúca databáza je v jurisdikcii EU; jej ID je už v produkčnej konfigurácii. Nevytvárajte ďalšiu databázu pri každej aktualizácii.
-- Workers Builds je pripojený ku GitHubu. Push na `main` automaticky spúšťa kontrolu typov, testy, zostavenie, nové migrácie, import troch verejných článkov cez `INSERT OR IGNORE` a nasadenie. Existujúce články ani kontaktné správy sa pri aktualizácii neprepisujú.
+- Workers Builds je pripojený ku GitHubu. Push na `main` automaticky spúšťa kontrolu typov, testy, zostavenie, nové migrácie, import ôsmich verejných článkov cez `INSERT OR IGNORE` a nasadenie. Existujúce články ani kontaktné správy sa pri aktualizácii neprepisujú.
 - Build používa `NODE_VERSION=24`, koreň `/`, vypnuté preview builds a token `enviset-builds-cloudflare` obmedzený na Workers Scripts:Edit a D1:Edit pre jediný účet. Token je uložený v Cloudflare, nie v repozitári.
 
 ### Rýchla aktualizácia
@@ -22,7 +28,7 @@ Na návrat k staršiemu kódu použite `git revert` príslušného commitu a pus
 
 Verejný web, databáza aj produkčné prihlásenie do `/admin` fungujú. Administrátorské údaje sú uložené ako šifrované Cloudflare Secrets. Dňa 13. 10. 2026 bolo cez produkčné rozhranie overené prihlásenie, vytvorenie a úprava neverejného konceptu aj zachovanie úpravy po obnovení stránky. Verejná adresa konceptu vracia 404 a administrátorské API bez prihlásenia vracia 401. Pri bežnom nasadení existujúce Secrets znovu nevytvárajte a nikdy ich nepridávajte do GitHubu.
 
-Kontakt ukladá dopyty do D1, e-mail sa neodosiela. Treba doplniť skutočné firemné kontakty a dokončiť informácie o ochrane súkromia. `SITE_URL` zostáva prázdne a indexácia vypnutá do dokončenia týchto údajov; web je napriek tomu dostupný priamym odkazom. Potom nastavte `SITE_URL` na verejný HTTPS origin a overte canonical, sitemap a robots.txt.
+Kontakt ukladá dopyty do D1, e-mail sa neodosiela. Firemné kontakty sú doplnené vo v2 z 18. 10. 2026; ešte treba dokončiť informácie o ochrane súkromia. `SITE_URL` zostáva prázdne a indexácia vypnutá do dokončenia týchto údajov; web je napriek tomu dostupný priamym odkazom. Potom nastavte `SITE_URL` na verejný HTTPS origin a overte canonical, sitemap a robots.txt.
 
 ### Pridanie a úprava článku
 
@@ -61,7 +67,7 @@ npx wrangler d1 migrations apply DB --remote --config deploy/wrangler.production
 npx wrangler d1 execute DB --remote --config deploy/wrangler.production.json --file data/public-posts.sql
 ```
 
-Migrácie vytvoria tabuľky posts, post_redirects, messages, sessions a rate_limits. Import prenesie iba tri publikované články. Nekopírujte `.wrangler`, `database.sql`, súkromné kontaktné správy ani existujúce prihlasovacie relácie. D1 je hostovaná SQLite databáza; MySQL/PostgreSQL nie sú pri tomto kóde priamou náhradou.
+Migrácie vytvoria tabuľky posts, post_redirects, messages, sessions a rate_limits. Import obsahuje tri pôvodné a päť dodaných publikovaných článkov; INSERT OR IGNORE zachová existujúce záznamy. Nekopírujte `.wrangler`, `database.sql`, súkromné kontaktné správy ani existujúce prihlasovacie relácie. D1 je hostovaná SQLite databáza; MySQL/PostgreSQL nie sú pri tomto kóde priamou náhradou.
 
 ## 3. Produkčná administrácia
 
