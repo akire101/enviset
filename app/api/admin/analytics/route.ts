@@ -5,11 +5,11 @@ export const dynamic='force-dynamic';
 export async function GET(request:Request){return api(async()=>{
  if(!await isAdmin())return json({error:'Prihlásenie je potrebné.'},401);
  const q=new URL(request.url).searchParams,period=q.get('period')||'week',path=q.get('path')||'',device=q.get('device')||'';
- if(!['day','week','month','year'].includes(period)||(path&&!analyticsPath.safeParse(path).success)||(device&&!['mobile','desktop'].includes(device)))return json({error:'Neplatný filter.'},400);
+ if(!['day','week','month','year','all'].includes(period)||(path&&!analyticsPath.safeParse(path).success)||(device&&!['mobile','desktop'].includes(device)))return json({error:'Neplatný filter.'},400);
  const db=await analyticsDb();
  await db.prepare('DELETE FROM analytics_views WHERE started_at < ?').bind(Date.now()-retentionDays*86400000).run();
- const from=periodStart(period),to=localDay();const where='day >= ? AND day <= ?'+(path?' AND path = ?':'')+(device?' AND device = ?':'');const args=[from,to,...(path?[path]:[]),...(device?[device]:[])];
- const bucket=period==='day'?'hour':period==='year'?"substr(day,1,7)":'day';
+ const from=period==='all'?((await db.prepare('SELECT MIN(day) AS day FROM analytics_views').first<{day:string|null}>())?.day||localDay()):periodStart(period),to=localDay();const where='day >= ? AND day <= ?'+(path?' AND path = ?':'')+(device?' AND device = ?':'');const args=[from,to,...(path?[path]:[]),...(device?[device]:[])];
+ const bucket=period==='day'?'hour':(period==='year'||period==='all')?"substr(day,1,7)":'day';
  const [summary,series,pages,rows,paths]=await Promise.all([
  db.prepare('SELECT COUNT(*) views, COUNT(DISTINCT visitor) visitors, COUNT(DISTINCT session) sessions, COALESCE(SUM(seconds),0) seconds, COALESCE(SUM(clicks),0) clicks, COALESCE(AVG(depth),0) depth FROM analytics_views WHERE '+where).bind(...args).first(),
  db.prepare('SELECT '+bucket+' bucket,COUNT(*) views,COUNT(DISTINCT visitor) visitors FROM analytics_views WHERE '+where+' GROUP BY bucket ORDER BY bucket').bind(...args).all(),

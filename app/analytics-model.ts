@@ -31,6 +31,6 @@ export function aggregateDetails(rows:ViewRow[]){
 export function fillSeries(rows:{bucket:string;views:number;visitors:number}[],period:string,from:string,to:string){
  const keys=new Set<string>();
  if(period==='day'){for(let h=0;h<24;h++)keys.add(String(h).padStart(2,'0'))}
- else {const day=new Date(from+'T12:00:00Z');while(day.toISOString().slice(0,10)<=to){const key=day.toISOString().slice(0,10);keys.add(period==='year'?key.slice(0,7):key);day.setUTCDate(day.getUTCDate()+1)}}
+ else {const day=new Date(from+'T12:00:00Z');while(day.toISOString().slice(0,10)<=to){const key=day.toISOString().slice(0,10);keys.add((period==='year'||period==='all')?key.slice(0,7):key);day.setUTCDate(day.getUTCDate()+1)}}
  const byKey=new Map(rows.map(r=>[r.bucket,r]));return [...keys].map(bucket=>byKey.get(bucket)||{bucket,views:0,visitors:0});
 }

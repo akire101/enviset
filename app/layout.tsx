@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   title: { default: 'ENVI set – odpadové hospodárstvo', template: '%s | ENVI set' },
   description: 'Odborné poradenstvo a manažment odpadového hospodárstva pre firmy.',
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.svg?v=14",
+    shortcut: "/favicon.svg?v=14",
   },
 };
 

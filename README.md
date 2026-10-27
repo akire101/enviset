@@ -1,12 +1,12 @@
 ﻿# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 28. 10. 2026. Verzia v13.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 28. 10. 2026. Verzia v14.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v13 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v14 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -28,7 +28,7 @@ Slovenský firemný web ENVI set predstavuje poradenstvo a manažment odpadovéh
 
 ## Štatistiky v administrácii
 
-V menu administrácie zvoľte **Štatistiky**. Obdobia: dnes (hodiny), posledných 7 alebo 30 dní (dni), posledných 365 dní (mesiace), v časovom pásme Bratislava. Možno filtrovať stránku a mobil/počítač. Prehľad rozlišuje unikátne identifikátory prehliadačov, návštevy (relácie karty), zobrazenia, aktívny čas, kliknutia na prvky a dosah rolovania. Nulové dni sa zobrazujú tiež. Nová návšteva vzniká po 30 minútach neaktivity pri ďalšom načítaní stránky.
+V menu administrácie zvoľte **Štatistiky**. Obdobia: dnes (hodiny), posledných 7 alebo 30 dní (dni), posledných 365 dní alebo Všetko (mesiace), v časovom pásme Bratislava. Možno filtrovať stránku a mobil/počítač. Prehľad rozlišuje unikátne identifikátory prehliadačov, návštevy (relácie karty), zobrazenia, aktívny čas, kliknutia na prvky a dosah rolovania. Nulové dni sa zobrazujú tiež. Nová návšteva vzniká po 30 minútach neaktivity pri ďalšom načítaní stránky.
 
 Tabuľky ukazujú najnavštevovanejšie stránky, čas v sekciách a najviac/najmenej klikané viditeľné odkazy či tlačidlá, vrátane nuly. Čas sa odhaduje po 5 sekundách pri viditeľnej aktívnej karte a aktivite v poslednej minúte. Hlásenia odchádzajú približne každých 15 sekúnd a pri odchode zo stránky.
 
@@ -277,6 +277,16 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 28. 10. 2026 – v14, tím podpory a mobilné zobrazenie
+
+**Pridané:** účty Podpora 1 (podpora) a Podpora 2 (podpora2), mená pri odpovediach, samostatné hodnotenia a porovnanie odpovedí, konverzácií, prvej reakcie a online času. Obdobie Všetko je aj v návštevnosti. Administrátor môže chat mimo pracovnej doby dočasne povoliť na 30, 60 alebo 120 minút; stále musí byť dostupná prihlásená pracovníčka. Pri dostupnej podpore je pri Poradíme vám viditeľný stav Online.
+
+**Vylepšené:** hlavný obrázok je úplne statický. Mobilné cookies sú v malej spodnej lište s prijatím, odmietnutím a odkazom na podmienky. Kroky spolupráce majú rovnaké odstupy. Upravená pätička a slovná hračka ENVI pre prírodu. SET riešení pre firmy. Favicon tvorí zelený znak loga bez textu na priehľadnom pozadí. Krátka poznámka o dohľade je odstránená z chatu; informácia ostáva v ochrane súkromia a na pracovisku podpory.
+
+**Celkový stav:** existujúce heslo podpora sa nemení; Podpora 2 sa aktivuje nastavením hesla v administrácii. Online čas sa zbiera až od v14 z potvrdených spojení pri zapnutom prijímaní chatu a povolenej prevádzke. Súbežné karty rovnakého účtu sa nezdvojujú; výpadky nad 75 sekúnd sa nezapočítajú. Konverzácie zostávajú 90 dní, denné online časy 400 dní; Všetko znamená všetky zachované údaje.
+
+**Overenie:** 19 automatických testov a lokálna integrácia dvoch pracovníčok, súbežných kariet, oddelených hodnotení, oprávnení a časového otvorenia chatu. Mobilná lišta pri 320 px má približne 137 px a obidve voľby fungujú. Rovnomerné kroky a statický obrázok overené v prehliadači. Fyzické telefóny neboli skúšané; upozornenia potrebujú otvorené pracovisko podpory.
 
 ### 28. 10. 2026 – v13, živá podpora a meranie
 
