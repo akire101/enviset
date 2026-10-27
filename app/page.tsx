@@ -1,5 +1,6 @@
 ﻿import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { Button, CTA, SectionHead, ServiceCards } from './components';
+import {FaqItem} from './faq-item';
 import {SectionControls} from './section-controls';
 import { industries } from './content';
 import { clientFaqs } from './client-content';
@@ -17,5 +18,5 @@ export default async function Home(){const posts=await publicPosts();return <mai
  <section id="sluzby" className="container section"><SectionHead label="" title="Komplexné riešenia odpadového hospodárstva"/><ServiceCards/></section>
  <section id="spolupraca" className="container section process-section"><SectionHead label="" title="Ako prebieha spolupráca?"/><ProcessSteps/></section>
  <section id="poradna" className="container section"><SectionHead label="" title="Prakticky o odpadoch"/><BlogCards posts={posts.slice(0,3)}/><div className="section-bottom"><a href="/blog" className="text-link">Všetky články <ArrowUpRight size={18}/></a></div></section>
- <section id="faq" className="container section faq-layout"><div><h2>Čo vás zaujíma?</h2><a href="/kontakt#formular" className="text-link">Mám inú otázku <ArrowUpRight size={18}/></a></div><div className="faq">{clientFaqs.map(([q,a])=><details key={q}><summary>{q}<span aria-hidden="true">+</span></summary><p>{a}</p></details>)}</div></section><div id="kontakt"><CTA/></div>
+ <section id="faq" className="container section faq-layout"><div><h2>Čo vás zaujíma?</h2><a href="/kontakt#formular" className="text-link">Mám inú otázku <ArrowUpRight size={18}/></a></div><div className="faq">{clientFaqs.map(([q,a])=><FaqItem key={q} question={q} answer={a}/>)}</div></section><div id="kontakt"><CTA/></div>
  <SectionControls/></main>}

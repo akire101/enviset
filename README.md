@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v7.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v8.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v7 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v8 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -266,6 +266,12 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 27. 10. 2026 – v8, plynulé rozbalenie FAQ
+
+**Vylepšené:** odpovede v Čo vás zaujíma sa plynulo rozbalia aj zbalia, ikona plus sa otáča. Zachované rolovacie efekty. Ovládanie podporuje klávesnicu, stav pre čítačky obrazovky a nastavenie obmedzeného pohybu.
+
+**Overenie:** meranie priebežnej výšky pri otvorení aj zatvorení, rýchle opakované kliknutia, klávesnica a vypnutie animácií overené v mobilnom prehliadači. Kontrola typov a 10 testov prešli. Fyzický telefón nebol testovaný. Ostatné funkcie a otvorené obmedzenia zostávajú bez zmeny.
 
 ### 27. 10. 2026 – v7, rolovacie efekty FAQ
 
