@@ -288,9 +288,9 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 
 **Vylepšené:** silnejší, lokálny vietor sleduje označenú rastlinku aj pri mobilnom orezaní fotografie. Analytika sa v administrácii obnovuje každých 30 sekúnd. Súhlas sa pamätá pri navigácii, ale obnovenie stránky (bežné aj Ctrl+F5) ho vyžiada znova; prehliadač tieto druhy obnovenia spoľahlivo nerozlišuje. Prihlásený admin/podpora a odmietnuté meranie sa nezapočítavajú.
 
-**Overenie:** 16 automatických testov; lokálna integrácia rolí, CSRF, dvoch návštevníkov, oddelenia rozhovorov, opakovaných požiadaviek, odpovedí, prečítania, hodnotenia, ukončenia a dostupnosti. Obojsmerný rozhovor v oddelených prehliadačoch, mobil bez vodorovného pretekania, zvuk a opakovanie po piatich minútach s riadeným časom. Prijatie analytiky overené na verejnom webe; celé dátové prehľady testované lokálne.
+**Overenie:** 16 automatických testov; lokálna integrácia rolí, CSRF, dvoch návštevníkov, oddelenia rozhovorov, opakovaných požiadaviek, odpovedí, prečítania, hodnotenia, ukončenia a dostupnosti. Obojsmerný rozhovor v oddelených prehliadačoch, mobil bez vodorovného pretekania, zvuk a opakovanie po piatich minútach s riadeným časom. Prijatie analytiky aj zaznamenané návštevy overené v ostrej administrácii. Účet podpora bol aktivovaný používateľom; produkčné prihlásenie a zamietnutie prístupu k článkom, kontaktným správam a administrátorským štatistikám boli overené. Overovacia relácia bola odhlásená.
 
-**Otvorené:** aktiváciu produkčného účtu podpory je nutné dokončiť cez prihlásenú administráciu. Fyzický telefón, uspatie zariadenia a právny audit neboli overené. Retencia nebeží samostatným plánovačom. Zmluvné a pracovnoprávne podmienky monitorovania má potvrdiť prevádzkovateľ.
+**Otvorené:** Fyzický telefón, uspatie zariadenia a právny audit neboli overené. Retencia nebeží samostatným plánovačom. Zmluvné a pracovnoprávne podmienky monitorovania má potvrdiť prevádzkovateľ.
 
 ### 27. 10. 2026 – v12, rastlinka a informácie o meraní
 
@@ -418,4 +418,5 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 Pri každej aktualizácii repozitára sa aktualizuje **dátum, čo bolo pridané, čo bolo vylepšené, celkový prehľad, overenie a zostávajúce obmedzenia**. Najnovší záznam patrí navrch; história zostáva zachovaná. Zmena funkcie, bezpečnosti, prepojenia alebo SEO sa premietne aj do príslušnej kapitoly.
 
 Za aktualizáciu tohto prehľadu zodpovedá správca pri úpravách webu; pracovné pravidlo je uložené v AGENTS.md. Publikovanie článku v administrácii tento súbor automaticky nemení. Do verejnej dokumentácie nepatria heslá, prístupové kľúče ani osobné správy zákazníkov.
+
 
