@@ -2,7 +2,7 @@ import { ArrowUpRight, ArrowRight, Leaf, FileCheck2, ListChecks, Send, ShieldChe
 import { brand, services } from './content';
 import { serviceOverview } from './client-content';
 export function Icon({name, size=25}:{name:string;size?:number}) { const I = ({file:FileCheck2,list:ListChecks,send:Send,shield:ShieldCheck,hazard:TriangleAlert,factory:Factory,leaf:Leaf,recycle:Recycle,meeting:MessagesSquare,search:Search,settings:Settings,law:Scale,handshake:Handshake} as Record<string,typeof Leaf>)[name] || Leaf; return <I size={size} strokeWidth={1.6} aria-hidden="true"/>; }
-export function Logo(){return <a href="/" className="logo" aria-label={`${brand.name} – domov`}><img src="/images/logo.webp" width="1200" height="552" alt="ENVI set"/></a>}
+export function Logo(){return <a href="/" className="logo" aria-label={`${brand.name} – domov`}><img src="/images/logo-transparent.webp" width="1200" height="552" alt="ENVI set"/></a>}
 export function Button({children,href='/kontakt#formular',secondary=false}:{children:React.ReactNode;href?:string;secondary?:boolean}){return <a className={`button ${secondary?'secondary':''}`} href={href.startsWith('/kontakt')&&!href.includes('#')?`${href}#formular`:href}>{children}<ArrowUpRight size={18}/></a>}
 export function Eyebrow({children}:{children:React.ReactNode}){return <p className="eyebrow"><span/>{children}</p>}
 export function SectionHead({label,title,text}:{label:string;title:string;text?:string}){return <div className="section-head"><div>{label&&<Eyebrow>{label}</Eyebrow>}<h2>{title}</h2></div>{text&&<p>{text}</p>}</div>}

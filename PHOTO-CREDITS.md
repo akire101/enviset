@@ -16,3 +16,5 @@ Logo, front_picture a papiere_real dodal majiteľ. Obrázky sú optimalizované 
 | system-v4.jpg | [El Jundi](https://www.pexels.com/photo/industrial-waste-bins-in-outdoor-storage-area-34888195/) |
 
 Retuš výrobnej fotografie: „Remove the single human worker completely, naturally reconstructing the obscured machinery and floor. Preserve the same crop, camera angle, machinery geometry, industrial wear, cables, natural light, texture and colors. No other people, no new decorative elements, no smoothing or stylization.“ Použitý vstavaný nástroj ImageGen; ostatné nové fotografie neboli generované.
+
+Logo v5: `public/images/logo-transparent.webp` – odstránenie bieleho pozadia dodaného loga pomocou vstavaného ImageGen (transparent_background: true), následná optimalizácia WebP. Zadanie: Remove only the pale white background; preserve exact green emblem, ENVI and black set letters, proportions and typography; transparent alpha including gaps, crisp edges.

@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v4.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v5.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v4 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v5 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -143,7 +143,7 @@ Formulár má štyri viditeľné polia: meno a priezvisko, e-mail, telefón a te
 - Úspešné uloženie zobrazí referenciu dopytu. Opakovanie rovnakej požiadavky nevytvorí duplicitu.
 - Staršie uložené firemné a cenové údaje zostávajú dostupné administrátorovi.
 
-Kontakt uvádza firemné údaje a pracovné hodiny od pondelka do piatka 08:00–17:00; sobota a nedeľa sú zatvorené. Stav dostupnosti a farebné body sa pri telefóne nezobrazujú. Orientačný čas odpovede je do 2 hodín podľa zadania majiteľa. Oblasť pôsobenia sa nezobrazuje. Google mapa bola odstránená.
+Kontakt uvádza firemné údaje a pracovné hodiny od pondelka do piatka 08:00–17:00; sobota a nedeľa sú zatvorené. Stav dostupnosti a farebné body sa pri telefóne nezobrazujú. Orientačný čas odpovede sa nezobrazuje. Oblasť pôsobenia sa nezobrazuje. Google mapa bola odstránená.
 
 Potvrdenie odoslania znamená, že sa správa uložila do schránky administrátora. E-mailové oznámenie zatiaľ nie je nastavené. Odoslaním nevzniká objednávka platených služieb.
 
@@ -266,6 +266,16 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 27. 10. 2026 – v5, mobilná navigácia a priehľadné logo
+
+**Upravené:** mobilná kontaktná lišta je natrvalo hore: Zavolaj a Bezplatná konzultácia. Konzultácia vedie priamo na formulár. Logo má priehľadné pozadie. Z kontaktu bol odstránený orientačný čas odpovede.
+
+**Vylepšené:** pevné šípky vľavo dole preskakujú na začiatky celých sekcií úvodu oboma smermi. Sprievodca zostáva vpravo dole; hlavička neprekrýva cieľové nadpisy. Priebežné lokálne odkazy Vyššie/Nižšie boli odstránené.
+
+**Overenie:** kontrola typov a 10 testov prešli; v mobilnom prehliadači overené všetky prechody medzi sekciami, návrat nahor, horná lišta a odkaz na formulár. Logo vizuálne skontrolované na pozadí stránky. Fyzický telefón nebol testovaný.
+
+**Celkový stav a obmedzenia:** existujúce funkcie ostávajú zachované. E-mailové oznámenia, finálne údaje ochrany súkromia a indexovanie vyhľadávačmi zostávajú otvorené podľa prehľadu vyššie.
 
 ### 27. 10. 2026 – v4, doladenie menu a fotografií
 

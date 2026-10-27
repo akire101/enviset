@@ -19,3 +19,9 @@ test('Blog cards show repeated photograph only once without losing articles',asy
  assert.equal((html.match(/<img /g)||[]).length,2);
  for(const p of posts)assert.ok(html.includes('/blog/'+p.slug));
 });
+test('Section navigation follows section starts, including manual scrolling',async()=>{
+ const {currentSection}=await import('../app/section-navigation.ts');const tops=[150,800,1600,2300];
+ assert.equal(currentSection(tops,0),0);assert.equal(currentSection(tops,150),0);
+ assert.equal(currentSection(tops,790),1);assert.equal(currentSection(tops,1200),1);
+ assert.equal(currentSection(tops,1600),2);assert.equal(currentSection(tops,9999),3);
+});
