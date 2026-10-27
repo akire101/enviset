@@ -4,7 +4,6 @@ import {usePathname} from 'next/navigation';
 import {flushSync} from 'react-dom';
 import {Menu,X,ChevronDown,ArrowUpRight,ArrowRight} from 'lucide-react';
 import {Logo,Icon} from './components';
-import {PhoneStatus} from './phone-status';
 import {services} from './content';
 
 export function Header(){
@@ -51,7 +50,7 @@ export function Header(){
    <a href="/blog" className={active('/blog')?'active':''} aria-current={active('/blog')?'page':undefined}>Blog / Poradňa</a>
    <a href="/kontakt" className={active('/kontakt')?'active':''} aria-current={active('/kontakt')?'page':undefined}>Kontakt</a>
   </nav>
-  <a className="button header-cta" href="tel:+421902469908">+421 902 469 908<PhoneStatus/></a>
+  <a className="button header-cta" href="tel:+421902469908">+421 902 469 908</a>
   <button ref={toggle} className="mobile-toggle" aria-label={mobileOpen?'Zavrieť menu':'Otvoriť menu'} aria-controls="navigation" aria-expanded={mobileOpen} onClick={()=>{setMobileOpen(!mobileOpen);setServicesOpen(false)}}>{mobileOpen?<X size={22}/>:<Menu size={22}/>}</button>
  </header>;
 }

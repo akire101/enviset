@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v3.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v4.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v3 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v4 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -143,7 +143,7 @@ Formulár má štyri viditeľné polia: meno a priezvisko, e-mail, telefón a te
 - Úspešné uloženie zobrazí referenciu dopytu. Opakovanie rovnakej požiadavky nevytvorí duplicitu.
 - Staršie uložené firemné a cenové údaje zostávajú dostupné administrátorovi.
 
-Kontakt uvádza firemné údaje a pracovné hodiny od pondelka do piatka 08:00–17:00; sobota a nedeľa sú zatvorené. Zelený alebo červený bod spolu so slovným stavom vychádza z času Europe/Bratislava a aktualizuje sa každých 30 sekúnd. Ide o stav podľa pravidelných hodín, nie meranie obsadenosti telefónu; sviatočné výnimky neboli dodané. Orientačný čas odpovede je do 2 hodín podľa zadania majiteľa. Oblasť pôsobenia sa nezobrazuje. Google mapa bola odstránená.
+Kontakt uvádza firemné údaje a pracovné hodiny od pondelka do piatka 08:00–17:00; sobota a nedeľa sú zatvorené. Stav dostupnosti a farebné body sa pri telefóne nezobrazujú. Orientačný čas odpovede je do 2 hodín podľa zadania majiteľa. Oblasť pôsobenia sa nezobrazuje. Google mapa bola odstránená.
 
 Potvrdenie odoslania znamená, že sa správa uložila do schránky administrátora. E-mailové oznámenie zatiaľ nie je nastavené. Odoslaním nevzniká objednávka platených služieb.
 
@@ -266,6 +266,15 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 27. 10. 2026 – v4, doladenie menu a fotografií
+
+**Upravené:** ponuka je ukotvená priamo pod tlačidlom Služby. Odstránený slovný aj farebný indikátor telefónu; pracovné hodiny a odpoveď do 2 hodín zostávajú v kontakte. Riešenia majú jednotné dva stĺpce a zarovnané ikony, názvy a šípky; na mobile jeden stĺpec. Väčšie rozostupy pri formulári a odoslaní.
+
+**Fotografie:** vymenená stavba, kancelária, gastro, remeslo a kontrola prevádzky za reálne fotografie z Pexels. Z výrobnej fotografie bola na žiadosť majiteľa odstránená postava pomocou obrazovej retuše. Sekcia systému má vlastnú fotografiu kontajnerov. Logo je obrazovo iba v hlavičke; päta používa textový názov. Opakovaný obrázok článku sa v jednom zozname zobrazí iba raz, všetky články ostávajú prístupné.
+
+**Overenie:** lokálne šírky 1440, 768 a 390 px bez vodorovného presahu, úvod aj blog bez opakovaných obrázkov; menu pod tlačidlom; odstup nad odoslaním 36 px na mobile. Kontrola typov, testy a zostavenie sú súčasťou vydania. Formulár ani databázová schéma sa nemenili. Historické informácie nižšie opisujú staršie verzie.
+
 
 ### 27. 10. 2026 – v3, fotografie a jednoduchší kontakt
 
