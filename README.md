@@ -282,6 +282,8 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 
 **Pridané:** záložka Štatistiky, štyri obdobia, počty návštevníkov/návštev/zobrazení, graf, prehľad stránok, čas v sekciách, najviac aj najmenej klikané prvky a relatívne mapy kliknutí a myši. Dobrovoľný súhlas, odmietnutie a vypnutie v pätičke. Aktualizované informácie o súkromí.
 
+**Spresnenie merania:** viditeľnosť zahŕňa aj pevnú hlavičku a mobilnú kontaktnú lištu; mapa pohybu reaguje iba na skutočný ukazovateľ myši, nie na dotyky.
+
 **Ochrana a nasadenie:** API štatistík vyžaduje prihlásenie, vstupy sú obmedzené a validované; opakované hlásenia nenavyšujú počty. Nová tabuľka sa vytvorí idempotentne pri prvom oprávnenom čítaní alebo platnom meraní. Existujúce články, správy a účty sa nemenia.
 
 **Overenie:** 13 testov, kontrola typov, zostavenie, lokálne integračné testy súhlasu, pôvodu požiadaviek, ochrany API, štyroch období, duplicitných a starších hlásení a vytvorenia tabuľky. Prehliadač: pred súhlasom/po odmietnutí/po vypnutí bez merania, obsah polí sa neposiela, aktívny čas/kliknutia/myš fungujú; mobil 390 px bez presahu a desktop 1440 px. Prihlásený admin sa nemeria ani na verejnej stránke.
