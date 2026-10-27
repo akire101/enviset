@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 18. 10. 2026. Verzia v2.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v3.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v2 – 18. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v3 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -71,7 +71,7 @@ Na každej stránke služby sa návštevník dozvie, čo služba zahŕňa, komu 
 
 - Navigácia Domov, O nás, Služby, Blog / Poradňa a Kontakt, s označením aktuálnej stránky.
 - Horné menu zostáva dostupné aj pri posúvaní stránky.
-- Rozšírené menu všetkých deviatich služieb, konzultácie a sekcií úvodnej stránky.
+- Kompaktné menu všetkých deviatich služieb pod sebou, iba s názvami.
 - Na počítači otvorenie služieb myšou; dostupné sú aj kliknutie, dotyk a klávesnica.
 - Zatvorenie kliknutím mimo menu, presunom klávesnicového výberu mimo navigácie alebo klávesom Escape; šípka nadol otvorí odkazy služieb.
 - Mobilné menu a prispôsobenie kariet, formulárov, rozloženia a textov menším obrazovkám. Pevné tlačidlá Zavolať a Poslať dopyt sú na mobile dostupné v dolnej lište.
@@ -135,18 +135,15 @@ Administrácia používa jeden účet. Neobsahuje samostatné používateľské 
 
 ## Kontaktný formulár
 
-V2 pridáva nepovinné IČO (osem číslic, ak bolo pridelené) a rozbaľovací dopyt na individuálnu cenovú ponuku: počet prevádzok, približný počet dokladov za rok a požadované služby. Číselná kalkulácia sa nezobrazuje, pretože cenník nebol dodaný. Údaje sa kontrolujú na serveri a ukladajú do textu dopytu, takže zostávajú dostupné v existujúcej schránke administrátora bez zmeny databázovej schémy.
+Formulár má štyri viditeľné polia: meno a priezvisko, e-mail, telefón a text správy. Služba z odkazu sa doplní priamo do správy. Tlačidlá na dopyt smerujú na formulár cez kotvu. Informácie o súkromí sú uvedené pri odoslaní.
 
+- Kontrola údajov v prehliadači aj na serveri; správa má 15 až 5 000 znakov.
+- Skryté pole pre robotov a serverový limit požiadaviek zostávajú zapnuté.
+- Počas odosielania sa tlačidlo zablokuje; chyba sa zobrazí pri formulári.
+- Úspešné uloženie zobrazí referenciu dopytu. Opakovanie rovnakej požiadavky nevytvorí duplicitu.
+- Staršie uložené firemné a cenové údaje zostávajú dostupné administrátorovi.
 
-- V prehliadači povinná kontaktná osoba, platný e-mail, firma, telefón, správa a potvrdenie oboznámenia sa s informáciami o spracúvaní údajov. Server zachováva kompatibilitu so staršími dopytmi, v ktorých firma a telefón mohli byť prázdne.
-- Výber služby a odvetvia, nepovinné IČO a podklady k individuálnej cenovej ponuke.
-- Kontrola údajov v prehliadači aj na serveri; správa má 15 až 5 000 znakov, ostatné polia vlastné limity.
-- Počas odosielania zablokuje tlačidlo; pri chybe zobrazí vysvetlenie.
-- Po uložení zobrazí potvrdenie, skrátenú referenciu dopytu a možnosť napísať ďalšiu správu.
-- Pri opakovanom pokuse o odoslanie používa rovnakú referenciu, aby sa dopyt neuložil dvakrát.
-- Skryté pole pre robotov (honeypot) a serverový limit požiadaviek obmedzujú zneužitie.
-
-Kontaktná stránka zobrazuje ENVI set, s.r.o., adresu Na pažiti 811/19, 911 05 Trenčín, IČO 56 090 552 a DIČ 2122206801. Telefón +421 902 469 908 je klikateľný na volanie, enviset@enviset.sk otvára e-mailovú aplikáciu. Vložená Google mapa a odkaz na Mapy používajú dodanú adresu. Vo výbere odvetví je aj možnosť „Iné odvetvie“; neznáma hodnota v odkaze sa nepredvyplní. Informácie o ochrane súkromia sa z formulára otvárajú v novej karte.
+Kontakt uvádza firemné údaje a pracovné hodiny od pondelka do piatka 08:00–17:00; sobota a nedeľa sú zatvorené. Zelený alebo červený bod spolu so slovným stavom vychádza z času Europe/Bratislava a aktualizuje sa každých 30 sekúnd. Ide o stav podľa pravidelných hodín, nie meranie obsadenosti telefónu; sviatočné výnimky neboli dodané. Orientačný čas odpovede je do 2 hodín podľa zadania majiteľa. Oblasť pôsobenia sa nezobrazuje. Google mapa bola odstránená.
 
 Potvrdenie odoslania znamená, že sa správa uložila do schránky administrátora. E-mailové oznámenie zatiaľ nie je nastavené. Odoslaním nevzniká objednávka platených služieb.
 
@@ -269,6 +266,17 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 27. 10. 2026 – v3, fotografie a jednoduchší kontakt
+
+**Pridané:** dodané firemné logo, hlavný obrázok a obrázok dokumentácie; deväť skutočných ilustračných fotografií z Pexels so zdrojmi v PHOTO-CREDITS.md. Pracovné hodiny, farebný aj slovný stav linky a orientačná odpoveď do 2 hodín.
+
+**Vylepšené:** poradie úvodu je hlavný obrázok → pre koho sú služby → s čím pomôžeme. Texty sú kratšie a väčšie, rozostupy kompaktnejšie. Služby majú dva stĺpce: osem individuálnych tlačidiel pri jednorazových položkách a jedno pod paušálom. FAQ obsahuje štyri dodané otázky a cenu; odstránené otázky sa nezobrazujú. Menu a stručný prehľad služieb majú iba názvy. Mobil má šípky Vyššie/Nižšie a sprievodcu nad kontaktnou lištou.
+
+**Overenie:** kontrola typov, deväť testov a produkčné zostavenie úspešné. Prehliadač overil šírky 1440, 768 a 390 px bez vodorovného presahu, načítanie všetkých fotografií, rozbalenie FAQ, 8 + 1 tlačidiel služieb, štyri polia a priamy odkaz na formulár, odstránenie mapy a neprekrývanie sprievodcu. Lokálny dopyt bol uložený (HTTP 201) a zobrazil potvrdenie. Produkčný formulár sa pri tejto kontrole neodosielal.
+
+**Otvorené:** e-mailové oznámenia zostávajú nenastavené, súkromie a indexácia vyžadujú dokončenie ako v predošlej verzii. Fyzický telefón a sviatočné výnimky neboli overené. FAQ zodpovedá dodanému zneniu; neprebehol právny audit.
+
 
 ### 18. 10. 2026 – v2, zákaznícke texty a nový postup spolupráce
 

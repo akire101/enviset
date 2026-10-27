@@ -4,6 +4,7 @@ import {usePathname} from 'next/navigation';
 import {flushSync} from 'react-dom';
 import {Menu,X,ChevronDown,ArrowUpRight,ArrowRight} from 'lucide-react';
 import {Logo,Icon} from './components';
+import {PhoneStatus} from './phone-status';
 import {services} from './content';
 
 export function Header(){
@@ -41,16 +42,16 @@ export function Header(){
    <div className="services-disclosure" onPointerEnter={event=>{if(desktopMouse(event.pointerType)){clearHover();setServicesOpen(true)}}} onPointerLeave={event=>{if(desktopMouse(event.pointerType)){clearHover();hoverTimer.current=setTimeout(()=>{if(!panel.current?.contains(document.activeElement))setServicesOpen(false)},180)}}}>
     <button ref={trigger} type="button" className={`services-trigger ${active('/sluzby')?'active':''}`} aria-expanded={servicesOpen} aria-controls="services-dropdown" onClick={event=>{clearHover();setServicesOpen(event.detail>0&&desktopMouse('mouse')?true:!servicesOpen)}} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();flushSync(()=>setServicesOpen(true));panel.current?.querySelector<HTMLAnchorElement>('a')?.focus({preventScroll:true})}}}>Služby<ChevronDown size={15} aria-hidden="true"/></button>
     <div ref={panel} id="services-dropdown" className={`services-panel ${servicesOpen?'is-open':''}`} aria-hidden={!servicesOpen} inert={!servicesOpen}>
-     <div className="dropdown-main"><div className="dropdown-heading"><span>OD PREHĽADU K JASNÝM KROKOM</span><a href="/sluzby" onClick={close}>Všetky služby<ArrowUpRight size={16}/></a></div>
-      <div className="dropdown-grid">{services.map(service=><a key={service.slug} href={`/sluzby/${service.slug}`} className="dropdown-service" onClick={close} aria-current={path===`/sluzby/${service.slug}`?'page':undefined}><span className="dropdown-icon"><Icon name={service.icon} size={23}/></span><span><strong>{service.title}</strong><small>{service.short}</small></span><ArrowUpRight className="dropdown-arrow" size={16}/></a>)}</div>
+     <div className="dropdown-main"><div className="dropdown-heading"><a href="/sluzby" onClick={close}>Všetky služby<ArrowUpRight size={16}/></a></div>
+      <div className="dropdown-grid">{services.map(service=><a key={service.slug} href={`/sluzby/${service.slug}`} className="dropdown-service" onClick={close} aria-current={path===`/sluzby/${service.slug}`?'page':undefined}><span className="dropdown-icon"><Icon name={service.icon} size={23}/></span><span><strong>{service.title}</strong></span><ArrowUpRight className="dropdown-arrow" size={16}/></a>)}</div>
      </div>
-     <aside className="dropdown-aside"><span className="dropdown-kicker">ZAČNIME ROZHOVOROM</span><h2>Jeden partner.<br/>Jasný systém.</h2><p>Prejdime si potreby vašej prevádzky na bezplatnej úvodnej konzultácii.</p><a className="dropdown-cta" href="/kontakt" onClick={close}>Dohodnúť konzultáciu<ArrowUpRight size={18}/></a><div className="dropdown-sections"><a href="/#pre-koho" onClick={close}>Pre koho sú služby<ArrowRight size={14}/></a><a href="/#spolupraca" onClick={close}>Ako prebieha spolupráca<ArrowRight size={14}/></a><a href="/#faq" onClick={close}>Časté otázky<ArrowRight size={14}/></a></div></aside>
+
     </div>
    </div>
    <a href="/blog" className={active('/blog')?'active':''} aria-current={active('/blog')?'page':undefined}>Blog / Poradňa</a>
    <a href="/kontakt" className={active('/kontakt')?'active':''} aria-current={active('/kontakt')?'page':undefined}>Kontakt</a>
   </nav>
-  <a className="button header-cta" href="tel:+421902469908">+421 902 469 908<ArrowUpRight size={17}/></a>
+  <a className="button header-cta" href="tel:+421902469908">+421 902 469 908<PhoneStatus/></a>
   <button ref={toggle} className="mobile-toggle" aria-label={mobileOpen?'Zavrieť menu':'Otvoriť menu'} aria-controls="navigation" aria-expanded={mobileOpen} onClick={()=>{setMobileOpen(!mobileOpen);setServicesOpen(false)}}>{mobileOpen?<X size={22}/>:<Menu size={22}/>}</button>
  </header>;
 }

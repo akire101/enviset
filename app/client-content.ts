@@ -10,10 +10,10 @@ export const serviceOverview = [
 ] as const;
 
 export const cooperationSteps = [
- ['Osobné stretnutie so špecialistom pre odpady', 'Osobne Vás navštívi náš expert pre odpadové hospodárstvo, ktorý sa oboznámi s činnosťou Vašej spoločnosti, na základe čoho posúdi aktuálny stav a predstaví Vám možnosti spolupráce a riešenia vhodné pre Vašu prevádzku.', 'meeting'],
- ['Vstupná odborná analýza', 'Po uzatvorení spolupráce vykonáme vstupnú analýzu potrebných oblastí Vašej spoločnosti a možné riziká v rámci odpadového hospodárstva. Na základe získaných informácií vyhodnotíme aktuálny stav a stanovíme, ako je potrebné nastaviť systém odpadového hospodárstva.', 'search'],
- ['Vypracovanie a dodanie odbornej dokumentácie', 'Po vyhodnotení získaných informácií pripravíme odbornú dokumentáciu pre odpadové hospodárstvo Vašej spoločnosti, ktorá Vám poskytne praktické informácie a jasný návod, ako správne zabezpečiť nakladanie s odpadmi a súvisiacich povinností. Hotovú dokumentáciu Vám odovzdáme a zrozumiteľne vysvetlíme jej obsah a využitie v praxi.', 'settings'],
- ['Celoročný odborný servis', 'Počas celej spolupráce dohliadame na správne fungovanie Vášho odpadového hospodárstva. Osobne kontrolujeme stav prevádzky a nastavené procesy, upozorňujeme na nedostatky a odporúčame potrebné úpravy. Sledujeme aktuálne legislatívne zmeny a zabezpečujeme za Vás potrebnú administratívu, evidenciu a ohlásenia.', 'recycle'],
+ ['Osobné stretnutie so špecialistom', 'Spoznáme Vašu činnosť a prevádzku. Prejdeme si aktuálny stav a možnosti spolupráce.', 'meeting'],
+ ['Vstupná odborná analýza', 'Posúdime vznikajúce odpady, povinnosti a riziká. Navrhneme systém podľa potrieb Vašej firmy.', 'search'],
+ ['Dokumentácia a jasné postupy', 'Pripravíme potrebné dokumenty, odovzdáme ich a vysvetlíme, ako ich používať v praxi.', 'settings'],
+ ['Celoročný odborný servis', 'Zabezpečíme dohodnutú evidenciu, ohlásenia, kontrolu prevádzky a priebežné poradenstvo.', 'recycle'],
 ] as const;
 
 export const annualServices = [
@@ -37,13 +37,9 @@ export const oneOffServices = [
  ['Školenie v oblasti odpadového hospodárstva', 'Uskutočníme praktické školenie o správnom nakladaní s odpadmi a plnení povinností v oblasti odpadového hospodárstva.'],
 ];
 export const clientFaqs = [
- ['Musí každá firma viesť evidenciu odpadov?', 'Povinnosti závisia od druhu a množstva odpadu, charakteru podnikateľskej činnosti a aktuálnych právnych predpisov. Pomôžeme Vám preveriť, ktoré požiadavky sa vzťahujú na Vašu spoločnosť.'],
- ['Stačí nám zmluva so zberovou spoločnosťou?', 'Zmluva so zberovou spoločnosťou rieši určitú časť nakladania s odpadmi, ale nemusí automaticky pokrývať všetky povinnosti pôvodcu odpadu. Odporúčame preveriť aj evidenciu, dokumentáciu a prípadné ohlasovacie povinnosti.'],
- ['Čo ak produkujeme iba malé množstvo odpadu?', 'Aj pri menšom množstve odpadu môžu vzniknúť konkrétne povinnosti. Rozhodujúce je posúdenie Vašej činnosti a príslušných právnych požiadaviek.'],
- ['Pomôžete nám aj vtedy, keď už máme vlastnú dokumentáciu?', 'Áno. Môžeme sa pozrieť na dostupné podklady, preveriť ich úplnosť v dohodnutom rozsahu a identifikovať oblasti, ktoré si vyžadujú pozornosť alebo aktualizáciu.'],
- ['Čo ak nevieme, aké odpady v našej firme vznikajú?', 'Začneme tým, že si vysvetlíme charakter Vašej činnosti a procesy, pri ktorých odpady vznikajú. Následne môžeme posúdiť potrebné zatriedenie a ďalší postup podľa dostupných informácií.'],
- ['Poskytujete služby aj menším firmám?', 'Áno. Rozsah spolupráce nastavujeme podľa konkrétnych potrieb spoločnosti. Dôležité je, aby riešenie zodpovedalo Vašej prevádzke a povinnostiam.'],
+ ['Od akého množstva odpadu musí firma viesť evidenciu odpadov?', 'Firma je povinná viesť evidenciu už od jedného gramu odpadov, ktoré vznikajú pri jej činnosti. Povinnosť sa teda nevzťahuje iba na firmy, ktoré produkujú veľké množstvá odpadu.'],
+ ['Môže firma odovzdať odpad inej firme, ktorá ho od nej odoberie?', 'Nie automaticky. To, že je niekto ochotný odpad prevziať, ešte neznamená, že ho môže legálne prevziať a ďalej s ním nakladať. Pri odovzdávaní odpadu je potrebné overiť, či má príjemca príslušné oprávnenia na nakladanie s daným druhom odpadu a či sú splnené zákonné podmienky jeho odovzdania.'],
+ ['Musí firma podávať ohlásenie o vzniku odpadu a nakladaní s ním?', 'Nie každá firma má povinnosť podávať ohlásenie o vzniku odpadu a nakladaní s ním. Povinnosť závisí od druhu a množstva vyprodukovaného odpadu.'],
+ ['Ako dlho môže firma skladovať nebezpečný odpad vo svojej prevádzke?', 'Podľa zákona o odpadoch možno nebezpečný odpad zhromažďovať najdlhšie jeden rok pred jeho zneškodnením a odovzdaním spoločnosti oprávnenej na zber a likvidáciu takéhoto odpadu.'],
  ['Koľko stoja vaše služby?', 'Cena závisí od rozsahu požadovaných služieb, počtu prevádzok, druhov odpadov a náročnosti spracovania podkladov. Po úvodnom posúdení Vám pripravíme individuálnu cenovú ponuku.'],
- ['Ako často sa treba venovať odpadovému hospodárstvu?', 'Odpadové hospodárstvo si vyžaduje priebežnú pozornosť. Frekvencia jednotlivých úkonov závisí od druhu odpadu, prevádzky a konkrétnych zákonných povinností. Dôležité je sledovať aj zmeny v činnosti firmy a v legislatíve.'],
- ['Čo potrebujeme na začatie spolupráce?', 'Na začiatok nám postačia základné informácie o Vašej spoločnosti, jej činnosti a súčasnom spôsobe riešenia odpadov. Podľa situácie si následne vyžiadame potrebné evidenčné a dokumentačné podklady.'],
 ];
