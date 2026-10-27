@@ -1,0 +1,21 @@
+﻿import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+const base='http://127.0.0.1:6010';let cookie='';
+async function call(path,method='GET',data,auth=false,origin=base){return fetch(base+path,{method,headers:{Origin:origin,'Content-Type':'application/json',...(auth?{Cookie:cookie}:{})},...(data?{body:JSON.stringify(data)}:{})})}
+assert.equal((await call('/api/admin/analytics')).status,401);
+const p={consent:true,id:crypto.randomUUID(),visitor:crypto.randomUUID(),session:crypto.randomUUID(),path:'/',device:'mobile',sequence:1,seconds:10,depth:40,sections:[{key:'faq',label:'FAQ',seconds:10}],targets:[{key:'contact',label:'Kontakt',clicks:2,seen:true},{key:'zero',label:'Bez kliknutia',clicks:0,seen:true}],points:[{x:2,y:35,clicks:2,moves:4}]};
+assert.equal((await call('/api/analytics','POST',p,false,'https://example.invalid')).status,403);
+assert.equal((await call('/api/analytics','POST',{...p,consent:false})).status,400);
+assert.equal((await call('/api/analytics','POST',{...p,path:'/admin'})).status,400);
+assert.equal((await call('/api/analytics','POST',p)).status,200);
+assert.equal((await call('/api/analytics','POST',p)).status,200);
+const login=await call('/api/login','POST',JSON.parse(readFileSync('.local-admin.json','utf8')));assert.equal(login.status,200);cookie=login.headers.get('set-cookie').split(';')[0];
+const before=await(await call('/api/admin/analytics?period=day&path=/&device=mobile','GET',undefined,true)).json();
+await call('/api/analytics','POST',{...p,sequence:2,seconds:20});
+await call('/api/analytics','POST',{...p,sequence:1,seconds:1});
+const after=await(await call('/api/admin/analytics?period=day&path=/&device=mobile','GET',undefined,true)).json();assert.equal(after.summary.views,before.summary.views);assert.equal(after.summary.seconds,before.summary.seconds+10);assert.ok(after.targets.some(t=>t.label.endsWith('Bez kliknutia')&&t.clicks===0));
+assert.equal((await call('/api/admin/analytics?period=invalid','GET',undefined,true)).status,400);
+assert.equal((await call('/api/admin/analytics?path=/admin','GET',undefined,true)).status,400);
+for(const period of ['day','week','month','year'])assert.equal((await call('/api/admin/analytics?period='+period,'GET',undefined,true)).status,200);
+writeFileSync('outputs/analytics-test-cookie.json',JSON.stringify({cookie}));
+console.log('Analytics integration passed: auth, consent, origin, validation, deduplication, stale batches, zero clicks and four periods.');

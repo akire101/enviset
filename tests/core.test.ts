@@ -25,3 +25,28 @@ test('Section navigation follows section starts, including manual scrolling',asy
  assert.equal(currentSection(tops,790),1);assert.equal(currentSection(tops,1200),1);
  assert.equal(currentSection(tops,1600),2);assert.equal(currentSection(tops,9999),3);
 });
+
+test('Analytics rejects private routes, query strings, missing consent and oversized maps',async()=>{
+ const {analyticsSchema}=await import('../app/analytics-model.ts');
+ const p={consent:true,id:crypto.randomUUID(),visitor:crypto.randomUUID(),session:crypto.randomUUID(),path:'/',device:'mobile',sequence:1,seconds:5,depth:30,sections:[],targets:[],points:[]};
+ assert.equal(analyticsSchema.safeParse(p).success,true);
+ for(const path of ['/admin','/api/admin/messages','/kontakt?email=person@example.com','//evil.example'])assert.equal(analyticsSchema.safeParse({...p,path}).success,false);
+ assert.equal(analyticsSchema.safeParse({...p,consent:false}).success,false);
+ assert.equal(analyticsSchema.safeParse({...p,points:Array(401).fill({x:1,y:1,clicks:0,moves:1})}).success,false);
+ assert.equal(analyticsSchema.safeParse({...p,seconds:-1}).success,false);
+});
+test('Analytics periods use Bratislava dates and aggregate zero-click exposed targets',async()=>{
+ const {periodStart,localDay,aggregateDetails}=await import('../app/analytics-model.ts');
+ assert.equal(localDay(new Date('2026-10-27T23:30:00Z')),'2026-10-28');
+ assert.equal(periodStart('week','2026-01-03'),'2025-12-28');
+ assert.equal(periodStart('year','2026-10-27'),'2025-10-28');
+ const payload=JSON.stringify({sections:[{key:'faq',label:'FAQ',seconds:10}],targets:[{key:'contact',label:'Kontakt',clicks:0,seen:true}],points:[{x:1,y:2,clicks:2,moves:3}]});
+ const result=aggregateDetails([{path:'/',payload},{path:'/',payload}]);
+ assert.equal(result.sections[0].seconds,20);assert.equal(result.targets[0].views,2);assert.equal(result.targets[0].clicks,0);assert.equal(result.points[0].moves,6);
+});
+test('Analytics charts keep zero-visit days and all 24 hours',async()=>{
+ const {fillSeries}=await import('../app/analytics-model.ts');
+ const series=fillSeries([{bucket:'2026-10-27',visitors:2,views:3}],'week','2026-10-21','2026-10-27');
+ assert.equal(series.length,7);assert.equal(series[0].views,0);assert.equal(series[6].visitors,2);
+ assert.equal(fillSeries([],'day','2026-10-27','2026-10-27').length,24);
+});

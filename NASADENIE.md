@@ -109,3 +109,11 @@ Formulár uloží dopyt do `messages`. Voliteľné `CONTACT_NOTIFICATION_URL` a 
 Na finálnej doméne skontrolujte články, služby, kontaktný formulár, prihlásenie/odhlásenie, anonymné odmietnutie `/api/admin/posts`, HTTPS, `robots.txt`, sitemap a canonical URL. Overte, že nový dopyt vidí iba administrátor, a nastavte zálohovanie D1. Verejné cloudové nasadenie ani doručenie e-mailov pri lokálnom exporte nebolo overené.
 
 Oficiálne zdroje: [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), [D1 príkazy](https://developers.cloudflare.com/workers/wrangler/commands/d1/), [Wrangler konfigurácia](https://developers.cloudflare.com/workers/wrangler/configuration/), [Secrets](https://developers.cloudflare.com/workers/configuration/secrets/).
+
+## Analytika od v9
+
+Nová tabuľka analytics_views a indexy majú idempotentné vytvorenie v app/analytics-db.ts pri prvom autorizovanom čítaní alebo validnom meraní; netreba pridávať tajomstvá ani externú službu. SQL je aj v drizzle/0002_analytics.sql pre samostatné zriadenie. Bootstrap nemení existujúce tabuľky. Pri databáze bez migračného denníka nespúšťajte naslepo staré migrácie nad už existujúcimi tabuľkami.
+
+Štatistiky používajú rovnakú D1 väzbu DB a administrátorskú reláciu. Mazanie starších dát sa vykonáva pri ďalšom prístupe (400 dní); nie samostatným plánovačom. Detaily sú obmedzené na 1 000 posledných zobrazení, počty agregované za celé zvolené obdobie.
+
+Lokálny test: node tests/analytics-integration.mjs používa výhradne http://127.0.0.1:6010 a lokálne testovacie prihlásenie. Vytvára syntetické návštevy len lokálne. Súbory .dev.vars, .local-admin.json a outputs musia zostať ignorované.

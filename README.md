@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v8.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v9.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v8 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v9 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -18,12 +18,23 @@ Slovenský firemný web ENVI set predstavuje poradenstvo a manažment odpadovéh
 | Služby | Deväť detailov služieb, osem položiek celoročného servisu a osem jednorazových služieb | Súčasť webu |
 | Blog / poradňa | Kategórie, vyhľadávanie, stránkovanie, detail a súvisiace články | Súčasť webu; import obsahuje tri pôvodné a päť nových článkov; existujúce úpravy sa neprepisujú |
 | Administrácia | Editor, koncepty, publikovanie, archív a stiahnutie zálohy článkov | Prihlásenie a úpravy konceptu na verejnom webe overené 13. 10. 2026 |
+| Štatistiky | Denné, 7-dňové, 30-dňové a 365-dňové prehľady, čas v sekciách, kliknutia a mapy pohybu myši | Vlastné meranie po súhlase; dostupné iba administrátorovi |
 | Dopyty | Formulár a súkromná schránka administrátora | Ukladajú sa do databázy |
 | E-mailové oznámenia | Pripravené prepojenie s e-mailovou službou | Zatiaľ nenastavené; web neposiela e-maily |
 | Sprievodca | Pomocník pre časté otázky s odkazmi na služby | Odpovedá priamo v prehliadači, bez externého AI modelu |
 | Mobilné zobrazenie | Rozloženie a navigácia prispôsobené mobilu | Súčasť webu |
 | SEO | Údaje pre vyhľadávače, mapa stránok a náhľady pri zdieľaní | Pripravené; zaradenie do vyhľadávačov zatiaľ vypnuté |
 | Aktualizácie | Automatické nasadenie zmien z GitHubu cez Cloudflare | Postup je opísaný v návode na nasadenie |
+
+## Štatistiky v administrácii
+
+V menu administrácie zvoľte **Štatistiky**. Obdobia: dnes (hodiny), posledných 7 alebo 30 dní (dni), posledných 365 dní (mesiace), v časovom pásme Bratislava. Možno filtrovať stránku a mobil/počítač. Prehľad rozlišuje unikátne identifikátory prehliadačov, návštevy (relácie karty), zobrazenia, aktívny čas, kliknutia na prvky a dosah rolovania. Nulové dni sa zobrazujú tiež. Nová návšteva vzniká po 30 minútach neaktivity pri ďalšom načítaní stránky.
+
+Tabuľky ukazujú najnavštevovanejšie stránky, čas v sekciách a najviac/najmenej klikané viditeľné odkazy či tlačidlá, vrátane nuly. Čas sa odhaduje po 5 sekundách pri viditeľnej aktívnej karte a aktivite v poslednej minúte. Hlásenia odchádzajú približne každých 15 sekúnd a pri odchode zo stránky.
+
+Teplotné mapy kliknutí a vzoriek pohybu myši sú **schematické**, podľa relatívnej šírky a výšky dokumentu; nie sú snímkou stránky ani sledovaním očí. Pre mapu treba vybrať jednu stránku a zariadenie. Myš sa vzorkuje najviac približne raz za 750 ms, najviac 400 buniek na zobrazenie; dotykový mobil neposkytuje pohyb myši. Detail správania používa najviac posledných 1 000 zobrazení vo výbere, celkové počty celé obdobie.
+
+Údaje vznikajú až od zavedenia funkcie a iba po súhlase, preto nepredstavujú celkový počet všetkých návštevníkov. Reklamné blokovanie, odmietnutie, DNT/GPC a prihlásení administrátori sa do merania nezapočítajú. Nezbierame obsah polí, sprievodcu, snímky obrazovky ani presné IP adresy do analytických záznamov. Dáta sú prístupné len po overení administrátorskej relácie. Merania staršie než 400 dní sa čistia pri ďalšom zápise alebo čítaní štatistík. Prevádzkovateľ má stále dokončiť celkové informačné oznámenie o súkromí.
 
 ## Čo vie verejná stránka
 
@@ -137,7 +148,7 @@ Administrácia používa jeden účet. Neobsahuje samostatné používateľské 
 
 Formulár má štyri viditeľné polia: meno a priezvisko, e-mail, telefón a text správy. Služba z odkazu sa doplní priamo do správy. Tlačidlá na dopyt smerujú na formulár cez kotvu. Informácie o súkromí sú uvedené pri odoslaní.
 
-- Kontrola údajov v prehliadači aj na serveri; správa má 15 až 5 000 znakov.
+- Kontrola údajov v prehliadači aj na serveri; správa má 15 až 1 000 znakov.
 - Skryté pole pre robotov a serverový limit požiadaviek zostávajú zapnuté.
 - Počas odosielania sa tlačidlo zablokuje; chyba sa zobrazí pri formulári.
 - Úspešné uloženie zobrazí referenciu dopytu. Opakovanie rovnakej požiadavky nevytvorí duplicitu.
@@ -224,7 +235,7 @@ Obrázky vo formáte WebP majú uvedené rozmery a textový opis podľa účelu.
 
 Údaje o webe, článkoch a hierarchii služieb sa zapisujú vo formáte JSON-LD. Všetky tri typy závisia od platného SITE_URL; nastavenie odmieta neplatnú adresu, adresu bez HTTPS a vybrané testovacie domény.
 
-Firemné údaje sú doplnené. Pred povolením vyhľadávačov treba dokončiť informácie o súkromí, potvrdiť finálnu HTTPS adresu a práva k fotografiám. Správca potom nastaví SITE_URL a skontroluje údaje pre vyhľadávače, robots a mapu stránok. Google Search Console ani meranie návštevnosti zatiaľ nie sú zapojené. Zaradenie do Google a merania rýchlosti Lighthouse/Core Web Vitals neboli v rámci tejto kontroly overované. Doplnkové schémy Organization, LocalBusiness a FAQPage web zatiaľ nepoužíva.
+Firemné údaje sú doplnené. Pred povolením vyhľadávačov treba dokončiť informácie o súkromí, potvrdiť finálnu HTTPS adresu a práva k fotografiám. Správca potom nastaví SITE_URL a skontroluje údaje pre vyhľadávače, robots a mapu stránok. Google Search Console zatiaľ nie je zapojená. Vlastné meranie návštevnosti je dostupné v záložke Štatistiky po prihlásení. Zaradenie do Google a merania rýchlosti Lighthouse/Core Web Vitals neboli v rámci tejto kontroly overované. Doplnkové schémy Organization, LocalBusiness a FAQPage web zatiaľ nepoužíva.
 
 ## Všetky prepojenia a údaje
 
@@ -241,9 +252,9 @@ Firemné údaje sú doplnené. Pred povolením vyhľadávačov treba dokončiť 
 | Detail služby → Slov-Lex | Verejné odkazy na zákon o odpadoch a Katalóg odpadov, bez odosielania evidencie |
 | Voliteľné e-mailové oznámenie | Zatiaľ nenastavené prepojenie cez HTTPS s prístupovým kľúčom; službe odovzdáva iba oznámenie a ID dopytu. Po 5 sekundách čakanie ukončí; prijatie službou ešte nepotvrdzuje doručenie e-mailu |
 
-**Prepojenia, ktoré web zatiaľ nemá:** platby, rezervácie termínov, systém správy zákazníkov (CRM), účtovníctvo, elektronické podania úradom, newsletter a analytické či reklamné nástroje. Pomocné súbory pôvodného vývojového prostredia nepridávajú tieto služby do zákazníckeho webu; neaktivujú ani prihlásenie cez ChatGPT.
+**Prepojenia, ktoré web zatiaľ nemá:** platby, rezervácie termínov, systém správy zákazníkov (CRM), účtovníctvo, elektronické podania úradom, newsletter a externé reklamné nástroje. Vlastné meranie návštevnosti je súčasťou administrácie. Pomocné súbory pôvodného vývojového prostredia nepridávajú tieto služby do zákazníckeho webu; neaktivujú ani prihlásenie cez ChatGPT.
 
-Aplikácia nezapína vlastné analytické ani reklamné cookies. Na kontaktnej stránke sa načítava vložená Google mapa, ktorá vytvára spojenie s poskytovateľom mapy a môže spracúvať technické údaje pripojenia. Admin používa nevyhnutnú prihlasovaciu cookie. Chat sa neposiela na server. Kontaktné údaje sú dostupné prihlásenému administrátorovi. Informácie o ochrane súkromia sú pracovné; technické opatrenia samy osebe nepotvrdzujú úplný súlad s GDPR.
+Analytika je predvolene vypnutá; návštevník ju môže povoliť, odmietnuť alebo vypnúť v pätičke. Voľba sa ukladá lokálne na 180 dní, náhodný identifikátor prehliadača najviac na 400 dní. Reklamné cookies ani Google mapa sa nepoužívajú. Admin používa nevyhnutnú prihlasovaciu cookie. Chat sa neposiela na server. Kontaktné údaje sú dostupné prihlásenému administrátorovi. Informácie o ochrane súkromia sú pracovné; technické opatrenia samy osebe nepotvrdzujú úplný súlad s GDPR.
 
 Ak bude e-mailové prepojenie neskôr zapnuté, správa sa najprv uloží do databázy. Prípadný výpadok oznamovacej služby už uložený dopyt neodstráni. Opakované odoslanie s rovnakou referenciou nevytvorí ďalší dopyt ani ďalšie oznámenie; automatické opakovanie neúspešného oznámenia zatiaľ nie je k dispozícii.
 
@@ -266,6 +277,16 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 27. 10. 2026 – v9, súkromná analytika návštevnosti
+
+**Pridané:** záložka Štatistiky, štyri obdobia, počty návštevníkov/návštev/zobrazení, graf, prehľad stránok, čas v sekciách, najviac aj najmenej klikané prvky a relatívne mapy kliknutí a myši. Dobrovoľný súhlas, odmietnutie a vypnutie v pätičke. Aktualizované informácie o súkromí.
+
+**Ochrana a nasadenie:** API štatistík vyžaduje prihlásenie, vstupy sú obmedzené a validované; opakované hlásenia nenavyšujú počty. Nová tabuľka sa vytvorí idempotentne pri prvom oprávnenom čítaní alebo platnom meraní. Existujúce články, správy a účty sa nemenia.
+
+**Overenie:** 13 testov, kontrola typov, zostavenie, lokálne integračné testy súhlasu, pôvodu požiadaviek, ochrany API, štyroch období, duplicitných a starších hlásení a vytvorenia tabuľky. Prehliadač: pred súhlasom/po odmietnutí/po vypnutí bez merania, obsah polí sa neposiela, aktívny čas/kliknutia/myš fungujú; mobil 390 px bez presahu a desktop 1440 px. Prihlásený admin sa nemeria ani na verejnej stránke.
+
+**Limity:** testovacie údaje sú iba lokálne. Reálnu návštevnosť nemožno spätne doplniť; fyzický telefón nebol testovaný. E-mailové oznámenia, dokončenie celkového oznámenia o súkromí a indexovanie zostávajú otvorené.
 
 ### 27. 10. 2026 – v8, plynulé rozbalenie FAQ
 
