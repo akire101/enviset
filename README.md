@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v10.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v11.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v10 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v11 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -45,7 +45,7 @@ Teplotné mapy kliknutí a vzoriek pohybu myši sú **schematické**, podľa rel
 - Štyri kroky spolupráce na súvislej zvislej časovej osi: osobné stretnutie, vstupná odborná analýza, dodanie a vysvetlenie dokumentácie, celoročný odborný servis.
 - Hodnoty: odbornosť, osobný prístup, zrozumiteľnosť, pripravenosť na kontrolu a dlhodobé partnerstvo.
 - Osem odvetví: výroba, autoservisy, stavebníctvo, obchod, kancelárie, gastro, sklady a logistika, remeselné prevádzky.
-- Odkazy z odvetví a detailov služieb predvyplnia príslušnú tému kontaktného formulára.
+- Obrázky aj názvy odvetví na úvode vedú na prehľad jednorazových a paušálnych služieb. Odkazy z detailov služieb predvyplnia príslušnú tému kontaktného formulára.
 - Deväť rozbaľovacích odpovedí z dodaných podkladov: evidencia, zberová spoločnosť, malé množstvá odpadov, existujúca dokumentácia, identifikácia odpadov, menšie firmy, cena, priebežné povinnosti a začiatok spolupráce.
 - Výzvy na konzultáciu prepájajú služby, blog a kontakt.
 
@@ -277,6 +277,12 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 27. 10. 2026 – v11, odkazy odvetví na služby
+
+**Upravené:** všetkých osem obrázkov a názvov v Pre koho sú naše služby určené vedie na /sluzby s jednorazovými aj paušálnymi službami.
+
+**Overenie:** všetky odkazy kontrolované, obrázok aj názov sú v jednom odkaze. Ostatné funkcie a obmedzenia sa nemenia.
 
 ### 27. 10. 2026 – v10, animácie služieb a mobilné detaily
 
