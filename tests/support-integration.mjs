@@ -1,0 +1,35 @@
+﻿import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const base='http://127.0.0.1:6010';
+async function call(path,data,auth='',method=data?'POST':'GET',origin=base){const r=await fetch(base+path,{method,headers:{Origin:origin,'Content-Type':'application/json',...(auth.startsWith('Bearer ')?{Authorization:auth}:auth?{Cookie:auth}:{})},...(data?{body:JSON.stringify(data)}:{})});let body;try{body=await r.json()}catch{body={}}return {status:r.status,body,cookie:r.headers.get('set-cookie')?.split(';')[0]}}
+const admin=await call('/api/login',JSON.parse(fs.readFileSync('.local-admin.json','utf8')));assert.equal(admin.status,200);assert.ok(admin.cookie);
+const creds={username:'podpora',password:crypto.randomUUID()};assert.equal((await call('/api/admin/support-user',creds,admin.cookie)).status,200);
+const support=await call('/api/login',creds);assert.equal(support.status,200);assert.ok(support.cookie);
+for(const path of ['/api/admin/posts','/api/admin/messages','/api/admin/analytics','/api/admin/support-stats'])assert.equal((await call(path,undefined,support.cookie)).status,401,path);
+assert.equal((await call('/api/admin/support-user',creds,support.cookie)).status,401);
+assert.equal((await call('/api/support')).status,401);
+assert.equal((await call('/api/support',{action:'heartbeat',online:true},support.cookie,'POST','https://evil.invalid')).status,403);
+await call('/api/support',{action:'heartbeat',online:true},support.cookie);
+const online=(await call('/api/chat')).body.online;
+if(process.argv.includes('--offline')){assert.equal(online,false);assert.equal((await call('/api/chat',{id:crypto.randomUUID(),text:'Offline test'})).status,409);console.log('Offline hours, admin/support isolation, CSRF checks passed.');await call('/api/logout',{},support.cookie);await call('/api/logout',{},admin.cookie);process.exit()}
+assert.equal(online,true,'Use controlled business-hours fixture locally');
+const token=Array.from(crypto.getRandomValues(new Uint8Array(32)),x=>x.toString(16).padStart(2,'0')).join('');const auth='Bearer '+token;
+const message={id:crypto.randomUUID(),text:'Local QA visitor one'};
+const sent=await call('/api/chat',message,auth);assert.equal(sent.status,200,JSON.stringify(sent));const room=sent.body.room;
+assert.equal((await call('/api/chat',message,auth)).status,200);assert.equal((await call('/api/chat',undefined,auth)).body.messages.length,1);
+const second=await call('/api/chat',{id:crypto.randomUUID(),text:'Local QA visitor two'});assert.equal(second.status,200);assert.notEqual(second.body.room,room);assert.equal((await call('/api/chat',undefined,'Bearer '+second.body.token)).body.messages.length,1);
+assert.equal((await call('/api/chat',undefined,'Bearer '+'0'.repeat(64))).status,404);
+assert.equal((await call('/api/support',{action:'rate',room,rating:5,note:'bad'},support.cookie)).status,403);
+const before=(await call('/api/support',undefined,support.cookie)).body.rooms.find(r=>r.id===room).unread;assert.equal(before,1);
+await call('/api/support?room='+room,undefined,admin.cookie);assert.equal((await call('/api/support',undefined,support.cookie)).body.rooms.find(r=>r.id===room).unread,1);
+assert.equal((await call('/api/support',{action:'read',room,through:999999999},admin.cookie)).status,403);
+const detail=(await call('/api/support?room='+room,undefined,support.cookie)).body;assert.equal((await call('/api/support',{action:'read',room,through:detail.messages.at(-1).seq},support.cookie)).status,200);
+assert.equal((await call('/api/support',undefined,support.cookie)).body.rooms.find(r=>r.id===room).unread,0);
+const reply={action:'reply',room,message:{id:crypto.randomUUID(),text:'Local QA answer'}};assert.equal((await call('/api/support',reply,support.cookie)).status,200);await call('/api/support',reply,support.cookie);assert.equal((await call('/api/chat',undefined,auth)).body.messages.length,2);
+assert.equal((await call('/api/support',{action:'rate',room,rating:4,note:'Local QA'},admin.cookie)).status,200);
+assert.equal((await call('/api/support',undefined,support.cookie)).body.rooms.find(r=>r.id===room).note,undefined);
+assert.equal((await call('/api/admin/support-stats',undefined,admin.cookie)).status,200);
+assert.equal((await call('/api/support',{action:'close',room},support.cookie)).status,200);assert.equal((await call('/api/chat',{id:crypto.randomUUID(),text:'Closed'},auth)).status,409);
+await call('/api/support',{action:'heartbeat',online:false},support.cookie);assert.equal((await call('/api/chat')).body.online,false);
+fs.writeFileSync('outputs/support-qa.json',JSON.stringify({support:creds,adminCookie:admin.cookie,supportCookie:support.cookie,room,visitorToken:token}));
+console.log('Chat integration passed: roles, CSRF, two visitors, isolation, retries, replies, reads, admin observer, rating, closure and presence.');

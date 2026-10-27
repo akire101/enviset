@@ -12,7 +12,7 @@
     "start": "node scripts/start-built.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "test": "node --import tsx --test --test-isolation=none tests/core.test.ts tests/chat-mail.test.ts",
+    "test": "node --import tsx --test --test-isolation=none tests/core.test.ts tests/chat-mail.test.ts tests/support.test.ts",
     "test:integration": "node tests/integration.mjs",
     "typecheck": "tsc --noEmit"
   },

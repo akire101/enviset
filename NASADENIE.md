@@ -117,3 +117,8 @@ Nová tabuľka analytics_views a indexy majú idempotentné vytvorenie v app/ana
 Štatistiky používajú rovnakú D1 väzbu DB a administrátorskú reláciu. Mazanie starších dát sa vykonáva pri ďalšom prístupe (400 dní); nie samostatným plánovačom. Detaily sú obmedzené na 1 000 posledných zobrazení, počty agregované za celé zvolené obdobie.
 
 Lokálny test: node tests/analytics-integration.mjs používa výhradne http://127.0.0.1:6010 a lokálne testovacie prihlásenie. Vytvára syntetické návštevy len lokálne. Súbory .dev.vars, .local-admin.json a outputs musia zostať ignorované.
+
+
+## Živá podpora (v13, 28. 10. 2026)
+Tabuľky support_users, support_sessions, support_rooms a support_messages sa bezpečne vytvoria pri prvom použití. Zodpovedajú drizzle/0003_support.sql; existujúce dáta sa nemenia. V administrácii → Štatistiky podpory → Prihlasovací účet podpory vytvorte účet podpora. Heslo ani jeho hash nepatria do Git-u. Zmena hesla ruší existujúce relácie podpory. Pracovník sa prihlasuje cez /admin a uvidí iba pracovisko podpory.
+Lokálne: tests/support-integration.mjs používa výlučne 127.0.0.1:6010 a lokálny testovací účet; --offline testuje zatvorené hodiny. Kompletný online test vyžaduje pracovný čas alebo dočasný lokálny hodinový fixture, ktorý sa nesmie nasadiť. Unit testy kontrolujú aj letný čas a víkend.

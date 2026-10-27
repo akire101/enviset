@@ -1,12 +1,12 @@
 ﻿# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v12.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 28. 10. 2026. Verzia v13.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v12 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v13 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -277,6 +277,20 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 28. 10. 2026 – v13, živá podpora a meranie
+
+**Pridané:** samostatná rola podpora bez článkov, kontaktných správ a analytiky. Viac súbežných konverzácií, rozpracované odpovede, neprečítané správy, zvuk a systémové notifikácie po povolení. Správa čakajúca viac ako päť minút sa zvýrazní a upozornenie sa opakuje raz za minútu. Panel musí zostať otvorený; uspatie zariadenia alebo obmedzenia prehliadača môžu upozornenia zdržať.
+
+**Admin:** karty Dohľad podpory a Štatistiky podpory, čítanie bez zmeny neprečítaných správ, hodnotenie 1–5 a interné poznámky, počty rozhovorov, časy prvej odpovede/prečítania a odpovede operátora. Podpora aj návštevník sú informovaní o kontrole kvality. V karte štatistík je bezpečné vytvorenie/obnovenie účtu podpora; heslo sa ukladá iba ako odvodený hash so soľou.
+
+**Dostupnosť a súkromie:** živý chat vyžaduje aktívny panel prihlásenej podpory a Po–Pi 08:00–17:00 v Bratislave. Dostupnosť sa overuje krátkym pravidelným spojením; po výpadku zaniká do 75 sekúnd. Mimo dostupnosti sa zobrazí e-mail. Návštevník má náhodný prístupový token iba k svojmu rozhovoru. Správy sa uchovávajú 90 dní od poslednej aktivity a staršie sa odstraňujú pri používaní funkcie. Nejde o automatické personálne hodnotenie.
+
+**Vylepšené:** silnejší, lokálny vietor sleduje označenú rastlinku aj pri mobilnom orezaní fotografie. Analytika sa v administrácii obnovuje každých 30 sekúnd. Súhlas sa pamätá pri navigácii, ale obnovenie stránky (bežné aj Ctrl+F5) ho vyžiada znova; prehliadač tieto druhy obnovenia spoľahlivo nerozlišuje. Prihlásený admin/podpora a odmietnuté meranie sa nezapočítavajú.
+
+**Overenie:** 16 automatických testov; lokálna integrácia rolí, CSRF, dvoch návštevníkov, oddelenia rozhovorov, opakovaných požiadaviek, odpovedí, prečítania, hodnotenia, ukončenia a dostupnosti. Obojsmerný rozhovor v oddelených prehliadačoch, mobil bez vodorovného pretekania, zvuk a opakovanie po piatich minútach s riadeným časom. Prijatie analytiky overené na verejnom webe; celé dátové prehľady testované lokálne.
+
+**Otvorené:** aktiváciu produkčného účtu podpory je nutné dokončiť cez prihlásenú administráciu. Fyzický telefón, uspatie zariadenia a právny audit neboli overené. Retencia nebeží samostatným plánovačom. Zmluvné a pracovnoprávne podmienky monitorovania má potvrdiť prevádzkovateľ.
 
 ### 27. 10. 2026 – v12, rastlinka a informácie o meraní
 
