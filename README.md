@@ -1,12 +1,12 @@
-# ENVI set – funkcie webu, bezpečnosť a SEO
+﻿# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v11.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v12.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v11 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v12 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -278,6 +278,16 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 
 ## Datovaný prehľad zmien
 
+### 27. 10. 2026 – v12, rastlinka a informácie o meraní
+
+**Vylepšené:** vietor je sústredený na zeleň vpravo dole. Na želanie zákazníka bolo odstránené tlačidlo pauzy; nastavenie obmedzeného pohybu a zastavenie mimo obrazovky zostávajú.
+
+**Pridané:** schválené texty lišty a samostatná stránka Cookies vrátane pohybu myši, úložiska, lehôt a odvolania súhlasu cez Nastavenia súkromia. Meranie naďalej vyžaduje súhlas.
+
+**Overenie:** kontrola typov a produkčné zostavenie prešli. Prehliadač overil mobil a počítač bez tlačidla pauzy, vypnutie efektu pri obmedzenom pohybe, nové texty a nulové analytické požiadavky pred súhlasom aj po odmietnutí.
+
+**Obmedzenia:** nejde o právny audit; zmluvné nastavenie Cloudflare a úplné oznámenie pre kontaktný formulár musí overiť prevádzkovateľ. Fyzický telefón nebol testovaný.
+
 ### 27. 10. 2026 – v11, odkazy odvetví na služby
 
 **Upravené:** všetkých osem obrázkov a názvov v Pre koho sú naše služby určené vedie na /sluzby s jednorazovými aj paušálnymi službami.
@@ -394,3 +404,4 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 Pri každej aktualizácii repozitára sa aktualizuje **dátum, čo bolo pridané, čo bolo vylepšené, celkový prehľad, overenie a zostávajúce obmedzenia**. Najnovší záznam patrí navrch; história zostáva zachovaná. Zmena funkcie, bezpečnosti, prepojenia alebo SEO sa premietne aj do príslušnej kapitoly.
 
 Za aktualizáciu tohto prehľadu zodpovedá správca pri úpravách webu; pracovné pravidlo je uložené v AGENTS.md. Publikovanie článku v administrácii tento súbor automaticky nemení. Do verejnej dokumentácie nepatria heslá, prístupové kľúče ani osobné správy zákazníkov.
+
