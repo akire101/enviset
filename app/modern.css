@@ -109,3 +109,14 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
  .chat-window{bottom:calc(78px + env(safe-area-inset-bottom));max-height:calc(100dvh - 238px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
  .footer-bottom{padding-bottom:90px}
 }
+
+/* A collapsed mobile disclosure must not reserve layout space. */
+@media(max-width:760px){.services-panel:not(.is-open){display:none}}
+@media(prefers-reduced-motion:no-preference){
+ @supports(animation-timeline:view()){
+  @keyframes content-enter{from{opacity:.45;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  .audience-grid>a,.help-grid>a,.section-head,.contact-form,.contact-aside{
+   animation:content-enter linear both;animation-timeline:view();animation-range:entry 0% entry 22%;
+  }
+ }
+}
