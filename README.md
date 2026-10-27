@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 27. 10. 2026. Verzia v9.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 27. 10. 2026. Verzia v10.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v9 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v10 – 27. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -277,6 +277,14 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 27. 10. 2026 – v10, animácie služieb a mobilné detaily
+
+**Opravené:** plynulé otvorenie aj zatvorenie FAQ je spoločné pre úvod a všetkých deväť detailov služieb vrátane Odbornej dokumentácie. Mobilná horná lišta má poradie Bezplatná konzultácia | Zavolaj, presne polovicu šírky pre každé tlačidlo. Mám inú otázku je na mobile pod odpoveďami; na počítači ostáva pri nadpise.
+
+**Vylepšené:** prechod myšou cez ktorýkoľvek krok spolupráce zvýrazní číslo, nadpis aj text. Jemný vietor deformuje len spodnú zeleň hlavnej fotografie, bez zdvojenia obrázka. Dá sa pozastaviť tlačidlom, automaticky stojí mimo obrazovky alebo na neaktívnej karte a pri obmedzenom pohybe sa nezobrazuje. Opravená medzera v mobilnom hlavnom nadpise.
+
+**Overenie:** všetkých deväť služieb má tri animované FAQ; priebežná výška overená pri otvorení aj zatvorení. Šírky tlačidiel 194,5/194,5 px pri 390 px a 159,5/159,5 pri 320 px; bez vodorovného presahu. Overené poradie FAQ odkazu, zvýraznenie kroku vrátane textu, pozastavenie/reduced-motion a pixelové porovnanie vetra: horná časť stabilná, spodná sa mení. Fyzický telefón nebol testovaný. Ostatné funkcie a otvorené obmedzenia zostávajú bez zmeny.
 
 ### 27. 10. 2026 – v9, súkromná analytika návštevnosti
 
