@@ -115,7 +115,7 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 @media(prefers-reduced-motion:no-preference){
  @supports(animation-timeline:view()){
   @keyframes content-enter{from{opacity:.45;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-  .audience-grid>a,.help-grid>a,.section-head,.contact-form,.contact-aside{
+  .audience-grid>a,.help-grid>a,.section-head,.contact-form,.contact-aside,#faq>div:first-child,#faq .faq>details{
    animation:content-enter linear both;animation-timeline:view();animation-range:entry 0% entry 22%;
   }
  }
