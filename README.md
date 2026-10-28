@@ -1,12 +1,12 @@
 ﻿# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 28. 10. 2026. Verzia v27.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 28. 10. 2026. Verzia v28.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v27 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v28 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -277,6 +277,10 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 28. 10. 2026 – v28, upravená ponuka Služby
+
+Rozbaľovacie menu Služby obsahuje sedem položiek s názvami dodanými zákazníkom: dokumentácia v oblasti odpadového hospodárstva, evidencia, ohlasovacie povinnosti, osobná kontrola, informovanie o legislatíve, telefonické a emailové poradenstvo a nebezpečné odpady. Každá vedie na existujúci detail služby; nebezpečné odpady sa neopakujú.
 
 ### 28. 10. 2026 – v27, súvislý príbeh O nás
 

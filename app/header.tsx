@@ -4,7 +4,15 @@ import {usePathname} from 'next/navigation';
 import {flushSync} from 'react-dom';
 import {Menu,X,ChevronDown,ArrowUpRight,ArrowRight} from 'lucide-react';
 import {Logo,Icon} from './components';
-import {services} from './content';
+const menuServices = [
+ {slug:'odborna-dokumentacia',icon:'file',title:'Dokumentácia v oblasti odpadového hospodárstva'},
+ {slug:'evidencia-odpadov',icon:'list',title:'Evidencia odpadov'},
+ {slug:'ohlasovacie-povinnosti',icon:'send',title:'Ohlasovacie povinnosti'},
+ {slug:'kontrola-a-poradenstvo',icon:'shield',title:'Osobná kontrola prevádzky'},
+ {slug:'legislativny-servis',icon:'law',title:'Priebežné informovanie o dôležitých zmenách v legislatíve'},
+ {slug:'odborne-poradenstvo',icon:'meeting',title:'Odborné telefonické a emailové poradenstvo'},
+ {slug:'nebezpecne-odpady',icon:'hazard',title:'Nebezpečné odpady'},
+];
 
 export function Header(){
  const [mobileOpen,setMobileOpen]=useState(false);
@@ -42,7 +50,7 @@ export function Header(){
     <button ref={trigger} type="button" className={`services-trigger ${active('/sluzby')?'active':''}`} aria-expanded={servicesOpen} aria-controls="services-dropdown" onClick={event=>{clearHover();setServicesOpen(event.detail>0&&desktopMouse('mouse')?true:!servicesOpen)}} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();flushSync(()=>setServicesOpen(true));panel.current?.querySelector<HTMLAnchorElement>('a')?.focus({preventScroll:true})}}}>Služby<ChevronDown size={15} aria-hidden="true"/></button>
     <div ref={panel} id="services-dropdown" className={`services-panel ${servicesOpen?'is-open':''}`} aria-hidden={!servicesOpen} inert={!servicesOpen}>
      <div className="dropdown-main"><div className="dropdown-heading"><a href="/sluzby" onClick={close}>Všetky služby<ArrowUpRight size={16}/></a></div>
-      <div className="dropdown-grid">{services.map(service=><a key={service.slug} href={`/sluzby/${service.slug}`} className="dropdown-service" onClick={close} aria-current={path===`/sluzby/${service.slug}`?'page':undefined}><span className="dropdown-icon"><Icon name={service.icon} size={23}/></span><span><strong>{service.title}</strong></span><ArrowUpRight className="dropdown-arrow" size={16}/></a>)}</div>
+      <div className="dropdown-grid">{menuServices.map(service=><a key={service.slug} href={`/sluzby/${service.slug}`} className="dropdown-service" onClick={close} aria-current={path===`/sluzby/${service.slug}`?'page':undefined}><span className="dropdown-icon"><Icon name={service.icon} size={23}/></span><span><strong>{service.title}</strong></span><ArrowUpRight className="dropdown-arrow" size={16}/></a>)}</div>
      </div>
 
     </div>
