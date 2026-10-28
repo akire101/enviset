@@ -1,12 +1,12 @@
 ﻿# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 28. 10. 2026. Verzia v17.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 28. 10. 2026. Verzia v18.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v17 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v18 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -133,7 +133,7 @@ Administrátor môže stiahnuť **zálohu všetkých článkov do súboru JSON**
 
 ### Schránka dopytov
 
-- Zobrazuje meno, e-mail, správu a prípadnú spoločnosť, telefón, službu a odvetvie.
+- Zobrazuje názov firmy (pri starších dopytoch meno), e-mail, správu a prípadnú spoločnosť, telefón, službu a odvetvie.
 - Uvádza čas prijatia a počet nových správ.
 - Umožňuje označiť správu ako vybavenú alebo opäť novú.
 - E-mailový odkaz otvorí e-mailovú aplikáciu na ručné odpovedanie.
@@ -146,7 +146,7 @@ Administrácia používa jeden účet. Neobsahuje samostatné používateľské 
 
 ## Kontaktný formulár
 
-Formulár má štyri viditeľné polia: meno a priezvisko, e-mail, telefón a text správy. Služba z odkazu sa doplní priamo do správy. Tlačidlá na dopyt smerujú na formulár cez kotvu. Informácie o súkromí sú uvedené pri odoslaní.
+Formulár má štyri viditeľné polia: názov firmy, e-mail, telefón a text správy. Služba z odkazu sa doplní priamo do správy. Tlačidlá na dopyt smerujú na formulár cez kotvu. Informácie o súkromí sú uvedené pri odoslaní.
 
 - Kontrola údajov v prehliadači aj na serveri; správa má 15 až 1 000 znakov.
 - Skryté pole pre robotov a serverový limit požiadaviek zostávajú zapnuté.
@@ -277,6 +277,10 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 28. 10. 2026 – v18, názov firmy vo formulári
+
+Pole „Meno a priezvisko“ je nahradené označením „Názov firmy“ vrátane vzorového textu, automatického dopĺňania a chybovej správy. Údaj sa ukladá existujúcou cestou; staršie dopyty zostávajú zachované. Opis údajov v ochrane súkromia zodpovedá formuláru.
 
 ### 28. 10. 2026 – v17, telefónne tlačidlá
 
