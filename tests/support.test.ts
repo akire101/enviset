@@ -14,3 +14,13 @@ test('Message links allow web URLs and escape markup without executing it',async
  const html=renderToStaticMarkup(createElement(MessageText,{text:'Pozrite https://enviset.sk/sluzby. A WWW.example.com/test?x=1&y=2\n<script>alert(1)</script> javascript:alert(1)'}));
  assert.match(html,/href="https:\/\/enviset.sk\/sluzby"/);assert.match(html,/href="https:\/\/www.example.com\/test\?x=1&amp;y=2"/);assert.equal((html.match(/<a /g)||[]).length,2);assert.ok(!html.includes('<script>'));assert.ok(!html.includes('href="javascript:'));assert.match(html,/rel="noopener noreferrer"/);
 });
+
+import {responseSummary,reminderDue} from '../app/support-metrics';
+test('Response statistics exclude missing values and explain mean median p90 and one minute share',()=>{
+ assert.deepEqual(responseSummary([]),{answered:0,mean:null,median:null,p90:null,withinMinute:null});
+ const r=responseSummary([10,30,60,300]);assert.equal(r.answered,4);assert.equal(r.mean,100);assert.equal(r.median,45);assert.equal(r.p90,300);assert.equal(r.withinMinute,75);
+ assert.equal(responseSummary([NaN,-1,20]).mean,20);
+});
+test('Reminders repeat at the configured interval until no answer is pending',()=>{
+ assert.equal(reminderDue(true,0,30,1000),true);assert.equal(reminderDue(true,1000,30,30999),false);assert.equal(reminderDue(true,1000,30,31000),true);assert.equal(reminderDue(false,1000,30,61000),false);assert.equal(reminderDue(true,1000,60,31000),false);assert.equal(reminderDue(true,1000,60,61000),true);
+});

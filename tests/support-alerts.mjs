@@ -1,0 +1,39 @@
+﻿// Local-only integration; requires dev server6010 and Playwright via PLAYWRIGHT_MODULE.
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url),{chromium,request}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const base='http://127.0.0.1:6010',adminCredentials=JSON.parse(fs.readFileSync('.local-admin.json','utf8'));
+const api=await request.newContext({baseURL:base,extraHTTPHeaders:{Origin:base}});assert.equal((await api.post('/api/login',{data:adminCredentials})).status(),200);
+const old=await(await api.get('/api/support')).json();for(const r of old.rooms)if(r.status==='open')await api.post('/api/support',{data:{action:'close',room:r.id}});
+const password=crypto.randomUUID();await api.post('/api/admin/support-user',{data:{username:'podpora2',password}});await api.post('/api/admin/support-settings',{data:{minutes:60,reminderSeconds:30}});
+const browser=await chromium.launch({channel:'msedge',headless:true});fs.mkdirSync('outputs',{recursive:true});
+try{
+ const worker=await browser.newPage({viewport:{width:1440,height:1000}});
+ await worker.addInitScript(()=>{window.__tones=0;window.AudioContext=class{currentTime=0;destination={};resume(){return Promise.resolve()}createGain(){return {connect(){},gain:{setValueAtTime(){},exponentialRampToValueAtTime(){}}}}createOscillator(){return {frequency:{value:0},connect(){},start(){window.__tones++},stop(){}}}};window.Notification=class{static permission='denied'};if(window.speechSynthesis)window.speechSynthesis.getVoices=()=>[]});
+ await worker.clock.install();await worker.goto(base+'/admin');await worker.locator('[name=username]').fill('podpora2');await worker.locator('[name=password]').fill(password);await worker.getByRole('button',{name:'Prihlásiť sa',exact:true}).click();await worker.getByRole('heading',{name:'Pracovisko podpory · Podpora 2'}).waitFor();await worker.getByRole('heading',{name:'Moja aktivita dnes'}).waitFor();
+ assert.equal((await worker.request.post(base+'/api/admin/support-settings',{headers:{Origin:base},data:{reminderSeconds:15}})).status(),401);
+ const created=await(await api.post('/api/chat',{data:{id:crypto.randomUUID(),text:'V16 upozornenie do odpovede'}})).json();assert.ok(created.room);const roomId=created.room;
+ await worker.getByRole('button').filter({hasText:'V16 upozornenie do odpovede'}).click();await worker.bringToFront();
+ await worker.getByRole('button',{name:'Zapnúť zvuk a upozornenia',exact:true}).click();
+ await worker.waitForFunction(()=>window.__tones>=1);
+ const before=await worker.evaluate(()=>window.__tones);await worker.clock.fastForward(29000);assert.equal(await worker.evaluate(()=>window.__tones),before);await worker.clock.fastForward(1100);assert.ok(await worker.evaluate(()=>window.__tones)>before);
+ // Reading a pending message must not clear its pending response state.
+ await worker.request.post(base+'/api/support',{headers:{Origin:base},data:{action:'read',room:roomId,through:2147483647}});
+ const afterRead=await(await api.get('/api/support')).json();const room=afterRead.rooms.find(r=>r.id===roomId);assert.equal(room.unread,0);assert.ok(room.pending_at);assert.equal(afterRead.queue.waiting,1);
+ const readTones=await worker.evaluate(()=>window.__tones);await worker.clock.fastForward(30100);assert.ok(await worker.evaluate(()=>window.__tones)>readTones);
+ await worker.getByLabel('Odpoveď návštevníkovi').fill('Test odpovede pre zastavenie upozornení.');const replyResult=worker.waitForResponse(r=>r.url().endsWith('/api/support')&&r.request().method()==='POST'&&r.request().postDataJSON()?.action==='reply');await worker.getByRole('button',{name:'Odoslať odpoveď',exact:true}).click();assert.equal((await replyResult).status(),200);await worker.getByText('Test odpovede pre zastavenie upozornení.',{exact:true}).waitFor();
+ const answered=await(await api.get('/api/support')).json();assert.equal(answered.rooms.find(r=>r.id===roomId).pending_at,null);assert.equal(answered.queue.waiting,0);
+ await worker.locator('.support-waiting-alert').waitFor({state:'hidden'});
+ const repliedTones=await worker.evaluate(()=>window.__tones);await worker.clock.fastForward(60100);assert.equal(await worker.evaluate(()=>window.__tones),repliedTones);
+ for(const seconds of [15,30,60,120])assert.equal((await api.post('/api/admin/support-settings',{data:{reminderSeconds:seconds}})).status(),200);
+ for(const seconds of [0,1,29,999])assert.equal((await api.post('/api/admin/support-settings',{data:{reminderSeconds:seconds}})).status(),400);
+ await api.post('/api/admin/support-settings',{data:{reminderSeconds:30}});
+ const stats=await(await api.get('/api/admin/support-stats?days=all')).json();assert.ok(stats.responses.answered>=1);assert.ok(stats.operators.find(o=>o.username==='podpora2').responses.answered>=1);assert.equal(stats.queue.waiting,0);assert.equal(stats.reminderSeconds,30);
+ await worker.getByRole('button',{name:'Všetky',exact:true}).click();await worker.screenshot({path:'outputs/v16-worker-desktop.png',fullPage:true});await worker.setViewportSize({width:390,height:844});assert.equal(await worker.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await worker.screenshot({path:'outputs/v16-worker-mobile.png',fullPage:true});
+ const admin=await browser.newPage({viewport:{width:1440,height:1000}});await admin.goto(base+'/admin');await admin.locator('[name=username]').fill(adminCredentials.username);await admin.locator('[name=password]').fill(adminCredentials.password);await admin.getByRole('button',{name:'Prihlásiť sa',exact:true}).click();await admin.getByRole('heading',{name:'Dnes na jednom mieste'}).waitFor();await admin.getByRole('heading',{name:'Pracovníčky',exact:true}).waitFor();await admin.screenshot({path:'outputs/v16-admin-overview.png',fullPage:true});await admin.getByRole('button',{name:'Štatistiky podpory',exact:true}).click();await admin.getByRole('heading',{name:'Pracovníčky vedľa seba'}).waitFor();await admin.getByLabel('Opakovať každých',{exact:true}).selectOption('60');await admin.getByText('Interval upozornení je uložený.',{exact:true}).waitFor();assert.equal((await(await api.get('/api/admin/support-stats')).json()).reminderSeconds,60);await admin.getByLabel('Opakovať každých',{exact:true}).selectOption('30');
+ await admin.screenshot({path:'outputs/v16-admin-stats.png',fullPage:true});await admin.setViewportSize({width:390,height:844});assert.equal(await admin.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await admin.screenshot({path:'outputs/v16-admin-stats-mobile.png',fullPage:true});
+ const publicPage=await browser.newPage();await publicPage.goto(base+'/blog');const imgs=await publicPage.locator('.blog-card img').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('src')));assert.equal(imgs.length,8);assert.equal(new Set(imgs).size,8);for(let n=1;n<=4;n++)assert.ok(imgs.includes('/images/odpad-obr'+n+'.webp'));assert.ok(!imgs.some(i=>i.includes('nature-')));
+ await publicPage.goto(base+'/o-nas');const about=await publicPage.locator('main img').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('src')));assert.equal(new Set(about).size,about.length);assert.ok(!about.some(i=>i.includes('nature-')));
+ await worker.getByRole('button',{name:'Odhlásiť sa',exact:true}).click();await admin.getByRole('button',{name:'Odhlásiť sa',exact:true}).click();console.log('PASS: repeated 30-second sound triggers with controlled clock, read does not silence, reply stops, admin-only configurable intervals, stats, both workspaces mobile, eight unique blog images and supplied About images.');
+}finally{await api.post('/api/admin/support-settings',{data:{minutes:0,reminderSeconds:30}});await api.post('/api/logout',{data:{}});await api.dispose();await browser.close()}

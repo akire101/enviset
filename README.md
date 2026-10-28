@@ -1,12 +1,12 @@
 ﻿# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 28. 10. 2026. Verzia v15.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 28. 10. 2026. Verzia v16.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v15 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v16 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -277,6 +277,18 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 28. 10. 2026 – v16, prehľad podpory a upozornenia do odpovede
+
+**Upozornenia:** štandardne každých 30 sekúnd, kým niektorá pracovníčka neodpovie alebo konverzáciu neukončí. Prečítanie správy ich nezastaví. Administrátor mení spoločný interval v Štatistiky podpory → Upozornenia pracovníčkam (15, 30, 60 alebo 120 sekúnd). Panel pulzuje a titulok karty upozorňuje na čakajúce odpovede. Zvuk musí pracovníčka zapnúť tlačidlom; dostupný slovenský/český hlas prečíta oznámenie, inak zaznie tón. Uspatý prehliadač či zariadenie môže upozornenie zdržať.
+
+**Prehľady:** administrátor začína na karte Prehľad s čakajúcimi rozhovormi, novými kontaktnými dopytmi, článkami a dnešnou aktivitou tímu. Pracovníčky vidia vlastný dnešný online čas, odpovede a rozhovory; zoznam má filtre Čakajúce, Neprečítané, Otvorené a Všetky. Shift + Enter vždy vloží nový riadok; vysvetlenie je pri poli na odpoveď.
+
+**Štatistiky:** priemerná prvá odpoveď znamená priemer od prvej správy návštevníka po prvú odpoveď podpory, bez nezodpovedaných rozhovorov. Dopĺňa ju medián, 90. percentil, podiel do jednej minúty, aktuálna fronta a najdlhšie čakanie. Pri pracovníčke sa prvé odpovede počítajú len tam, kde odpovedala prvá. Počíta sa skutočný čas aj mimo pracovných hodín; rýchlosť podľa rozhovorov začatých v období, počet odoslaných správ podľa odoslania. Všetko označuje všetky zachované údaje (konverzácie 90 dní, online čas 400 dní).
+
+**Obrázky:** dodané odpad-obr1 až odpad-obr4 nahrádzajú štyri generované prírodné obrázky v poradni a zodpovedajúce fotografie O nás. Nebezpečný odpad patrí k nebezpečným odpadom, triedenie k praxi, kalendár k príprave konzultácie a krajina k úvodu do témy. Každý obrázok sa v danom výpise/stránke zobrazuje najviac raz. Viditeľný vodoznak Adobe Stock na dodanej krajine zostáva zachovaný. Historické generované súbory ostávajú kvôli starším odkazom; aktuálne rozloženie ich nepoužíva.
+
+**Overenie:** výsledky vydania sú zaznamenané v [kontrole v16](docs/v16-verification.md). Fyzický telefón, reproduktor a konkrétny hlas operačného systému neboli testované.
 
 ### 28. 10. 2026 – v15, spoločný chat a prírodná poradňa
 

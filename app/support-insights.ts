@@ -1,0 +1,10 @@
+﻿import type {supportDb} from './support-db';
+import {bratislavaDayStart} from './support-model';
+import {localDay} from './analytics-model';
+import type {SupportQueue,PersonalSupport} from './support-metrics';
+type Db=Awaited<ReturnType<typeof supportDb>>;
+// A read receipt never resolves a question; only a later worker reply does.
+export const pendingSinceSql="(SELECT MIN(v.created_at) FROM support_messages v WHERE v.room=r.id AND v.sender='visitor' AND v.seq>COALESCE((SELECT MAX(a.seq) FROM support_messages a WHERE a.room=r.id AND a.sender='support'),0))";
+export async function supportQueue(db:Db){return (await db.prepare(`SELECT COUNT(*) AS open,COALESCE(SUM(pending_at IS NOT NULL),0) AS waiting,COALESCE(SUM(pending_at<=?),0) AS overdue,MIN(pending_at) AS oldest,COALESCE(SUM(unread),0) AS unread FROM (SELECT ${pendingSinceSql} AS pending_at,(SELECT COUNT(*) FROM support_messages WHERE room=r.id AND sender='visitor' AND read_at IS NULL) AS unread FROM support_rooms r WHERE status='open')`).bind(Date.now()-300000).first<SupportQueue>())!}
+export async function reminderSeconds(db:Db){const row=await db.prepare('SELECT reminder_seconds AS seconds FROM support_preferences WHERE id=1').first<{seconds:number}>();return row?.seconds||30}
+export async function personalSupport(db:Db,username:string){const activity=await db.prepare(`SELECT COUNT(*) AS replies,COUNT(DISTINCT room) AS conversations,AVG(CASE WHEN m.seq=(SELECT MIN(f.seq) FROM support_messages f WHERE f.room=m.room AND f.sender='support') THEN (m.created_at-r.created_at)/1000 END) AS response_seconds FROM support_messages m JOIN support_rooms r ON r.id=m.room WHERE m.sender='support' AND m.operator=? AND m.created_at>=?`).bind(username,bratislavaDayStart()).first<Omit<PersonalSupport,'online_ms'>>();const time=await db.prepare('SELECT COALESCE(SUM(milliseconds),0) AS online_ms FROM support_online_days WHERE username=? AND day=?').bind(username,localDay()).first<{online_ms:number}>();return {...activity,...time} as PersonalSupport}

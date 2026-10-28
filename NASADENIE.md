@@ -131,3 +131,10 @@ Dočasné otvorenie chatu má serverom kontrolovaný koniec (maximálne 120 min�
 LiveChat je jediný návštevnícky formulár. Po potvrdení dostupnosti posiela správy živej podpore; pri offline stave používa lokálne pravidlá sprievodcu bez zápisu do chatu. Pri výpadku počas odosielania zostáva text a identifikátor správy na opakovanie; zlyhanie sa nezamlčí. Webové odkazy sa vykresľujú ako React text a overené HTTP/HTTPS odkazy, bez vykonávania vloženého HTML.
 Voľba Enteru je v localStorage pod envi_enter_[účet]. Predvolená hodnota je vypnutá, Shift + Enter vkladá nový riadok.
 Pri prvom čítaní článkov app/blog-image-migration.ts v jednej databázovej dávke vytvorí site_updates, nahradí iba staré spoločné obrázky štyroch určených článkov a uloží značku v15-blog-images. Obsah ani publikovanie nemení; aktualizuje image, image_alt a updated_at. Nové WebP sa nasadia spolu s kódom. Neskoršie zmeny redaktora sa už neprepisujú.
+
+## Upozornenia a prehľady (v16, 28. 10. 2026)
+Tabuľka support_preferences vzniká idempotentne cez supportDb aj migráciu 0005_support_reminders.sql. Predvolený interval 30 sekúnd sa existujúcemu nastaveniu neprepíše. POST /api/admin/support-settings vyžaduje administrátora a pôvod požiadavky; povoľuje len 15/30/60/120 sekúnd. Pracoviská načítajú zmenu pri ďalšom päťsekundovom obnovení. Čakanie znamená návštevnícku správu za poslednou odpoveďou podpory v otvorenom rozhovore, nezávisle od read_at. Fronta je spoločná obom pracovníčkam; odpoveď ktorejkoľvek ju vyrieši. Zatvorenie rozhovoru tiež zastaví pripomienku.
+
+Jednorazová migrácia obrázkov používa značku v16-supplied-images a štyri dodané WebP. Nahrádza len určené staré predvolené alebo v15 generované obrázky štyroch konkrétnych článkov. Iné redakčné výbery a neskoršie úpravy sa neprepisujú. Vodoznak dodaného odpad-obr4 sa neupravoval.
+
+Lokálny test tests/support-alerts.mjs používa izolovanú databázu a náhodné testovacie heslo; nemení produkčné účty. PLAYWRIGHT_MODULE smeruje na nainštalovaný Playwright. Opakované spúšťanie môže vyčerpať lokálny prihlasovací limit; čistiť možno výhradne lokálnu tabuľku rate_limits.

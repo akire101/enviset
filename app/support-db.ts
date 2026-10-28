@@ -1,6 +1,8 @@
 import {env} from 'cloudflare:workers';
 let ready:Promise<unknown>|undefined;
 export async function supportDb(){const db=env.DB!;if(!ready)ready=db.batch([
+ db.prepare('CREATE TABLE IF NOT EXISTS support_preferences (id INTEGER PRIMARY KEY,reminder_seconds INTEGER NOT NULL DEFAULT 30)'),
+ db.prepare('INSERT OR IGNORE INTO support_preferences(id,reminder_seconds) VALUES(1,30)'),
  db.prepare('CREATE TABLE IF NOT EXISTS support_settings (id INTEGER PRIMARY KEY,override_until INTEGER NOT NULL DEFAULT 0)'),
  db.prepare('INSERT OR IGNORE INTO support_settings(id,override_until) VALUES(1,0)'),
  db.prepare('CREATE TABLE IF NOT EXISTS support_presence (username TEXT PRIMARY KEY,last_at INTEGER NOT NULL)'),
