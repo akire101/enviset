@@ -3,7 +3,6 @@ import { Button, CTA, SectionHead, ServiceCards } from './components';
 import {HeroWind} from './hero-wind';
 import {FaqItem} from './faq-item';
 import {SectionControls} from './section-controls';
-import { industries } from './content';
 import { clientFaqs } from './client-content';
 import { ProcessSteps } from './process-steps';
 import { BlogCards } from './blog/components';
@@ -11,10 +10,9 @@ import { publicPosts } from './server';
 import { pageMetadata } from './seo';
 export const metadata = pageMetadata('Odpadové hospodárstvo pre firmy', 'Dokumentácia, evidencia odpadov a odborné poradenstvo pre Vašu firmu. ENVI set – viac podnikania, menej starostí.', '/');
 export const dynamic = 'force-dynamic';
-const photos=['vyroba-v4','autoservis','stavba-v4','obchod','kancelaria-v4','gastro-v4','sklad','remeslo-v4'];
 export default async function Home(){const posts=await publicPosts();return <main id="main">
  <section id="uvod" className="hero container"><HeroWind/><div className="hero-shade"/><div className="hero-content"><h1>Viac podnikania.<br/> Menej starostí s odpadmi.</h1><p>Dokumentácia, evidencia a poradenstvo pre Vašu firmu. Od prvého posúdenia po celoročnú podporu.</p><div className="hero-actions"><Button>Bezplatná konzultácia</Button><a href="/sluzby" className="hero-link">Naše služby <ArrowUpRight size={20}/></a></div></div><a className="hero-next" href="#pre-koho">Pre koho sú naše služby <ArrowDown size={20}/></a></section>
- <section id="pre-koho" className="container section audience-section"><h2>Pre koho sú naše služby určené?</h2><div className="audience-grid">{industries.map((name,i)=><a href="/sluzby" key={name}><img src={`/images/${photos[i]}.jpg`} alt="" width="600" height="400" loading="lazy"/><span>{name}<ArrowUpRight size={20}/></span></a>)}</div></section>
+ <section id="pre-koho" className="container section audience-section"><h2>Pre koho sú naše služby určené?</h2><p className="audience-summary"><a href="/sluzby">Pomáhame firmám vo výrobe, obchode aj službách. Či máte dielňu, reštauráciu alebo kanceláriu, pomôžeme aj Vám. Stačí, že pri Vašej činnosti vzniká odpad.</a></p></section>
  <section id="pomoc" className="help-section"><div className="container section"><h2>S čím Vám vieme pomôcť?</h2><div className="help-grid"><a href="/sluzby/odborna-dokumentacia"><img src="/images/papiere_real.webp" width="1536" height="1024" loading="lazy" alt="Doklady o odpadoch a vážne lístky na pracovnom stole"/><h3>Dokumentácia a evidencia</h3><p>Poriadok v dokladoch, evidencii a ohláseniach.</p></a><a href="/sluzby/kontrola-a-poradenstvo"><img src="/images/kontrola-v4.jpg" width="600" height="400" loading="lazy" alt="Kontrola dokumentácie a materiálu priamo v prevádzke"/><h3>Kontrola Vašej prevádzky</h3><p>Posúdenie stavu a jasné odporúčania pre prax.</p></a><a href="/sluzby/riesenia-pre-firmy"><img src="/images/system-v4.jpg" width="600" height="400" loading="lazy" alt="Nádoby na odpady v priemyselnom areáli"/><h3>Systém podľa Vašej činnosti</h3><p>Praktické nastavenie nakladania s odpadmi a odborná podpora.</p></a></div></div></section>
  <section id="sluzby" className="container section"><SectionHead label="" title="Komplexné riešenia odpadového hospodárstva"/><ServiceCards/></section>
  <section id="spolupraca" className="container section process-section"><SectionHead label="" title="Ako prebieha spolupráca?"/><ProcessSteps/></section>
