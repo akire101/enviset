@@ -8,3 +8,9 @@ import {chatHoursAllowed,onlineCredit,bratislavaDayStart} from '../app/support-m
 test('temporary hours extension expires exactly and respects normal opening',()=>{assert.equal(chatHoursAllowed(false,2000,1999),true);assert.equal(chatHoursAllowed(false,2000,2000),false);assert.equal(chatHoursAllowed(true,0,2000),true)});
 test('online time credits only confirmed bounded intervals',()=>{assert.equal(onlineCredit(0,1000),0);assert.equal(onlineCredit(1000,1000),0);assert.equal(onlineCredit(1000,16000),15000);assert.equal(onlineCredit(1000,76001),0)});
 test('calendar periods start at Bratislava midnight including DST transition days',()=>{assert.equal(new Date(bratislavaDayStart(new Date('2026-10-28T10:00Z'))).toISOString(),'2026-10-27T23:00:00.000Z');assert.equal(new Date(bratislavaDayStart(new Date('2026-03-29T10:00Z'))).toISOString(),'2026-03-28T23:00:00.000Z');assert.equal(new Date(bratislavaDayStart(new Date('2026-10-25T10:00Z'))).toISOString(),'2026-10-24T22:00:00.000Z')});
+
+test('Message links allow web URLs and escape markup without executing it',async()=>{
+ const {createElement}=await import('react');const {renderToStaticMarkup}=await import('react-dom/server');const {MessageText}=await import('../app/message-text');
+ const html=renderToStaticMarkup(createElement(MessageText,{text:'Pozrite https://enviset.sk/sluzby. A WWW.example.com/test?x=1&y=2\n<script>alert(1)</script> javascript:alert(1)'}));
+ assert.match(html,/href="https:\/\/enviset.sk\/sluzby"/);assert.match(html,/href="https:\/\/www.example.com\/test\?x=1&amp;y=2"/);assert.equal((html.match(/<a /g)||[]).length,2);assert.ok(!html.includes('<script>'));assert.ok(!html.includes('href="javascript:'));assert.match(html,/rel="noopener noreferrer"/);
+});

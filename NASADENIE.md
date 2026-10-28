@@ -126,3 +126,8 @@ Lokálne: tests/support-integration.mjs používa výlučne 127.0.0.1:6010 a lok
 ## Tím podpory (v14, 28. 10. 2026)
 Nové tabuľky z drizzle/0004_support_team.sql sa idempotentne vytvoria pri použití. Existujúce účty a správy sa zachovajú. V Štatistikách podpory sú dva formuláre: podpora (Podpora 1) a podpora2 (Podpora 2). Druhý účet aktivujte heslom zadaným priamo v administrácii; heslá ani odvodené hodnoty neukladajte do repozitára. Zmena hesla ruší iba relácie daného účtu a resetuje základ online merania.
 Dočasné otvorenie chatu má serverom kontrolovaný koniec (maximálne 120 minút). Neobchádza požiadavku na prihlásenú dostupnú podporu. Online čas je súčet potvrdených intervalov do 75 sekúnd, delený podľa kalendárneho dňa v Bratislave a bez zdvojenia súbežných kariet. Nemeria sa spätne. Denné súčty sa uchovávajú 400 dní, konverzácie a ich hodnotenia 90 dní.
+
+## Jednotný chat a obrázky (v15, 28. 10. 2026)
+LiveChat je jediný návštevnícky formulár. Po potvrdení dostupnosti posiela správy živej podpore; pri offline stave používa lokálne pravidlá sprievodcu bez zápisu do chatu. Pri výpadku počas odosielania zostáva text a identifikátor správy na opakovanie; zlyhanie sa nezamlčí. Webové odkazy sa vykresľujú ako React text a overené HTTP/HTTPS odkazy, bez vykonávania vloženého HTML.
+Voľba Enteru je v localStorage pod envi_enter_[účet]. Predvolená hodnota je vypnutá, Shift + Enter vkladá nový riadok.
+Pri prvom čítaní článkov app/blog-image-migration.ts v jednej databázovej dávke vytvorí site_updates, nahradí iba staré spoločné obrázky štyroch určených článkov a uloží značku v15-blog-images. Obsah ani publikovanie nemení; aktualizuje image, image_alt a updated_at. Nové WebP sa nasadia spolu s kódom. Neskoršie zmeny redaktora sa už neprepisujú.

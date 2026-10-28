@@ -1,12 +1,12 @@
 ﻿# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 28. 10. 2026. Verzia v14.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 28. 10. 2026. Verzia v15.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v14 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v15 – 28. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -277,6 +277,18 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 28. 10. 2026 – v15, spoločný chat a prírodná poradňa
+
+**Pridané:** jedno okno návštevníckeho chatu. Pri dostupnej podpore správa smeruje pracovníčke; mimo dostupnosti odpovedá automatický sprievodca a ponúka e-mailový kontakt. Odpovede pracovníčky obsahujú klikateľné webové odkazy. Na pracovisku podpory možno zapnúť alebo vypnúť odosielanie Enterom; voľba sa pamätá pre každý účet v danom prehliadači. Vysvetlenie Shift + Enter na nový riadok je vždy viditeľné. Pri vypnutej voľbe sa správa odosiela tlačidlom.
+
+**Vylepšené:** opravené načítanie identity Podpora 1/Podpora 2; odstránená požadovaná veta nad pracoviskom. Informácia o kontrole kvality zostáva v ochrane súkromia. Správy majú čitateľnejší kontrast. Väčší odkaz Mám inú otázku a tlačidlo Odoslať v kontakte. O nás strieda plnohodnotné textové bloky s prírodnými zábermi bez prázdneho ľavého stĺpca. Prihlasovací formulár je pred pripravenosťou aplikácie zablokovaný a neposiela heslo v adrese.
+
+**Obrázky:** štyri nové generované prírodné ilustrácie dopĺňajú články, ktorým sa skryl opakovaný obrázok. Všetkých osem publikovaných článkov má vlastný záber. Obrázky sú dostupné aj v editore; jednorazová aktualizácia zachová texty článkov a neskoršie redakčné úpravy. Zadania a súbory: [Prírodné ilustrácie](docs/v15-image-prompts.md).
+
+**Overenie:** 20 automatických testov a typová kontrola. Lokálny test v prehliadači overil identitu Podpora 2, odosielanie Enterom aj jeho vypnutie, Shift + Enter, zachovanie voľby, doručenie klikateľného odkazu, offline odpoveď sprievodcu a rozloženie O nás pri šírkach 1440, 768 a 390 px bez vodorovného pretekania. Všetkých osem článkov má načítateľný obrázok.
+
+**Stav a limity:** Podpora 2 bola používateľom aktivovaná a jej pripravenosť overená v produkcii. Automatické odpovede sa vykonávajú v prehliadači a nie sú odosielané podpore; online pracovníčka vidí správy odoslané počas živej podpory. Štyri nové obrázky sú generované ilustrácie. Fyzické mobilné zariadenia neboli skúšané.
 
 ### 28. 10. 2026 – v14, tím podpory a mobilné zobrazenie
 
