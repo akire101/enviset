@@ -1,11 +1,4 @@
-﻿import {about,values} from '../content';
-import {PageHero,Button} from '../components';
+﻿import {about} from '../content';
 import {pageMetadata} from '../seo';
 export const metadata=pageMetadata('O nás – náš príbeh','ENVI set vznikla v roku 2024. Odborné poradenstvo, osobný prístup a zodpovedné odpadové hospodárstvo pre firmy.','/o-nas');
-export default function About(){return <main id="main" className="about-page"><PageHero label="O nás" title="Dôvera rastie spoluprácou." text="Pomáhame firmám nastaviť odpadové hospodárstvo tak, aby fungovalo v praxi a bolo zodpovedné k prírode."/>
-<section className="container about-opening"><div><h2>ENVI pre prírodu.<br/>SET riešení pre firmy.</h2><p>Odbornosť, osobný prístup a riešenia, na ktoré sa môžete spoľahnúť.</p><p className="about-year">S vami od roku <strong>2024</strong></p></div></section>
-<section className="container about-chapter"><h2>Skúsenosti, na ktorých staviame</h2><div><p>{about[0]}</p><p>{about[1]}</p></div></section>
-<section className="container about-chapter"><h2>Ako vzniklo ENVI set</h2><div><p>{about[2]}</p></div></section>
-<section className="about-practice"><div className="container"><h2>Dobré nastavenie má zmysel</h2><div><p>{about[3]}</p><p>{about[4]}</p></div></div></section>
-<section className="container about-chapter"><h2>Partnerstvo, ktoré pokračuje</h2><div><p>{about[5]}</p><p>{about[6]}</p></div></section>
-<section className="container about-values"><h2>Na čom nám záleží</h2><div>{values.map(([title,text])=><article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></section><section className="container cta about-close"><div><h2>Začnime rozhovorom.</h2><p>Prejdeme si vašu prevádzku a navrhneme ďalšie kroky.</p></div><Button>Bezplatná konzultácia</Button></section></main>}
+export default function About(){return <main id="main" className="container about-text"><h1>O nás</h1><div>{about.map(paragraph=><p key={paragraph}>{paragraph}</p>)}</div><img src="/images/valley.webp" alt="Zelené údolie pod horským hrebeňom" width="838" height="407" loading="lazy"/></main>}
