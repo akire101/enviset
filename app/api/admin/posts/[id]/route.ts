@@ -1,3 +1,4 @@
+import {requireArticleImage} from '../../../../article-image-server';
 import { env } from 'cloudflare:workers';
 import { getDb } from '../../../../../db';
 import { posts } from '../../../../../db/schema';
@@ -10,7 +11,7 @@ export async function PUT(request:Request,{params}:{params:Promise<{id:string}>}
  const old=await db.prepare('SELECT slug,updated_at,published_at FROM posts WHERE id = ?').bind(id).first<{slug:string;updated_at:number;published_at:number|null}>();
  if(!old)return json({error:'Článok sa nenašiel.'},404);
  if(parsed.data.updatedAt!==old.updated_at)return json({error:'Článok medzičasom upravil iný editor. Obnovte zoznam.'},409);
- const p=parsed.data;const changed=p.slug!==old.slug;
+ const p=parsed.data;await requireArticleImage(p.image);const changed=p.slug!==old.slug;
  if(changed&&await db.prepare('SELECT slug FROM post_redirects WHERE slug = ?').bind(p.slug).first())return json({error:'Adresa je rezervovaná pre presmerovanie.'},409);
  const updated=Math.max(Date.now(),old.updated_at+1);const published=old.published_at||(p.status==='published'?updated:null);
  const update=db.prepare('UPDATE posts SET slug=?,title=?,excerpt=?,content=?,category=?,image=?,image_alt=?,seo_title=?,seo_description=?,status=?,updated_at=?,published_at=? WHERE id=? AND updated_at=? RETURNING id').bind(p.slug,p.title,p.excerpt,p.content,p.category,p.image,p.imageAlt,p.seoTitle,p.seoDescription,p.status,updated,published,id,old.updated_at);

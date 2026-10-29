@@ -34,6 +34,18 @@ Kontakt ukladá dopyty do D1, e-mail sa neodosiela. Firemné kontakty sú doplne
 
 Otvorte `/admin` a prihláste sa. Cez **Nový článok** vyplňte názov, úvod a obsah; ponechajte **Koncept – iba administrátor** a kliknite na **Uložiť článok**. Na zverejnenie vyberte **Zverejnený – viditeľný na blogu** a znovu uložte. Existujúci článok vyberte zo zoznamu vľavo. Možnosť archívu článok skryje a umožňuje neskoršie obnovenie.
 
+### Vlastné titulné obrázky (v32, 29. 10. 2026)
+
+Pred nasadením kódu aplikujte novú migráciu `drizzle/0006_article_images.sql` v rámci existujúceho postupu migrácií D1. Vlastník schválil nasadenie 29. 10. 2026. Nie je potrebná nová služba, účet ani tajomstvo.
+
+`POST /api/admin/images` vyžaduje administrátorskú reláciu a rovnaký Origin; limituje 60 pokusov za hodinu a priebežne čítané telo na 750 KiB. Kontroluje signatúru JPEG/PNG/WebP aj zhodu s Content-Type, SVG/HTML nepovoľuje. Prehliadač prijíma originál do 10 MiB, prekreslí ho bez metadát, zmenší dlhšiu stranu najviac na 1600 px a odošle komprimovaný obrázok. Dáta sa ukladajú do D1 ako BLOB, adresa `/media/<sha256>` sa pri opakovanom nahratí rovnakých dát nemení.
+
+`GET /media/[id]` sprístupní obrázok anonymne iba vtedy, keď ho používa zverejnený článok; administrátor ho vidí aj pred uložením konceptu. Odpoveď má `no-store`, `nosniff` a reštriktívne CSP. Obrázok zdieľaný s iným zverejneným článkom zostáva verejný. Ukladanie článku overí existenciu nahratého obrázka. Prepnutie článku ruší rozbehnutý upload v editore; serverom už prijaté, ale nepriradené obrázky zostávajú v úložisku. Automatické mazanie nie je implementované.
+
+Záloha musí zahŕňať tabuľku `article_images`. JSON export redakcie obsahuje iba odkazy; zdrojová Git záloha neobsahuje uploady. Toto jednoduché úložisko je určené pre jednotlivé komprimované titulné fotografie; pri väčšej knižnici médií presuňte súbory do objektového úložiska. Limit riadka D1 je 2 MB, súčasný limit 750 KiB zostáva pod ním ([Cloudflare D1 limits](https://developers.cloudflare.com/d1/platform/limits/)).
+
+Lokálne overenie: `ENVI_TEST_URL=http://127.0.0.1:6010`, potom `node tests/article-images.mjs`. Playwright musí byť dostupný cez nainštalovaný modul alebo premennú `PLAYWRIGHT_MODULE`. Test používa len lokálny účet z ignorovaného `.local-admin.json`; vytvorí testovací článok a na konci ho archivuje. V staršej lokálnej databáze inicializovanej mimo záznamov migrácií stačí vykonať výhradne novú migráciu cez `wrangler d1 execute DB --local --config wrangler.local.json --persist-to .wrangler/state --file drizzle/0006_article_images.sql`. Neopakujte na nej prvotné vytvorenie existujúcich tabuliek.
+
 Nasledujúce časti opisujú aj ručnú obnovu v novom účte. Kroky vytvorenia databázy neopakujte pre existujúce nasadenie.
 
 GitHub uchováva zdrojové súbory. GitHub Pages spúšťa statické stránky; serverové API, administrácia a D1 tohto projektu vyžadujú Cloudflare Workers. Samostatný SQL súbor v repozitári nie je bežiaca databáza.

@@ -1,6 +1,11 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {postSchema,contactSchema,constantEqual,slugify,sameOrigin} from '../app/validation.ts';
+test('Article images accept only built-in or uploaded same-origin paths',()=>{
+ const post={title:'Testovací článok',slug:'test-clanok',excerpt:'Dostatočne dlhý úvodný text pre test.',content:'Toto je dostatočne dlhý obsah článku určený iba na testovanie.',category:'Pre firmy',image:'/media/'+'a'.repeat(64),status:'draft'};
+ assert.equal(postSchema.safeParse(post).success,true);
+ for(const image of ['https://example.com/photo.jpg','//evil.test/image','data:image/png;base64,AA','/media/../admin','/media/'+'a'.repeat(64)+'?x=1','/images/missing.png'])assert.equal(postSchema.safeParse({...post,image}).success,false);
+});
 test('Inquiry requires company and email, optional fields may be empty',()=>{
  const payload={company:'Test firma',email:'qa@example.invalid',consent:true};
  const parsed=contactSchema.parse(payload);assert.equal(parsed.name,'');assert.equal(parsed.phone,'');assert.equal(parsed.message,'');

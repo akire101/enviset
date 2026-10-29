@@ -1,12 +1,14 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 29. 10. 2026. Verzia v31.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 29. 10. 2026. Verzia v32.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+
+**Novinka vo v32:** vlastný titulný obrázok článku možno nahrať z počítača. Nahrávanie je implementované a lokálne overené; vydanie je schválené vlastníkom na nasadenie 29. 10. 2026.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v31 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v32 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -17,7 +19,7 @@ Slovenský firemný web ENVI set predstavuje poradenstvo a manažment odpadovéh
 | Firemná prezentácia | Domov, O nás, služby, odvetvia, spolupráca, časté otázky, kontakt | Súčasť webu |
 | Služby | Deväť detailov služieb, osem položiek celoročného servisu a osem jednorazových služieb | Súčasť webu |
 | Blog / poradňa | Kategórie, vyhľadávanie, stránkovanie, detail a súvisiace články | Súčasť webu; import obsahuje tri pôvodné a päť nových článkov; existujúce úpravy sa neprepisujú |
-| Administrácia | Editor, koncepty, publikovanie, archív a stiahnutie zálohy článkov | Prihlásenie a úpravy konceptu na verejnom webe overené 13. 10. 2026 |
+| Administrácia | Editor, koncepty, publikovanie, archív, záloha článkov a nahrávanie vlastného titulného obrázka | Prihlásenie a úpravy konceptu na verejnom webe overené 13. 10. 2026; upload lokálne overený 29. 10. 2026, súčasť vydania v32 |
 | Štatistiky | Denné, 7-dňové, 30-dňové a 365-dňové prehľady, čas v sekciách, kliknutia a mapy pohybu myši | Vlastné meranie po súhlase; dostupné iba administrátorovi |
 | Dopyty | Formulár a súkromná schránka administrátora | Ukladajú sa do databázy |
 | E-mailové oznámenia | Pripravené prepojenie s e-mailovou službou | Zatiaľ nenastavené; web neposiela e-maily |
@@ -117,11 +119,13 @@ Blog nemá komentáre, newsletter ani verejné používateľské účty. Vyhľad
 
 1. Prihlási sa na `/admin` menom a heslom.
 2. Vytvorí článok alebo vyberie existujúci zo zoznamu.
-3. Vyplní názov, adresu, krátky úvod, obsah, kategóriu a pripravený obrázok.
+3. Vyplní názov, adresu, krátky úvod, obsah, kategóriu a vyberie pripravený obrázok alebo nahrá vlastný obrázok z počítača.
 4. Voliteľne doplní alternatívny text obrázka, vlastný SEO titulok a popis.
 5. Uloží koncept, zverejní článok alebo ho presunie do obnoviteľného archívu.
 
-Editor navrhuje adresu nového článku z názvu bez diakritiky. Na výber sú kategórie **Pre firmy, Nebezpečné odpady, Praktické tipy a Novinky** a štyri obrázky: horský les, rozkvitnutá lúka, horské údolie a zelené kopce. Pri úvode zobrazuje počet znakov. Pred uložením možno skontrolovať obrázok a náhľad textu; po uložení sa zobrazí potvrdenie.
+Editor navrhuje adresu nového článku z názvu bez diakritiky. Na výber sú kategórie **Pre firmy, Nebezpečné odpady, Praktické tipy a Novinky** a dvanásť pripravených obrázkov. Pri úvode zobrazuje počet znakov. Pred uložením možno skontrolovať obrázok a náhľad textu; po uložení sa zobrazí potvrdenie.
+
+**Vlastný obrázok:** pri novom aj existujúcom článku je tlačidlo **Nahrať z počítača**. Podporuje JPG, PNG a WebP do 10 MB. Prehliadač automaticky zmenší fotografiu pre web, zobrazí náhľad a vyzve na **Uložiť článok**. Pôvodný súbor v počítači sa nemení. Pri chybe zostane pôvodný obrázok aj text; nahrávanie možno zopakovať. Počas nahrávania nemožno uložiť článok s nedokončeným obrázkom. Pripravené fotografie zostávajú na výber. Vlastný obrázok konceptu je dostupný len prihlásenému administrátorovi, verejne až po publikovaní článku, ktorý ho používa.
 
 Text sa zadáva bez programovania. Odseky sa oddeľujú prázdnym riadkom; prvý riadok viacriadkového odseku sa na webe zobrazí ako nadpis. Vložené HTML príkazy sa nevykonávajú. Náhľad v editore slúži na kontrolu textu; výsledné členenie možno pozrieť otvorením publikovaného článku z editora v novej karte.
 
@@ -129,7 +133,7 @@ Zoznam článkov uvádza ich stav a dátum poslednej úpravy; pri načítaní je
 
 Archiváciu treba potvrdiť. Článok sa tým nevymaže: neskôr ho možno vrátiť medzi koncepty alebo znova publikovať. Publikovaný článok možno tiež stiahnuť z webu zmenou na koncept. Ak rovnaký článok medzitým upraví ďalší človek, staršie úpravy sa neuložia cez novšie; editor vyžiada opätovné načítanie. Adresa článku musí byť jedinečná.
 
-Administrátor môže stiahnuť **zálohu všetkých článkov do súboru JSON**, vrátane konceptov a archívu. Záloha nezahŕňa kontaktné správy ani ostatné údaje databázy. Jej obnovenie zabezpečí správca webu; editor nemá tlačidlo na import. Súbor môže obsahovať neverejné texty a patrí do súkromného úložiska.
+Administrátor môže stiahnuť **zálohu všetkých článkov do súboru JSON**, vrátane konceptov a archívu. Záloha obsahuje adresy obrázkov, nie samotné nahraté súbory; tie musí správca zálohovať spolu s databázou. Záloha nezahŕňa kontaktné správy ani ostatné údaje databázy. Jej obnovenie zabezpečí správca webu; editor nemá tlačidlo na import. Súbor môže obsahovať neverejné texty a patrí do súkromného úložiska.
 
 ### Schránka dopytov
 
@@ -277,6 +281,14 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 29. 10. 2026 – v32, nahrávanie vlastného obrázka článku
+
+- **Pridané:** výber JPG, PNG alebo WebP z počítača v novom aj existujúcom článku, náhľad a trvalé uloženie obrázka.
+- **Vylepšené:** automatické zmenšenie, zachovanie pôvodného obrázka pri chybe, opakovanie nahrávania a ochrana pred uložením počas uploadu. Obrázky konceptov sa verejne nesprístupňujú.
+- **Celkový stav:** nahrávanie je súčasťou vydania v32, schváleného vlastníkom na nasadenie. Ostatné funkcie webu sa touto úpravou nemenia.
+- **Overenie:** kontrola typov, 23 automatických testov, 37 existujúcich integračných kontrol a zostavenie úspešné; 30 lokálnych kontrol nahrávania, vytvorenia nového článku cez formulár, uchovania po obnovení, publikovania, súkromia, chybných vstupov, výpadku siete a zobrazenia pri šírke 1440 a 390 px úspešných.
+- **Obmedzenia:** uvedené funkčné testy boli vykonané lokálne v Edge s emulovanou šírkou mobilu; fyzický mobil a Safari neoverené. Nahráva sa jeden titulný obrázok, nie galéria; nepoužité uploady sa automaticky nemažú. Samotný JSON export článkov neobsahuje súbory obrázkov.
 
 ### 29. 10. 2026 – v31, úvodná stránka a nezáväzný dopyt
 
