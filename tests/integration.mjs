@@ -12,7 +12,7 @@ ok((await call('/api/admin/posts')).status===401,'Anonym nemôže čítať konce
 ok((await call('/api/admin/posts','POST',{})).status===401,'Anonym nemôže vytvárať obsah');
 ok((await call('/api/contact','POST',{},{}, {Origin:'https://example.invalid'})).status===403,'CSRF cudzieho pôvodu odmietnuté');
 ok((await call('/api/contact','POST',{})).status===400,'Neplatný formulár odmietnutý');
-const c={name:'Lokálny test',email:'qa@example.invalid',company:'',phone:'',service:'Evidencia odpadov',industry:'',message:'Testovací dopyt v samostatnej lokálnej databáze.',consent:true,website:''};const key=crypto.randomUUID();
+const c={name:'Lokálny test',email:'qa@example.invalid',company:'Test firma',phone:'',service:'Evidencia odpadov',industry:'',message:'Testovací dopyt v samostatnej lokálnej databáze.',consent:true,website:''};const key=crypto.randomUUID();
 const received=await call('/api/contact','POST',c,false,{'Idempotency-Key':key});ok(received.status===201,'Dopyt skutočne uložený');
 ok((await received.json()).notification==='not_configured','Bez konfigurácie sa nepredstiera e-mail');
 ok((await call('/api/contact','POST',c,false,{'Idempotency-Key':key})).status===201,'Opakovaný dopyt má rovnaký identifikátor');

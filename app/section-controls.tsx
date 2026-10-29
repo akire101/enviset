@@ -2,7 +2,7 @@
 import {useEffect,useState} from 'react';
 import {ArrowUp,ArrowDown} from 'lucide-react';
 import {currentSection} from './section-navigation';
-const sections=['uvod','pre-koho','pomoc','sluzby','spolupraca','poradna','faq','kontakt'];
+const sections=['uvod','pomoc','sluzby','spolupraca','poradna','faq','kontakt'];
 const topOffset=()=>Math.max(document.querySelector('.site-header')?.getBoundingClientRect().bottom??0,document.querySelector('.mobile-contact')?.getBoundingClientRect().bottom??0)+12;
 const positions=()=>sections.map(id=>document.getElementById(id)!.getBoundingClientRect().top+window.scrollY);
 export function SectionControls(){

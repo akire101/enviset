@@ -1,12 +1,12 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 29. 10. 2026. Verzia v30.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 29. 10. 2026. Verzia v31.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v30 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v31 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -146,9 +146,9 @@ Administrácia používa jeden účet. Neobsahuje samostatné používateľské 
 
 ## Kontaktný formulár
 
-Formulár má štyri viditeľné polia: názov firmy, e-mail, telefón a text správy. Služba z odkazu sa doplní priamo do správy. Tlačidlá na dopyt smerujú na formulár cez kotvu. Informácie o súkromí sú uvedené pri odoslaní.
+Formulár obsahuje firmu a e-mail (povinné), kontaktnú osobu, telefón, výber záujmu a nepovinnú správu. Služba z odkazu sa doplní priamo do správy. Tlačidlá na dopyt smerujú na formulár cez kotvu. Informácie o súkromí sú uvedené pri odoslaní.
 
-- Kontrola údajov v prehliadači aj na serveri; správa má 15 až 1 000 znakov.
+- Kontrola údajov v prehliadači aj na serveri; správa je nepovinná a môže mať najviac 5 000 znakov.
 - Skryté pole pre robotov a serverový limit požiadaviek zostávajú zapnuté.
 - Počas odosielania sa tlačidlo zablokuje; chyba sa zobrazí pri formulári.
 - Úspešné uloženie zobrazí referenciu dopytu. Opakovanie rovnakej požiadavky nevytvorí duplicitu.
@@ -277,6 +277,12 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 29. 10. 2026 – v31, úvodná stránka a nezáväzný dopyt
+
+Tlačidlo v hlavičke „Bezplatné stretnutie“ vedie na formulár s predvolenou bezplatnou konzultáciou. Hlavné tlačidlo v úvode má názov „Nezáväzný dopyt“. Sekcia „Pre koho sú naše služby určené?“ je odstránená vrátane odkazu v navigácii medzi sekciami. Nadpis riešení znie „Riešenia, ktoré Vás zbavia starostí s odpadovým hospodárstvom“; slovo „zbavia“ je hrubšie a zelené.
+
+Kontaktný formulár zodpovedá dodanému vzoru: firma, kontaktná osoba, e-mail, telefón, štyri možnosti záujmu a nepovinná správa. Hviezdičkou sú označené iba povinné údaje – názov spoločnosti a e-mail. Telefón, kontaktná osoba a správa sú nepovinné aj pri serverovej kontrole. Dopyty sa naďalej ukladajú do existujúcej schránky administrácie; zmena nevyžaduje databázovú migráciu. Zachované sú kontrola dĺžok, ochrana proti spamu a duplicitám aj informácia o spracúvaní údajov. Overenie: kontrola typov, 22 testov, zostavenie a Edge pri šírkach 1440, 768 a 390 px. Overené aj povinné polia, predvolená konzultácia a odoslanie zachytené v teste; fyzické zariadenia neoverené.
 
 ### 29. 10. 2026 – v30, automatické privítanie v chate
 

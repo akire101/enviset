@@ -177,3 +177,12 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 .about-text{max-width:960px;padding-block:40px 56px}.about-text h1{font-size:clamp(36px,4vw,52px);margin-bottom:28px}.about-text p{font-size:18px;line-height:1.7;color:var(--ink);margin:0 0 20px}.about-text>img{width:100%;height:auto;margin-top:32px}
 
 .chat-brand-mark{flex-shrink:0;filter:brightness(0) invert(1)}
+
+/* Contact inquiry layout. */
+.help-highlight{color:#176b43;font-weight:800}
+.inquiry-interests{border:0;padding:0;margin:0 0 24px;min-width:0}
+.inquiry-interests legend{font-size:17px;margin-bottom:8px;color:var(--muted)}
+.inquiry-interests label{display:flex;align-items:center;gap:12px;min-height:44px;font-size:17px;cursor:pointer}
+.inquiry-interests input[type=radio]{appearance:auto;width:22px;height:22px;min-height:0;margin:0;padding:0;flex:0 0 22px;accent-color:#176b43}
+.contact-form input:not([type=radio]){border-radius:999px}
+.contact-form textarea{min-height:100px}
