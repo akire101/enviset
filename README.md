@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 29. 10. 2026. Verzia v32.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 29. 10. 2026. Verzia v33.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinka vo v32:** vlastný titulný obrázok článku možno nahrať z počítača. Nahrávanie je implementované a lokálne overené; vydanie je schválené vlastníkom na nasadenie 29. 10. 2026.
 
@@ -8,7 +8,7 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v32 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v33 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -289,6 +289,10 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 - **Celkový stav:** nahrávanie je súčasťou vydania v32, schváleného vlastníkom na nasadenie. Ostatné funkcie webu sa touto úpravou nemenia.
 - **Overenie:** kontrola typov, 23 automatických testov, 37 existujúcich integračných kontrol a zostavenie úspešné; 30 lokálnych kontrol nahrávania, vytvorenia nového článku cez formulár, uchovania po obnovení, publikovania, súkromia, chybných vstupov, výpadku siete a zobrazenia pri šírke 1440 a 390 px úspešných.
 - **Obmedzenia:** uvedené funkčné testy boli vykonané lokálne v Edge s emulovanou šírkou mobilu; fyzický mobil a Safari neoverené. Nahráva sa jeden titulný obrázok, nie galéria; nepoužité uploady sa automaticky nemažú. Samotný JSON export článkov neobsahuje súbory obrázkov.
+
+### 29. 10. 2026 – v33, články bez času čítania
+
+Z náhľadov článkov na hlavnej stránke a v blogu aj z detailov článkov bol odstránený odhad „X min čítania“. Kategória a dátum publikovania zostávajú zobrazené. Uložený zákaznícky bod návratu v4 zostáva zachovaný. Kontrola typov a zostavenie overujú úpravu; fyzické zariadenia neboli testované.
 
 ### 29. 10. 2026 – v31, úvodná stránka a nezáväzný dopyt
 
