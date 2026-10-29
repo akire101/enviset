@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import {useEffect,useRef,useState} from 'react';
 import {Send} from 'lucide-react';
 import {offlineText,type ChatMessage} from './support-model';
@@ -6,11 +6,11 @@ import {MessageText} from './message-text';
 const key='envi_support_chat';
 type GuideMessage={id:string;sender:'visitor'|'guide';text:string;created_at:number;href?:string;label?:string};
 const greeting:GuideMessage={id:'welcome',sender:'guide',text:'Dobrý deň. S čím vám môžeme pomôcť? Keď je podpora online, odpovie pracovníčka. Inak vám s otázkami o službách pomôže automatický sprievodca.',created_at:0};
-export function LiveChat({onAvailability}:{onAvailability?:(online:boolean)=>void}){
+export function LiveChat({onAvailability,autoFocus=true}:{onAvailability?:(online:boolean)=>void;autoFocus?:boolean}){
  const [messages,setMessages]=useState<ChatMessage[]>([]),[guide,setGuide]=useState<GuideMessage[]>([greeting]),[online,setOnline]=useState(false),[status,setStatus]=useState('open'),[input,setInput]=useState(''),[error,setError]=useState(''),[busy,setBusy]=useState(false),[ready,setReady]=useState(false);
  const token=useRef(''),list=useRef<HTMLDivElement>(null),field=useRef<HTMLInputElement>(null),pending=useRef<{id:string;text:string}|null>(null),sent=useRef<number[]>([]);
  async function load(){const r=await fetch('/api/chat',{headers:token.current?{Authorization:'Bearer '+token.current}:{}});const d=await r.json() as {online:boolean;messages?:ChatMessage[];status?:string;error?:string};if(r.status===404){token.current='';try{sessionStorage.removeItem(key)}catch{}return load()}if(!r.ok)throw Error(d.error||'Nepodarilo sa načítať chat.');setOnline(d.online);onAvailability?.(d.online);if(d.messages)setMessages(d.messages);if(d.status)setStatus(d.status);setReady(true)}
- useEffect(()=>{try{token.current=sessionStorage.getItem(key)||''}catch{}field.current?.focus();void load().catch(e=>setError(e.message));const timer=setInterval(()=>void load().catch(e=>setError(e.message)),4000);return()=>clearInterval(timer)},[]);
+ useEffect(()=>{try{token.current=sessionStorage.getItem(key)||''}catch{}if(autoFocus)field.current?.focus();void load().catch(e=>setError(e.message));const timer=setInterval(()=>void load().catch(e=>setError(e.message)),4000);return()=>clearInterval(timer)},[]);
  useEffect(()=>{if(list.current)list.current.scrollTop=list.current.scrollHeight},[messages.length,guide.length]);
  async function send(e:React.FormEvent){e.preventDefault();if(busy||!ready||!input.trim())return;const text=input.trim(),now=Date.now();sent.current=sent.current.filter(t=>now-t<60000);if(sent.current.length>=15){setError('Chvíľu počkajte. Môžete odoslať najviac 15 správ za minútu.');return}sent.current.push(now);setBusy(true);setError('');
  try{

@@ -1,12 +1,12 @@
-﻿# ENVI set – funkcie webu, bezpečnosť a SEO
+# ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 29. 10. 2026. Verzia v29.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 29. 10. 2026. Verzia v30.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v29 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v30 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -277,6 +277,12 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 29. 10. 2026 – v30, automatické privítanie v chate
+
+Chat „Poradíme vám“ sa po 8 sekundách automaticky otvorí s otázkou „Dobrý deň. S čím vám môžeme pomôcť?“. Upozorní jemným dvojtónovým zvukom, keď prehliadač po kliknutí alebo stlačení klávesu povolí prehrávanie. Bez tejto interakcie sa okno otvorí aj bez zvuku; zvuk zaznie pri následnej interakcii, ak je privítanie ešte otvorené. Automatické privítanie sa zobrazí len raz počas návštevy v danej karte a po zatvorení ani obnovení stránky sa neopakuje. Ručné otvorenie zostáva dostupné.
+
+Privítanie počká na zatvorenie cookies alebo iného dialógu, nepreruší písanie do formulára ani sa neotvorí v skrytej karte či administrácii. Pri automatickom otvorení nepresunie kurzor do vstupu a nevyvolá mobilnú klávesnicu. Obsah a odosielanie správ sa nemenia. Kontrola typov, 22 existujúcich testov a zostavenie prešli. V lokálnom Edge na šírkach 1440 a 390 px bolo overené automatické otvorenie, vyvolanie jedného zvuku, zachovanie kurzora a neopakovanie po obnovení stránky; fyzické mobilné zariadenie ani počuteľná hlasitosť neboli overené.
 
 ### 29. 10. 2026 – v29, firemný znak v chatbote
 
