@@ -23,7 +23,7 @@ try{
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   console.log(width,"greeted");await page.screenshot({path:`outputs/chat-greeting-${width}.png`});
   await page.getByRole('button',{name:'Zavrieť chat',exact:true}).click();
-  console.log(width,"closed");await page.reload({waitUntil:"domcontentloaded",timeout:15000});if(await reject.isVisible())await reject.click();await page.waitForTimeout(9000);console.log(width,"reloaded");
+  console.log(width,"closed");await page.reload({waitUntil:"domcontentloaded",timeout:15000});if(await reject.isVisible())await reject.click();await page.waitForTimeout(9000);console.log(width,"reloaded");if(await reject.isVisible()){await reject.click();await page.waitForTimeout(9000)}
   assert.equal(await page.locator('.chat-window').count(),0);
   await page.locator('.chat-launch').click();
   await page.locator('#live-message').waitFor();
