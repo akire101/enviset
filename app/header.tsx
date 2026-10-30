@@ -2,16 +2,17 @@
 import {useEffect,useRef,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import {flushSync} from 'react-dom';
-import {Menu,X,ChevronDown,ArrowUpRight,ArrowRight} from 'lucide-react';
-import {Logo,Icon} from './components';
+import {Menu,X,ChevronDown,ArrowUpRight} from 'lucide-react';
+import {Logo} from './components';
+import {brand} from './content';
 const menuServices = [
- {slug:'odborna-dokumentacia',icon:'file',title:'Dokumentácia v oblasti odpadového hospodárstva'},
- {slug:'evidencia-odpadov',icon:'list',title:'Evidencia odpadov'},
- {slug:'ohlasovacie-povinnosti',icon:'send',title:'Ohlasovacie povinnosti'},
- {slug:'kontrola-a-poradenstvo',icon:'shield',title:'Osobná kontrola prevádzky'},
- {slug:'legislativny-servis',icon:'law',title:'Priebežné informovanie o dôležitých zmenách v legislatíve'},
- {slug:'odborne-poradenstvo',icon:'meeting',title:'Odborné telefonické a emailové poradenstvo'},
- {slug:'nebezpecne-odpady',icon:'hazard',title:'Nebezpečné odpady'},
+ {slug:'odborna-dokumentacia',title:'Dokumentácia odpadového hospodárstva'},
+ {slug:'evidencia-odpadov',title:'Evidencia odpadov'},
+ {slug:'ohlasovacie-povinnosti',title:'Ohlasovacie povinnosti'},
+ {slug:'nebezpecne-odpady',title:'Nebezpečné odpady'},
+ {slug:'kontrola-a-poradenstvo',title:'Osobné kontroly prevádzky'},
+ {slug:'odborne-poradenstvo',title:'Individuálne odborné poradenstvo'},
+ {slug:'legislativny-servis',title:'Monitoring legislatívnych zmien'},
 ];
 
 export function Header(){
@@ -35,6 +36,7 @@ export function Header(){
  },[servicesOpen,mobileOpen]);
  function escape(event:React.KeyboardEvent){
   if(event.key!=='Escape')return;
+  if(document.getElementById('meeting-phone')?.matches(':popover-open')){document.getElementById('meeting-phone')?.hidePopover();return}
   event.preventDefault();event.stopPropagation();
   if(servicesOpen){setServicesOpen(false);trigger.current?.focus({preventScroll:true})}
   else if(mobileOpen){setMobileOpen(false);toggle.current?.focus({preventScroll:true})}
@@ -50,7 +52,7 @@ export function Header(){
     <button ref={trigger} type="button" className={`services-trigger ${active('/sluzby')?'active':''}`} aria-expanded={servicesOpen} aria-controls="services-dropdown" onClick={event=>{clearHover();setServicesOpen(event.detail>0&&desktopMouse('mouse')?true:!servicesOpen)}} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();flushSync(()=>setServicesOpen(true));panel.current?.querySelector<HTMLAnchorElement>('a')?.focus({preventScroll:true})}}}>Služby<ChevronDown size={15} aria-hidden="true"/></button>
     <div ref={panel} id="services-dropdown" className={`services-panel ${servicesOpen?'is-open':''}`} aria-hidden={!servicesOpen} inert={!servicesOpen}>
      <div className="dropdown-main"><div className="dropdown-heading"><a href="/sluzby" onClick={close}>Všetky služby<ArrowUpRight size={16}/></a></div>
-      <div className="dropdown-grid">{menuServices.map(service=><a key={service.slug} href={`/sluzby/${service.slug}`} className="dropdown-service" onClick={close} aria-current={path===`/sluzby/${service.slug}`?'page':undefined}><span className="dropdown-icon"><Icon name={service.icon} size={23}/></span><span><strong>{service.title}</strong></span><ArrowUpRight className="dropdown-arrow" size={16}/></a>)}</div>
+      <div className="dropdown-grid">{menuServices.map(service=><a key={service.slug} href={`/sluzby/${service.slug}`} className="dropdown-service" onClick={close} aria-current={path===`/sluzby/${service.slug}`?'page':undefined}><strong>{service.title}</strong></a>)}</div>
      </div>
 
     </div>
@@ -58,7 +60,8 @@ export function Header(){
    <a href="/blog" className={active('/blog')?'active':''} aria-current={active('/blog')?'page':undefined}>Blog / Poradňa</a>
    <a href="/kontakt" className={active('/kontakt')?'active':''} aria-current={active('/kontakt')?'page':undefined}>Kontakt</a>
   </nav>
-  <a className="button header-cta" href="/kontakt?sluzba=konzultacia#formular">Bezplatné stretnutie</a>
+  <a className="button header-cta" href={`tel:${brand.contacts.phone.replace(/\s/g,'')}`} aria-controls="meeting-phone" onClick={event=>{if(window.matchMedia('(min-width: 761px) and (pointer: fine)').matches){event.preventDefault();document.getElementById('meeting-phone')?.showPopover()}}}>Bezplatné stretnutie</a>
+  <div id="meeting-phone" popover="auto" className="meeting-phone"><h2>Dohodnime si osobné stretnutie</h2><p>Zavolajte nám a spoločne si dohodneme termín bezplatného osobného stretnutia.</p><a className="meeting-number" href={`tel:${brand.contacts.phone.replace(/\s/g,'')}`}>{brand.contacts.phone}</a><button type="button" className="button" popoverTarget="meeting-phone" popoverTargetAction="hide">Zavrieť</button></div>
   <button ref={toggle} className="mobile-toggle" aria-label={mobileOpen?'Zavrieť menu':'Otvoriť menu'} aria-controls="navigation" aria-expanded={mobileOpen} onClick={()=>{setMobileOpen(!mobileOpen);setServicesOpen(false)}}>{mobileOpen?<X size={22}/>:<Menu size={22}/>}</button>
  </header>;
 }

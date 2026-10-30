@@ -1,14 +1,14 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 29. 10. 2026. Verzia v33.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 30. 10. 2026. Zákaznícka verzia v5, vydanie v34.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Novinka vo v32:** vlastný titulný obrázok článku možno nahrať z počítača. Nahrávanie je implementované a lokálne overené; vydanie je schválené vlastníkom na nasadenie 29. 10. 2026.
+**Novinky v zákazníckej v5:** tri hlavné služby s priehľadnými ilustráciami, telefonické dohodnutie stretnutia, nové výhody spolupráce, upravené štyri kroky a textové menu siedmich služieb. Nasadenie všetkých zmien schválil vlastník 30. 10. 2026.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v33 – 29. 10. 2026**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v34 – 30. 10. 2026, zákaznícka v5**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
 ## Celkový prehľad
 
@@ -16,7 +16,7 @@ Slovenský firemný web ENVI set predstavuje poradenstvo a manažment odpadovéh
 
 | Oblasť | Možnosti | Stav |
 |---|---|---|
-| Firemná prezentácia | Domov, O nás, služby, odvetvia, spolupráca, časté otázky, kontakt | Súčasť webu |
+| Firemná prezentácia | Domov, O nás, služby, výhody, spolupráca, kontakt; časté otázky na detailoch služieb | Súčasť webu |
 | Služby | Deväť detailov služieb, osem položiek celoročného servisu a osem jednorazových služieb | Súčasť webu |
 | Blog / poradňa | Kategórie, vyhľadávanie, stránkovanie, detail a súvisiace články | Súčasť webu; import obsahuje tri pôvodné a päť nových článkov; existujúce úpravy sa neprepisujú |
 | Administrácia | Editor, koncepty, publikovanie, archív, záloha článkov a nahrávanie vlastného titulného obrázka | Prihlásenie a úpravy konceptu na verejnom webe overené 13. 10. 2026; upload lokálne overený 29. 10. 2026, súčasť vydania v32 |
@@ -48,7 +48,7 @@ Teplotné mapy kliknutí a vzoriek pohybu myši sú **schematické**, podľa rel
 - Hodnoty: odbornosť, osobný prístup, zrozumiteľnosť, pripravenosť na kontrolu a dlhodobé partnerstvo.
 - Osem odvetví: výroba, autoservisy, stavebníctvo, obchod, kancelárie, gastro, sklady a logistika, remeselné prevádzky.
 - Obrázky aj názvy odvetví na úvode vedú na prehľad jednorazových a paušálnych služieb. Odkazy z detailov služieb predvyplnia príslušnú tému kontaktného formulára.
-- Deväť rozbaľovacích odpovedí z dodaných podkladov: evidencia, zberová spoločnosť, malé množstvá odpadov, existujúca dokumentácia, identifikácia odpadov, menšie firmy, cena, priebežné povinnosti a začiatok spolupráce.
+- Hlavná stránka obsahuje tri hlavné služby, pozvanie na osobné stretnutie, päť výhod a štyri kroky spolupráce. Sekcia otázok a odpovedí a záverečná opakovaná výzva boli z úvodu odstránené; odpovede na detailoch služieb zostávajú.
 - Výzvy na konzultáciu prepájajú služby, blog a kontakt.
 
 | Služba | Obsah samostatnej stránky |
@@ -78,16 +78,16 @@ Na každej stránke služby sa návštevník dozvie, čo služba zahŕňa, komu 
 | Informácie o spracúvaní osobných údajov | `/ochrana-sukromia` |
 | Administrácia | `/admin` |
 
-Úvodná stránka ponúka sedem oblastí služieb. V menu a na stránke Služby je deväť samostatných detailov. Prehľad služieb navyše obsahuje osem položiek celoročného servisu a osem jednorazových služieb. Na sekcie odvetví, spolupráce a častých otázok možno prejsť priamo odkazom.
+Úvodná stránka ponúka dokumentáciu, evidenciu odpadov a nebezpečné odpady s priehľadnými ilustráciami a tlačidlom Všetky riešenia. Menu obsahuje sedem služieb v schválenom poradí, bez ikon; stránka Služby sprístupňuje deväť detailov. Prehľad služieb navyše obsahuje osem položiek celoročného servisu a osem jednorazových služieb. Výhody a postup spolupráce majú priame odkazy /#vyhody a /#postup.
 
 ### Vzhľad, navigácia a prístupnosť
 
 - Navigácia Domov, O nás, Služby, Blog / Poradňa a Kontakt, s označením aktuálnej stránky.
 - Horné menu zostáva dostupné aj pri posúvaní stránky.
-- Kompaktné menu všetkých deviatich služieb pod sebou, iba s názvami.
+- Kompaktné menu siedmich služieb pod sebou, iba s názvami v schválenom poradí.
 - Na počítači otvorenie služieb myšou; dostupné sú aj kliknutie, dotyk a klávesnica.
 - Zatvorenie kliknutím mimo menu, presunom klávesnicového výberu mimo navigácie alebo klávesom Escape; šípka nadol otvorí odkazy služieb.
-- Mobilné menu a prispôsobenie kariet, formulárov, rozloženia a textov menším obrazovkám. Pevné tlačidlá Zavolať a Poslať dopyt sú na mobile dostupné v dolnej lište.
+- Mobilné menu a prispôsobenie kariet, formulárov, rozloženia a textov menším obrazovkám. Na hlavnej stránke mobilná kontaktná lišta ponúka Bezplatné stretnutie s priamym volaním; na počítači tlačidlo v hlavičke zobrazí číslo +421 902 469 908 a vysvetlenie dohodnutia stretnutia.
 - Lokálne WebP fotografie, lokálne písmo Manrope, ikony, jemné prechody a efekty pri prejdení myšou.
 - Odkaz „Preskočiť na obsah“, viditeľné označenie prvku vybraného klávesnicou, popisky formulárov a hlásenia použiteľné aj s čítačkou obrazovky.
 - Rešpektovanie systémového obmedzenia animácií (`prefers-reduced-motion`).
@@ -281,6 +281,16 @@ Súčasťou projektu sú automatizované testy údajov formulárov, adries člá
 5. Zálohovanie a obnova D1, správa prístupov a uchovávanie či výmaz kontaktných správ.
 
 ## Datovaný prehľad zmien
+
+### 30. 10. 2026 – zákaznícka v5, hlavná stránka a menu služieb
+
+**Pridané:** tri priehľadné ilustrácie dodaných služieb, fotografia pri pozvaní na stretnutie a päť výhod s fajkami. Texty zostávajú čitateľnou súčasťou stránky aj na mobile.
+
+**Vylepšené:** nové texty štyroch krokov spolupráce; sedem položiek menu v požadovanom poradí bez ikon; telefonické dohodnutie stretnutia (počítač zobrazí číslo, mobil otvorí volanie). Ilustrácie sa pri prejdení myšou zväčšia, tlačidlo Všetky riešenia je na stred.
+
+**Odstránené z úvodu:** odkazy Naše služby a Riešenia pre Vašu firmu v titulnom obrázku, pôvodná sekcia Komplexné riešenia odpadového hospodárstva, sekcia otázok a odpovedí a záverečná opakovaná výzva na konzultáciu.
+
+**Overenie a stav:** kontrola typov, 23 testov a produkčné zostavenie prešli. Lokálny prehliadač overil nové texty, priehľadné obrázky, zväčšenie, menu myšou aj na mobile, zobrazenie telefónu a chýbajúce odstránené sekcie. Nasadenie schválené 30. 10. 2026; verejné overenie nasleduje po automatickom nasadení z GitHubu. Žiadna zmena databázovej schémy ani prihlasovacích nastavení. Fyzický telefón a skutočný hovor neboli testované.
 
 ### 29. 10. 2026 – v32, nahrávanie vlastného obrázka článku
 

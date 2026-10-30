@@ -10,10 +10,10 @@ export const serviceOverview = [
 ] as const;
 
 export const cooperationSteps = [
- ['Osobné stretnutie so špecialistom', 'Spoznáme Vašu činnosť a prevádzku. Prejdeme si aktuálny stav a možnosti spolupráce.', 'meeting'],
- ['Vstupná odborná analýza', 'Posúdime vznikajúce odpady, povinnosti a riziká. Navrhneme systém podľa potrieb Vašej firmy.', 'search'],
- ['Dokumentácia a jasné postupy', 'Pripravíme potrebné dokumenty, odovzdáme ich a vysvetlíme, ako ich používať v praxi.', 'settings'],
- ['Celoročný odborný servis', 'Zabezpečíme dohodnutú evidenciu, ohlásenia, kontrolu prevádzky a priebežné poradenstvo.', 'recycle'],
+ ['Osobné stretnutie', 'Spoznáme Vašu prevádzku, potreby a aktuálny spôsob nakladania s odpadmi.', 'meeting'],
+ ['Vstupná odborná analýza', 'Zhodnotíme stav odpadového hospodárstva a určíme, čo treba nastaviť alebo doplniť.', 'search'],
+ ['Odborná dokumentácia', 'Pripravíme potrebnú dokumentáciu a vysvetlíme Vám, ako ju správne používať.', 'settings'],
+ ['Celoročný odborný servis', 'Pomáhame Vám s evidenciou, ohlasovaním a priebežne Vás informujeme o legislatívnych zmenách.', 'recycle'],
 ] as const;
 
 export const annualServices = [
