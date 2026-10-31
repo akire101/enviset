@@ -9,6 +9,7 @@ export function Chatbot(){
  useEffect(()=>{
   if(path.startsWith('/admin')||greeted.current)return;
   const key='envi_chat_greeted';
+  const desktopGreeting=()=>window.matchMedia('(min-width: 761px) and (hover: hover) and (pointer: fine)').matches;
   try{if(sessionStorage.getItem(key))return}catch{}
   let audio:AudioContext|undefined,notified=false;
   const sound=()=>{
@@ -20,10 +21,12 @@ export function Chatbot(){
    oscillator.connect(gain);gain.connect(audio.destination);oscillator.start(now);oscillator.stop(now+.42);
   };
   const unlock=()=>{
+   if(!desktopGreeting())return;
    try{audio??=new AudioContext();void audio.resume().then(()=>{if(greeted.current)sound()}).catch(()=>{})}catch{}
   };
   const greet=()=>{
    if(greeted.current){clearInterval(timer);return;}
+   if(!desktopGreeting())return;
    if(document.visibilityState!=='visible'||document.querySelector('[role="dialog"],.analytics-consent,input:focus,textarea:focus,select:focus'))return;
    greeted.current=true;try{sessionStorage.setItem(key,'1')}catch{}
    soundPending.current=true;setAutoOpened(true);setOpen(true);sound();clearInterval(timer);

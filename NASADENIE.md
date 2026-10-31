@@ -2,6 +2,8 @@
 
 ## Zákaznícka v6 – 31. 10. 2026
 
+Aktualizácia 1 (interné v36): mobilný chat iba na ručné otvorenie, kontaktná lišta naspodku a nadväzujúce polohy hlavičky a ovládania. Nasadenie aj uloženie schválené vlastníkom. Aktualizovaný bod obnovy je `v6-zakaznicka-2026-10-31-aktualizacia1`, záloha `backups/ENVISET_v6_2026-10-31_aktualizacia1`; pôvodný bod v6 sa neprepisuje.
+
 Vlastník schválil nasadenie všetkých lokálnych zmien v6. Interné označenie je v35.
 Bod obnovy: tag `v6-zakaznicka-2026-10-31`, záloha `backups/ENVISET_v6_2026-10-31` v nadradenom projektovom priečinku, so zdrojovým ZIP, Git bundle, kontrolnými súčtami a návodom OBNOVA-v6.txt rovnako ako v5.
 Obnova zdrojov neobnovuje živú databázu D1, správy, chaty, analytiku, redakčné dáta uložené iba v D1, účty ani Secrets. Obnovu vykonajte do nového priečinka; push na main spúšťa online nasadenie.

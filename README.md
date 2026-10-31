@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 31. 10. 2026. Zákaznícka verzia v6, vydanie v35.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 31. 10. 2026. Zákaznícka verzia v6, vydanie v36.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v6:** nový nadpis služieb, tri prehľadné textové karty s malými ikonami, detailnejšie listy v pozadí a plynulejšie priblíženie fotografií článkov. Nasadenie všetkých zmien a zálohu v6 schválil vlastník 31. 10. 2026.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v35 – 31. 10. 2026, zákaznícka v6**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v36 – 31. 10. 2026, zákaznícka v6, aktualizácia 1**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 31. 10. 2026 – v6, aktualizácia 1: mobilné úpravy
+
+- **Chat:** automatické otvorenie a zvukové privítanie iba na väčšej obrazovke s myšou. Na mobile a dotykovom tablete sa chat otvára iba po stlačení tlačidla.
+- **Kontakt:** mobilná kontaktná lišta je naspodku obrazovky; tlačidlo chatu a šípky sekcií sú nad ňou. Upravené odsadenie hlavičky a prechody medzi sekciami.
+- **Stav:** vlastník schválil online nasadenie aj uloženie aktualizácie do v6. Pôvodná záloha v6 zostáva zachovaná; aktualizovaný bod obnovy je samostatná aktualizácia 1.
+- **Overenie:** kontrola typov prešla. V lokálnom prehliadači pri šírke 390 px zostal chat zatvorený po 17 sekundách, lišta bola pri spodnom okraji a ručné otvorenie chatu fungovalo. Pri šírke 1440 px sa chat automaticky otvoril. Bez vodorovného posúvania.
 
 ## 31. 10. 2026 – v6, schválené vydanie
 

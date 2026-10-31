@@ -93,20 +93,20 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 /* Mobil: kontakt zostáva hore, šípky preskakujú celé sekcie. */
 .section-controls{display:none}
 @media(max-width:760px){
- body{padding-top:calc(52px + env(safe-area-inset-top))}
- body:has(.admin-workspace),body:has(.admin-login){padding-top:0}
- .mobile-contact{top:0;bottom:auto;padding:env(safe-area-inset-top) 0 0;grid-template-columns:.8fr 1.6fr;z-index:70}
+ body{padding-top:0;padding-bottom:calc(52px + env(safe-area-inset-bottom))}
+ body:has(.admin-workspace),body:has(.admin-login){padding-top:0;padding-bottom:0}
+ .mobile-contact{top:auto;bottom:0;padding:0 0 env(safe-area-inset-bottom);grid-template-columns:.8fr 1.6fr;z-index:70}
  .mobile-contact a{min-height:52px;padding:8px 10px;font-size:14px;gap:7px}
  .mobile-contact svg{flex-shrink:0}
- .modern-header{top:calc(60px + env(safe-area-inset-top))}
- html{scroll-padding-top:calc(148px + env(safe-area-inset-top))}
+ .modern-header{top:calc(8px + env(safe-area-inset-top))}
+ html{scroll-padding-top:calc(96px + env(safe-area-inset-top))}
  section[id],#formular{scroll-margin-top:0}
  .modern-header .nav{max-height:calc(100dvh - 160px - env(safe-area-inset-top))}
- .section-controls{display:flex;position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom));gap:6px;z-index:55;padding:5px;background:#f7f8f3;border:1px solid #b3c4b0;border-radius:14px;box-shadow:0 4px 18px #123d2b18}
+ .section-controls{display:flex;position:fixed;left:16px;bottom:calc(76px + env(safe-area-inset-bottom));gap:6px;z-index:55;padding:5px;background:#f7f8f3;border:1px solid #b3c4b0;border-radius:14px;box-shadow:0 4px 18px #123d2b18}
  .section-controls button{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:9px;background:#123d2b;color:white;cursor:pointer}
  .section-controls button:disabled{background:#e1e8dc;color:#80917f;cursor:default}
- .chat-launch,.chat-launch.contact-chat{position:fixed;margin:0;bottom:calc(16px + env(safe-area-inset-bottom));right:16px}
- .chat-window{bottom:calc(78px + env(safe-area-inset-bottom));max-height:calc(100dvh - 238px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
+ .chat-launch,.chat-launch.contact-chat{position:fixed;margin:0;bottom:calc(76px + env(safe-area-inset-bottom));right:16px}
+ .chat-window{bottom:calc(138px + env(safe-area-inset-bottom));max-height:calc(100dvh - 238px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
  .footer-bottom{padding-bottom:90px}
 }
 
