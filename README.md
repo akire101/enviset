@@ -1,14 +1,23 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 30. 10. 2026. Zákaznícka verzia v5, vydanie v34.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 31. 10. 2026. Zákaznícka verzia v6, vydanie v35.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Novinky v zákazníckej v5:** tri hlavné služby s priehľadnými ilustráciami, telefonické dohodnutie stretnutia, nové výhody spolupráce, upravené štyri kroky a textové menu siedmich služieb. Nasadenie všetkých zmien schválil vlastník 30. 10. 2026.
+**Novinky v zákazníckej v6:** nový nadpis služieb, tri prehľadné textové karty s malými ikonami, detailnejšie listy v pozadí a plynulejšie priblíženie fotografií článkov. Nasadenie všetkých zmien a zálohu v6 schválil vlastník 31. 10. 2026.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v34 – 30. 10. 2026, zákaznícka v5**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v35 – 31. 10. 2026, zákaznícka v6**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 31. 10. 2026 – v6, schválené vydanie
+
+- **Články:** viditeľnejšie priblíženie fotografie o 9 % pri prejdení myšou, s plynulým prechodom 550 ms a pozvoľným návratom. Spoločná úprava platí pre hlavnú stránku aj blog; pri obmedzenom pohybe je animácia vypnutá.
+- **Pozadie služieb:** listy majú detailnejšiu kresbu s hlavnou žilou, bočným žilkovaním a jemnými zelenými prechodmi podľa dodanej predlohy.
+- **Služby:** tri svetlé karty podľa dodanej predlohy, s jemným okrajom, malými zelenými ikonami dokumentu, evidencie a štítu a textami zarovnanými doľava. Veľké ilustrácie sú odstránené. Názvy a popisy zodpovedajú predlohe; pod kartami je uprostred tlačidlo „Ukázať všetky služby“ s odkazom na prehľad služieb.
+- **Vylepšené:** podľa najnovšej predlohy nadpis „S našimi službami Vám pomôžeme ľahko / zvládnuť povinnosti v oblasti odpadov“, so zeleným druhým riadkom a zvýrazneným „zvládnuť“. Jemné listy dopĺňajú pozadie; služby používajú malé ikony dokumentu, evidencie a štítu. Na úzkych obrazovkách sa text prirodzene zalamuje.
+- **Celkový stav:** vlastník schválil nasadenie všetkých zmien v6 a vytvorenie bodu obnovy 31. 10. 2026. Záloha zdrojov nezahŕňa živú databázu, správy, účty ani tajomstvá; podrobnosti obnovy sú v NASADENIE.md.
+- **Overenie:** kontrola typov, 23 automatických testov, produkčné zostavenie a kontrola formátu zmien prešli 31. 10. 2026. Lokálny prehliadač potvrdil nové texty, malé ikony, listy, odkaz tlačidla a priblíženie článkov; pri desktopovej a mobilnej šírke nevzniká vodorovné posúvanie. Online overenie nasleduje po dokončení nasadenia.
 
 ## Celkový prehľad
 

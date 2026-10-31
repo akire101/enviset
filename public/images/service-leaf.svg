@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" fill="none">
+  <defs>
+    <linearGradient id="leaf" x1="35" y1="115" x2="220" y2="5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d2e5a7"/><stop offset=".48" stop-color="#a9ce77"/><stop offset="1" stop-color="#78aa49"/>
+    </linearGradient>
+    <linearGradient id="light" x1="130" y1="20" x2="160" y2="105" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#edf6cf" stop-opacity=".28"/><stop offset="1" stop-color="#edf6cf" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="outline"><path d="M5 114C48 28 172 7 295 5C257 77 143 124 5 114Z"/></clipPath>
+  </defs>
+  <path d="M5 114C48 28 172 7 295 5C257 77 143 124 5 114Z" fill="url(#leaf)" stroke="#80aa57" stroke-width="3"/>
+  <g clip-path="url(#outline)">
+    <path d="M5 114C48 28 172 7 295 5L5 114Z" fill="url(#light)"/>
+    <g stroke="#deecb8" stroke-width="1.2" opacity=".48">
+      <path d="M31 105Q33 82 55 52M61 94Q65 66 88 35M92 83Q98 53 123 24M124 71Q132 43 159 16M157 59Q168 34 195 11M190 46Q202 27 229 8M223 32Q235 19 258 7"/>
+      <path d="M31 105Q51 116 73 116M61 94Q82 111 108 114M92 83Q116 104 143 109M124 71Q148 93 178 100M157 59Q178 80 210 87M190 46Q211 65 239 70M223 32Q239 48 263 49"/>
+    </g>
+    <path d="M5 114Q151 64 295 5" stroke="#e3efc4" stroke-width="2" opacity=".7"/>
+    <path d="M7 117Q150 68 295 6" stroke="#739f4b" stroke-width=".8" opacity=".3"/>
+  </g>
+</svg>

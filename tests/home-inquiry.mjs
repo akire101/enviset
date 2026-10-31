@@ -10,7 +10,7 @@ try{
   await page.locator('.analytics-consent button').first().click();
   assert.equal(await page.locator('#pre-koho').count(),0);
   assert.equal(await page.locator('.hero-actions .button').innerText(),'Nezáväzný dopyt');
-  assert.match(await page.locator('#pomoc h2').innerText(),/Riešenia, ktoré Vás zbavia starostí/);
+  assert.match(await page.locator('#pomoc h2').innerText(),/S našimi službami Vám pomôžeme ľahko\s+zvládnuť povinnosti v oblasti odpadov/);
   assert.equal(await page.locator('.help-highlight').evaluate(e=>getComputedStyle(e).fontWeight),'800');
   await page.locator('#pomoc').scrollIntoViewIfNeeded();await page.screenshot({path:`outputs/v31-home-${width}.png`});
   await page.goto('http://127.0.0.1:6010/kontakt?sluzba=konzultacia#formular',{waitUntil:'domcontentloaded'});

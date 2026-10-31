@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check } from 'lucide-react';
+import { ArrowUpRight, Check, FileText, ClipboardList, ShieldCheck } from 'lucide-react';
 import { Button, SectionHead } from './components';
 import {HeroWind} from './hero-wind';
 import {SectionControls} from './section-controls';
@@ -10,11 +10,11 @@ export const metadata = pageMetadata('Odpadové hospodárstvo pre firmy', 'Dokum
 export const dynamic = 'force-dynamic';
 export default async function Home(){const posts=await publicPosts();return <main id="main">
  <section id="uvod" className="hero"><HeroWind/><div className="hero-shade"/><div className="hero-content"><h1>Odpady sú koncom<br/> jedného procesu, ale<br/> zodpovednosťou sa začína ten ďalší.</h1><p>Pomáhame firmám zbaviť sa administratívnej záťaže a starostí spojených s plnením zákonných povinností.</p><div className="hero-actions"><Button>Nezáväzný dopyt</Button></div></div></section>
- <section id="pomoc" className="help-section"><div className="container section"><h2>Riešenia, ktoré Vás <strong className="help-highlight">zbavia</strong> starostí s odpadovým hospodárstvom</h2><div className="help-icons">{[
-  {slug:'odborna-dokumentacia',title:'Dokumentácia v oblasti odpadového hospodárstva'},
-  {slug:'evidencia-odpadov',title:'Evidencia odpadov'},
-  {slug:'nebezpecne-odpady',title:'Nebezpečné odpady'},
- ].map(s=><a href={`/sluzby/${s.slug}`} key={s.slug}><img className="help-service-image" src={`/images/services/${s.slug}.png?v=transparent` } alt="" width={800} height={570} loading="lazy"/><h3>{s.title}</h3></a>)}</div><div className="section-bottom"><Button href="/sluzby">Všetky riešenia</Button></div></div></section>
+ <section id="pomoc" className="help-section"><div className="container section"><h2>S našimi službami Vám pomôžeme ľahko<br/><span className="help-heading-green"><strong className="help-highlight">zvládnuť</strong> povinnosti v oblasti odpadov</span></h2><div className="help-icons">{[
+  {slug:'odborna-dokumentacia',icon:FileText,title:'Dokumentácia',description:'Pripravíme Vám potrebnú dokumentáciu, na základe ktorej nastavíme procesy tak, aby Vaša firma spĺňala povinnosti nakladania s odpadmi v súlade s legislatívou.'},
+  {slug:'evidencia-odpadov',icon:ClipboardList,title:'Evidencia odpadov',description:'Budeme za Vás spracovávať podklady o odovzdávaní odpadu a viesť z nich evidenciu odpadov pre Vašu firmu.'},
+  {slug:'nebezpecne-odpady',icon:ShieldCheck,title:'Nebezpečné odpady',description:'Zabezpečíme správne označenie, triedenie, skladovanie a nakladanie s nebezpečnými odpadmi, v súlade s legislatívou.'},
+ ].map(s=><a href={`/sluzby/${s.slug}`} key={s.slug}><s.icon className="help-service-icon" size={40} strokeWidth={1.7} aria-hidden="true"/><h3>{s.title}</h3><p>{s.description}</p></a>)}</div><div className="section-bottom"><Button href="/sluzby">Ukázať všetky služby</Button></div></div></section>
 
  <section id="spolupraca" className="meeting-intro"><div className="container meeting-layout"><div className="meeting-copy"><h2>Neviete, aké povinnosti sa týkajú Vašej firmy?</h2><p>Dohodnite si bezplatné stretnutie s naším špecialistom na odpadové hospodárstvo.</p></div><img src="/images/meeting-office.png" alt="Pracovný stôl s dokumentáciou, notebookom a zeleným zakladačom" width={854} height={577} loading="lazy"/></div></section>
  <section id="vyhody" className="container section meeting-benefits"><h2>Čo získate?</h2><ul>{[

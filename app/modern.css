@@ -166,8 +166,8 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 /* Concise audience introduction, replacing the photo grid. */
 .audience-summary{max-width:1080px;margin:0;color:var(--ink);font-size:clamp(24px,2.25vw,32px);font-weight:700;line-height:1.45;letter-spacing:-.025em}.audience-summary a{display:block;border-radius:2px}.audience-summary a:hover{color:var(--green)}
 
-/* Seven linked service symbols; four plus three on wide screens. */
-.help-section .section-bottom{display:flex;justify-content:center}.help-icons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}.help-icons>a{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;padding:16px 8px;color:var(--ink);border-radius:8px}.help-service-image{display:block;width:100%;height:auto;aspect-ratio:800/570;object-fit:contain;border-radius:16px;transition:transform .24s ease-out}.help-icons h3{font-size:22px;font-weight:700;line-height:1.3;letter-spacing:-.02em;margin:0;max-width:320px}.help-icons>a:focus-visible{outline:2px solid var(--green);outline-offset:6px}.help-icons>a:is(:hover,:focus-visible) .help-service-image{transform:scale(1.09)}@media(max-width:760px){.help-icons{grid-template-columns:1fr;gap:28px;max-width:400px;margin-inline:auto}.help-icons>a{padding:12px 4px;gap:16px}.help-icons h3{font-size:21px}}@media(prefers-reduced-motion:reduce){.help-service-image{transition:none}}
+/* Three linked services with descriptions. */
+.help-section .section-bottom{display:flex;justify-content:center;margin-top:28px}.help-icons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.help-icons>a{display:grid;grid-template-rows:subgrid;grid-row:span 3;row-gap:16px;align-content:start;justify-items:start;text-align:left;padding:30px;color:var(--ink);background:#f7f9f4;border:1px solid #dbe3d5;border-radius:12px}.help-service-icon{color:#285d47}.help-icons h3{font-size:clamp(23px,2.2vw,30px);font-weight:750;line-height:1.2;letter-spacing:-.025em;margin:0}.help-icons p{font-size:18px;line-height:1.45;margin:0;color:#52665d}.help-icons>a:focus-visible{outline:2px solid var(--green);outline-offset:6px}.help-icons>a:is(:hover,:focus-visible) h3{color:var(--green)}@media(max-width:1000px){.help-icons>a{padding:24px}.help-icons h3{font-size:23px}}@media(max-width:760px){.help-icons{grid-template-columns:1fr;gap:16px;max-width:440px;margin-inline:auto}.help-icons>a{row-gap:16px;padding:26px}.help-icons h3{font-size:26px}}
 
 /* Úvodný obrázok cez celú šírku obrazovky. */
 .hero{width:100%;border-radius:0}
@@ -179,7 +179,8 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 .chat-brand-mark{flex-shrink:0;filter:brightness(0) invert(1)}
 
 /* Contact inquiry layout. */
-.help-highlight{color:#176b43;font-weight:800}
+.help-highlight{color:#176b43;font-weight:800}.help-heading-green{color:#176b43}
+.help-section{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 95% 75%,#d4e1c5 0,transparent 50%),#edf1e7}.help-section>.container{position:relative;z-index:1}.help-section::before,.help-section::after{content:"";position:absolute;z-index:0;pointer-events:none;right:-12px;top:38px;width:280px;height:112px;transform:rotate(-18deg);background:url("/images/service-leaf.svg") center/contain no-repeat;opacity:.7}.help-section::after{top:166px;right:-24px;width:230px;height:92px;transform:rotate(-12deg);opacity:.55}@media(max-width:760px){.help-section::before,.help-section::after{opacity:.18}.help-section h2{font-size:30px}}
 .inquiry-interests{border:0;padding:0;margin:0 0 24px;min-width:0}
 .inquiry-interests legend{font-size:17px;margin-bottom:8px;color:var(--muted)}
 .inquiry-interests label{display:flex;align-items:center;gap:12px;min-height:44px;font-size:17px;cursor:pointer}

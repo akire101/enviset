@@ -1,5 +1,11 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v6 – 31. 10. 2026
+
+Vlastník schválil nasadenie všetkých lokálnych zmien v6. Interné označenie je v35.
+Bod obnovy: tag `v6-zakaznicka-2026-10-31`, záloha `backups/ENVISET_v6_2026-10-31` v nadradenom projektovom priečinku, so zdrojovým ZIP, Git bundle, kontrolnými súčtami a návodom OBNOVA-v6.txt rovnako ako v5.
+Obnova zdrojov neobnovuje živú databázu D1, správy, chaty, analytiku, redakčné dáta uložené iba v D1, účty ani Secrets. Obnovu vykonajte do nového priečinka; push na main spúšťa online nasadenie.
+
 ## Aktualizácia v2 (18. 10. 2026)
 
 Zdrojová verzia v2 je uložená v Git-e pod označením `v2-2026-10-18`; toto označenie sa vytvorí pri nahraní vydania. Základom je uložený zákaznícky stav z 18. 10. 2026. Nasledujúce nastavenie Workera, databázy a Secrets sa pri aktualizácii zachováva. Súbor `/version.json` umožňuje overiť vydanie na verejnom webe. Nahrávanie ďalších verzií vykonávajte iba na výslovný pokyn vlastníka.
