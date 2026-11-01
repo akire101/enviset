@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 1. 11. 2026. Zákaznícka verzia v7, aktualizácia 1, vydanie v38.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 2, vydanie v39.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s troma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,24 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v38 – 1. 11. 2026, zákaznícka v7, aktualizácia 1**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v39 – 2. 11. 2026, zákaznícka v7, aktualizácia 2**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 2. 11. 2026 – v7, aktualizácia 2: schválené vydanie
+
+- **Vylepšené:** zelená vlna plynulo pokračuje za kartami Služieb a okolo nich. Obe karty majú pomaly prechádzajúci svetelný gradient a jemnú zelenú žiaru. Pri prejdení kurzorom sa zväčšia o 7 %, nadvihnú o 7 px a svetlo zosilnie.
+- **Text:** nadpis spodného rámčeka je „Neviete, ktoré služby sú potrebné pre Vašu firmu?“.
+- **Celkový stav:** vlastník schválil online nasadenie a uloženie do v7; predošlé zálohy zostávajú zachované. Ostatné funkcie, prepojenia, bezpečnosť a SEO zostávajú podľa prehľadu nižšie. Staršie lokálne záznamy opisujú prípravu.
+- **Overenie:** lokálna kontrola typov a prehliadača potvrdila zväčšenie, nadvihnutie, pohyb svetla, rozbaľovanie, vypnutie animácií pri obmedzenom pohybe a mobil bez vodorovného posúvania. Testy, zostavenie, verejný web a obnova zálohy sa kontrolujú pri vydaní. Zdrojová záloha neobsahuje živú databázu ani Secrets.
+
+## 2. 11. 2026 – lokálne súvislé pozadie a animácia kariet Služieb
+
+- **Vylepšené:** zelená vlna pokračuje za oboma kartami v jednej súvislej ploche s jemne zvlneným dolným okrajom. Karty majú pomalý pohyblivý svetelný gradient a jemnú zelenú žiaru. Pri prejdení kurzorom sa nadvihnú o 7 px a zväčšia o 7 %, svetlo aj žiara zosilnejú.
+- **Stav:** iba lokálne, bez online nasadenia. Dekoratívne vrstvy neblokujú tlačidlá ani rozbaľovanie; pri obmedzenom pohybe sú animácie vypnuté.
+
+## 2. 11. 2026 – lokálna oprava nadpisu pod službami
+
+- **Vylepšené:** nadpis spodného rámčeka stránky Služby je „Neviete, ktoré služby sú potrebné pre Vašu firmu?“.
+- **Stav:** iba lokálne, bez online nasadenia; ostatný obsah a telefónne tlačidlo zostávajú zachované.
 
 ## 1. 11. 2026 – v7, aktualizácia 1: schválené vydanie
 

@@ -1,5 +1,11 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v7 – aktualizácia 2, 2. 11. 2026
+
+Vlastník schválil nasadenie a uloženie aktuálnych zmien ako ďalšej aktualizácie v7 (interné v39). Obsah: opravený nadpis pod službami, súvislá zelená vlna za kartami, zväčšenie o 7 % s nadvihnutím, pohyblivý svetelný gradient a jemná žiara. Pri obmedzenom pohybe sa animácie vypnú. Databáza, migrácie a Secrets sa nemenia.
+
+Bod obnovy `v7-zakaznicka-2026-11-02-aktualizacia2`, záloha `backups/ENVISET_v7_2026-11-02_aktualizacia2`. Predchádzajúce body v7 zostávajú zachované. Zdrojová záloha nezahŕňa živé dáta D1, správy, chaty, analytiku, účty, Secrets ani médiá uložené iba v D1.
+
 ## Zákaznícka v7 – 1. 11. 2026
 
 Aktualizácia 1 (interné v38): vlastník schválil uloženie všetkých nadväzujúcich úprav do v7 a online nasadenie. Zahŕňa pozadie Služieb, dopytové tlačidlá a formulár s troma typmi záujmu, telefonickú výzvu, domovské karty bez odkazov, menu, nové texty spolupráce a O nás aj prerobený Kontakt. Bod obnovy `v7-zakaznicka-2026-11-01-aktualizacia1`, záloha `backups/ENVISET_v7_2026-11-01_aktualizacia1`. Pôvodná v7 zostáva zachovaná. Rozsah vylúčených živých údajov je rovnaký ako nižšie.
