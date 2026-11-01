@@ -1,5 +1,11 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v7 – 1. 11. 2026
+
+Vlastník schválil online nasadenie všetkých lokálnych zmien v7 a uloženie bodu obnovy. Interné označenie je v37. Obsah: nový úvod stránky Služby, dve karty spolupráce s 15 rozbaľovacími opismi, plynulé rozvinutie a zväčšenie pri prejdení kurzorom, odstránenie duplicitných zoznamov. Databázové migrácie ani nastavenia sa nemenia.
+
+Bod obnovy: tag `v7-zakaznicka-2026-11-01`, priečinok `backups/ENVISET_v7_2026-11-01` v nadradenom projekte so zdrojovým ZIP, Git bundle, kontrolnými súčtami a návodom obnovy. Záloha nezahŕňa živú D1, správy, chaty, analytiku, účty, Secrets ani obrázky uložené iba v D1. Staršie zálohy sa zachovávajú.
+
 ## Zákaznícka v6 – 31. 10. 2026
 
 Aktualizácia 1 (interné v36): mobilný chat iba na ručné otvorenie, kontaktná lišta naspodku a nadväzujúce polohy hlavičky a ovládania. Nasadenie aj uloženie schválené vlastníkom. Aktualizovaný bod obnovy je `v6-zakaznicka-2026-10-31-aktualizacia1`, záloha `backups/ENVISET_v6_2026-10-31_aktualizacia1`; pôvodný bod v6 sa neprepisuje.

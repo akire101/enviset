@@ -1,14 +1,45 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 31. 10. 2026. Zákaznícka verzia v6, vydanie v36.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 1. 11. 2026. Zákaznícka verzia v7, vydanie v37.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Novinky v zákazníckej v6:** nový nadpis služieb, tri prehľadné textové karty s malými ikonami, detailnejšie listy v pozadí a plynulejšie priblíženie fotografií článkov. Nasadenie všetkých zmien a zálohu v6 schválil vlastník 31. 10. 2026.
+**Novinky v zákazníckej v7:** nový úvod stránky Služby, dve karty spolupráce s rozbaľovacími opismi, jemné zväčšenie kariet a plynulé rozvinutie textov. Nasadenie všetkých zmien a uloženie v7 schválil vlastník 1. 11. 2026.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v36 – 31. 10. 2026, zákaznícka v6, aktualizácia 1**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v37 – 1. 11. 2026, zákaznícka v7**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 1. 11. 2026 – v7, schválené vydanie
+
+- **Služby:** nový hlavný nadpis a podnadpis; tmavozelený ročný paušálny servis s ôsmimi položkami a svetlá karta siedmich jednorazových služieb podľa dodanej predlohy.
+- **Ovládanie:** celý riadok rozbaľuje opis, symbol sa mení z plus na mínus a v každej karte zostáva otvorená najviac jedna služba. Text sa plynulo rozvinie a zavrie; karty sa pri prejdení myšou jemne zväčšia. Rešpektuje sa obmedzený pohyb.
+- **Prehľadnosť:** duplicitné pôvodné zoznamy sú odstránené; tlačidlá smerujú na služby v príslušnej karte. Na mobile sú karty pod sebou.
+- **Celkový stav:** vlastník schválil nasadenie a uloženie v7. Rozsah ostatných funkcií, prepojení, bezpečnosti a SEO zostáva podľa prehľadu nižšie. Staršie záznamy opisujú priebeh lokálnej prípravy.
+- **Overenie:** kontrola typov, 23 testov a lokálne overenie kariet, animácie, klávesnice, odkazov a mobilného zobrazenia prešli. Online overenie a kontrola zálohy nasledujú po nasadení; zdrojová záloha neobsahuje živé údaje D1 ani Secrets.
+
+## 1. 11. 2026 – v7, plynulé rozbaľovanie služieb
+
+- **Vylepšené:** opisy v oboch kartách sa postupne rozvinú a zatvoria počas 380 ms, s jemným zobrazením textu. V každej karte zostáva otvorená najviac jedna položka.
+- **Stav a overenie:** iba lokálne. Animácia overená v lokálnom prehliadači; pri systémovej požiadavke na obmedzený pohyb je vypnutá. Staršie prehliadače bez podpory animácie zobrazia opis okamžite.
+
+## 1. 11. 2026 – v7, odstránenie duplicitného prehľadu
+
+- **Vylepšené:** pôvodné zoznamy pod kartami sú odstránené. Všetkých 15 služieb aj opisy zostávajú iba v nových rozbaľovacích kartách; tlačidlá smerujú na zoznam v príslušnej karte.
+- **Stav a overenie:** iba lokálne pre v7, bez nasadenia. Kontrola typov a prehliadača potvrdzuje dve karty, 15 rozbaľovacích položiek a platné ciele tlačidiel.
+
+## 1. 11. 2026 – v7, lokálna príprava: dve možnosti spolupráce
+
+- **Služby podľa predlohy:** tmavozelená karta ročného paušálneho servisu a svetlá karta jednorazových služieb. Obe majú fajky, zaoblené tlačidlá a jemné zväčšenie pri prejdení myšou; pri obmedzenom pohybe sa zväčšenie vypne.
+- **Rozbaľovanie:** osem položiek ročného servisu a sedem jednorazových služieb obsahuje dodané opisy. Celý riadok je ovládateľný myšou aj klávesnicou; v každej karte môže byť otvorená iba jedna položka. Tlačidlá vedú na podrobné sekcie nižšie na stránke.
+- **Celkový stav:** iba lokálna príprava v7, bez online nasadenia. Prehľad služieb teraz obsahuje sedem jednorazových služieb a osem položiek ročného servisu; ostatné funkcie, prepojenia, bezpečnosť a SEO zostávajú zachované.
+- **Overenie:** kontrola typov a lokálny prehliadač: počty 8/7, vzájomné zatváranie položiek v karte, nezávislé otvorenie oboch kariet, existujúce ciele tlačidiel a mobilná šírka 390 px bez vodorovného posúvania. Online nasadenie čaká na pokyn vlastníka.
+
+## 1. 11. 2026 – v7, lokálna príprava: úvod stránky Služby
+
+- **Vylepšené:** hlavný nadpis stránky Služby znie „Od jednorazových služieb až po celoročnú starostlivosť.“ Podnadpis: „Vyberte si riešenie podľa potrieb vašej firmy. Pomôžeme vám s konkrétnymi povinnosťami alebo prevezmeme starostlivosť o celé odpadové hospodárstvo.“
+- **Celkový stav:** textová úprava je pripravená iba lokálne. Funkcie, prepojenia, bezpečnosť a SEO zostávajú v rozsahu nižšie uvedeného prehľadu.
+- **Overenie a obmedzenia:** kontrola zmien a typov; zobrazenie v prehliadači zatiaľ neoverené. Online nasadenie všetkých zmien v7 čaká na výslovný pokyn vlastníka.
 
 ## 31. 10. 2026 – v6, aktualizácia 1: mobilné úpravy
 
@@ -33,7 +64,7 @@ Slovenský firemný web ENVI set predstavuje poradenstvo a manažment odpadovéh
 | Oblasť | Možnosti | Stav |
 |---|---|---|
 | Firemná prezentácia | Domov, O nás, služby, výhody, spolupráca, kontakt; časté otázky na detailoch služieb | Súčasť webu |
-| Služby | Deväť detailov služieb, osem položiek celoročného servisu a osem jednorazových služieb | Súčasť webu |
+| Služby | Deväť detailov služieb, osem položiek celoročného servisu a sedem jednorazových služieb | Dve rozbaľovacie karty pripravené lokálne pre v7 |
 | Blog / poradňa | Kategórie, vyhľadávanie, stránkovanie, detail a súvisiace články | Súčasť webu; import obsahuje tri pôvodné a päť nových článkov; existujúce úpravy sa neprepisujú |
 | Administrácia | Editor, koncepty, publikovanie, archív, záloha článkov a nahrávanie vlastného titulného obrázka | Prihlásenie a úpravy konceptu na verejnom webe overené 13. 10. 2026; upload lokálne overený 29. 10. 2026, súčasť vydania v32 |
 | Štatistiky | Denné, 7-dňové, 30-dňové a 365-dňové prehľady, čas v sekciách, kliknutia a mapy pohybu myši | Vlastné meranie po súhlase; dostupné iba administrátorovi |

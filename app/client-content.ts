@@ -17,20 +17,19 @@ export const cooperationSteps = [
 ] as const;
 
 export const annualServices = [
- ['Vstupná analýza spoločnosti', 'Prejdeme si detailne činnosť Vašej spoločnosti a zistíme, aké druhy odpadov Vám vznikajú, v akom množstve a aké povinnosti sa na Vás vzťahujú.'],
- ['Vypracovanie odbornej dokumentácie', 'Vypracujeme podrobný návod pre správne nakladanie s odpadmi vo Vašej spoločnosti zabezpečujúci prehľadnosť, súlad s platnou legislatívou a pomoc pri eliminovaní rizík pri kontrolách.'],
- ['Doručenie a vysvetlenie dokumentácie', 'Hotovú dokumentáciu Vám doručíme, vysvetlíme a ukážeme, ako ju používať v praxi.'],
- ['Vedenie systému evidencie odpadov', 'Postaráme sa o správne vedenie evidencie vzniknutých odpadov a potrebných údajov o ich odovzdaní a nakladaní s nimi.'],
- ['Vypracovanie a podanie ročného ohlásenia o odpadoch', 'Na základe evidencie pripravíme a podáme elektronické ohlásenia pre orgány štátnej správy.'],
- ['Osobná kontrola prevádzky', 'Vykonávame osobné kontroly priamo vo Vašej prevádzke, preveríme plnenie povinností, skontrolujeme fyzický stav prevádzky a následne vypracujeme hodnotiacu správu s prípadnými nedostatkami a odporúčanými riešeniami.'],
- ['Priebežné informovanie o dôležitých zmenách v legislatíve', 'Priebežne sledujeme a upozorňujeme na dôležité zmeny v legislatíve, ktoré môžu ovplyvniť Vaše povinnosti v oblasti odpadového hospodárstva.'],
- ['Odborné telefonické a e-mailové poradenstvo počas roka', 'Počas celého roka máte možnosť konzultovať s nami otázky týkajúce sa odpadov, povinností firmy, evidencie, dokumentácie a aktuálnych legislatívnych zmien.'],
+ ['Vstupná analýza spoločnosti', 'Podrobne zanalyzujeme fungovanie Vašej spoločnosti a prevádzky, aby sme nastavili vhodné riešenia v súlade s tým, čomu sa venujete.'],
+ ['Odborná dokumentácia', 'Pripravíme potrebnú dokumentáciu, na základe ktorej nastavíme procesy tak, aby Vaša firma spĺňala povinnosti nakladania s odpadmi v súlade s legislatívou.'],
+ ['Zavedenie dokumentácie do praxe', 'Vysvetlíme Vám vypracovanú dokumentáciu, oboznámime Vás s jej jednotlivými sekciami a ukážeme Vám, ako všetko správne zaviesť do praxe.'],
+ ['Vedenie evidencie odpadov', 'Budeme za Vás spracovávať podklady o odovzdávaní odpadu a viesť z nich evidenciu odpadov pre Vašu firmu.'],
+ ['Zabezpečenie ohlasovacích povinností', 'Zabezpečíme vypracovanie a podanie potrebných ohlásení o odpadoch za Vašu firmu v stanovenom termíne.'],
+ ['Osobné kontroly prevádzok', 'Osobne kontrolujeme nakladanie s odpadmi vo Vašej prevádzke, preveríme plnenie legislatívnych povinností a navrhneme opatrenia na odstránenie prípadných nedostatkov.'],
+ ['Monitoring legislatívnych zmien', 'Priebežne sledujeme dôležité zmeny v legislatíve, na ktoré Vás včas upozorníme a vysvetlíme spôsoby, ako zmeny aplikovať vo firme.'],
+ ['Individuálna odborná podpora', 'Počas celej doby trvania zmluvy Vám budeme k dispozícii pri riešení otázok a situácií súvisiacich s odpadovým hospodárstvom a poskytovať odbornú podporu pri špecifických záležitostiach.'],
 ];
 export const oneOffServices = [
- ['Individuálna konzultácia na prevádzke', 'Osobne konzultujeme situáciu priamo vo Vašej prevádzke a prejdeme s Vami konkrétne otázky a povinnosti v oblasti odpadového hospodárstva.'],
- ['Registrácie v registri výrobcov obalov a neobalových výrobkov do 100 kg ročne', 'Pripravíme potrebné podklady a zabezpečíme registráciu podľa povinností, ktoré sa na Vašu spoločnosť vzťahujú.'],
+ ['Registrácie firiem v registri výrobcov', 'Pripravíme potrebné podklady a zabezpečíme registráciu podľa povinností, ktoré sa na vašu spoločnosť vzťahujú.'],
  ['Podklady k uzavretiu zmluvy s OZV', 'Vypracujeme podklady potrebné na uzatvorenie zmluvy s organizáciou zodpovednosti výrobcov.'],
- ['Podanie ohlásenia pre obaly a neobalové výrobky', 'Spracujeme potrebné údaje a pripravíme ohlásenie týkajúce sa obalov a neobalových výrobkov.'],
+ ['Podanie ohlásenia pre obaly/neobaly', 'Spracujeme potrebné údaje a pripravíme ohlásenie týkajúce sa obalov a neobalových výrobkov.'],
  ['Identifikačné listy nebezpečných odpadov', 'Vypracujeme identifikačné listy pre nebezpečné odpady podľa konkrétneho odpadu a jeho nebezpečných vlastností.'],
  ['Plán opatrení pre prípad havárie', 'Vypracujeme dokumentáciu a postupy, ktoré určujú, ako postupovať pri vzniku havárie spojenej s nebezpečnými odpadmi.'],
  ['Prevádzkový poriadok miesta zhromaždiska nebezpečného odpadu', 'Vypracujeme potrebnú dokumentáciu pre správne a bezpečné zhromažďovanie nebezpečných odpadov.'],
