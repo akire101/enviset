@@ -52,12 +52,12 @@ export function Header(){
     <button ref={trigger} type="button" className={`services-trigger ${active('/sluzby')?'active':''}`} aria-expanded={servicesOpen} aria-controls="services-dropdown" onClick={event=>{clearHover();setServicesOpen(event.detail>0&&desktopMouse('mouse')?true:!servicesOpen)}} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();flushSync(()=>setServicesOpen(true));panel.current?.querySelector<HTMLAnchorElement>('a')?.focus({preventScroll:true})}}}>Služby<ChevronDown size={15} aria-hidden="true"/></button>
     <div ref={panel} id="services-dropdown" className={`services-panel ${servicesOpen?'is-open':''}`} aria-hidden={!servicesOpen} inert={!servicesOpen}>
      <div className="dropdown-main"><div className="dropdown-heading"><a href="/sluzby" onClick={close}>Všetky služby<ArrowUpRight size={16}/></a></div>
-      <div className="dropdown-grid">{menuServices.map(service=><a key={service.slug} href={`/sluzby/${service.slug}`} className="dropdown-service" onClick={close} aria-current={path===`/sluzby/${service.slug}`?'page':undefined}><strong>{service.title}</strong></a>)}</div>
+      <div className="dropdown-grid">{menuServices.map(service=><div key={service.slug} className="dropdown-service"><strong>{service.title}</strong></div>)}</div>
      </div>
 
     </div>
    </div>
-   <a href="/blog" className={active('/blog')?'active':''} aria-current={active('/blog')?'page':undefined}>Blog / Poradňa</a>
+   <a href="/blog" className={active('/blog')?'active':''} aria-current={active('/blog')?'page':undefined}>Blog/Novinky</a>
    <a href="/kontakt" className={active('/kontakt')?'active':''} aria-current={active('/kontakt')?'page':undefined}>Kontakt</a>
   </nav>
   <a className="button header-cta" href={`tel:${brand.contacts.phone.replace(/\s/g,'')}`} aria-controls="meeting-phone" onClick={event=>{if(window.matchMedia('(min-width: 761px) and (pointer: fine)').matches){event.preventDefault();document.getElementById('meeting-phone')?.showPopover()}}}>Bezplatné stretnutie</a>

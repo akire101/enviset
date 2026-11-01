@@ -2,6 +2,8 @@
 
 ## Zákaznícka v7 – 1. 11. 2026
 
+Aktualizácia 1 (interné v38): vlastník schválil uloženie všetkých nadväzujúcich úprav do v7 a online nasadenie. Zahŕňa pozadie Služieb, dopytové tlačidlá a formulár s troma typmi záujmu, telefonickú výzvu, domovské karty bez odkazov, menu, nové texty spolupráce a O nás aj prerobený Kontakt. Bod obnovy `v7-zakaznicka-2026-11-01-aktualizacia1`, záloha `backups/ENVISET_v7_2026-11-01_aktualizacia1`. Pôvodná v7 zostáva zachovaná. Rozsah vylúčených živých údajov je rovnaký ako nižšie.
+
 Vlastník schválil online nasadenie všetkých lokálnych zmien v7 a uloženie bodu obnovy. Interné označenie je v37. Obsah: nový úvod stránky Služby, dve karty spolupráce s 15 rozbaľovacími opismi, plynulé rozvinutie a zväčšenie pri prejdení kurzorom, odstránenie duplicitných zoznamov. Databázové migrácie ani nastavenia sa nemenia.
 
 Bod obnovy: tag `v7-zakaznicka-2026-11-01`, priečinok `backups/ENVISET_v7_2026-11-01` v nadradenom projekte so zdrojovým ZIP, Git bundle, kontrolnými súčtami a návodom obnovy. Záloha nezahŕňa živú D1, správy, chaty, analytiku, účty, Secrets ani obrázky uložené iba v D1. Staršie zálohy sa zachovávajú.

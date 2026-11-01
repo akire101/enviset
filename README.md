@@ -1,14 +1,84 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 1. 11. 2026. Zákaznícka verzia v7, vydanie v37.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 1. 11. 2026. Zákaznícka verzia v7, aktualizácia 1, vydanie v38.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Novinky v zákazníckej v7:** nový úvod stránky Služby, dve karty spolupráce s rozbaľovacími opismi, jemné zväčšenie kariet a plynulé rozvinutie textov. Nasadenie všetkých zmien a uloženie v7 schválil vlastník 1. 11. 2026.
+**Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s troma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v37 – 1. 11. 2026, zákaznícka v7**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v38 – 1. 11. 2026, zákaznícka v7, aktualizácia 1**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 1. 11. 2026 – v7, aktualizácia 1: schválené vydanie
+
+- **Služby:** dodané kancelárske pozadie nad kartami; tlačidlá záujmu predvyplnia formulár. Pod kartami je nový text o bezplatnom osobnom stretnutí a telefónne tlačidlo (počítač najprv zobrazí číslo, mobil priamo otvorí volanie). Nadpis rámčeka využíva celú šírku.
+- **Formulár:** Ročný paušálny servis, Jednorazová služba a Iný dopyt. Iba pri jednorazovej službe sa zobrazí sedem možností s viacnásobným výberom. Výber sa uloží s dopytom do existujúcej schránky; e-mailové oznámenia zostávajú nenastavené.
+- **Domov a navigácia:** tri hlavné karty bez prekliku, zväčšenie o 7 % pri prejdení myšou. Menu Služby má iba jeden odkaz „Všetky služby“. Položka blogu je „Blog/Novinky“. Štyri kroky spolupráce majú dodané nadpisy a opisy.
+- **O nás:** kratší príbeh v piatich odsekoch.
+- **Kontakt:** nový nadpis a podnadpis, kontakty a firemné údaje vedľa pracovných hodín, pôsobnosti a mapy z predlohy; formulár vedľa nich. Pôvodný slogan, tri fajky a doplnková veta sú odstránené. Kontakty aj formulár začínajú v jednej výške.
+- **Celkový stav:** všetky vyššie uvedené úpravy sú schválené na online nasadenie ako súčasť v7. Pôvodný bod obnovy v7 zostáva zachovaný, pribúda samostatná aktualizácia 1. Staršie lokálne záznamy nižšie opisujú prípravu.
+- **Overenie a obmedzenia:** kontrola typov, zostavenie a lokálne kontroly prehliadača prešli; verejný web a nový bod obnovy sa overia po nasadení. Zdrojová záloha nezahŕňa živú databázu, správy, chaty, účty ani Secrets. SEO indexácia a ostatné prevádzkové obmedzenia zostávajú podľa prehľadu nižšie.
+
+## 1. 11. 2026 – po v7, lokálne zarovnanie kontaktov
+
+- **Vylepšené:** odstránené prázdne odsadenie nad telefónom a e-mailom. Kontakty aj pracovné hodiny začínajú pri hornom okraji formulára; ľavý blok je usporiadaný súvisle odhora.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 1. 11. 2026 – po v7, lokálny Kontakt podľa predlohy
+
+- **Vylepšené:** nový nadpis „Napíšte nám, čo vaša firma potrebuje“ a podnadpis. Vedľa formulára sú iba kontakty, firemné údaje, pracovné hodiny Pondelok – Piatok 8:00 – 17:00 a pôsobnosť Trenčín a celé Slovensko s mapou z dodanej predlohy. Pôvodný slogan, tri fajky a veta pod nimi sú odstránené.
+- **Stav:** iba lokálne, bez online nasadenia. Formulár a jeho výbery zostávajú zachované.
+
+## 1. 11. 2026 – po v7, lokálne skrátený príbeh O nás
+
+- **Vylepšené:** text O nás je nahradený dodanou kratšou verziou v piatich odsekoch. Opravený je preklep „zaačínal“ a doplnená čiarka vo vete „Chceme, aby…“. Vzhľad stránky zostáva zachovaný.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 1. 11. 2026 – po v7, lokálne texty priebehu spolupráce
+
+- **Vylepšené:** sekcia „Ako prebieha naša spolupráca?“ má dodané texty štyroch krokov: bezplatné osobné stretnutie, analýza a nastavenie systému, vypracovanie a zavedenie dokumentácie do praxe, celoročná starostlivosť a podpora. Zachované sú čísla 01–04 a existujúca časová os.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 1. 11. 2026 – po v7, lokálny názov Blog/Novinky
+
+- **Vylepšené:** položka hornej navigácie sa volá „Blog/Novinky“ a naďalej otvára blog.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 1. 11. 2026 – po v7, lokálne tri typy dopytov
+
+- **Vylepšené:** formulár ponúka Ročný paušálny servis, Jednorazovú službu a Iný dopyt. Iba pri jednorazovej službe sa zobrazí sedem konkrétnych služieb s možnosťou označiť viac položiek. Výber sa odošle s dopytom a zachová v správe pre tím.
+- **Stav:** iba lokálne. Predvyplnenie z oboch kariet zostáva funkčné vrátane predchádzajúcich názvov v odkazoch. Pri prepnutí na iný typ sa skryté položky neodosielajú; ročný servis ani iný dopyt nevyžadujú ďalšie odpovede.
+
+## 1. 11. 2026 – po v7, lokálne menu Služby bez jednotlivých odkazov
+
+- **Vylepšené:** názvy jednotlivých služieb v rozbaľovacom menu hlavičky sú iba informačné. Jediný odkaz v paneli zostáva „Všetky služby“, ktorý otvára prehľad služieb. Otváranie menu myšou, dotykom a klávesnicou zostáva zachované.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 1. 11. 2026 – po v7, lokálne karty na domovskej stránke
+
+- **Vylepšené:** tri hlavné karty Dokumentácia, Evidencia odpadov a Nebezpečné odpady už neodkazujú na podstránky. Pri prejdení kurzorom sa plynulo zväčšia o 7 % s jemným tieňom. Tlačidlo „Ukázať všetky služby“ zostáva zachované.
+- **Stav:** iba lokálne. Pri obmedzenom pohybe sa zväčšenie vypne; na dotykových zariadeniach sa hover efekt nepoužíva.
+
+## 1. 11. 2026 – po v7, lokálne zalomenie nadpisu stretnutia
+
+- **Vylepšené:** nadpis svetlozeleného rámčeka využíva celú dostupnú šírku, aby slovo „firmy?“ nezostávalo na samostatnom riadku kvôli zbytočnému obmedzeniu šírky. Na menších obrazovkách sa naďalej prirodzene zalamuje.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 1. 11. 2026 – po v7, lokálna výzva na osobné stretnutie
+
+- **Vylepšené:** svetlozelený rámček pod kartami Služieb obsahuje dodaný nadpis a text o bezplatnom nezáväznom osobnom stretnutí. Nové tlačidlo na počítači najprv zobrazí telefónne číslo; ďalším kliknutím možno volať. Na mobile otvorí volanie priamo.
+- **Stav:** iba lokálna úprava stránky Služby; spoločné výzvy na ostatných stránkach zostávajú zachované. Pred odovzdaním sa overuje zobrazenie, telefónny odkaz a kontrola typov.
+
+## 1. 11. 2026 – po v7, lokálne dopytové tlačidlá služieb
+
+- **Vylepšené:** tlačidlá „Mám záujem o ročný servis“ a „Mám záujem o jednorazové služby“ otvárajú kontaktný formulár s označeným príslušným typom záujmu aj predvyplnenou správou. Klient doplní svoje údaje a odošle dopyt cez existujúci formulár.
+- **Stav a overenie:** iba lokálne, bez online nasadenia. Overujú sa oba odkazy, výber záujmu a obsah odosielaného dopytu; pôvodné možnosti formulára zostávajú zachované.
+
+## 1. 11. 2026 – po v7, lokálne pozadie úvodu Služieb
+
+- **Vylepšené:** dodaný obrázok kancelárie tvorí pozadie úvodu stránky Služby nad dvoma kartami, podľa obrazovej predlohy. Na mobile je zosvetlený pre čitateľnosť textu. Obrázok je optimalizovaný do WebP.
+- **Stav:** nová úprava je iba lokálna; online zostáva schválená v7. Kontrola lokálneho zobrazenia a typov pred odovzdaním; bez zmeny funkcionality kariet.
 
 ## 1. 11. 2026 – v7, schválené vydanie
 
