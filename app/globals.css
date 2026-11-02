@@ -73,6 +73,7 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 @media(max-width:900px){.service-offers{gap:18px}.service-offer{padding:25px}.offer-heading{min-height:270px}.offer-item summary{font-size:15px;gap:9px}.offer-action{font-size:15px}}
 @media(max-width:700px){.service-offers{grid-template-columns:1fr;gap:22px;padding-top:0;padding-bottom:25px}.service-offer{padding:25px 22px;border-radius:22px}.offer-heading{min-height:0;padding-bottom:25px;margin-bottom:24px}.offer-heading h2{font-size:29px}.offer-heading p{font-size:16px}.offer-label{font-size:12px;margin-bottom:22px}.offer-list-title{font-size:21px}.offer-item summary{font-size:16px;padding-block:13px}.offer-item>p{padding-right:20px;font-size:15px}.offer-accordions{margin-bottom:30px}.offer-action{font-size:16px;padding:18px 12px}}
 .offer-heading h2,.offer-list-title{font-weight:750}
+#zaujem{scroll-margin-top:125px}
 .services-surface{position:relative;isolation:isolate;padding-bottom:65px}
 .services-surface::before{content:"";position:absolute;z-index:-1;inset:350px 0 0;background:url('/images/services-wave.svg') center/100% 100% no-repeat;pointer-events:none}
 .services-surface .services-page-intro::after{content:"";position:absolute;inset:65% 0 0;background:linear-gradient(transparent,#e3edd6);pointer-events:none}
@@ -104,9 +105,6 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 .contact-coverage-map{display:block;width:100%;height:auto;overflow:hidden;margin-top:30px}
 @media(max-width:1150px){.contact-page .contact-layout{grid-template-columns:1fr 1fr;gap:30px}.contact-overview{grid-template-columns:1fr;padding-top:15px;gap:30px}.contact-company{padding-top:0}.contact-availability{padding-left:0;border-left:0}.contact-coverage-map{max-width:320px}.contact-fact{margin-bottom:25px}}
 @media(max-width:760px){.contact-page .contact-layout{grid-template-columns:1fr}.contact-page .page-hero>p:not(.eyebrow){font-size:19px}.contact-page .page-hero h1{font-size:37px}.contact-direct a{font-size:23px}.contact-overview{gap:28px}.contact-coverage-map{max-width:360px}}
-.inquiry-one-off>p{font-size:15px;margin:0 0 16px;color:var(--muted)}
-.inquiry-one-off label{align-items:flex-start}
-.inquiry-one-off input[type=checkbox]{flex-shrink:0}
 .cta.services-meeting{display:block;text-align:left}
 .cta.services-meeting h2{max-width:none;width:100%;text-wrap:pretty;margin-bottom:22px}
 .cta.services-meeting>p{max-width:1000px;font-size:18px;line-height:1.8;margin:0 0 28px}

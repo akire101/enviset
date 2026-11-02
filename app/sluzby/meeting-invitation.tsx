@@ -10,7 +10,7 @@ export function MeetingInvitation() {
  return <section className="container cta services-meeting" aria-labelledby="services-meeting-title">
   <h2 id="services-meeting-title">Neviete, ktoré služby sú potrebné pre Vašu firmu?</h2>
   <p>Žiadny problém! Jednoducho si dohodnite BEZPLATNÉ nezáväzné stretnutie s naším špecialistom na odpady, ktorý Vás navštívi priamo vo Vašej firme, zhodnotí aktuálny stav a poradí Vám najlepšie riešenie s nezáväznou cenovou ponukou.</p>
-  <a className="button" href={phoneHref} onClick={event=>{if(window.matchMedia('(min-width: 761px)').matches&&!revealed){event.preventDefault();setRevealed(true);}}}><Phone size={19} aria-hidden="true"/>{revealed?brand.contacts.phone:'Dohodnúť termín osobného stretnutia'}</a>
+  <a className="button" href={phoneHref} onClick={event=>{if(window.matchMedia('(min-width: 761px)').matches&&!revealed){event.preventDefault();setRevealed(true);}}}><Phone size={19} aria-hidden="true"/>{revealed?brand.contacts.phone:'Dohodnúť bezplatnú konzultáciu'}</a>
   <span className="sr-only" role="status">{revealed?`Zavolajte nám na ${brand.contacts.phone}`:''}</span>
  </section>;
 }

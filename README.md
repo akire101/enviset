@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 2, vydanie v39.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 3, vydanie v40.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s troma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,45 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v39 – 2. 11. 2026, zákaznícka v7, aktualizácia 2**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v40 – 2. 11. 2026, zákaznícka v7, aktualizácia 3**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 2. 11. 2026 – v7, aktualizácia 3: schválené vydanie
+
+- **Spolupráca:** prvý krok je „Bezplatná konzultácia“ s možnosťou stretnutia vo firme alebo videohovoru.
+- **Formulár:** iba dve možnosti „Chcem nezáväznú cenovú ponuku“ a „Mám inú požiadavku“. Pôvodné tri možnosti a zaškrtávacie služby sú odstránené.
+- **Tlačidlá:** horné tlačidlo aj obe karty Služieb sa volajú „Získať cenovú ponuku“. Karty vedú priamo na výber záujmu s predvolenou cenovou ponukou; správa obsahuje jednu vetu osobitne pre ročný servis alebo jednorazové služby. Horné tlačidlo si zachováva pôvodné telefonické správanie.
+- **Konzultácia:** spodné tlačidlo Služieb sa volá „Dohodnúť bezplatnú konzultáciu“; telefonické prepojenie zostáva zachované.
+- **Stav a overenie:** vlastník schválil uloženie do v7 a online nasadenie. Ostatné funkcie, bezpečnosť a SEO zostávajú podľa prehľadu nižšie. Lokálne prekliky a predvyplnenie sú overené; testy, zostavenie, verejný web a obnova zálohy sa overujú pri vydaní. Staršie lokálne záznamy opisujú prípravu. Zdrojová záloha nezahŕňa živé údaje D1 ani Secrets.
+
+## 2. 11. 2026 – lokálne rozlíšenie predvyplnených správ
+
+- **Vylepšené:** preklik z ročnej karty predvyplní iba „Prosím o nezáväznú cenovú ponuku na ročný paušálny servis.“; jednorazová karta predvyplní iba „Prosím o nezáväznú cenovú ponuku na jednorazové služby.“. Duplicitná všeobecná veta o cenovej ponuke je odstránená.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne cenové tlačidlá oboch kariet
+
+- **Vylepšené:** obe karty Služieb majú tlačidlo „Získať cenovú ponuku“. Odkaz otvára priamo sekciu „O čo máte záujem?“ vo formulári s predvolenou možnosťou „Chcem nezáväznú cenovú ponuku“. Informácia o zvolenej karte zostáva v predvyplnenej správe.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálny názov konzultačného tlačidla Služieb
+
+- **Vylepšené:** spodné tlačidlo stránky Služby sa volá „Dohodnúť bezplatnú konzultáciu“. Telefonické prepojenie zostáva zachované.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálny názov tlačidla v navigácii
+
+- **Vylepšené:** horné tlačidlo „Bezplatné stretnutie“ je premenované na „Získať cenovú ponuku“. Existujúce správanie tlačidla zostáva zachované.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne zjednodušenie záujmu vo formulári
+
+- **Vylepšené:** sekcia „O čo máte záujem?“ má iba možnosti „Chcem nezáväznú cenovú ponuku“ a „Mám inú požiadavku“. Predchádzajúce tri možnosti aj podmienené zaškrtávacie služby sú odstránené. Záujem prenesený z kariet zostáva v predvyplnenej správe.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálna úprava prvého kroku spolupráce
+
+- **Vylepšené:** prvý krok sekcie „Ako prebieha naša spolupráca?“ sa volá „Bezplatná konzultácia“. Opis: „Spoznáme vašu spoločnosť a jej potreby, osobne vo Vašej firme alebo online prostredníctvom videohovoru.“
+- **Stav:** iba lokálne, bez online nasadenia; ostatné kroky zostávajú zachované.
 
 ## 2. 11. 2026 – v7, aktualizácia 2: schválené vydanie
 

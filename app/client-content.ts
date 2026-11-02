@@ -10,7 +10,7 @@ export const serviceOverview = [
 ] as const;
 
 export const cooperationSteps = [
- ['Bezplatné osobné stretnutie', 'Stretneme sa priamo u vás vo firme, spoznáme vašu činnosť, zhodnotíme aktuálny stav a poradíme vhodné riešenia.', 'meeting'],
+ ['Bezplatná konzultácia', 'Spoznáme vašu spoločnosť a jej potreby, osobne vo Vašej firme alebo online prostredníctvom videohovoru.', 'meeting'],
  ['Analýza a nastavenie systému', 'V prípade uzavretia spolupráce vykonáme podrobnú analýzu Vašej spoločnosti, nastavíme systém podľa vašich potrieb a legislatívnych povinností.', 'search'],
  ['Vypracovanie a zavedenie dokumentácie do praxe', 'Vypracujeme a doručíme potrebnú odbornú dokumentáciu, vysvetlíme jej obsah a pomôžeme Vám zaviesť nastavené postupy do každodennej praxe.', 'settings'],
  ['Celoročná starostlivosť a podpora', 'Počas celej doby spolupráce zabezpečujeme správne vedenie evidencie odpadov, ohlasovacie povinnosti, osobné kontroly prevádzok a poskytujeme priebežné odborné poradenstvo a podporu.', 'recycle'],
