@@ -1,14 +1,35 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 3, vydanie v40.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 4, vydanie v41.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s troma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
+**Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v40 – 2. 11. 2026, zákaznícka v7, aktualizácia 3**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v41 – 2. 11. 2026, zákaznícka v7, aktualizácia 4**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 2. 11. 2026 – v7, aktualizácia 4: schválené vydanie
+
+- **Vylepšené:** fotografickú sekciu a „Čo získate?“ prepája jemná zelená vlna cez celú šírku s lístkami vpravo. Vlna je pod fotografiou s odstupom; nezasahuje do nej.
+- **Výhody:** šesť položiek rozdelených na počítači do dvoch stĺpcov po troch, s fajkami vo svetlozelených kruhoch. Doplnená je individuálna odborná podpora počas celej spolupráce. Fotografia a pôvodné texty zostávajú zachované; na mobile je jeden stĺpec.
+- **Stav a overenie:** vlastník schválil uloženie do v7 a nasadenie. Ostatné funkcie, bezpečnosť a SEO zostávajú podľa prehľadu nižšie. Lokálne overených šesť položiek, rozloženie a odstup od fotografie; typy, testy, zostavenie, verejný web a zdrojová záloha sa kontrolujú pri vydaní. Záloha nezahŕňa živé dáta D1 ani Secrets. Staršie lokálne záznamy opisujú prípravu.
+
+## 2. 11. 2026 – lokálne doplnenie šiestej výhody
+
+- **Vylepšené:** sekcia „Čo získate?“ má šesť výhod podľa predlohy. Doplnená je „Individuálnu odbornú podporu počas celej spolupráce.“; na počítači sú tri položky v každom stĺpci.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálny odstup vlny od fotografie
+
+- **Vylepšené:** organická vlna s lístkami je posunutá pod fotografiu s odstupom 24 px na počítači a 18 px na mobile, aby nezasahovala do obrázka.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne prepojenie fotografie a výhod
+
+- **Vylepšené:** medzi fotografickou sekciou a „Čo získate?“ je tenká organická zelená línia cez celú šírku s jemným rastlinným motívom vpravo. Päť existujúcich výhod je na počítači rozdelených do dvoch stĺpcov; fajky sú vo svetlozelených kruhoch. Na mobile zostáva jeden stĺpec.
+- **Stav:** iba lokálne. Fotografia, nadpis, texty aj svetlé pozadie zostávajú zachované; bez online nasadenia.
 
 ## 2. 11. 2026 – v7, aktualizácia 3: schválené vydanie
 
