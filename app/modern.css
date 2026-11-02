@@ -192,6 +192,15 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 
 .help-icons>article{position:relative;transform-origin:center;transition:transform 300ms cubic-bezier(.2,.65,.3,1),box-shadow 300ms ease;cursor:default}
 .dropdown-grid>div.dropdown-service{cursor:default;background:transparent;transform:none}
+.about-text.about-with-portrait{max-width:1400px}
+.about-story{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:65px;align-items:start}
+.about-story-copy{min-width:0}
+.about-portrait{position:sticky;top:130px;margin:30px 0 0;isolation:isolate}
+.about-portrait::before{content:"";position:absolute;inset:-28px -18px -20px;background:#e8efdf;border-radius:46% 54% 62% 38% / 42% 34% 66% 58%;transform:rotate(9deg);z-index:-1;opacity:.65}
+.about-portrait img{display:block;width:100%;height:auto;border-radius:28px;mask-image:linear-gradient(to bottom,#000 0%,#000 83%,transparent 100%)}
+
+@media(max-width:1000px){.about-story{gap:35px;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}}
+@media(max-width:700px){.about-story{grid-template-columns:1fr;gap:30px}.about-portrait{position:relative;top:auto;grid-row:1;width:min(78%,330px);margin:0 auto 10px}.about-portrait::before{inset:-12px}.about-story-copy{grid-row:2}.about-text.about-with-portrait{padding-top:25px}}
 .meeting-organic-divider{height:130px;margin-top:24px;position:relative;z-index:1;background:url('/images/meeting-organic-divider.svg') center/100% 100% no-repeat;pointer-events:none}
 .meeting-benefits{padding-top:0}
 .meeting-benefits ul{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,auto);grid-auto-flow:column;gap:26px 65px}

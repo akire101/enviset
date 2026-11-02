@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 4, vydanie v41.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 5, vydanie v42.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,40 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v41 – 2. 11. 2026, zákaznícka v7, aktualizácia 4**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v42 – 2. 11. 2026, zákaznícka v7, aktualizácia 5**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 2. 11. 2026 – v7, aktualizácia 5: schválené vydanie
+
+- **O nás:** dodaný portrét napravo od nezmeneného textu, jemné zelené pozadie a prechod spodného okraja do stratena. Na mobile je portrét pod nadpisom. Pôvodná fotografia krajiny je odstránená.
+- **Blog/Novinky:** nadpis „Témy, o ktorých sa oplatí diskutovať.“ a podnadpis „Prinášame aktuálne informácie, praktické rady a témy z každodennej praxe.“.
+- **Navigácia:** horné tlačidlo „Cenová ponuka“ otvára kontaktný formulár s predvolenou nezáväznou cenovou ponukou, namiesto telefonického otvorenia.
+- **Domov:** nový nadpis nad troma kartami „Kľúčové oblasti v odpadoch, na ktoré sa zameriavame“.
+- **Stav a overenie:** vlastník schválil uloženie a online nasadenie do v7. Ostatné funkcie, bezpečnosť a SEO zostávajú podľa prehľadu nižšie. Lokálne overené zobrazenie portrétu, zachovanie textu a preklik na formulár; typy, testy, zostavenie, verejný web a obnova zdrojovej zálohy sa kontrolujú pri vydaní. Záloha neobsahuje živé údaje D1 ani Secrets. Staršie lokálne záznamy opisujú prípravu.
+
+## 2. 11. 2026 – lokálny nadpis oblastí na domovskej stránke
+
+- **Vylepšené:** nadpis nad troma hlavnými kartami je „Kľúčové oblasti v odpadoch, na ktoré sa zameriavame“.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne horné tlačidlo Cenová ponuka
+
+- **Vylepšené:** pravé horné tlačidlo spoločnej navigácie sa volá „Cenová ponuka“ a otvára kontaktný formulár s predvolenou nezáväznou cenovou ponukou. Nahrádza pôvodné telefonické otvorenie.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálny úvod Blog/Novinky
+
+- **Vylepšené:** hlavný nadpis blogu je „Témy, o ktorých sa oplatí diskutovať.“ a podnadpis „Prinášame aktuálne informácie, praktické rady a témy z každodennej praxe.“.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne odstránenie krajiny z O nás
+
+- **Vylepšené:** pôvodná fotografia krajiny pod príbehom je odstránená. Stránka O nás obsahuje nezmenený text a nový portrét.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálny portrét na stránke O nás
+
+- **Vylepšené:** dodaný portrét je napravo od nezmeneného príbehu, so zaoblenými rohmi, jemným zeleným podkladom a jedným prechodom spodného okraja do stratena. Na mobile je fotografia pod nadpisom pred textom. Pôvodná fotografia krajiny zostáva pod príbehom.
+- **Stav:** iba lokálne, bez online nasadenia. Portrét je optimalizovaný do WebP; samotná fotografia osoby sa nemení.
 
 ## 2. 11. 2026 – v7, aktualizácia 4: schválené vydanie
 
