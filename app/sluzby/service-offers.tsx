@@ -4,7 +4,7 @@ import { annualServices, oneOffServices } from '../client-content';
 export function ServiceOffers() {
  return <div id="popis-sluzieb" className="container service-offers" aria-label="Možnosti spolupráce">
   <Offer annual label="Dlhodobá spolupráca" title="Ročný paušálny servis" intro="Komplexná starostlivosť o odpadové hospodárstvo vašej firmy počas celého roka." listTitle="Čo získate?" items={annualServices} href={`/kontakt?sluzba=${encodeURIComponent('Ročný servis')}&ponuka=1#zaujem`} action="Získať cenovú ponuku"/>
-  <Offer label="Bez dlhodobej spolupráce" title="Chýba Vám len konkrétna vec?" intro="Vyberte si to, čo vaša firma aktuálne potrebuje." listTitle="S čím vám pomôžeme?" items={oneOffServices} href={`/kontakt?sluzba=${encodeURIComponent('Jednorazové služby')}&ponuka=1#zaujem`} action="Získať cenovú ponuku"/>
+  <Offer label="Bez dlhodobej spolupráce" title="Jednorázové služby" intro="Chýba Vám len konkrétna vec? Vyberte si čo aktuálne potrebujete" listTitle="S čím vám pomôžeme?" items={oneOffServices} href={`/kontakt?sluzba=${encodeURIComponent('Jednorazové služby')}&ponuka=1#zaujem`} action="Získať cenovú ponuku"/>
  </div>;
 }
 

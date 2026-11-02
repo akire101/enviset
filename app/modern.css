@@ -192,6 +192,7 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 
 .help-icons>article{position:relative;transform-origin:center;transition:transform 300ms cubic-bezier(.2,.65,.3,1),box-shadow 300ms ease;cursor:default}
 .dropdown-grid>div.dropdown-service{cursor:default;background:transparent;transform:none}
+.meeting-copy .meeting-form-link{margin-top:26px;display:inline-flex;gap:12px}
 .about-text.about-with-portrait{max-width:1400px}
 .about-story{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:65px;align-items:start}
 .about-story-copy{min-width:0}

@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 5, vydanie v42.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 6, vydanie v43.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,39 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v42 – 2. 11. 2026, zákaznícka v7, aktualizácia 5**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v43 – 2. 11. 2026, zákaznícka v7, aktualizácia 6**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 2. 11. 2026 – v7, aktualizácia 6: schválené vydanie
+
+- **Domov:** prvá karta je „Nastavenie odpadového hospodárstva“ s novým opisom. Pod textom pri fotografii pribudlo tlačidlo „Dohodnúť osobné stretnutie“ s ikonou kalendára a prepojením na formulár s predvyplnenou správou.
+- **Služby:** biela karta má nadpis „Jednorázové služby“ a dodaný podnadpis. Spodný konzultačný rámček s textom a telefónnym tlačidlom je úplne odstránený; cenové tlačidlá oboch kariet zostávajú.
+- **O nás:** nový dodaný príbeh v štyroch odsekoch pri zachovaní portrétu a rozloženia.
+- **Stav a overenie:** vlastník schválil uloženie a nasadenie do v7. Ostatné funkcie, bezpečnosť a SEO zostávajú podľa prehľadu nižšie. Lokálne prekliky a obsah overené; typy, testy, zostavenie, verejný web a obnova zálohy sa overujú pri vydaní. Zdrojová záloha nezahŕňa živé dáta D1 ani Secrets. Staršie lokálne záznamy opisujú prípravu.
+
+## 2. 11. 2026 – lokálny nový príbeh O nás
+
+- **Vylepšené:** príbeh O nás je nahradený novým dodaným znením v štyroch odsekoch. Opravený je preklep „ktorý sa snažiť“ na „ktorý sa snaží“. Portrét a rozloženie zostávajú zachované.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne tlačidlo osobného stretnutia na domove
+
+- **Vylepšené:** pod textom pri fotografii pribudlo tlačidlo „Dohodnúť osobné stretnutie“ s malou ikonou kalendára. Otvára kontaktný formulár s predvyplneným záujmom o osobné stretnutie v správe.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne odstránenie spodnej výzvy Služieb
+
+- **Vylepšené:** spodný svetlozelený rámček s nadpisom „Neviete, ktoré služby sú potrebné pre Vašu firmu?“, opisom stretnutia a telefónnym tlačidlom je zo stránky Služby úplne odstránený.
+- **Stav:** iba lokálne, bez online nasadenia. Obe karty služieb a ich cenové tlačidlá zostávajú zachované.
+
+## 2. 11. 2026 – lokálny úvod bielej karty Služieb
+
+- **Vylepšené:** biela karta má nadpis „Jednorázové služby“ a podnadpis „Chýba Vám len konkrétna vec? Vyberte si čo aktuálne potrebujete“ podľa dodaného znenia.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálny text prvej domovskej karty
+
+- **Vylepšené:** prvá karta má názov „Nastavenie odpadového hospodárstva“ a opis „Nastavíme správny systém nakladania s odpadmi vo Vašej firme, zabezpečíme potrebnú dokumentáciu a nastavíme postupy tak, aby boli povinnosti pod kontrolou.“.
+- **Stav:** iba lokálne, bez online nasadenia.
 
 ## 2. 11. 2026 – v7, aktualizácia 5: schválené vydanie
 

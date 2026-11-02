@@ -1,5 +1,11 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v7 – aktualizácia 6, 2. 11. 2026
+
+Schválené uloženie a nasadenie aktuálnych zmien (interné v43): prvá domovská karta, tlačidlo osobného stretnutia, nový úvod bielej karty Služieb, odstránenie spodnej výzvy Služieb a nový príbeh O nás. Bez migrácií a zmien Secrets.
+
+Bod obnovy `v7-zakaznicka-2026-11-02-aktualizacia6`, záloha `backups/ENVISET_v7_2026-11-02_aktualizacia6`. Staršie zálohy zostávajú zachované. Zdrojová záloha vylučuje živé dáta D1, správy, chaty, analytiku, účty, Secrets a médiá uložené iba v D1.
+
 ## Zákaznícka v7 – aktualizácia 5, 2. 11. 2026
 
 Schválené uloženie a nasadenie aktuálnych zmien (interné v42): portrét a odstránenie krajiny na O nás, nový úvod blogu, horné tlačidlo Cenová ponuka smerujúce na formulár a nový nadpis oblastí na domovskej stránke. Bez migrácií a zmien Secrets.
