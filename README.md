@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 6, vydanie v43.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 2. 11. 2026. Zákaznícka verzia v7, aktualizácia 7, vydanie v44.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,51 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v43 – 2. 11. 2026, zákaznícka v7, aktualizácia 6**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v44 – 2. 11. 2026, zákaznícka v7, aktualizácia 7**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 2. 11. 2026 – v7, aktualizácia 7: schválené vydanie
+
+- **Služby:** sedem nových rozbaľovacích opisov ročného servisu; všetky názvy a individuálna odborná podpora zachované. V bielej karte sedem nových opisov a štyri upravené názvy podľa dodaného znenia.
+- **Domov:** kratší nadpis „Kľúčové oblasti na ktoré sa zameriavame“, tri stručné popisy pri zachovaných názvoch a tlačidlo „ukázať služby“.
+- **Stretnutie:** tlačidlo pri fotografii namiesto formulára zobrazí na počítači telefónne číslo; na mobile otvorí volanie.
+- **O nás:** portrét je zmenšený približne o 28 % a vycentrovaný v pravom stĺpci.
+- **Pätička:** odstránený stĺpec „Pomôžeme vám“ aj spodné motto s opisom. Ostatné kontakty a odkazy zostávajú zachované na celom webe.
+- **Stav a overenie:** vlastník schválil uloženie a online nasadenie do v7. Ostatné funkcie, bezpečnosť a SEO zostávajú podľa prehľadu nižšie. Lokálne overené rozbaľovanie, nové texty a telefonické prepojenie; typy, testy, zostavenie, verejný web a zdrojová záloha sa kontrolujú pri vydaní. Záloha nezahŕňa živé dáta D1 ani Secrets. Staršie lokálne záznamy opisujú prípravu.
+
+## 2. 11. 2026 – lokálne zjednodušená pätička
+
+- **Vylepšené:** zo spoločnej pätičky je odstránený stĺpec „Pomôžeme vám“ a spodné motto s opisom poradenstva. Kontakty, „Preskúmajte“, copyright, ochrana súkromia a administrácia zostávajú zachované. Rozloženie je upravené na dva stĺpce.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne telefonické dohodnutie stretnutia
+
+- **Vylepšené:** tlačidlo „Dohodnúť osobné stretnutie“ pri fotografii na domove už nevedie na formulár. Na počítači zobrazí existujúce okno s telefónnym číslom a možnosťou volať; na mobile priamo otvorí volanie.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne popisy troch domovských kariet
+
+- **Vylepšené:** všetky tri domovské karty majú dodané stručné popisy oblastí. Hlavné názvy zostávajú zachované. Tlačidlo pod kartami sa volá „ukázať služby“ a naďalej vedie na prehľad služieb.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne skrátenie nadpisu oblastí
+
+- **Vylepšené:** nadpis nad troma domovskými kartami je „Kľúčové oblasti na ktoré sa zameriavame“ podľa dodaného znenia.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne zmenšenie portrétu O nás
+
+- **Vylepšené:** portrét O nás je približne o 28 % menší, vycentrovaný v pravom stĺpci; na mobile je tiež zmenšený. Text a jemný prechod fotografie zostávajú zachované.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 2. 11. 2026 – lokálne texty jednorazových služieb
+
+- **Vylepšené:** v bielej karte je sedem dodaných rozbaľovacích opisov a štyri nové názvy služieb: registrácia vyhradených výrobkov, podklady k uzatvoreniu zmluvy s OZV, ohlásenie pre obaly a neobalové výrobky a identifikačný list nebezpečného odpadu (ILNO). Zvyšné tri názvy zostávajú zachované. Normalizované sú iba medzery a koncová interpunkcia.
+- **Stav:** iba lokálne, bez online nasadenia. Texty sú zákazníkom dodané znenie; právne posúdenie sa pri tejto obsahovej úprave nevykonávalo.
+
+## 2. 11. 2026 – lokálne opisy ročného servisu
+
+- **Vylepšené:** sedem rozbaľovacích opisov v zelenej karte ročného servisu je nahradených dodanými textami. Názvy služieb a ôsma položka individuálnej odbornej podpory zostávajú zachované. Opravený je preklep „pomôžee“ a medzera po čiarke.
+- **Stav:** iba lokálne, bez online nasadenia.
 
 ## 2. 11. 2026 – v7, aktualizácia 6: schválené vydanie
 

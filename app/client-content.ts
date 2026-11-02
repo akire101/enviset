@@ -17,23 +17,23 @@ export const cooperationSteps = [
 ] as const;
 
 export const annualServices = [
- ['Vstupná analýza spoločnosti', 'Podrobne zanalyzujeme fungovanie Vašej spoločnosti a prevádzky, aby sme nastavili vhodné riešenia v súlade s tým, čomu sa venujete.'],
- ['Odborná dokumentácia', 'Pripravíme potrebnú dokumentáciu, na základe ktorej nastavíme procesy tak, aby Vaša firma spĺňala povinnosti nakladania s odpadmi v súlade s legislatívou.'],
- ['Zavedenie dokumentácie do praxe', 'Vysvetlíme Vám vypracovanú dokumentáciu, oboznámime Vás s jej jednotlivými sekciami a ukážeme Vám, ako všetko správne zaviesť do praxe.'],
- ['Vedenie evidencie odpadov', 'Budeme za Vás spracovávať podklady o odovzdávaní odpadu a viesť z nich evidenciu odpadov pre Vašu firmu.'],
- ['Zabezpečenie ohlasovacích povinností', 'Zabezpečíme vypracovanie a podanie potrebných ohlásení o odpadoch za Vašu firmu v stanovenom termíne.'],
- ['Osobné kontroly prevádzok', 'Osobne kontrolujeme nakladanie s odpadmi vo Vašej prevádzke, preveríme plnenie legislatívnych povinností a navrhneme opatrenia na odstránenie prípadných nedostatkov.'],
- ['Monitoring legislatívnych zmien', 'Priebežne sledujeme dôležité zmeny v legislatíve, na ktoré Vás včas upozorníme a vysvetlíme spôsoby, ako zmeny aplikovať vo firme.'],
+ ['Vstupná analýza spoločnosti', 'Podrobne zanalyzujeme fungovanie Vašej spoločnosti, zistíme ktoré povinnosti potrebujete mať splnené, vznikajúce odpady správne zaradíme podľa ich kategórií a nastavíme vhodné riešenia na základe činnosti firmy.'],
+ ['Odborná dokumentácia', 'Vypracujeme potrebnú dokumentáciu odpadového hospodárstva pre Vašu firmu, v ktorej Vám dáme presné postupy a návody od správneho skladovania, zhromažďovania, triedenia, označovania a odovzdávania odpadu, až po procesy spojené s fyzickým zabezpečením odpadov v priestoroch spoločnosti, v súlade s legislatívou. Dokumentáciu vždy priebežne aktualizujeme.'],
+ ['Zavedenie dokumentácie do praxe', 'Vypracovanú dokumentáciu Vám odovzdáme, vysvetlíme jednotlivé sekcie a ukážeme, ako ju používať v praxi.'],
+ ['Vedenie evidencie odpadov', 'Počas celého roka za Vás spracovávame doklady o odovzdaní odpadov a priebežne zaznamenávame všetky potrebné údaje do evidencie. Zabezpečujeme jej aktuálnosť, správnosť a vedenie podľa aktuálnych požiadaviek.'],
+ ['Zabezpečenie ohlasovacích povinností', 'Postaráme sa o prípravu a včasné podanie všetkých potrebných ohlásení o odpadoch za Vašu firmu. Dohliadneme na dodržanie zákonných termínov a správnosť podaných údajov.'],
+ ['Osobné kontroly prevádzok', 'Osobne kontrolujeme nami nastavený systém vo Vašej prevádzke, preverujeme plnenie legislatívnych povinností, kontrolujeme fyzický stav priestorov v spoločnosti a navrhneme konkrétne opatrenia na odstránenie prípadných nedostatkov, ktoré zistíme.'],
+ ['Monitoring legislatívnych zmien', 'Priebežne sledujeme legislatívne zmeny v oblasti odpadového hospodárstva. O všetkých dôležitých zmenách Vás včas informujeme a pomôžeme zaviesť do praxe.'],
  ['Individuálna odborná podpora', 'Počas celej doby trvania zmluvy Vám budeme k dispozícii pri riešení otázok a situácií súvisiacich s odpadovým hospodárstvom a poskytovať odbornú podporu pri špecifických záležitostiach.'],
 ];
 export const oneOffServices = [
- ['Registrácie firiem v registri výrobcov', 'Pripravíme potrebné podklady a zabezpečíme registráciu podľa povinností, ktoré sa na vašu spoločnosť vzťahujú.'],
- ['Podklady k uzavretiu zmluvy s OZV', 'Vypracujeme podklady potrebné na uzatvorenie zmluvy s organizáciou zodpovednosti výrobcov.'],
- ['Podanie ohlásenia pre obaly/neobaly', 'Spracujeme potrebné údaje a pripravíme ohlásenie týkajúce sa obalov a neobalových výrobkov.'],
- ['Identifikačné listy nebezpečných odpadov', 'Vypracujeme identifikačné listy pre nebezpečné odpady podľa konkrétneho odpadu a jeho nebezpečných vlastností.'],
- ['Plán opatrení pre prípad havárie', 'Vypracujeme dokumentáciu a postupy, ktoré určujú, ako postupovať pri vzniku havárie spojenej s nebezpečnými odpadmi.'],
- ['Prevádzkový poriadok miesta zhromaždiska nebezpečného odpadu', 'Vypracujeme potrebnú dokumentáciu pre správne a bezpečné zhromažďovanie nebezpečných odpadov.'],
- ['Školenie v oblasti odpadového hospodárstva', 'Uskutočníme praktické školenie o správnom nakladaní s odpadmi a plnení povinností v oblasti odpadového hospodárstva.'],
+ ['Registrácia v registri výrobcov vyhradených výrobkov', 'Uvádzate na slovenský trh obalové a neobalové výrobky v množstve do 100 kg ročne? Vzniká Vám povinnosť registrácie. Zabezpečíme podanie žiadosti o zápis do príslušného registra, aby ste si splnili zákonné povinnosti ešte pred uvedením výrobkov na trh.'],
+ ['Podklady k uzatvoreniu zmluvy s OZV', 'Uvádzate na slovenský trh obaly vo veľkých množstvách alebo iné vyhradené výrobky? Pripravíme potrebné podklady na uzatvorenie zmluvy s organizáciou zodpovednosti výrobcov (OZV), prostredníctvom ktorej si budete plniť zákonné povinnosti vyplývajúce z rozšírenej zodpovednosti výrobcu.'],
+ ['Podanie ohlásenia pre obaly a neobalové výrobky', 'Uvádzate na slovenský trh obaly alebo neobalové výrobky v množstve do 100 kg ročne? Vzťahuje sa na Vás ohlasovacia povinnosť. Spracujeme potrebné údaje a podáme elektronické ohlásenie pre Vašu firmu.'],
+ ['Identifikačný list nebezpečného odpadu (ILNO)', 'Každý druh nebezpečného odpadu má zákonnú povinnosť byť riadne identifikovaný a označený. Vypracujeme identifikačné listy pre jednotlivé nebezpečné odpady, obsahujúce informácie o vlastnostiach odpadu, jeho nebezpečnosti, odporúčanom spôsobe zneškodnenia a opatreniach pri haváriách a požiaroch.'],
+ ['Plán opatrení pre prípad havárie', 'Viete, ako má Vaša firma a zamestnanci postupovať pri úniku nebezpečného odpadu alebo inej havárii? Vypracujeme tento dokument, ktorý Vám pomôže predísť chaosu v kritickej situácii. Stanovuje konkrétne kroky a opatrenia na rýchle zvládnutie havárie a minimalizáciu jej následkov.'],
+ ['Prevádzkový poriadok miesta zhromaždiska nebezpečného odpadu', 'Zhromažďujete vo firme nebezpečné odpady na vyhradenom mieste pred ich odvozom? Vypracujeme dokument pre toto konkrétne miesto, ktorý určuje reálne podmienky zhromažďovania, označovania, zabezpečenia a manipulácie s nebezpečnými odpadmi na tomto mieste.'],
+ ['Školenie v oblasti odpadového hospodárstva', 'Získajte prehľad o správnom nakladaní s odpadmi a povinnostiach, ktoré sa na Vašu firmu vzťahujú. Školenie Vám priblíži aktuálne pravidlá, legislatívne požiadavky a správne postupy v odpadovom hospodárstve.'],
 ];
 export const clientFaqs = [
  ['Od akého množstva odpadu musí firma viesť evidenciu odpadov?', 'Firma je povinná viesť evidenciu už od jedného gramu odpadov, ktoré vznikajú pri jej činnosti. Povinnosť sa teda nevzťahuje iba na firmy, ktoré produkujú veľké množstvá odpadu.'],
