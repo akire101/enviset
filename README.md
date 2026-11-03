@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 3. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v47.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 3. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v48.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,13 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v47 – 3. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v48 – 3. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 3. 11. 2026 – TO DO #133 a predloha #134: menší panel Služieb
+
+- **Vylepšené:** ponuky Služieb sú podľa obrázkovej predlohy kompaktnejšie: šírka najviac 1040 px, nižšie záložky, menšie písmo na počítači, menšie vnútorné odsadenie a medzery. Na mobile zostáva písmo služieb 16 px a ovládacie riadky majú výšku aspoň 44 px.
+- **Celkový stav:** rozloženie, farby, obsah, prepínanie ponúk, rozbaľovanie, cenové odkazy a zväčšovanie iba záložiek zostávajú zachované. Bez zmien funkcií správy, bezpečnosti a SEO.
+- **Overenie:** kontrola typov, všetkých 23 testov, produkčné zostavenie aj vizuálna kontrola podľa predlohy prešli. Na mobile pri 390 px je písmo služieb 16 px a stránka je bez vodorovného pretečenia. Online overenie nasleduje po automatickom nasadení z hlavnej vetvy. Živé odosielanie formulárov ani chat sa pri tejto vizuálnej úprave nemenia a znovu netestujú.
 
 ## 3. 11. 2026 – TO DO #132: kompaktnejšie Služby
 
