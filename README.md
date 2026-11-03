@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 3. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v45.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 3. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v47.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v45 – 3. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v47 – 3. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 3. 11. 2026 – TO DO #132: kompaktnejšie Služby
+
+- **Vylepšené:** panel služieb má maximálnu šírku 1120 px a menšie vnútorné medzery. Celý panel sa pri prejdení myšou nezväčšuje; zväčšenie je iba na záložkách Celoročné služby a Jednorázové služby.
+- **Zachované:** farby, písmo, svetelné efekty, prepínanie ponúk, rozbaľovacie opisy a odkazy na cenovú ponuku. Obmedzený pohyb vypína animáciu záložiek.
+- **Overenie:** kontrola typov, všetkých 23 testov a produkčné zostavenie prešli. V prehliadači overené desktopové zväčšenie iba záložky, stabilný panel, prepínanie a rozbaľovanie. Mobil pri 390 px je bez vodorovného pretečenia.
+- **Stav:** pripravené na automatické nasadenie z hlavnej vetvy. Online overenie nasleduje po dokončení nasadenia.
 
 ## 3. 11. 2026 – odovzdanie úprav Služieb na GitHub
 
