@@ -10,6 +10,33 @@
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
 - Aktuálne vydanie: **v45 – 3. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
 
+## 3. 11. 2026 – odovzdanie úprav Služieb na GitHub
+
+- **Zmeny:** prepínanie celoročných a jednorazových služieb podľa dodaného návrhu, aktualizované názvy a opisy celoročných služieb a plynulé zatváranie opisov.
+- **Overenie:** kontrola typov, všetkých 23 testov a produkčné zostavenie prešli. Rozloženie a ovládanie boli overené lokálne na počítači, tablete a mobile.
+- **Stav:** vlastník požiadal o nahratie na GitHub; push do hlavnej vetvy spustí existujúce automatické nasadenie. Tento záznam nepotvrdzuje dokončenie online nasadenia. Identifikácia pripravených zdrojov: v46, zákaznícka v7.
+
+## 3. 11. 2026 – lokálne prepínanie ponúk Služieb
+
+- **Vylepšené:** dve záložky prepínajú jeden široký panel podľa dodaného návrhu. Celoročné služby majú tmavozelenú a jednorazové svetlú podobu. Služby sú na širokej obrazovke v dvoch stĺpcoch, vpravo sú štyri výhody; na mobile je obsah pod sebou. Písmo, pohyblivý svetelný efekt, žiara a zväčšenie pri prejdení kurzorom sú zachované.
+- **Funkčnosť:** plynulé otváranie aj zatváranie opisov, najviac jedna otvorená položka v ponuke, klávesnicové prepínanie záložiek, priame odkazy z menu a cenová ponuka podľa vybranej služby.
+- **Overenie a stav:** kontrola typov prešla; lokálna kontrola prepínania, odkazov a zobrazenia pri 1440, 768 a 390 px. Bez online nasadenia.
+
+## 3. 11. 2026 – lokálne aktualizované opisy celoročných služieb
+
+- **Vylepšené:** služba „Priebežná podpora pri používaní dokumentácie“ má nový názov a opis podpory počas spolupráce. Opis vedenia evidencie pokrýva celú dobu spolupráce a monitoring legislatívy zahŕňa pomoc so zavedením zmien do praxe.
+- **Stav a overenie:** iba lokálne, bez online nasadenia. Dodané texty sú overené v zdroji; názvy ostatných služieb zostávajú zachované.
+
+## 3. 11. 2026 – lokálne plynulé zatváranie opisov Služieb
+
+- **Vylepšené:** rozbaľovacie opisy v oboch kartách sa plynulo otvárajú aj zatvárajú vrátane prepnutia na inú položku. Zatváraný text zostáva vykreslený počas animácie, takže nezmizne skokom. V každej karte je otvorená najviac jedna položka; ovládanie klávesnicou a obmedzený pohyb zostávajú podporované.
+- **Stav:** iba lokálne, bez online nasadenia.
+
+## 3. 11. 2026 – lokálny úvod celoročných služieb
+
+- **Vylepšené:** zelená karta má nadpis „Celoročné služby“ a podnadpis „Pravidelné zabezpečovanie odpadového hospodárstva počas celej doby spolupráce.“. Prvá služba je „Pravidelné analýzy spoločnosti“ s dodaným opisom pravidelných analýz. Opravený je preklep „administratývnych“ na „administratívnych“.
+- **Stav:** iba lokálne, bez online nasadenia.
+
 ## 3. 11. 2026 – v7, aktualizácia 8: schválené vydanie
 
 - **Menu Služby:** iba tri klikateľné možnosti „Celoročné služby“, „Jednorázové služby“ a „Všetky služby“.

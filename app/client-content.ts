@@ -17,13 +17,13 @@ export const cooperationSteps = [
 ] as const;
 
 export const annualServices = [
- ['Vstupná analýza spoločnosti', 'Podrobne zanalyzujeme fungovanie Vašej spoločnosti, zistíme ktoré povinnosti potrebujete mať splnené, vznikajúce odpady správne zaradíme podľa ich kategórií a nastavíme vhodné riešenia na základe činnosti firmy.'],
+ ['Pravidelné analýzy spoločnosti', 'Pravidelne analyzujeme fungovanie odpadového hospodárstva v spoločnosti od plnenia administratívnych povinností po správne zaradenie odpadov a zmeny zapracujeme do dokumentácie.'],
  ['Odborná dokumentácia', 'Vypracujeme potrebnú dokumentáciu odpadového hospodárstva pre Vašu firmu, v ktorej Vám dáme presné postupy a návody od správneho skladovania, zhromažďovania, triedenia, označovania a odovzdávania odpadu, až po procesy spojené s fyzickým zabezpečením odpadov v priestoroch spoločnosti, v súlade s legislatívou. Dokumentáciu vždy priebežne aktualizujeme.'],
- ['Zavedenie dokumentácie do praxe', 'Vypracovanú dokumentáciu Vám odovzdáme, vysvetlíme jednotlivé sekcie a ukážeme, ako ju používať v praxi.'],
- ['Vedenie evidencie odpadov', 'Počas celého roka za Vás spracovávame doklady o odovzdaní odpadov a priebežne zaznamenávame všetky potrebné údaje do evidencie. Zabezpečujeme jej aktuálnosť, správnosť a vedenie podľa aktuálnych požiadaviek.'],
+ ['Priebežná podpora pri používaní dokumentácie', 'Pri začatí spolupráce Vám vypracovanú dokumentáciu odovzdáme, vysvetlíme a ukážeme jej používanie v praxi. Počas celej doby spolupráce obsah priebežne aktualizujeme a pomáhame Vám riešiť súvisiace otázky.'],
+ ['Vedenie evidencie odpadov', 'Počas celej doby spolupráce za Vás spracovávame doklady o odovzdaní odpadov a priebežne zaznamenávame všetky potrebné údaje do evidencie. Zabezpečujeme jej aktuálnosť, správnosť a vedenie podľa aktuálnych požiadaviek.'],
  ['Zabezpečenie ohlasovacích povinností', 'Postaráme sa o prípravu a včasné podanie všetkých potrebných ohlásení o odpadoch za Vašu firmu. Dohliadneme na dodržanie zákonných termínov a správnosť podaných údajov.'],
  ['Osobné kontroly prevádzok', 'Osobne kontrolujeme nami nastavený systém vo Vašej prevádzke, preverujeme plnenie legislatívnych povinností, kontrolujeme fyzický stav priestorov v spoločnosti a navrhneme konkrétne opatrenia na odstránenie prípadných nedostatkov, ktoré zistíme.'],
- ['Monitoring legislatívnych zmien', 'Priebežne sledujeme legislatívne zmeny v oblasti odpadového hospodárstva. O všetkých dôležitých zmenách Vás včas informujeme a pomôžeme zaviesť do praxe.'],
+ ['Monitoring legislatívnych zmien', 'Priebežne sledujeme legislatívne zmeny v oblasti odpadového hospodárstva. O všetkých dôležitých zmenách Vás včas informujeme a pomôžeme ich zaviesť do praxe.'],
  ['Individuálna odborná podpora', 'Počas celej doby trvania zmluvy Vám budeme k dispozícii pri riešení otázok a situácií súvisiacich s odpadovým hospodárstvom a poskytovať odbornú podporu pri špecifických záležitostiach.'],
 ];
 export const oneOffServices = [
