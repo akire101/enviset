@@ -192,6 +192,9 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 
 .help-icons>article{position:relative;transform-origin:center;transition:transform 300ms cubic-bezier(.2,.65,.3,1),box-shadow 300ms ease;cursor:default}
 .dropdown-grid>div.dropdown-service{cursor:default;background:transparent;transform:none}
+.service-offer[id]{scroll-margin-top:145px}
+.dropdown-service>svg{flex-shrink:0;margin-left:auto}
+@media(max-width:760px){.service-offer[id]{scroll-margin-top:105px}}
 .footer-main{grid-template-columns:1.5fr 1fr}
 @media(max-width:760px){.footer-main{grid-template-columns:1fr}.footer-main>div:first-child{grid-column:auto}}
 .meeting-copy .meeting-form-link{margin-top:26px;display:inline-flex;gap:12px}

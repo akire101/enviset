@@ -6,13 +6,9 @@ import {Menu,X,ChevronDown,ArrowUpRight} from 'lucide-react';
 import {Logo} from './components';
 import {brand} from './content';
 const menuServices = [
- {slug:'odborna-dokumentacia',title:'Dokumentácia odpadového hospodárstva'},
- {slug:'evidencia-odpadov',title:'Evidencia odpadov'},
- {slug:'ohlasovacie-povinnosti',title:'Ohlasovacie povinnosti'},
- {slug:'nebezpecne-odpady',title:'Nebezpečné odpady'},
- {slug:'kontrola-a-poradenstvo',title:'Osobné kontroly prevádzky'},
- {slug:'odborne-poradenstvo',title:'Individuálne odborné poradenstvo'},
- {slug:'legislativny-servis',title:'Monitoring legislatívnych zmien'},
+ {href:'/sluzby#celorocny-servis',title:'Celoročné služby'},
+ {href:'/sluzby#jednorazove-sluzby',title:'Jednorázové služby'},
+ {href:'/sluzby',title:'Všetky služby'},
 ];
 
 export function Header(){
@@ -51,8 +47,8 @@ export function Header(){
    <div className="services-disclosure" onPointerEnter={event=>{if(desktopMouse(event.pointerType)){clearHover();setServicesOpen(true)}}} onPointerLeave={event=>{if(desktopMouse(event.pointerType)){clearHover();hoverTimer.current=setTimeout(()=>{if(!panel.current?.contains(document.activeElement))setServicesOpen(false)},180)}}}>
     <button ref={trigger} type="button" className={`services-trigger ${active('/sluzby')?'active':''}`} aria-expanded={servicesOpen} aria-controls="services-dropdown" onClick={event=>{clearHover();setServicesOpen(event.detail>0&&desktopMouse('mouse')?true:!servicesOpen)}} onKeyDown={event=>{if(event.key==='ArrowDown'){event.preventDefault();flushSync(()=>setServicesOpen(true));panel.current?.querySelector<HTMLAnchorElement>('a')?.focus({preventScroll:true})}}}>Služby<ChevronDown size={15} aria-hidden="true"/></button>
     <div ref={panel} id="services-dropdown" className={`services-panel ${servicesOpen?'is-open':''}`} aria-hidden={!servicesOpen} inert={!servicesOpen}>
-     <div className="dropdown-main"><div className="dropdown-heading"><a href="/sluzby" onClick={close}>Všetky služby<ArrowUpRight size={16}/></a></div>
-      <div className="dropdown-grid">{menuServices.map(service=><div key={service.slug} className="dropdown-service"><strong>{service.title}</strong></div>)}</div>
+     <div className="dropdown-main">
+      <div className="dropdown-grid">{menuServices.map(service=><a key={service.href} href={service.href} className="dropdown-service" onClick={close}><strong>{service.title}</strong><ArrowUpRight size={16} aria-hidden="true"/></a>)}</div>
      </div>
 
     </div>
