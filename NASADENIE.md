@@ -1,5 +1,10 @@
 # GitHub → Cloudflare Workers + D1
 
+## TO DO #142 – 4. 11. 2026, interné v50
+
+Úprava názvu a odstránenie úvodu dlhodobej ponuky v `app/sluzby/service-offers.tsx`. V CSS je zelená ponuky a aktívnej záložky `#2e6248`; zväčšenie 1,045 je iba na `.offer-wide .offer-item:hover` pre presný ukazovateľ a bez obmedzenia pohybu. Záložky sa nezväčšujú, panel nemení transformáciu ani tieň pri hover. Bez migrácie databázy alebo zmeny konfigurácie. Existujúci push do main spustí automatické nasadenie; identifikácia je v `/version.json`.
+
+
 ## TO DO #135–140 – 4. 11. 2026, interné v49
 
 `post_order` uchováva poradie a pripnutie článkov ako jednu konfiguráciu s revíziou. `PUT /api/admin/post-order` vyžaduje administrátora a rovnaký pôvod; neplatné ID odmietne a starú revíziu vráti ako 409. Obsah článkov sa nemení. Verejný blog a prvé tri domovské články používajú rovnaké poradie.

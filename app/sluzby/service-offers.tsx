@@ -4,7 +4,7 @@ import { ArrowUpRight, Check, Plus, Minus } from 'lucide-react';
 import { annualServices, oneOffServices } from '../client-content';
 
 const offers = [
- {id:'celorocny-servis', title:'Celoročné služby', intro:'Zabezpečovanie odpadového hospodárstva počas celej doby spolupráce.', items:annualServices, service:'Ročný servis'},
+ {id:'celorocny-servis', title:'Dlhodobé zabezpečenie odborného servisu', intro:'', items:annualServices, service:'Ročný servis'},
  {id:'jednorazove-sluzby', title:'Jednorázové služby', intro:'Chýba Vám len konkrétna vec? Vyberte si čo aktuálne potrebujete', items:oneOffServices, service:'Jednorazové služby'},
 ];
 
@@ -36,7 +36,7 @@ function Offer({annual,intro,items,service,id}:{annual:boolean;intro:string;item
  const [openItem,setOpenItem]=useState<number|null>(null);
  const split=Math.ceil(items.length/2);
  return <section className={`service-offer offer-wide${annual?' service-offer-annual':''}`}>
-  <div className="offer-main"><header className="offer-heading"><p>{intro}</p></header>
+  <div className="offer-main">{intro&&<header className="offer-heading"><p>{intro}</p></header>}
    <div className="offer-service-columns">{[items.slice(0,split),items.slice(split)].map((column,col)=><div className="offer-accordions" key={col}>{column.map(([name,description],row)=>{
     const index=col*split+row;
     return <div key={name} className="offer-item" data-open={openItem===index}>

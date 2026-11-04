@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 4. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v49.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 4. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v50.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v49 – 4. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v50 – 4. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 4. 11. 2026 – názov a správanie ponúk Služieb (TO DO #142)
+
+- **Vylepšené:** názov dlhodobej ponuky je „Dlhodobé zabezpečenie odborného servisu“, pôvodný podnadpis je odstránený. Zelená ponuka aj jej záložka majú svetlejšiu zelenú.
+- **Ovládanie:** celá ponuka a záložky sa pri prejdení myšou nehýbu. Zväčšenie je na jednotlivých rozbaľovacích službách oboch ponúk; rešpektuje nastavenie obmedzeného pohybu.
+- **Celkový stav:** obsah služieb, cenové odkazy, menu a priame odkazy ostávajú funkčné. Administrácia, prepojenia, bezpečnosť a SEO sú bez zmeny; ich prehľad je uvedený nižšie.
+- **Overenie a limity:** typy a produkčné zostavenie prešli; obe ponuky skontrolované na počítači a mobile bez vodorovného pretečenia. Prehliadač hlásil obmedzený pohyb, preto bol efekt zväčšenia v tomto režime vypnutý. Online kontrola nasleduje po automatickom nasadení. Živé odosielanie dopytu ani chat sa pri tejto vizuálnej úprave znovu netestujú.
 
 ## 4. 11. 2026 – články, súkromie, cookies a Služby (TO DO #135–140)
 
