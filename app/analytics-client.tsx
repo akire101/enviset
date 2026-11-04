@@ -2,17 +2,18 @@
 import {useEffect,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import type {AnalyticsPayload} from './analytics-model';
-let reloadChecked=false;
+import {consentVersion,parseConsent} from './consent-model';
 const consentKey='envi_analytics_consent';
 const blocked=()=>navigator.doNotTrack==='1'||Boolean((navigator as Navigator&{globalPrivacyControl?:boolean}).globalPrivacyControl);
-function readChoice(){try{const saved=JSON.parse(localStorage.getItem(consentKey)||'null');return saved?.expires>Date.now()?saved.value as 'yes'|'no':null}catch{return null}}
+function readChoice(){try{return parseConsent(localStorage.getItem(consentKey))?.value??null}catch{return null}}
 function startTracking(path:string){
  const now=Date.now();let visitor:string,session:string;
  try{
   const v=JSON.parse(localStorage.getItem('envi_analytics_visitor')||'null');visitor=v?.expires>now?v.id:crypto.randomUUID();localStorage.setItem('envi_analytics_visitor',JSON.stringify({id:visitor,expires:v?.expires>now?v.expires:now+400*86400000}));
   const s=JSON.parse(sessionStorage.getItem('envi_analytics_session')||'null');session=s?.time>now-1800000?s.id:crypto.randomUUID();sessionStorage.setItem('envi_analytics_session',JSON.stringify({id:session,time:now}));
  }catch{return ()=>{}}
- const data:AnalyticsPayload={consent:true,id:crypto.randomUUID(),visitor,session,path,device:innerWidth<=760?'mobile':'desktop',sequence:0,seconds:0,depth:0,sections:[],targets:[],points:[]};
+ let consent;try{consent=parseConsent(localStorage.getItem(consentKey))}catch{return ()=>{}}if(consent?.value!=='yes')return ()=>{};
+ const data:AnalyticsPayload={consent:true,consentVersion:consent.version,consentChosenAt:consent.chosenAt,id:crypto.randomUUID(),visitor,session,path,device:innerWidth<=760?'mobile':'desktop',sequence:0,seconds:0,depth:0,sections:[],targets:[],points:[]};
  const privateArea=(el:Element)=>!!el.closest('form,input,textarea,select,[contenteditable],.chat-window,.analytics-consent,.analytics-settings');
  const targets=[...document.querySelectorAll<HTMLElement>('a,button,summary')].filter(e=>!privateArea(e)&&!e.closest('.section-controls')).slice(0,100);
  data.targets=targets.map((el,i)=>({key:'target-'+i,label:(el.getAttribute('aria-label')||el.textContent||el.tagName).trim().replace(/\s+/g,' ').slice(0,100)||'Odkaz',clicks:0,seen:false}));
@@ -42,9 +43,9 @@ function startTracking(path:string){
 }
 export function AnalyticsConsent({admin=false}:{admin?:boolean}){
  const path=usePathname();const [choice,setChoice]=useState<'yes'|'no'|null>(null),[ready,setReady]=useState(false),[settings,setSettings]=useState(false),[privacy,setPrivacy]=useState(false);
- useEffect(()=>{if(!reloadChecked){reloadChecked=true;if((performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming)?.type==='reload'){try{localStorage.removeItem(consentKey)}catch{}}}setChoice(readChoice());setPrivacy(blocked());setReady(true);const sync=()=>setChoice(readChoice());window.addEventListener('storage',sync);return()=>window.removeEventListener('storage',sync)},[]);
+ useEffect(()=>{setChoice(readChoice());setPrivacy(blocked());setReady(true);const sync=()=>setChoice(readChoice());window.addEventListener('storage',sync);return()=>window.removeEventListener('storage',sync)},[]);
  useEffect(()=>{if(!ready||admin||path.startsWith('/admin')||choice!=='yes'||privacy)return;return startTracking(path)},[path,choice,ready,admin,privacy]);
- function choose(value:'yes'|'no'){try{localStorage.setItem(consentKey,JSON.stringify({value,version:'2026-10-27',chosenAt:Date.now(),expires:Date.now()+180*86400000}));if(value==='no'){localStorage.removeItem('envi_analytics_visitor');sessionStorage.removeItem('envi_analytics_session')}}catch{}setChoice(value);setSettings(false)}
+ function choose(value:'yes'|'no'){try{localStorage.setItem(consentKey,JSON.stringify({value,version:consentVersion,chosenAt:Date.now(),expires:Date.now()+180*86400000}));if(value==='no'){localStorage.removeItem('envi_analytics_visitor');sessionStorage.removeItem('envi_analytics_session')}}catch{}setChoice(value);setSettings(false)}
  if(!ready||admin||path.startsWith('/admin'))return null;
  return <><div className="analytics-settings container"><button type="button" className="text-link" onClick={()=>setSettings(!settings)}>Nastavenia súkromia</button>{choice==='yes'&&<button type="button" className="text-link" onClick={()=>choose('no')}>Vypnúť meranie</button>}</div>{(settings||!choice)&&<aside className="analytics-consent" aria-label="Meranie návštevnosti"><p className="consent-summary">{privacy?'Váš prehliadač žiada nesledovanie. Meranie je vypnuté.':'S vaším súhlasom meriame návštevy, kliknutia a pohyb myši.'}</p>{privacy?<div><button className="button secondary" onClick={()=>choose('no')}>Rozumiem</button></div>:<div><button className="button secondary" onClick={()=>choose('no')}>Zamietnuť</button><button className="button" onClick={()=>choose('yes')}>Akceptovať</button></div>}<a className="consent-details" href="/cookies">Zobraziť všetky podmienky</a>{settings&&<button className="text-link" onClick={()=>setSettings(false)}>Zavrieť nastavenia</button>}</aside>}</>;
 }

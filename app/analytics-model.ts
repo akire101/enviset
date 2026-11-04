@@ -4,7 +4,7 @@ export const analyticsPath=z.string().max(180).regex(/^\/(?:[a-z0-9-]+\/?)*$/).r
 const label=z.string().min(1).max(100);
 const count=z.number().int().min(0).max(100000);
 export const analyticsSchema=z.object({
- consent:z.literal(true),id:z.string().uuid(),visitor:z.string().uuid(),session:z.string().uuid(),
+ consent:z.literal(true),consentVersion:z.string().max(30).optional(),consentChosenAt:z.number().int().nonnegative().optional(),id:z.string().uuid(),visitor:z.string().uuid(),session:z.string().uuid(),
  path:analyticsPath,device:z.enum(['mobile','desktop']),sequence:z.number().int().min(0).max(10000),
  seconds:z.number().int().min(0).max(14400),depth:z.number().int().min(0).max(100),
  sections:z.array(z.object({key:label,label,seconds:count})).max(40),

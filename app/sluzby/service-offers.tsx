@@ -1,13 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { ArrowUpRight, Check, Plus, Minus, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Check, Plus, Minus } from 'lucide-react';
 import { annualServices, oneOffServices } from '../client-content';
 
 const offers = [
- {id:'celorocny-servis', title:'Celoročné služby', intro:'Pravidelné zabezpečovanie odpadového hospodárstva počas celej doby spolupráce.', items:annualServices, service:'Ročný servis'},
+ {id:'celorocny-servis', title:'Celoročné služby', intro:'Zabezpečovanie odpadového hospodárstva počas celej doby spolupráce.', items:annualServices, service:'Ročný servis'},
  {id:'jednorazove-sluzby', title:'Jednorázové služby', intro:'Chýba Vám len konkrétna vec? Vyberte si čo aktuálne potrebujete', items:oneOffServices, service:'Jednorazové služby'},
 ];
-const benefits = ['Skúsenosti odborníkov','Minimum administratívnej záťaže','Splnenie zákonných povinností','Minimalizáciu rizika pokút'];
 
 export function ServiceOffers() {
  const [active,setActive]=useState(0);
@@ -46,7 +45,6 @@ function Offer({annual,intro,items,service,id}:{annual:boolean;intro:string;item
     </div>;
    })}</div>)}</div>
   </div>
-  <aside className="offer-benefits"><h2>Čo získate?</h2><ul>{benefits.map(benefit=><li key={benefit}><ShieldCheck aria-hidden="true"/><span>{benefit}</span></li>)}</ul></aside>
   <a className="offer-action" href={`/kontakt?sluzba=${encodeURIComponent(service)}&ponuka=1#zaujem`}>Získať nezáväznú cenovú ponuku<ArrowUpRight size={22} aria-hidden="true"/></a>
  </section>;
 }

@@ -1,5 +1,17 @@
 # GitHub → Cloudflare Workers + D1
 
+## TO DO #135–140 – 4. 11. 2026, interné v49
+
+`post_order` uchováva poradie a pripnutie článkov ako jednu konfiguráciu s revíziou. `PUT /api/admin/post-order` vyžaduje administrátora a rovnaký pôvod; neplatné ID odmietne a starú revíziu vráti ako 409. Obsah článkov sa nemení. Verejný blog a prvé tri domovské články používajú rovnaké poradie.
+
+`message_resolutions` uchováva čas vybavenia dopytu. Označenie za nový čas odstráni; opakované označenie za vybavený lehotu nepredĺži. Po 365 dňoch sa vybavený dopyt vymaže pri používaní schránky alebo prijatí nového dopytu. Existujúce vybavené správy dostanú začiatok lehoty 4. 11. 2026. Otvorené správy sa nemažú. Tabuľky vznikajú idempotentne pri prvom použití; rovnakú schému obsahuje `drizzle/0006_post_order_retention.sql`. Staré migrácie nad existujúcou databázou znovu nespúšťajte.
+
+Voľba analytiky používa verziu oznámenia `2026-11-04` a platnosť 180 dní aj po reload. Pri staršej verzii sa meranie nespustí bez novej voľby. Nový payload obsahuje čas voľby a verziu; historické merania zostávajú čitateľné. Odmietnutie odstráni lokálne meracie identifikátory.
+
+Lokálne overenie: `ENVI_TEST_URL=http://127.0.0.1:6010 node tests/post-order-retention.mjs` mení iba lokálny náhľad a syntetický expirovaný dopyt, pôvodné poradie po teste obnoví. Vyžaduje ignorovaný lokálny testovací účet. Žiadne testovacie údaje neposielajte na verejný web.
+
+Právne texty vychádzajú zo znení účinných 4. 11. 2026: GDPR, zákon 18/2018 Z. z. od 18. 8. 2026 a § 109 ods. 8 zákona 452/2021 Z. z. v období 18. 8.–31. 12. 2026. Zdroje sú prepojené priamo na stránkach súkromia a cookies. Prevádzkovateľ musí aj organizačne zabezpečiť vybavovanie práv, posúdenie oprávnených záujmov, záznamy spracúvania a platnosť zmluvných prenosových mechanizmov; text webu tieto dokumenty sám nevytvára.
+
 ## Zákaznícka v7 – aktualizácia 8, 3. 11. 2026
 
 Schválené uloženie a online nasadenie aktuálnych zmien (interné v45): tri odkazy v menu Služby a priamy posun na ročnú alebo jednorazovú kartu. Bez migrácií a zmien Secrets.

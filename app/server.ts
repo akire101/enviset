@@ -5,8 +5,10 @@ import { eq, desc, and } from 'drizzle-orm';
 import { getDb } from '../db';
 import { posts } from '../db/schema';
 import { sameOrigin } from './validation';
+import {orderPosts} from './post-order';
+import {readPostOrder} from './post-order-server';
 export type Post=typeof posts.$inferSelect;
-export async function publicPosts(){await ensureBlogImages();return getDb().select().from(posts).where(eq(posts.status,'published')).orderBy(desc(posts.publishedAt));}
+export async function publicPosts(){await ensureBlogImages();const rows=await getDb().select().from(posts).where(eq(posts.status,'published')).orderBy(desc(posts.publishedAt));return orderPosts(rows,await readPostOrder());}
 export async function publicPost(slug:string){await ensureBlogImages();return (await getDb().select().from(posts).where(and(eq(posts.slug,slug),eq(posts.status,'published'))).limit(1))[0];}
 export async function oldPost(slug:string){return env.DB!.prepare('SELECT p.slug FROM post_redirects r JOIN posts p ON p.id = r.post_id WHERE r.slug = ? AND p.status = ?').bind(slug,'published').first<{slug:string}>();}
 export async function digest(text:string){const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return Array.from(new Uint8Array(bytes),x=>x.toString(16).padStart(2,'0')).join('');}

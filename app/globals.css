@@ -132,23 +132,25 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 .offer-tab-annual[aria-selected=true]{background:#194b34;color:#fff;border-color:#194b34}
 .offer-tab[aria-selected=true]::after{content:"";position:absolute;bottom:-11px;left:calc(50% - 12px);width:24px;height:24px;background:inherit;transform:rotate(45deg);border-radius:3px}
 .offer-tab:focus-visible{outline:3px solid #328d31;outline-offset:5px}
-.offer-wide{display:grid;grid-template-columns:minmax(0,2fr) minmax(220px,1fr);gap:20px;padding:24px;border-radius:22px}
+.offer-wide{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;padding:24px;border-radius:22px}
 .offer-wide .offer-heading{min-height:0;padding:0 0 14px;margin-bottom:10px}
 .offer-wide .offer-heading p{font-size:16px;line-height:1.5}
 .offer-service-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.offer-wide .offer-accordions{margin:0 -10px}
+.offer-wide .offer-accordions{margin:0}
 .offer-wide .offer-question{align-items:flex-start;font-size:14px;line-height:1.45;padding-block:8px;min-height:44px;gap:9px}
 .offer-wide .offer-check,.offer-wide .offer-toggle{margin-top:3px}
-.offer-benefits{border-left:1px solid var(--offer-border);padding-left:24px}
-.offer-benefits h2{font-size:clamp(25px,2.2vw,30px);color:var(--offer-ink);margin:0 0 18px;font-weight:750}
-.offer-benefits ul{list-style:none;padding:0;margin:0;display:grid;gap:16px}
-.offer-benefits li{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:650;line-height:1.4}
-.offer-benefits svg{flex-shrink:0;width:27px;height:30px;color:var(--offer-accent)}
+
+
+
+
+
 .offer-wide .offer-action{grid-column:1/-1;justify-self:center;margin-top:0;padding:14px 24px;font-size:15px}
-@media(max-width:1000px){.offer-wide{padding:30px;gap:25px;grid-template-columns:minmax(0,1fr) 260px}.offer-service-columns{grid-template-columns:1fr;gap:0}.offer-benefits{padding-left:25px}}
-@media(max-width:700px){.offer-tabs{gap:8px;margin-bottom:22px}.offer-tab{padding:15px 10px;font-size:18px;border-radius:16px}.offer-wide{grid-template-columns:1fr;padding:22px 18px;gap:22px}.offer-wide .offer-heading{padding-top:0}.offer-wide .offer-heading p{font-size:16px}.offer-wide .offer-question{font-size:16px}.offer-benefits{border-left:0;border-top:1px solid var(--offer-border);padding:20px 0 0}.offer-benefits h2{margin:0 0 18px}.offer-benefits ul{gap:14px}.offer-benefits li{font-size:16px}.offer-wide .offer-action{width:100%;font-size:16px;padding:14px 12px}.services-surface .service-tabs{scroll-margin-top:105px}}
+@media(max-width:1000px){.offer-wide{padding:30px;gap:25px;grid-template-columns:minmax(0,1fr)}.offer-service-columns{grid-template-columns:1fr;gap:0}}
+@media(max-width:700px){.offer-tabs{gap:8px;margin-bottom:22px}.offer-tab{padding:15px 10px;font-size:18px;border-radius:16px}.offer-wide{grid-template-columns:1fr;padding:22px 18px;gap:22px}.offer-wide .offer-heading{padding-top:0}.offer-wide .offer-heading p{font-size:16px}.offer-wide .offer-question{font-size:16px}.offer-wide .offer-action{width:100%;font-size:16px;padding:14px 12px}.services-surface .service-tabs{scroll-margin-top:105px}}
 .services-surface:has(.service-tabs){overflow-x:clip}
 .offer-tab-annual[aria-selected=false]{background:#edf3ed;color:#194b34}
 
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.offer-tab:hover{transform:translateY(-3px) scale(1.04);z-index:1}}
 @media(prefers-reduced-motion:reduce){.offer-tab{transition:none}}
+
+.offer-wide .offer-item{border:1px solid var(--offer-border);border-radius:24px;background:var(--offer-highlight);margin-bottom:8px}.offer-wide .offer-question{border-radius:24px;padding-inline:14px}.article-order{margin:24px 0 34px;padding:24px;border:1px solid var(--line);border-radius:16px;background:#fff}.article-order h2{font-size:25px;margin-bottom:12px}.article-order ol{list-style:none;padding:0;margin:0}.article-order li{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0;border-top:1px solid var(--line)}.article-order li>div:first-child{min-width:0}.article-order small{display:block;margin-top:5px;color:var(--muted)}.article-order .homepage-badge{font-weight:750;color:#194b34}.article-order-actions{display:flex;gap:8px;flex-shrink:0}.article-order-actions button{display:flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;border:1px solid var(--line);border-radius:10px;background:#f8f9f5;color:var(--ink);padding:8px}.article-order-actions button[aria-pressed=true]{background:#194b34;color:white}@media(max-width:700px){.article-order{padding:18px}.article-order li{align-items:flex-start;flex-direction:column}.article-order-actions{align-self:flex-end}}

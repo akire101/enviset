@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 3. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v48.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 4. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v49.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
 
@@ -8,7 +8,16 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v48 – 3. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v49 – 4. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 4. 11. 2026 – články, súkromie, cookies a Služby (TO DO #135–140)
+
+- **Pridané:** poradie publikovaných článkov ovládané šípkami a pripnutím; tri články na hlavnej stránke sú označené poradovým miestom. Poradie sa uloží ihneď a chráni pred prepísaním súbežnej úpravy.
+- **Vylepšené:** oznámenia o súkromí a cookies podľa skutočných funkcií a právnych zdrojov účinných 4. 11. 2026. Obsahujú účely, právne základy, lehoty, príjemcov, prenosy a uplatnenie práv. Voľba merania platí aj po obnovení stránky; pri zmene oznámenia sa obnoví súhlas. Nové merania evidujú verziu a čas voľby.
+- **Lehota dopytov:** vybavené správy sa odstránia po 365 dňoch pri ďalšom používaní schránky alebo prijatí dopytu. Otvorené správy sa týmto pravidlom nemažú. Staršie vybavené správy získajú lehotu od 4. 11. 2026.
+- **Služby:** nový podnadpis celoročnej ponuky; v oboch ponukách odstránené „Čo získate?“ s výhodami, služby zostávajú v samostatných zaoblených rozbaľovacích riadkoch podľa predlohy.
+- **Overenie:** 25 testov, typy, produkčné zostavenie a lokálny integračný test prístupu, poradia, pripnutia, konfliktu editácie a lehoty syntetického dopytu. Desktop a mobil kontrolované v prehliadači. Verejné overenie nasleduje po nasadení.
+- **Celkový stav a limity:** existujúce články, otvorené dopyty, prihlasovanie a nastavenie SEO sa neprepisujú. Texty webu nenahrádzajú interné záznamy prevádzkovateľa, kontrolu zmlúv so sprostredkovateľmi a organizačné postupy pri uplatnení práv. Aktivácia indexácie ani skutočné e-mailové doručovanie nie sú súčasťou úloh.
 
 ## 3. 11. 2026 – TO DO #133 a predloha #134: menší panel Služieb
 
@@ -453,13 +462,13 @@ Web je v slovenčine. Prepínanie jazykov, tmavý režim a 3D scény táto verzi
 
 ## Blog a poradňa
 
-- Verejne zobrazuje iba publikované články, od najnovšieho publikovania.
+- Verejne zobrazuje iba publikované články: najprv pripnuté, potom podľa uloženého poradia; pri neurčenom poradí od najnovšieho publikovania.
 - Filtruje podľa kategórie a vyhľadáva v názve a krátkom úvode článku (perexe) bez ohľadu na diakritiku či veľkosť písmen.
 - Stránkuje po deviatich článkoch; pri prázdnom výsledku umožní zrušiť filtre.
 - Pri zmene kategórie alebo hľadaného výrazu sa výpis vráti na prvú stranu. Kategórie vo filtri zodpovedajú zverejneným článkom.
 - Karty článkov zobrazujú obrázok, kategóriu, názov, krátky úvod a odhad času čítania. Detail navyše obsahuje dátum publikovania a celý text.
 - Text člení na nadpisy a odseky, pripája súvisiace články, návrat na blog a konzultáciu.
-- Úvodná stránka zobrazuje najviac tri najnovšie články.
+- Úvodná stránka zobrazuje prvé tri články podľa pripnutia a uloženého poradia. Administrácia ich označuje „Hlavná stránka“ s konkrétnym miestom.
 - Zmena adresy už publikovaného článku vytvorí trvalé presmerovanie starej adresy (HTTP 308).
 - Rozpracované a archivované články návštevník neuvidí. Ak otvorí ich adresu, zobrazí sa stránka „nenájdené“; platí to aj pre pôvodnú adresu článku.
 - Ak ešte nie je zverejnený žiadny článok, blog zobrazí oznam o pripravovanej poradni.
@@ -469,6 +478,8 @@ Blog nemá komentáre, newsletter ani verejné používateľské účty. Vyhľad
 ## Čo vie administrátor
 
 ### Správa článkov
+
+Prehľad **Poradie článkov a hlavná stránka** umožňuje publikované články posúvať hore a dole a pripnúť ich pred ostatné. Prvé tri sú označené miestom na hlavnej stránke. Zmeny sa ukladajú ihneď; koncepty a archív sa do verejného výberu nezapočítavajú.
 
 1. Prihlási sa na `/admin` menom a heslom.
 2. Vytvorí článok alebo vyberie existujúci zo zoznamu.

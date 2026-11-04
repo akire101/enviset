@@ -1,6 +1,26 @@
 import assert from 'node:assert/strict';
 import {test} from 'node:test';
 import {postSchema,contactSchema,constantEqual,slugify,sameOrigin} from '../app/validation.ts';
+import {orderPosts,homepagePosts,postOrderSchema} from '../app/post-order.ts';
+import {parseConsent,consentVersion} from '../app/consent-model.ts';
+test('Consent rejects expired, malformed and superseded choices',()=>{
+ const now=1000000;const choice={value:'yes',version:consentVersion,chosenAt:now-1,expires:now+1000};
+ assert.equal(parseConsent(JSON.stringify(choice),now)?.value,'yes');
+ for(const change of [{expires:now},{value:'maybe'},{version:'old'},{chosenAt:now+1},{expires:now+181*86400000}])assert.equal(parseConsent(JSON.stringify({...choice,...change}),now),null);
+ assert.equal(parseConsent('{'),null);
+});
+
+test('Article placement prioritizes pins, honors order and excludes private posts from homepage',()=>{
+ const ids=[1,2,3,4,5].map(n=>`00000000-0000-4000-8000-${String(n).padStart(12,'0')}`);
+ const posts=ids.map((id,index)=>({id,status:index===0?'draft':'published',publishedAt:index}));
+ const settings={order:[ids[2],ids[4],ids[3],ids[1]],pinned:[ids[1],ids[0]],revision:0};
+ assert.deepEqual(homepagePosts(posts,settings).map(p=>p.id),[ids[1],ids[2],ids[4]]);
+ assert.equal(orderPosts(posts,settings).length,5);assert.equal(posts[0].id,ids[0]);
+ assert.equal(postOrderSchema.safeParse({...settings,order:[ids[1],ids[1]]}).success,false);
+ assert.equal(postOrderSchema.safeParse({...settings,order:[],pinned:[ids[1]]}).success,false);
+ assert.equal(postOrderSchema.safeParse({...settings,revision:-1}).success,false);
+ assert.equal(postOrderSchema.safeParse({order:['client-20261018-0'],pinned:['client-20261018-0'],revision:0}).success,true);
+});
 test('Article images accept only built-in or uploaded same-origin paths',()=>{
  const post={title:'Testovací článok',slug:'test-clanok',excerpt:'Dostatočne dlhý úvodný text pre test.',content:'Toto je dostatočne dlhý obsah článku určený iba na testovanie.',category:'Pre firmy',image:'/media/'+'a'.repeat(64),status:'draft'};
  assert.equal(postSchema.safeParse(post).success,true);
