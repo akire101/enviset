@@ -1,14 +1,21 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 4. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v50.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 4. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v51.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Novinky v zákazníckej v7:** dve karty služieb s rozbaľovacími opismi a dopytovými tlačidlami, kancelárske pozadie, formulár s dvoma typmi záujmu, nový Kontakt, upravená navigácia, domovské karty a texty spolupráce i O nás. Nasadenie všetkých zmien a uloženie aktualizácie do v7 schválil vlastník 1. 11. 2026.
+**Aktuálny prehľad zákazníckej v7:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v50 – 4. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v51 – 4. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 4. 11. 2026 – tri oblasti Služieb podľa predlohy (TO DO #143–145 a #156)
+
+- **Vylepšené:** nový dodaný banner a nadpis „Tri kľúčové oblasti v jednej dlhodobej spolupráci“. Pôvodné prepínané ponuky nahrádzajú tri svetlé karty zasahujúce do bannera: Legislatívne zabezpečenie, Administratívne prevzatie a Osobný dohľad a podpora.
+- **Obsah a ovládanie:** osem služieb má nové názvy a opisy podľa zadania. Celý riadok s fajkou a plusom otvára opis; v každej karte je otvorený najviac jeden. Klávesnica a obmedzený pohyb sú podporované. Na tablete a mobile sú karty pod sebou.
+- **Celkový stav:** horná navigácia zostáva zachovaná, aj jej pôvodné priame odkazy vedú k novému prehľadu. Aktualizovaný popis stránky pre vyhľadávače. Administrácia, články, formulár, chat, bezpečnosť a nastavenie indexácie sú bez zmeny.
+- **Overenie a limity:** lokálne overených všetkých osem opisov, mobilné a tabletové zobrazenie bez vodorovného pretečenia; kontrola typov a produkčné zostavenie. Verejná kontrola nasleduje po automatickom nasadení. Nejde o nové testovanie živého doručovania formulára ani podpory.
 
 ## 4. 11. 2026 – názov a správanie ponúk Služieb (TO DO #142)
 
@@ -386,7 +393,7 @@ Slovenský firemný web ENVI set predstavuje poradenstvo a manažment odpadovéh
 | Oblasť | Možnosti | Stav |
 |---|---|---|
 | Firemná prezentácia | Domov, O nás, služby, výhody, spolupráca, kontakt; časté otázky na detailoch služieb | Súčasť webu |
-| Služby | Deväť detailov služieb, osem položiek celoročného servisu a sedem jednorazových služieb | Dve rozbaľovacie karty pripravené lokálne pre v7 |
+| Služby | Tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi; existujúce detailové URL zostávajú dostupné | Nový banner a tri karty podľa zadania z 4. 11. 2026 |
 | Blog / poradňa | Kategórie, vyhľadávanie, stránkovanie, detail a súvisiace články | Súčasť webu; import obsahuje tri pôvodné a päť nových článkov; existujúce úpravy sa neprepisujú |
 | Administrácia | Editor, koncepty, publikovanie, archív, záloha článkov a nahrávanie vlastného titulného obrázka | Prihlásenie a úpravy konceptu na verejnom webe overené 13. 10. 2026; upload lokálne overený 29. 10. 2026, súčasť vydania v32 |
 | Štatistiky | Denné, 7-dňové, 30-dňové a 365-dňové prehľady, čas v sekciách, kliknutia a mapy pohybu myši | Vlastné meranie po súhlase; dostupné iba administrátorovi |

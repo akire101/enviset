@@ -1,50 +1,39 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { ArrowUpRight, Check, Plus, Minus } from 'lucide-react';
-import { annualServices, oneOffServices } from '../client-content';
+import { useState } from 'react';
+import { Check, Plus, Minus } from 'lucide-react';
 
-const offers = [
- {id:'celorocny-servis', title:'Dlhodobé zabezpečenie odborného servisu', intro:'', items:annualServices, service:'Ročný servis'},
- {id:'jednorazove-sluzby', title:'Jednorázové služby', intro:'Chýba Vám len konkrétna vec? Vyberte si čo aktuálne potrebujete', items:oneOffServices, service:'Jednorazové služby'},
+const groups = [
+ {id:'legislativa',title:['Legislatívne','zabezpečenie'],items:[
+  ['Analýzy spoločnosti','Pravidelne analyzujeme fungovanie odpadového hospodárstva v spoločnosti a prípadné zmeny spracujeme.'],
+  ['Odborné dokumentácie','Vypracujeme potrebnú dokumentáciu odpadového hospodárstva pre Vašu firmu, v ktorej dávame presné postupy, návody a riešenia v súlade s platnou legislatívou. Dokumentáciu priebežne aktualizujeme.'],
+  ['Podpora pri používaní dokumentácií','Pri novej spolupráci vypracovanú dokumentáciu odovzdáme, vysvetlíme a ukážeme jej používanie v praxi. Pri aktualizácii zmeny vysvetlíme.'],
+ ]},
+ {id:'administrativa',title:['Administratívne','prevzatie'],items:[
+  ['Vedenie evidencie odpadov','Spracovávame doklady o odovzdávaní odpadov a priebežne zaznamenávame všetky potrebné údaje do evidencie. Zabezpečujeme jej aktuálnosť a správnosť podľa aktuálnych požiadaviek.'],
+  ['Ohlasovacie povinnosti','Pripravujeme včasné podanie potrebných ohlásení o odpadoch za Vašu firmu. Dohliadneme na dodržanie zákonných termínov a správnosť podaných údajov.'],
+ ]},
+ {id:'podpora',title:['Osobný dohľad','a podpora'],items:[
+  ['Osobné kontroly prevádzok','Osobne kontrolujeme nastavený systém v prevádzke, plnenie povinností, fyzický stav priestorov a navrhneme odporúčania v prípade nedostatkov, ktoré zistíme.'],
+  ['Monitoring legislatívnych zmien','Sledujeme legislatívne zmeny v oblasti odpadového hospodárstva a o všetkom dôležitom Vás informujeme.'],
+  ['Individuálna odborná podpora','Sme k dispozícii pri riešení otázok a situácií súvisiacich s odpadovým hospodárstvom a poskytujeme odbornú podporu pri špecifických záležitostiach.'],
+ ]},
 ];
 
 export function ServiceOffers() {
- const [active,setActive]=useState(0);
- useEffect(()=>{
-  const fromHash=()=>{
-   const index=offers.findIndex(offer=>offer.id===window.location.hash.slice(1));
-   if(index<0)return;
-   setActive(index);
-   document.getElementById('popis-sluzieb')?.scrollIntoView({block:'start',behavior:'instant'});
-  };
-  const frame=requestAnimationFrame(fromHash);
-  window.addEventListener('hashchange',fromHash);
-  return()=>{cancelAnimationFrame(frame);window.removeEventListener('hashchange',fromHash)};
- },[]);
- return <div id="popis-sluzieb" className="container service-offers service-tabs" aria-label="Možnosti spolupráce">
-  <div className="offer-tabs" role="tablist" aria-label="Typ služieb">{offers.map((offer,index)=><button key={offer.id} id={offer.id} type="button" role="tab" aria-selected={active===index} aria-controls={`${offer.id}-panel`} tabIndex={active===index?0:-1} className={`offer-tab${index===0?' offer-tab-annual':''}`} onClick={()=>setActive(index)} onKeyDown={event=>{
-   if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
-   event.preventDefault();
-   const next=event.key==='Home'?0:event.key==='End'?1:1-active;
-   setActive(next);document.getElementById(offers[next].id)?.focus();
-  }}>{offer.title}</button>)}</div>
-  {offers.map((offer,index)=><div key={offer.id} role="tabpanel" id={`${offer.id}-panel`} aria-labelledby={offer.id} hidden={active!==index}><Offer annual={index===0} {...offer}/></div>)}
+ return <div id="popis-sluzieb" className="container service-pillars" aria-label="Tri oblasti dlhodobej spolupráce">
+  <span id="celorocny-servis" className="service-anchor" aria-hidden="true"/>
+  <span id="jednorazove-sluzby" className="service-anchor" aria-hidden="true"/>
+  {groups.map(group=><ServiceGroup key={group.id} {...group}/>)}
  </div>;
 }
 
-function Offer({annual,intro,items,service,id}:{annual:boolean;intro:string;items:string[][];service:string;id:string}) {
+function ServiceGroup({id,title,items}:{id:string;title:string[];items:string[][]}) {
  const [openItem,setOpenItem]=useState<number|null>(null);
- const split=Math.ceil(items.length/2);
- return <section className={`service-offer offer-wide${annual?' service-offer-annual':''}`}>
-  <div className="offer-main">{intro&&<header className="offer-heading"><p>{intro}</p></header>}
-   <div className="offer-service-columns">{[items.slice(0,split),items.slice(split)].map((column,col)=><div className="offer-accordions" key={col}>{column.map(([name,description],row)=>{
-    const index=col*split+row;
-    return <div key={name} className="offer-item" data-open={openItem===index}>
-     <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Check className="offer-check" size={21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true"><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></span></button>
-     <div className="offer-answer" id={`${id}-answer-${index}`} role="region" aria-labelledby={`${id}-question-${index}`} aria-hidden={openItem!==index} inert={openItem!==index}><div><p>{description}</p></div></div>
-    </div>;
-   })}</div>)}</div>
-  </div>
-  <a className="offer-action" href={`/kontakt?sluzba=${encodeURIComponent(service)}&ponuka=1#zaujem`}>Získať nezáväznú cenovú ponuku<ArrowUpRight size={22} aria-hidden="true"/></a>
+ return <section className="service-pillar" aria-labelledby={`${id}-title`}>
+  <h2 id={`${id}-title`}>{title.map((line,index)=><span key={line}>{index>0?' ':''}{line}</span>)}</h2>
+  {items.map(([name,description],index)=><div key={name} className="offer-item" data-open={openItem===index}>
+   <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Check className="offer-check" size={21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true"><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></span></button>
+   <div className="offer-answer" id={`${id}-answer-${index}`} role="region" aria-labelledby={`${id}-question-${index}`} aria-hidden={openItem!==index} inert={openItem!==index}><div><p>{description}</p></div></div>
+  </div>)}
  </section>;
 }

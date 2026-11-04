@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## TO DO #143–145 a #156 – 4. 11. 2026, interné v51
+
+`app/sluzby/page.tsx` používa dodaný `public/images/services-office-banner.png` zo súboru `image_stol.png`. `service-offers.tsx` nahrádza záložky tromi skupinami s ôsmimi opismi; stav otvorenia je samostatný v každej karte. Horná navigácia sa nemení. Staré kotvy `celorocny-servis`, `jednorazove-sluzby` a `popis-sluzieb` zostávajú na novom prehľade. Nemenia sa databáza, formulár ani konfigurácia. CSS pre nové rozloženie je ohraničené triedami `services-redesign`, `services-banner`, `service-pillars` a `service-pillar`; do 900 px sú karty pod sebou. Push do main spúšťa existujúce automatické nasadenie.
+
 ## TO DO #142 – 4. 11. 2026, interné v50
 
 Úprava názvu a odstránenie úvodu dlhodobej ponuky v `app/sluzby/service-offers.tsx`. V CSS je zelená ponuky a aktívnej záložky `#2e6248`; zväčšenie 1,045 je iba na `.offer-wide .offer-item:hover` pre presný ukazovateľ a bez obmedzenia pohybu. Záložky sa nezväčšujú, panel nemení transformáciu ani tieň pri hover. Bez migrácie databázy alebo zmeny konfigurácie. Existujúci push do main spustí automatické nasadenie; identifikácia je v `/version.json`.

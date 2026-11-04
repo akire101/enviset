@@ -1,10 +1,9 @@
-import { PageHero } from '../components';
 import { pageMetadata } from '../seo';
 import { ServiceOffers } from './service-offers';
 
-export const metadata=pageMetadata('Služby pre firmy','Jednorazové služby a paušálna spolupráca v odpadovom hospodárstve.','/sluzby');
+export const metadata=pageMetadata('Služby pre firmy','Tri kľúčové oblasti v jednej dlhodobej spolupráci: legislatívne zabezpečenie, administratívne prevzatie a osobný dohľad a podpora.','/sluzby');
 export default function Services(){return <main id="main">
- <div className="services-surface"><div className="services-page-intro"><PageHero label="Naše služby" title="Od jednorazových služieb až po celoročnú starostlivosť." text="Vyberte si riešenie podľa potrieb vašej firmy. Pomôžeme vám s konkrétnymi povinnosťami alebo prevezmeme starostlivosť o celé odpadové hospodárstvo."/></div>
+ <div className="services-redesign"><section className="services-banner"><div className="container"><h1>Tri kľúčové oblasti v jednej dlhodobej spolupráci</h1></div></section>
  <ServiceOffers/></div>
 
  </main>}

@@ -150,6 +150,20 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 .services-surface:has(.service-tabs){overflow-x:clip}
 .offer-tab-annual[aria-selected=false]{background:#edf3ed;color:#194b34}
 
+.services-redesign{padding-bottom:90px}
+.services-banner{background:#123e35 url('/images/services-office-banner.png') center/cover no-repeat;min-height:480px;padding:70px 0 145px}
+.services-banner h1{max-width:850px;color:#fff;font-size:clamp(38px,4vw,60px);font-weight:450;line-height:1.15;letter-spacing:-.035em;margin:0}
+.service-pillars{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch;margin-top:-85px;scroll-margin-top:135px}
+.service-anchor{position:absolute;top:0;scroll-margin-top:135px}
+.service-pillar{--offer-ink:#173e2e;--offer-text:#345643;--offer-accent:#328d31;--offer-highlight:#edf6ed;color:var(--offer-ink);background:#fff;border-radius:30px;padding:28px 22px 30px;min-width:0}
+.service-pillar h2{font-size:clamp(25px,2.2vw,34px);line-height:1.16;font-weight:750;letter-spacing:-.035em;min-height:2.32em;margin:0 0 13px;padding-bottom:22px;border-bottom:1px solid #dce9df;box-sizing:content-box}
+.service-pillar h2 span{display:block}
+.service-pillar .offer-question{align-items:flex-start;padding:12px 3px;font-size:16px;line-height:1.5;gap:10px}
+.service-pillar .offer-check,.service-pillar .offer-toggle{margin-top:2px}
+.service-pillar .offer-answer p{padding:5px 16px 18px 34px;font-size:15px}
+@media(min-width:901px) and (max-width:1100px){.service-pillars{gap:16px}.service-pillar{padding:24px 17px}.service-pillar h2{font-size:27px;min-height:2.32em}.service-pillar .offer-question{font-size:15px}}
+@media(max-width:900px){.services-redesign{padding-bottom:45px}.services-banner{min-height:400px;padding:44px 0 125px;background-position:left center}.services-banner h1{font-size:clamp(34px,7vw,44px);max-width:620px}.service-pillars{grid-template-columns:1fr;gap:18px;margin-top:-65px;scroll-margin-top:115px}.service-anchor{scroll-margin-top:115px}.service-pillar{padding:26px 22px}.service-pillar h2{min-height:0;font-size:29px;padding-bottom:20px}.service-pillar .offer-question{font-size:16px}}
+
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.offer-wide .offer-item:hover{transform:scale(1.045);z-index:1}}
 @media(prefers-reduced-motion:reduce){.offer-tab,.offer-wide .offer-item{transition:none}}
 @media(max-width:700px){.offer-tab-annual{font-size:16px}}
