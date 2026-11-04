@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## TO DO #158 – 4. 11. 2026, interné v52
+
+Služby majú kratší nadpis, nový podnadpis a tlačidlo `/kontakt?ponuka=1#formular` pod kartami. CSS pridáva 1 px rámik a `scale(1.065)` iba pri hover presného ukazovateľa; `prefers-reduced-motion: reduce` vypína prechod, takže zväčšenie je okamžité. Bez zmien databázy alebo konfigurácie. Existujúce automatické nasadenie spúšťa push do main.
+
 ## TO DO #143–145 a #156 – 4. 11. 2026, interné v51
 
 `app/sluzby/page.tsx` používa dodaný `public/images/services-office-banner.png` zo súboru `image_stol.png`. `service-offers.tsx` nahrádza záložky tromi skupinami s ôsmimi opismi; stav otvorenia je samostatný v každej karte. Horná navigácia sa nemení. Staré kotvy `celorocny-servis`, `jednorazove-sluzby` a `popis-sluzieb` zostávajú na novom prehľade. Nemenia sa databáza, formulár ani konfigurácia. CSS pre nové rozloženie je ohraničené triedami `services-redesign`, `services-banner`, `service-pillars` a `service-pillar`; do 900 px sú karty pod sebou. Push do main spúšťa existujúce automatické nasadenie.

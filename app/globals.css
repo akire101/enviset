@@ -153,6 +153,12 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 .services-redesign{padding-bottom:90px}
 .services-banner{background:#123e35 url('/images/services-office-banner.png') center/cover no-repeat;min-height:480px;padding:70px 0 145px}
 .services-banner h1{max-width:850px;color:#fff;font-size:clamp(38px,4vw,60px);font-weight:450;line-height:1.15;letter-spacing:-.035em;margin:0}
+.services-banner p{max-width:700px;margin:22px 0 0;color:#fff;font-size:18px;line-height:1.65}
+.services-price{display:flex;justify-content:center;margin-top:38px}
+.service-pillars .service-pillar{position:relative;border:1px solid #ceddce;transition:transform 260ms cubic-bezier(.2,.65,.3,1);transform-origin:center}
+@media(hover:hover) and (pointer:fine){.service-pillars .service-pillar:hover{transform:scale(1.065);z-index:1}}
+@media(prefers-reduced-motion:reduce){.service-pillars .service-pillar{transition:none}}
+@media(max-width:900px){.services-banner p{font-size:16px;max-width:620px}.services-price{margin-top:28px}}
 .service-pillars{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch;margin-top:-85px;scroll-margin-top:135px}
 .service-anchor{position:absolute;top:0;scroll-margin-top:135px}
 .service-pillar{--offer-ink:#173e2e;--offer-text:#345643;--offer-accent:#328d31;--offer-highlight:#edf6ed;color:var(--offer-ink);background:#fff;border-radius:30px;padding:28px 22px 30px;min-width:0}
