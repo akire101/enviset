@@ -182,7 +182,7 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 .services-benefits h2::before{content:"";display:block;width:72px;height:4px;background:#173e2e;margin-bottom:22px}
 .services-benefits ul{list-style:square;margin:0;padding:0 0 0 48px;border-left:1px solid #173e2e;display:grid;gap:20px;font-size:21px;line-height:1.6}
 .services-benefits li{padding-left:6px}.services-benefits li::marker{color:#328d31}
-.services-one-off{--offer-ink:#173e2e;--offer-text:#345643;--offer-accent:#328d31;--offer-highlight:#edf6ed;max-width:1280px;color:var(--offer-ink);scroll-margin-top:135px}
+.services-one-off{--offer-ink:#173e2e;--offer-text:#345643;--offer-accent:#328d31;--offer-highlight:#edf6ed;max-width:1400px;color:var(--offer-ink);scroll-margin-top:135px}
 .services-one-off header{max-width:800px;margin-bottom:30px}
 .services-one-off h2{font-size:clamp(30px,3vw,42px);font-weight:500;letter-spacing:-.03em;line-height:1.2;margin:0 0 18px;text-wrap:balance}
 .services-one-off header p{font-size:17px;line-height:1.65;margin:0}

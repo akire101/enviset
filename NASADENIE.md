@@ -1,8 +1,8 @@
 # GitHub → Cloudflare Workers + D1
 
-## Zákaznícka v8 – 5. 11. 2026, TO DO #169, interné v58
+## Zákaznícka v8 – 5. 11. 2026, TO DO #169, interné v59
 
-Sekcia jednorazových služieb používa rovnakú maximálnu šírku 1280 px ako hlavná os stránky; nadpis a podnadpis sú tým posunuté doľava. Samotný zoznam zostáva maximálne 960 px a vycentrovaný. Používajú sa zelené fajky bez číslic. Bez zmien dát alebo konfigurácie; nasadenie cez main.
+Sekcia jednorazových služieb používa rovnakú maximálnu šírku 1400 px ako hlavná os stránky; nadpis a podnadpis sú tým posunuté doľava. Samotný zoznam zostáva maximálne 960 px a vycentrovaný. Používajú sa zelené fajky bez číslic. Bez zmien dát alebo konfigurácie; nasadenie cez main.
 
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #167–168, interné v57
 
