@@ -1,5 +1,11 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #159–162, interné v53
+
+Služby dopĺňa sekcia výhod a zoznam siedmich jednorazových služieb. Kotva `jednorazove-sluzby` je presunutá na skutočný nový zoznam; `celorocny-servis` a `popis-sluzieb` zostávajú na troch kartách. Rovnaký komponent ovláda rozbaľovacie položky, v každej skupine je otvorená najviac jedna. Opisy sa používajú z existujúceho `oneOffServices`; dva názvy sa zobrazujú podľa nového zadania. Bez migrácie alebo zmeny konfigurácie či Secrets. Push do main spúšťa existujúce automatické nasadenie.
+
+Bod návratu pred v8: `backups/ENVISET_v7_2026-11-05_pred_v8` v nadradenom projekte, commit `f113dfc6032877b1ead5c83dc6da83dd78a74937`, zákaznícka v7 / interné v52. Obsahuje zdroje, Git bundle a overené kontrolné súčty; neobsahuje živé dáta D1 ani Secrets. Obnovovať do nového priečinka.
+
 ## TO DO #158 – 4. 11. 2026, interné v52
 
 Služby majú kratší nadpis, nový podnadpis a tlačidlo `/kontakt?ponuka=1#formular` pod kartami. CSS pridáva 1 px rámik a `scale(1.065)` iba pri hover presného ukazovateľa; `prefers-reduced-motion: reduce` vypína prechod, takže zväčšenie je okamžité. Bez zmien databázy alebo konfigurácie. Existujúce automatické nasadenie spúšťa push do main.

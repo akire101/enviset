@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { Check, Plus, Minus } from 'lucide-react';
+import { Check, Leaf, Plus, Minus } from 'lucide-react';
+import { oneOffServices } from '../client-content';
 
 const groups = [
  {id:'legislativa',title:['Legislatívne','zabezpečenie'],items:[
@@ -22,18 +23,33 @@ const groups = [
 export function ServiceOffers() {
  return <div id="popis-sluzieb" className="container service-pillars" aria-label="Tri oblasti dlhodobej spolupráce">
   <span id="celorocny-servis" className="service-anchor" aria-hidden="true"/>
-  <span id="jednorazove-sluzby" className="service-anchor" aria-hidden="true"/>
   {groups.map(group=><ServiceGroup key={group.id} {...group}/>)}
  </div>;
 }
 
 function ServiceGroup({id,title,items}:{id:string;title:string[];items:string[][]}) {
- const [openItem,setOpenItem]=useState<number|null>(null);
  return <section className="service-pillar" aria-labelledby={`${id}-title`}>
   <h2 id={`${id}-title`}>{title.map((line,index)=><span key={line}>{index>0?' ':''}{line}</span>)}</h2>
-  {items.map(([name,description],index)=><div key={name} className="offer-item" data-open={openItem===index}>
-   <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Check className="offer-check" size={21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true"><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></span></button>
-   <div className="offer-answer" id={`${id}-answer-${index}`} role="region" aria-labelledby={`${id}-question-${index}`} aria-hidden={openItem!==index} inert={openItem!==index}><div><p>{description}</p></div></div>
-  </div>)}
+  <ServiceItems id={id} items={items}/>
  </section>;
+}
+
+export function OneOffServices() {
+ const items=oneOffServices.map(([name,description],index)=>[
+  index===3?'Identifikačné listy nebezpečných odpadov (ILNO)':index===5?'Prevádzkový poriadok miesta zhromažďovania nebezpečného odpadu':name,
+  description,
+ ]);
+ return <section id="jednorazove-sluzby" className="container services-one-off" aria-labelledby="one-off-title">
+  <header><h2 id="one-off-title">Riešenia pre konkrétne potreby Vašej firmy</h2><p>Chýba Vám už len konkrétna vec? Zvoľte si to, čo aktuálne potrebujete.</p></header>
+  <div className="one-off-list"><ServiceItems id="one-off" items={items} leaf/></div>
+ </section>;
+}
+
+function ServiceItems({id,items,leaf=false}:{id:string;items:string[][];leaf?:boolean}) {
+ const [openItem,setOpenItem]=useState<number|null>(null);
+ const Icon=leaf?Leaf:Check;
+ return <>{items.map(([name,description],index)=><div key={name} className="offer-item" data-open={openItem===index}>
+   <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Icon className="offer-check" size={21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true"><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></span></button>
+   <div className="offer-answer" id={`${id}-answer-${index}`} role="region" aria-labelledby={`${id}-question-${index}`} aria-hidden={openItem!==index} inert={openItem!==index}><div><p>{description}</p></div></div>
+  </div>)}</>;
 }

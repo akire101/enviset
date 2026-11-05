@@ -1,14 +1,22 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 4. 11. 2026. Zákaznícka verzia v7, aktualizácia 8, vydanie v52.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v53.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Aktuálny prehľad zákazníckej v7:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
+**Aktuálny prehľad zákazníckej v8:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v52 – 4. 11. 2026, zákaznícka v7, aktualizácia 8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v53 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 5. 11. 2026 – výhody spolupráce a jednorazové služby (TO DO #159–162)
+
+- **Pridané:** pod cenovým tlačidlom sekcia „Čo získate?“ s troma výhodami označenými štvorcovými odrážkami podľa zadania a obrazovej predlohy.
+- **Pridané:** sekcia „Riešenia pre konkrétne potreby Vašej firmy“ s podnadpisom a siedmimi jednorazovými službami. Celý riadok s lístkom a plusom otvára opis, opätovné kliknutie ho zatvára; otvorený je najviac jeden opis zo zoznamu.
+- **Vylepšené:** odkaz „Jednorázové služby“ v menu vedie priamo na nový zoznam. Rozloženie sa prispôsobuje mobilu; ovládanie podporuje klávesnicu a obmedzený pohyb.
+- **Celkový stav:** zachované tri oblasti dlhodobej spolupráce, existujúce opisy jednorazových služieb, formulár, chat, administrácia a nastavenie indexácie. Aktualizovaný prehľad stránky pre vyhľadávače; podrobnosti bezpečnosti a prepojení nižšie zostávajú platné podľa uvedených dátumov.
+- **Overenie a limity:** kontrola typov, všetkých 25 testov a produkčné zostavenie prešli. Lokálne overených sedem rozbaľovacích opisov, klávesnicové zatvorenie a zobrazenie pri 1440 a 390 px bez vodorovného pretečenia. Verejné overenie nasleduje po automatickom nasadení. Živé odosielanie dopytov a doručovanie podpory nie sú súčasťou tejto úpravy.
 
 ## 4. 11. 2026 – texty, karty a cenová ponuka Služieb (TO DO #158)
 
