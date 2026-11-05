@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v62.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v63.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v8:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v62 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v63 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 5. 11. 2026 – zjednodušenie domovskej stránky (TO DO #178–180)
+
+- **Upravené:** odstránená celá domovská sekcia „Čo získate?“ aj jej dekoratívny predel. Po sekcii s fotografiou nasleduje prehľad odvetví.
+- **Upravené:** odstránené tlačidlo „Dohodnúť osobné stretnutie“ pri fotografii a tlačidlo „ukázať služby“ pod štyrmi kľúčovými oblasťami. Dekoratívne lístky za poslednou kartou sú odstránené.
+- **Celkový stav:** domovská stránka obsahuje štyri oblasti, text s fotografiou stretnutia, šesť odvetví a štyri kroky spolupráce. Zákaznícka verzia zostáva v8. Sekcia „Čo získate?“ na stránke Služby, formulár, chat, administrácia, prepojenia, bezpečnosť a SEO zachovávajú nižšie uvedený stav.
+- **Overenie a limity:** kontrola typov a produkčné zostavenie, vizuálna kontrola počítača a mobilu, neprítomnosť odstránených prvkov a kontrola vodorovného pretečenia. Verejné overenie nasleduje po automatickom nasadení. Doručovanie formulárov sa v tejto úprave netestuje.
 
 ## 5. 11. 2026 – odvetvia firiem, prechody a cesta k spolupráci (TO DO #174–177)
 

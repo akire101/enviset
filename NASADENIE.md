@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #178–180, interné v63
+
+Z domovskej stránky odstránené `#vyhody`, jeho organický predel, `MeetingCallButton` a tlačidlo pod `.help-icons`. Odstránené CSS pseudo-elementy dekoratívnych lístkov `.help-section`; štyri karty aj ich hover zostávajú. Sekcia výhod na stránke Služby sa nemení. Bez zmien databázy, konfigurácie alebo Secrets; nasadenie existujúcim push na main.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #174–177, interné v62
 
 Domovská sekcia `#pre-koho` obsahuje šesť odvetví z obrazovej predlohy, dekoratívne obrysové ikony a kontaktný odkaz. Mriežka má tri stĺpce, do 760 px dva a do 480 px jeden. Jemné prechody používajú rovnaký princíp svetlozeleného gradientu ako jednorazové služby; fotografia a telefonické tlačidlo stretnutia zostávajú. Obsah štyroch krokov je v `cooperationSteps`, nadpis v `app/page.tsx`. Bez zmeny databázy, konfigurácie a Secrets; nasadenie cez existujúci push na main.

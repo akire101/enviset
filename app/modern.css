@@ -187,7 +187,7 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 
 /* Contact inquiry layout. */
 .help-highlight{color:#176b43;font-weight:800}.help-heading-green{color:#176b43}
-.help-section{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 95% 75%,#d4e1c5 0,transparent 50%),#edf1e7}.help-section>.container{position:relative;z-index:1}.help-section::before,.help-section::after{content:"";position:absolute;z-index:0;pointer-events:none;right:-12px;top:38px;width:280px;height:112px;transform:rotate(-18deg);background:url("/images/service-leaf.svg") center/contain no-repeat;opacity:.7}.help-section::after{top:166px;right:-24px;width:230px;height:92px;transform:rotate(-12deg);opacity:.55}@media(max-width:760px){.help-section::before,.help-section::after{opacity:.18}.help-section h2{font-size:30px}}
+.help-section{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 95% 75%,#d4e1c5 0,transparent 50%),#edf1e7}.help-section>.container{position:relative;z-index:1}@media(max-width:760px){.help-section h2{font-size:30px}}
 .inquiry-interests{border:0;padding:0;margin:0 0 24px;min-width:0}
 .inquiry-interests legend{font-size:17px;margin-bottom:8px;color:var(--muted)}
 .inquiry-interests label{display:flex;align-items:center;gap:12px;min-height:44px;font-size:17px;cursor:pointer}
