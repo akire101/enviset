@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #167–168, interné v56
+
+`OneOffBullet` vykresľuje geometrickú tmavomodrú dvojitú šípku podľa predlohy #168 iba v siedmich jednorazových službách. Ikona je dekoratívna s `aria-hidden`; prístupný názov ovládania zostáva názov služby. Rozbaľovanie, ostatné fajky, databáza aj konfigurácia zostávajú zachované. Nasadenie cez existujúci push na main.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #165–166, interné v55
 
 Obal `.services-one-off-surface` plynulo mení pozadie z existujúceho `--paper` na `#edf1e8` v hornej časti a pokračuje mierne tmavšou plochou až po koniec jednorazových služieb. Na mobile je prechod kratší. Kotvy, existujúce biele riadky a ovládanie sa nemenia; bez zmeny databázy, konfigurácie alebo Secrets. Push na main spúšťa existujúce nasadenie.
