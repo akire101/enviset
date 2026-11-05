@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v53.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v54.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v8:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v53 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v54 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 5. 11. 2026 – výraznejšia sekcia „Čo získate?“ (TO DO #163–164)
+
+- **Vylepšené:** väčší výrazný nadpis a väčšie texty troch výhod; úvodné slová výhod sú zvýraznené podľa obrazovej predlohy.
+- **Pridané:** hrubšia tmavozelená vodorovná čiara nad nadpisom a tenká tmavozelená zvislá čiara oddeľujúca výhody. Na mobile zostáva nadpis nad zoznamom a zvislá čiara vedľa výhod.
+- **Celkový stav:** zákaznícka verzia zostáva v8. Tri oblasti spolupráce, sedem jednorazových služieb, formulár, chat, administrácia, prepojenia, bezpečnosť a nastavenie SEO zostávajú zachované podľa prehľadu a dátumov nižšie.
+- **Overenie a limity:** kontrola typov a produkčné zostavenie prešli. Lokálne skontrolované rozloženie pri 1440, 768 a 390 px bez vodorovného pretečenia; potvrdená hrúbka čiar 4 px a 1 px. Verejné overenie nasleduje po automatickom nasadení. Živé doručovanie formulárov nie je súčasťou tejto typografickej úpravy.
 
 ## 5. 11. 2026 – výhody spolupráce a jednorazové služby (TO DO #159–162)
 

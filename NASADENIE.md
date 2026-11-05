@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #163–164, interné v54
+
+Sekcia `.services-benefits` má väčší nadpis a texty, tmavozelenú vodorovnú čiaru 4 px nad nadpisom a zvislú čiaru 1 px pri zozname. Na mobile zostávajú stĺpce pod sebou s písmom výhod 18 px. Nová kotva `vyhody-spoluprace` a odsadenie pri posune umožňujú priamy odkaz na celú sekciu. Bez databázových a konfiguračných zmien; nasadenie cez existujúci push na main. Zákaznícke súhrny tejto verzie majú podľa opravy používateľa nadpis `Zmeny v8 - ENVI set`.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #159–162, interné v53
 
 Služby dopĺňa sekcia výhod a zoznam siedmich jednorazových služieb. Kotva `jednorazove-sluzby` je presunutá na skutočný nový zoznam; `celorocny-servis` a `popis-sluzieb` zostávajú na troch kartách. Rovnaký komponent ovláda rozbaľovacie položky, v každej skupine je otvorená najviac jedna. Opisy sa používajú z existujúceho `oneOffServices`; dva názvy sa zobrazujú podľa nového zadania. Bez migrácie alebo zmeny konfigurácie či Secrets. Push do main spúšťa existujúce automatické nasadenie.
