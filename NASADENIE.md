@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #170–171, interné v60
+
+Zoznam `.one-off-list` má nulové bočné okraje a začína na rovnakej osi ako nadpis; zachováva maximálnu šírku 960 px. Nové dekoratívne SVG `OneOffBullet` má dve tmavomodré trojuholníkové plochy bez textu alebo číslic podľa novej predlohy #171. Platí iba pre jednorazové služby; horné karty zachovávajú fajky. Bez zmeny databázy, konfigurácie alebo Secrets. Nasadenie cez existujúci push na main.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #169, interné v59
 
 Sekcia jednorazových služieb používa rovnakú maximálnu šírku 1400 px ako hlavná os stránky; nadpis a podnadpis sú tým posunuté doľava. Samotný zoznam zostáva maximálne 960 px a vycentrovaný. Používajú sa zelené fajky bez číslic. Bez zmien dát alebo konfigurácie; nasadenie cez main.

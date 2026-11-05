@@ -186,12 +186,12 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 .services-one-off header{max-width:800px;margin-bottom:30px}
 .services-one-off h2{font-size:clamp(30px,3vw,42px);font-weight:500;letter-spacing:-.03em;line-height:1.2;margin:0 0 18px;text-wrap:balance}
 .services-one-off header p{font-size:17px;line-height:1.65;margin:0}
-.one-off-list{display:grid;gap:10px;max-width:960px;margin-inline:auto}.one-off-list .offer-item{border-radius:14px;background:#fff}
+.one-off-list{display:grid;gap:10px;max-width:960px;margin-inline:0}.one-off-list .offer-item{border-radius:14px;background:#fff}
 .one-off-list .offer-question{padding:15px 18px;gap:14px;font-size:16px;line-height:1.5;min-height:54px}
 .one-off-list .offer-answer p{padding:4px 50px 20px 53px;font-size:16px}
 @media(max-width:700px){.services-benefits{grid-template-columns:1fr;gap:25px;margin-top:55px;margin-bottom:60px}.services-benefits ul{font-size:16px;gap:16px}.services-one-off{scroll-margin-top:115px}.services-one-off header p{font-size:16px}.one-off-list .offer-question{align-items:flex-start;padding:14px;gap:10px}.one-off-list .offer-check,.one-off-list .offer-toggle{margin-top:2px}.one-off-list .offer-answer p{padding:4px 20px 18px 45px}}
 .services-benefits h2{scroll-margin-top:160px}@media(max-width:700px){.services-benefits{gap:26px;scroll-margin-top:115px}.services-benefits h2{font-size:38px;scroll-margin-top:130px}.services-benefits h2::before{width:60px;margin-bottom:18px}.services-benefits ul{font-size:18px;padding-left:29px;gap:18px}}
 .services-redesign{padding-bottom:0}.services-benefits{margin-bottom:0}
 .services-one-off-surface{margin-top:30px;padding:60px 0 90px;background:linear-gradient(to bottom,var(--paper),#edf1e8 90px)}
-.one-off-list .offer-check{align-self:flex-start;margin-top:2px}
-@media(max-width:700px){.services-one-off-surface{margin-top:20px;padding:40px 0 55px;background:linear-gradient(to bottom,var(--paper),#edf1e8 60px)}}
+.one-off-list .offer-check{align-self:flex-start;margin-top:0}.one-off-list .offer-answer p{padding-left:62px}
+@media(max-width:700px){.services-one-off-surface{margin-top:20px;padding:40px 0 55px;background:linear-gradient(to bottom,var(--paper),#edf1e8 60px)}.one-off-list .offer-answer p{padding-left:54px}}
