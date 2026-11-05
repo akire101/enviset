@@ -193,5 +193,5 @@ body{font-size:16px}.hero-content h1{font-size:clamp(35px,4.1vw,59px)}.hero-cont
 .services-benefits h2{scroll-margin-top:160px}@media(max-width:700px){.services-benefits{gap:26px;scroll-margin-top:115px}.services-benefits h2{font-size:38px;scroll-margin-top:130px}.services-benefits h2::before{width:60px;margin-bottom:18px}.services-benefits ul{font-size:18px;padding-left:29px;gap:18px}}
 .services-redesign{padding-bottom:0}.services-benefits{margin-bottom:0}
 .services-one-off-surface{margin-top:30px;padding:60px 0 90px;background:linear-gradient(to bottom,var(--paper),#edf1e8 90px)}
-.one-off-list .offer-check{align-self:flex-start;margin-top:0}.one-off-list .offer-answer p{padding-left:62px}
-@media(max-width:700px){.services-one-off-surface{margin-top:20px;padding:40px 0 55px;background:linear-gradient(to bottom,var(--paper),#edf1e8 60px)}.one-off-list .offer-answer p{padding-left:54px}}
+.one-off-list .offer-check{align-self:flex-start;margin-top:2px}
+@media(max-width:700px){.services-one-off-surface{margin-top:20px;padding:40px 0 55px;background:linear-gradient(to bottom,var(--paper),#edf1e8 60px)}}

@@ -1,8 +1,8 @@
 # GitHub → Cloudflare Workers + D1
 
-## Zákaznícka v8 – 5. 11. 2026, TO DO #167–168, interné v56
+## Zákaznícka v8 – 5. 11. 2026, TO DO #167–168, interné v57
 
-`OneOffBullet` vykresľuje geometrickú tmavomodrú dvojitú šípku podľa predlohy #168 iba v siedmich jednorazových službách. Ikona je dekoratívna s `aria-hidden`; prístupný názov ovládania zostáva názov služby. Rozbaľovanie, ostatné fajky, databáza aj konfigurácia zostávajú zachované. Nasadenie cez existujúci push na main.
+Jednorazové služby používajú existujúcu zelenú ikonu `Check` podľa výslovného výberu používateľa. Ikona je dekoratívna s `aria-hidden`; prístupný názov ovládania zostáva názov služby. Rozbaľovanie, ostatné fajky, databáza aj konfigurácia zostávajú zachované. Nasadenie cez existujúci push na main.
 
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #165–166, interné v55
 

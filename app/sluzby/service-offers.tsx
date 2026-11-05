@@ -41,19 +41,14 @@ export function OneOffServices() {
  ]);
  return <section id="jednorazove-sluzby" className="container services-one-off" aria-labelledby="one-off-title">
   <header><h2 id="one-off-title">Riešenia pre konkrétne potreby Vašej firmy</h2><p>Chýba Vám už len konkrétna vec? Zvoľte si to, čo aktuálne potrebujete.</p></header>
-  <div className="one-off-list"><ServiceItems id="one-off" items={items} oneOff/></div>
+  <div className="one-off-list"><ServiceItems id="one-off" items={items}/></div>
  </section>;
 }
 
-function OneOffBullet({className,size=30}:{className?:string;size?:number}) {
- return <svg className={className} width={size} height={size} viewBox="0 0 32 32" aria-hidden="true"><path d="M4 3 25 16 4 29Z" fill="#376372"/><path d="M11 3 32 16 11 29Z" fill="#174456"/><text x="15" y="20" textAnchor="middle" fontSize="10" fill="#91aab2">2</text></svg>;
-}
-
-function ServiceItems({id,items,oneOff=false}:{id:string;items:string[][];oneOff?:boolean}) {
+function ServiceItems({id,items}:{id:string;items:string[][]}) {
  const [openItem,setOpenItem]=useState<number|null>(null);
- const Icon=oneOff?OneOffBullet:Check;
  return <>{items.map(([name,description],index)=><div key={name} className="offer-item" data-open={openItem===index}>
-   <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Icon className="offer-check" size={oneOff?30:21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true"><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></span></button>
+   <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Check className="offer-check" size={21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true"><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></span></button>
    <div className="offer-answer" id={`${id}-answer-${index}`} role="region" aria-labelledby={`${id}-question-${index}`} aria-hidden={openItem!==index} inert={openItem!==index}><div><p>{description}</p></div></div>
   </div>)}</>;
 }
