@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #172–173, interné v61
+
+Domovská sekcia `#pomoc` používa štyri oblasti s ikonami Recycle, Boxes, ClipboardCheck a Scale. Mriežka má štyri stĺpce, do 1100 px dva a do 600 px jeden. Jemný ukazovateľ s hoverom zväčšuje kartu o 9 %; pri obmedzenom pohybe bez animácie. Zachovaný štýl hlavného nadpisu a odkaz na služby. Bez zmien databázy, konfigurácie alebo Secrets; nasadenie existujúcim push na main.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #170–171, interné v60
 
 Zoznam `.one-off-list` má nulové bočné okraje a začína na rovnakej osi ako nadpis; zachováva maximálnu šírku 960 px. Nové dekoratívne SVG `OneOffBullet` má dve tmavomodré trojuholníkové plochy bez textu alebo číslic podľa novej predlohy #171. Platí iba pre jednorazové služby; horné karty zachovávajú fajky. Bez zmeny databázy, konfigurácie alebo Secrets. Nasadenie cez existujúci push na main.

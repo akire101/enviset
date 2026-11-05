@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v60.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v61.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v8:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v60 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v61 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 5. 11. 2026 – štyri kľúčové oblasti na domovskej stránke (TO DO #172–173)
+
+- **Vylepšené:** nadpis „Kľúčové oblasti, ktoré Vám pokryjeme“ a štyri karty s novými opismi: Druhy a triedenie odpadov, Zhromažďovanie a odovzdávanie odpadov, Evidencia a ohlasovanie odpadov, Legislatíva a dokumentácia.
+- **Pridané:** čierne obrysové ikony podľa predlohy; na počítači štyri karty vedľa seba a zväčšenie o 9 % pri prejdení myšou. Tablet používa dva stĺpce, mobil jeden. Obmedzený pohyb vypína animovaný prechod.
+- **Celkový stav:** zákaznícka v8; služby, formulár, chat, administrácia, bezpečnosť, SEO a prepojenia zachovávajú stav uvedený nižšie.
+- **Overenie a limity:** kontrola typov a produkčné zostavenie; vizuálna kontrola počítača a mobilu, skutočné zväčšenie karty a kontrola vodorovného pretečenia. Verejné overenie nasleduje po automatickom nasadení. Doručovanie formulárov sa v tejto úprave netestuje.
 
 ## 5. 11. 2026 – zoznam služieb vľavo a šípky bez číslic (TO DO #170–171)
 
