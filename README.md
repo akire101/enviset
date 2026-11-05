@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v54.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v55.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v8:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,13 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v54 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v55 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 5. 11. 2026 – jemný prechod k jednorazovým službám (TO DO #165–166)
+
+- **Vylepšené:** od sekcie „Čo získate?“ plynulo prechádza pozadie do mierne tmavšej svetlozelenej plochy jednorazových služieb podľa dodanej predlohy. Biele rozbaľovacie riadky zostávajú v popredí.
+- **Celkový stav:** zákaznícka verzia zostáva v8. Obsah výhod a služieb, rozbaľovanie, menu, formulár, chat, administrácia, bezpečnosť a nastavenie SEO zostávajú zachované podľa prehľadu a dátumov nižšie.
+- **Overenie a limity:** kontrola typov a produkčné zostavenie prešli; prechod skontrolovaný na počítači a mobile bez vodorovného pretečenia. Verejné overenie nasleduje po automatickom nasadení. Zmena symbolu odrážok z úlohy #167 čaká na upresnenie požadovaného symbolu. Doručovanie formulárov nie je súčasťou vizuálnej úpravy.
 
 ## 5. 11. 2026 – výraznejšia sekcia „Čo získate?“ (TO DO #163–164)
 
