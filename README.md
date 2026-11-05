@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v57.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v58.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v8:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,13 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v57 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v58 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 5. 11. 2026 – ľavé zarovnanie nadpisov jednorazových služieb (TO DO #169)
+
+- **Vylepšené:** hlavný nadpis a podnadpis jednorazových služieb sú posunuté na ľavú os obsahu stránky. Zoznam siedmich služieb zachováva svoju šírku a zelené fajky bez číslic.
+- **Celkový stav:** zákaznícka verzia zostáva v8; obsah, rozbaľovanie, farebný prechod, formulár, chat, administrácia, bezpečnosť a SEO zostávajú zachované.
+- **Overenie a limity:** kontrola typov a produkčné zostavenie prešli. Lokálne overené zarovnanie nadpisu s hlavnou osou stránky, zachovaná šírka zoznamu 960 px, sedem zelených fajok bez číslic a zobrazenie počítača aj mobilu bez vodorovného pretečenia. Verejné overenie nasleduje po automatickom nasadení. Doručovanie formulárov nie je súčasťou úpravy zarovnania.
 
 ## 5. 11. 2026 – odrážky jednorazových služieb (TO DO #167–168)
 

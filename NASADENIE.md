@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #169, interné v58
+
+Sekcia jednorazových služieb používa rovnakú maximálnu šírku 1280 px ako hlavná os stránky; nadpis a podnadpis sú tým posunuté doľava. Samotný zoznam zostáva maximálne 960 px a vycentrovaný. Používajú sa zelené fajky bez číslic. Bez zmien dát alebo konfigurácie; nasadenie cez main.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #167–168, interné v57
 
 Jednorazové služby používajú existujúcu zelenú ikonu `Check` podľa výslovného výberu používateľa. Ikona je dekoratívna s `aria-hidden`; prístupný názov ovládania zostáva názov služby. Rozbaľovanie, ostatné fajky, databáza aj konfigurácia zostávajú zachované. Nasadenie cez existujúci push na main.
