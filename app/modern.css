@@ -221,3 +221,21 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 .meeting-benefits li p{font-size:20px;color:var(--ink)}
 @media(max-width:760px){.meeting-organic-divider{height:80px;margin-top:18px;background-size:auto 100%;background-position:75% center}.meeting-benefits{padding-top:5px}.meeting-benefits ul{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;gap:24px}.meeting-benefits li>svg{width:22px;height:22px;padding:9px;margin-top:0}.meeting-benefits li p{font-size:18px}}
 @media(hover:hover) and (pointer:fine){.help-icons>article:hover{transform:scale(1.09);z-index:2;box-shadow:0 16px 35px #123d2b20}}@media(prefers-reduced-motion:reduce){.help-icons>article{transition:none}}
+
+/* Home section transitions and industry overview from the supplied reference. */
+.help-section{background:radial-gradient(ellipse at 95% 55%,#d4e1c5 0,transparent 50%),#edf1e7}
+.meeting-intro{margin-top:0;padding-top:48px;background:linear-gradient(to bottom,#edf1e7,#f1f5ec 100px)}
+.home-audience{background:linear-gradient(to bottom,var(--paper),#edf1e8 90px,#edf1e8 calc(100% - 60px),var(--paper));padding-top:20px}
+.home-audience h2{margin-bottom:18px;max-width:1000px}
+.home-audience-intro{font-size:21px;line-height:1.5;margin:0 0 46px;max-width:1000px}
+.home-industry-list{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px 48px;padding:0;margin:0}
+.home-industry-list li{text-align:center;min-width:0}
+.home-industry-list svg{display:block;margin:0 auto 14px;color:#285d47}
+.home-industry-list h3{font-size:23px;line-height:1.25;font-weight:750;margin:0 0 10px}
+.home-industry-list p{font-size:17px;line-height:1.5;max-width:32ch;margin:0 auto}
+.home-audience-note{font-size:21px;line-height:1.5;text-align:center;margin:42px 0 0;color:var(--ink)}
+.home-audience-note a{text-decoration:underline;text-underline-offset:4px}
+
+
+@media(max-width:760px){.meeting-intro{margin-top:0;padding-top:24px}.home-audience{padding-top:10px;background:linear-gradient(to bottom,var(--paper),#edf1e8 60px,#edf1e8 calc(100% - 50px),var(--paper))}.home-audience-intro{font-size:18px;margin-bottom:34px}.home-industry-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}.home-industry-list h3{font-size:21px}.home-industry-list p{font-size:16px}.home-audience-note{font-size:18px;margin-top:34px}}
+@media(max-width:480px){.home-industry-list{grid-template-columns:1fr;gap:32px}.home-industry-list h3{font-size:23px}.home-industry-list p{font-size:17px}}

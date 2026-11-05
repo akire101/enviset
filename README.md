@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v61.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 5. 11. 2026. Zákaznícka verzia v8, vydanie v62.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v8:** Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,15 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v61 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v62 – 5. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 5. 11. 2026 – odvetvia firiem, prechody a cesta k spolupráci (TO DO #174–177)
+
+- **Pridané:** sekcia „Pre aké firmy je spolupráca s nami určená?“ so šiestimi odvetviami, zelenými obrysovými ikonami a opismi podľa predlohy. Nadpis a podnadpis sú vľavo; pod odvetviami je výzva na kontakt s odkazom na formulár.
+- **Vylepšené:** jemné zelené prechody pri sekcii osobného stretnutia a novej sekcii odvetví. Sekcia stretnutia zachováva fotografiu, text aj telefonické tlačidlo.
+- **Vylepšené:** nadpis „Ako prebieha cesta k spolupráci?“ a nové názvy aj opisy všetkých štyroch krokov od bezplatného osobného stretnutia po zabezpečenie odpadového hospodárstva.
+- **Celkový stav:** domovská stránka predstavuje štyri kľúčové oblasti, osobné stretnutie, výhody, šesť odvetví a štyri kroky spolupráce. Zákaznícka verzia zostáva v8. Služby, formulár, chat, administrácia, bezpečnosť, SEO a prepojenia zachovávajú nižšie uvedený stav.
+- **Overenie a limity:** kontrola typov, existujúce testy a produkčné zostavenie; vizuálna kontrola počítača a mobilu, počtu odvetví a krokov, prechodov a vodorovného pretečenia. Verejné overenie nasleduje po automatickom nasadení. Doručovanie formulárov sa v tejto úprave netestuje.
 
 ## 5. 11. 2026 – štyri kľúčové oblasti na domovskej stránke (TO DO #172–173)
 

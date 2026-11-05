@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 5. 11. 2026, TO DO #174–177, interné v62
+
+Domovská sekcia `#pre-koho` obsahuje šesť odvetví z obrazovej predlohy, dekoratívne obrysové ikony a kontaktný odkaz. Mriežka má tri stĺpce, do 760 px dva a do 480 px jeden. Jemné prechody používajú rovnaký princíp svetlozeleného gradientu ako jednorazové služby; fotografia a telefonické tlačidlo stretnutia zostávajú. Obsah štyroch krokov je v `cooperationSteps`, nadpis v `app/page.tsx`. Bez zmeny databázy, konfigurácie a Secrets; nasadenie cez existujúci push na main.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #172–173, interné v61
 
 Domovská sekcia `#pomoc` používa štyri oblasti s ikonami Recycle, Boxes, ClipboardCheck a Scale. Mriežka má štyri stĺpce, do 1100 px dva a do 600 px jeden. Jemný ukazovateľ s hoverom zväčšuje kartu o 9 %; pri obmedzenom pohybe bez animácie. Zachovaný štýl hlavného nadpisu a odkaz na služby. Bez zmien databázy, konfigurácie alebo Secrets; nasadenie existujúcim push na main.
