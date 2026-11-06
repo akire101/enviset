@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 6. 11. 2026, TO DO #182–185, interné v65
+
+Domovské `#pomoc` nahrádza štyri karty predstavením paušálneho servisu s troma oblasťami podpory. Nadpis má na širokom displeji tri riadky, opis päť riadkov a zvislé oddelenie. Nové `#odborne-ukony` obsahuje štyri informačné karty podľa predlohy. Tlačidlá vedú na existujúce kotvy `/sluzby#celorocny-servis` a `/sluzby#jednorazove-sluzby`. Na užších displejoch sa text zalamuje prirodzene, karty sa skladajú do dvoch a jedného stĺpca. Odstránené nepoužívané štýly pôvodných kariet. Bez zmien databázy, konfigurácie a Secrets; nasadenie cez main.
+
 ## Zákaznícka v8 – 6. 11. 2026, TO DO #181, interné v64
 
 Pole `menuServices` v `app/header.tsx` obsahuje iba „Paušálny servis“ a „Jednorázové služby“. Priame kotvy zostávajú zachované; spoločné menu používa rovnaké položky na počítači aj mobile. Bez zmien databázy, konfigurácie a Secrets. Nasadenie existujúcim push na main.
