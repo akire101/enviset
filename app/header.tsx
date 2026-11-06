@@ -6,9 +6,8 @@ import {Menu,X,ChevronDown,ArrowUpRight} from 'lucide-react';
 import {Logo} from './components';
 import {brand} from './content';
 const menuServices = [
- {href:'/sluzby#celorocny-servis',title:'Celoročné služby'},
+ {href:'/sluzby#celorocny-servis',title:'Paušálny servis'},
  {href:'/sluzby#jednorazove-sluzby',title:'Jednorázové služby'},
- {href:'/sluzby',title:'Všetky služby'},
 ];
 
 export function Header(){

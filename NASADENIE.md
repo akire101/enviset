@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 6. 11. 2026, TO DO #181, interné v64
+
+Pole `menuServices` v `app/header.tsx` obsahuje iba „Paušálny servis“ a „Jednorázové služby“. Priame kotvy zostávajú zachované; spoločné menu používa rovnaké položky na počítači aj mobile. Bez zmien databázy, konfigurácie a Secrets. Nasadenie existujúcim push na main.
+
 ## Zákaznícka v8 – 5. 11. 2026, TO DO #178–180, interné v63
 
 Z domovskej stránky odstránené `#vyhody`, jeho organický predel, `MeetingCallButton` a tlačidlo pod `.help-icons`. Odstránené CSS pseudo-elementy dekoratívnych lístkov `.help-section`; štyri karty aj ich hover zostávajú. Sekcia výhod na stránke Služby sa nemení. Bez zmien databázy, konfigurácie alebo Secrets; nasadenie existujúcim push na main.
