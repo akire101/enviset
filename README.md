@@ -1,14 +1,24 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 6. 11. 2026. Zákaznícka verzia v8, vydanie v65.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 8. 11. 2026. Zákaznícka verzia v8, vydanie v66.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Aktuálny prehľad zákazníckej v8:** Domovská stránka predstavuje paušálny servis v troch oblastiach a štyri jednorazové odborné úkony s odkazmi na úplnú ponuku. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
+**Aktuálny prehľad zákazníckej v8:** Domovská stránka predstavuje komplexné zabezpečenie odpadového hospodárstva tromi výhodami a ilustráciou celoročnej starostlivosti. Nasleduje zodpovedný prístup, kompaktnejší prehľad odvetví, kroky spolupráce a ponuka jednorazových služieb. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v65 – 6. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v66 – 8. 11. 2026, zákaznícka v8**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 8. 11. 2026 – nové usporiadanie domovskej stránky (TO DO #186–192)
+
+- **Vylepšené:** nový nadpis komplexného zabezpečenia odpadového hospodárstva, tri výhody s ikonami a ilustrácia „Celoročná starostlivosť v jednom servise“ podľa predlohy. Odkaz vedie na celoročný servis.
+- **Pridané:** sekcia „Zodpovedný prístup k odpadom, kľúč k lepšiemu životnému prostrediu“ s odlíšeným serifovým nadpisom v dvoch riadkoch a dodaným opisom v troch riadkoch na širokom displeji.
+- **Vylepšené:** prehľad šiestich odvetví má menšiu šírku, kompaktnejšie ikony a rozostupy; pôvodný podnadpis je odstránený.
+- **Pridané:** predposledná sekcia jednorazových služieb podľa predlohy: vľavo nadpis, opis a odkaz, vpravo štyri služby so zelenými fajkami.
+- **Odstránené:** predchádzajúca sekcia paušálneho servisu, štyri karty špecifických povinností a sekcia stretnutia s fotografiou.
+- **Celkový stav:** zákaznícka verzia zostáva v8. Obsah Služieb, kontaktný formulár, chat, administrácia, bezpečnosť, SEO a prepojenia zachovávajú nižšie uvedený stav.
+- **Overenie a limity:** kontrola typov, existujúce testy a produkčné zostavenie; vizuálna kontrola počítača a mobilu, počtu prvkov, poradia sekcií a odkazov. Verejné overenie nasleduje po automatickom nasadení. Doručovanie formulárov sa v tejto úprave netestuje.
 
 ## 6. 11. 2026 – predstavenie paušálneho servisu a odborných úkonov (TO DO #182–185)
 

@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v8 – 8. 11. 2026, TO DO #186–192, interné v66
+
+Domovské `#pomoc` používa `.home-service-overview` s tromi dekoratívnymi ikonami a ilustráciou kalendára vytvorenou existujúcimi SVG ikonami a CSS. Nové `#zodpovedny-pristup` používa lokálne dostupný serifový font Georgia, bez ďalších požiadaviek na externé fonty. `#pre-koho` má obsah do 1080 px, bez podnadpisu. `#odborne-ukony` je predposledná sekcia s textom a zoznamom štyroch služieb; pôvodné karty a fotografia stretnutia sú odstránené. Obe tlačidlá zachovávajú existujúce priame kotvy na Služby. Bez zmien databázy, konfigurácie alebo Secrets; nasadenie cez main.
+
 ## Zákaznícka v8 – 6. 11. 2026, TO DO #182–185, interné v65
 
 Domovské `#pomoc` nahrádza štyri karty predstavením paušálneho servisu s troma oblasťami podpory. Nadpis má na širokom displeji tri riadky, opis päť riadkov a zvislé oddelenie. Nové `#odborne-ukony` obsahuje štyri informačné karty podľa predlohy. Tlačidlá vedú na existujúce kotvy `/sluzby#celorocny-servis` a `/sluzby#jednorazove-sluzby`. Na užších displejoch sa text zalamuje prirodzene, karty sa skladajú do dvoch a jedného stĺpca. Odstránené nepoužívané štýly pôvodných kariet. Bez zmien databázy, konfigurácie a Secrets; nasadenie cez main.
