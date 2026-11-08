@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 8. 11. 2026, TO DO #193–202, interné v67
+
+Domovské sekcie používajú dodané obrazové predlohy: štyri kartičky namiesto kalendára, nový nadpis a opis celoročného servisu, SVG motív ruky s rastlinou, kompaktné odvetvia a jednorazové služby. Postup spolupráce je predposledný a má menšie rozostupy aj typografiu. CSS je ohraničené existujúcimi triedami domovských sekcií; žiadne nové závislosti, migrácie, konfigurácia ani Secrets. Nasadenie existujúcim push na main. Bod návratu v8 je uložený v `backups/ENVISET_v8_2026-11-08`, tag `v8-zakaznicka-2026-11-08`.
+
 ## Zákaznícka v8 – 8. 11. 2026, TO DO #186–192, interné v66
 
 Domovské `#pomoc` používa `.home-service-overview` s tromi dekoratívnymi ikonami a ilustráciou kalendára vytvorenou existujúcimi SVG ikonami a CSS. Nové `#zodpovedny-pristup` používa lokálne dostupný serifový font Georgia, bez ďalších požiadaviek na externé fonty. `#pre-koho` má obsah do 1080 px, bez podnadpisu. `#odborne-ukony` je predposledná sekcia s textom a zoznamom štyroch služieb; pôvodné karty a fotografia stretnutia sú odstránené. Obe tlačidlá zachovávajú existujúce priame kotvy na Služby. Bez zmien databázy, konfigurácie alebo Secrets; nasadenie cez main.
