@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 9. 11. 2026, TO DO #205–212, interné v69
+
+`app/page.tsx` pridáva medzi servis a zodpovedný prístup samostatný obrazový predel mimo zoznamu sekcií. Dodaný originál 2032 × 660 je optimalizovaný v `public/images/recycling-bins-divider.webp` (približne 188 kB); načítava sa odložene s určenými rozmermi. CSS používa plnú šírku, `object-fit: cover` a mobilný výrez. Oba upravené nadpisy používajú rovnakú desktopovú veľkosť ako hero a hrúbku 800; kartičky a svetlozelené pozadie sledujú novú predlohu. Bez závislostí, databázových zmien, konfigurácie či Secrets; nasadenie push na main.
+
 ## Zákaznícka v9 – 9. 11. 2026, TO DO #203–204, interné v68
 
 Domovské `main.home-page` ohraničuje úpravu rozostupov. Od šírky 761 px majú sekcie okrem hero minimálnu výšku `calc(100svh - 110px)`; obsah je zvislo vycentrovaný a existujúci horný scroll-padding zostáva jediným odsadením kotvy. Výška je minimálna, bez orezania dlhšieho obsahu. Mobilná výška sa nemení. Zoznam v `section-controls.tsx` zodpovedá všetkým siedmim aktuálnym sekciám. Bez migrácie, závislostí, konfigurácie alebo Secrets; nasadenie existujúcim push na main.
