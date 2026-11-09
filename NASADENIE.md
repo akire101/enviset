@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 9. 11. 2026, TO DO #218–220, interné v72
+
+Ilustrovaný predel používa samostatnú triedu `home-illustration-divider`, prirodzený pomer strán, `object-fit: contain` a maximálnu výšku 120 px (70 px na mobile); fotografický predel zostáva samostatný. Obal `services-annual-section` zahŕňa banner, karty a cenové tlačidlo. Tento celok, výhody a jednorazový servis majú od 761 px minimálnu výšku `calc(100svh - 110px)`. Nadpis jednorazových služieb používa rovnakú mierku a hrúbku 800 ako domovská stránka. Bez zmeny databázy, konfigurácie alebo závislostí; nasadenie push na main.
+
 ## Zákaznícka v9 – 9. 11. 2026, TO DO #215–217, interné v71
 
 Spoločné CSS pravidlo nadpisov zahŕňa aj prehľad firiem, jednorazové služby a postup spolupráce. Medzi `odborne-ukony` a `postup` je nový predel s existujúcou triedou `home-image-divider`. Dodaná ilustrácia 2774 × 354 je optimalizovaná v `public/images/environment-services-divider.webp`; rozmery a odložené načítanie sú určené v markupe. Bez zmeny závislostí, databázy alebo konfigurácie; nasadenie push na main.

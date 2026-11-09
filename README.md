@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 9. 11. 2026. Zákaznícka verzia v9, vydanie v71.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 9. 11. 2026. Zákaznícka verzia v9, vydanie v72.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v9:** Domovská stránka predstavuje celoročný servis novým nadpisom, opisom, tromi výhodami a štyrmi kartičkami služieb. Nasleduje zodpovedný prístup s motívom ruky a rastliny, kompaktný prehľad šiestich odvetví, jednorazové služby a menší postup spolupráce. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,15 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v71 – 9. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v72 – 9. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 9. 11. 2026 – menší predel a vzdušnejšie služby (TO DO #218–220)
+
+- **Vylepšené:** ilustrácia pred postupom spolupráce je výrazne menšia a zobrazuje sa celá bez orezania podľa novej predlohy.
+- **Vylepšené:** hlavné obsahové celky stránky Služby majú na počítači minimálnu výšku podľa dostupnej obrazovky. Výhody a jednorazové služby sú pri kratšom obsahu zvislo vycentrované; dlhší obsah sa prirodzene rozšíri. Mobil zachováva plynulé rozloženie.
+- **Vylepšené:** nadpis „Riešenia pre konkrétne potreby Vašej firmy“ používa veľkosť a hrúbku ostatných výrazných nadpisov.
+- **Celkový stav:** zákaznícka v9; funkcie, bezpečnosť, SEO a prepojenia majú stav uvedený nižšie.
+- **Overenie a limity:** kontrola typov, produkčné zostavenie a kontrola rozloženia na počítači a mobile. Doručovanie formulárov sa pri tejto úprave netestuje.
 
 ## 9. 11. 2026 – jednotné nadpisy a ilustrovaný predel (TO DO #215–217)
 
