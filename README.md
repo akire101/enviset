@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 9. 11. 2026. Zákaznícka verzia v9, vydanie v70.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 9. 11. 2026. Zákaznícka verzia v9, vydanie v71.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v9:** Domovská stránka predstavuje celoročný servis novým nadpisom, opisom, tromi výhodami a štyrmi kartičkami služieb. Nasleduje zodpovedný prístup s motívom ruky a rastliny, kompaktný prehľad šiestich odvetví, jednorazové služby a menší postup spolupráce. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v70 – 9. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v71 – 9. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 9. 11. 2026 – jednotné nadpisy a ilustrovaný predel (TO DO #215–217)
+
+- **Vylepšené:** nadpisy prehľadu firiem, jednorazových služieb a postupu spolupráce majú rovnakú veľkosť a hrúbku ako nadpis celoročného servisu.
+- **Pridané:** dodaná ilustrácia oddeľuje jednorazové služby od postupu spolupráce v širokom obrazovom páse s mobilným výrezom.
+- **Celkový stav:** zákaznícka v9; funkcie, bezpečnosť, SEO a prepojenia majú stav uvedený nižšie.
+- **Overenie a limity:** kontrola typov, produkčné zostavenie a vizuálna kontrola počítača a mobilu. Doručovanie formulárov sa pri tejto úprave netestuje.
 
 ## 9. 11. 2026 – nová fotografia predelu (TO DO #213–214)
 

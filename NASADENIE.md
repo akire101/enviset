@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 9. 11. 2026, TO DO #215–217, interné v71
+
+Spoločné CSS pravidlo nadpisov zahŕňa aj prehľad firiem, jednorazové služby a postup spolupráce. Medzi `odborne-ukony` a `postup` je nový predel s existujúcou triedou `home-image-divider`. Dodaná ilustrácia 2774 × 354 je optimalizovaná v `public/images/environment-services-divider.webp`; rozmery a odložené načítanie sú určené v markupe. Bez zmeny závislostí, databázy alebo konfigurácie; nasadenie push na main.
+
 ## Zákaznícka v9 – 9. 11. 2026, TO DO #213–214, interné v70
 
 Nová príloha Trello #214 (2030 × 484) je optimalizovaná do `public/images/recycling-bins-divider-v9.webp`. Nový názov zabezpečuje načítanie aktuálneho obrázka aj pri existujúcej cache. `app/page.tsx` používa nové rozmery; rozloženie a výrezy zostávajú zachované. Bez zmeny závislostí, konfigurácie či databázy; nasadenie push na main.

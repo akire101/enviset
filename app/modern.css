@@ -274,7 +274,7 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 @media(max-width:380px){.home-service-benefits p{font-size:14px}.home-service-copy>.button{font-size:15px}.home-service-tiles h3{font-size:20px}}
 
 /* Supplied v9 reference: bold headings, soft tiles and a cropped photo band. */
-.home-service-copy h2,.home-responsibility h2{font-family:inherit;font-style:normal;font-size:clamp(38px,4.4vw,62px);font-weight:800;line-height:1.08;letter-spacing:-.035em}
+.home-service-copy h2,.home-responsibility h2,.home-audience h2,.home-specific-copy h2,.process-section .section-head h2{font-family:inherit;font-style:normal;font-size:clamp(38px,4.4vw,62px);font-weight:800;line-height:1.08;letter-spacing:-.035em}
 .home-service-tiles{gap:22px}
 .home-service-tiles li{border:1px solid #f0f2ef;background:#fff;border-radius:24px;box-shadow:0 3px 5px #163d2b12,0 12px 24px #163d2b06;min-height:180px}
 .home-service-tiles h3{font-size:24px;font-weight:750}
@@ -283,4 +283,4 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 .home-responsibility h2::before{content:"";display:block;width:72px;height:5px;background:#76cf64;border-radius:4px;margin-bottom:22px}
 .home-image-divider{height:clamp(260px,38svh,460px);width:100%;overflow:hidden;background:#e4ebe2}
 .home-image-divider img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 55%}
-@media(max-width:760px){.home-service-copy h2,.home-responsibility h2{font-size:39px}.home-service-tiles{gap:16px}.home-service-tiles li{min-height:150px}.home-service-tiles h3{font-size:22px}.home-image-divider{height:220px}.home-image-divider img{object-position:75% center}}
+@media(max-width:760px){.home-service-copy h2,.home-responsibility h2,.home-audience h2,.home-specific-copy h2,.process-section .section-head h2{font-size:39px}.home-service-tiles{gap:16px}.home-service-tiles li{min-height:150px}.home-service-tiles h3{font-size:22px}.home-image-divider{height:220px}.home-image-divider img{object-position:75% center}}
