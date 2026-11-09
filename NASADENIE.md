@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 9. 11. 2026, TO DO #229–232, interné v74
+
+Existujúci gradient je zdieľaný triedami `home-audience` a `home-specific-services`. Tlačidlo v zodpovednom prístupe používa existujúci komponent `Button` s odkazom `/o-nas` a vodorovným centrovaním pod opisom. Spodné odsadenie `home-service-layout` sa mení z 48 na 144 px, na mobile z 32 na 96 px. Bez zmeny databázy, konfigurácie alebo závislostí; nasadenie push na main.
+
 ## Zákaznícka v9 – 9. 11. 2026, TO DO #221–228, interné v73
 
 Domovské obsahové obaly aj hero majú spoločnú maximálnu šírku 1240 px a rovnaké okraje. Postup používa zarovnanie hore a horný odstup 150 px (80 px na mobile). Dve CTA majú minimálnu výšku 44 px. Pôvodný SVG motív nahrádza dodaný `responsible-waste-care.webp` s rozmermi 950 × 858 a odloženým načítaním. Prechod medzi odvetviami a jednorazovými službami tvorí lokálny sivastozelený gradient. Ikony výhod používajú šesťsekundovú CSS animáciu s dvojsekundovými odstupmi; `prefers-reduced-motion` ju vypína. Bez závislostí, databázových zmien či konfigurácie; nasadenie push na main.
