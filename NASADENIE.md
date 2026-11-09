@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 9. 11. 2026, TO DO #221–228, interné v73
+
+Domovské obsahové obaly aj hero majú spoločnú maximálnu šírku 1240 px a rovnaké okraje. Postup používa zarovnanie hore a horný odstup 150 px (80 px na mobile). Dve CTA majú minimálnu výšku 44 px. Pôvodný SVG motív nahrádza dodaný `responsible-waste-care.webp` s rozmermi 950 × 858 a odloženým načítaním. Prechod medzi odvetviami a jednorazovými službami tvorí lokálny sivastozelený gradient. Ikony výhod používajú šesťsekundovú CSS animáciu s dvojsekundovými odstupmi; `prefers-reduced-motion` ju vypína. Bez závislostí, databázových zmien či konfigurácie; nasadenie push na main.
+
 ## Zákaznícka v9 – 9. 11. 2026, TO DO #218–220, interné v72
 
 Ilustrovaný predel používa samostatnú triedu `home-illustration-divider`, prirodzený pomer strán, `object-fit: contain` a maximálnu výšku 120 px (70 px na mobile); fotografický predel zostáva samostatný. Obal `services-annual-section` zahŕňa banner, karty a cenové tlačidlo. Tento celok, výhody a jednorazový servis majú od 761 px minimálnu výšku `calc(100svh - 110px)`. Nadpis jednorazových služieb používa rovnakú mierku a hrúbku 800 ako domovská stránka. Bez zmeny databázy, konfigurácie alebo závislostí; nasadenie push na main.
