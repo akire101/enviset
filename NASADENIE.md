@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 9. 11. 2026, TO DO #203–204, interné v68
+
+Domovské `main.home-page` ohraničuje úpravu rozostupov. Od šírky 761 px majú sekcie okrem hero minimálnu výšku `calc(100svh - 110px)`; obsah je zvislo vycentrovaný a existujúci horný scroll-padding zostáva jediným odsadením kotvy. Výška je minimálna, bez orezania dlhšieho obsahu. Mobilná výška sa nemení. Zoznam v `section-controls.tsx` zodpovedá všetkým siedmim aktuálnym sekciám. Bez migrácie, závislostí, konfigurácie alebo Secrets; nasadenie existujúcim push na main.
+
 ## Zákaznícka v9 – 8. 11. 2026, TO DO #193–202, interné v67
 
 Domovské sekcie používajú dodané obrazové predlohy: štyri kartičky namiesto kalendára, nový nadpis a opis celoročného servisu, SVG motív ruky s rastlinou, kompaktné odvetvia a jednorazové služby. Postup spolupráce je predposledný a má menšie rozostupy aj typografiu. CSS je ohraničené existujúcimi triedami domovských sekcií; žiadne nové závislosti, migrácie, konfigurácia ani Secrets. Nasadenie existujúcim push na main. Bod návratu v8 je uložený v `backups/ENVISET_v8_2026-11-08`, tag `v8-zakaznicka-2026-11-08`.

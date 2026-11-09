@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 8. 11. 2026. Zákaznícka verzia v9, vydanie v67.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 9. 11. 2026. Zákaznícka verzia v9, vydanie v68.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v9:** Domovská stránka predstavuje celoročný servis novým nadpisom, opisom, tromi výhodami a štyrmi kartičkami služieb. Nasleduje zodpovedný prístup s motívom ruky a rastliny, kompaktný prehľad šiestich odvetví, jednorazové služby a menší postup spolupráce. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v67 – 8. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v68 – 9. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 9. 11. 2026 – samostatnejšie zobrazenie domovských sekcií (TO DO #203–204)
+
+- **Vylepšené:** od celoročného servisu majú domovské sekcie na počítači minimálnu výšku podľa dostupnej obrazovky pod navigáciou. Obsah je zvislo vycentrovaný a ďalšia sekcia pri zarovnaní aktuálnej zostáva pod obrazovkou. Dlhší obsah sa prirodzene rozšíri.
+- **Vylepšené:** navigačné šípky zahŕňajú všetkých sedem aktuálnych sekcií v správnom poradí. Mobil zachováva plynulé rozloženie bez pridanej minimálnej výšky.
+- **Celkový stav:** zákaznícka v9; obsah, formulár, chat, administrácia, bezpečnosť, SEO a prepojenia zostávajú podľa prehľadu nižšie.
+- **Overenie a limity:** kontrola typov, existujúce testy a produkčné zostavenie; vizuálna a rozmerová kontrola notebooku a mobilu. Doručovanie formulárov sa pri tejto úprave netestuje.
 
 ## 8. 11. 2026 – domovská stránka podľa nových predlôh (TO DO #193–202)
 
