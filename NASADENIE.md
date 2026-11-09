@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 9. 11. 2026, TO DO #213–214, interné v70
+
+Nová príloha Trello #214 (2030 × 484) je optimalizovaná do `public/images/recycling-bins-divider-v9.webp`. Nový názov zabezpečuje načítanie aktuálneho obrázka aj pri existujúcej cache. `app/page.tsx` používa nové rozmery; rozloženie a výrezy zostávajú zachované. Bez zmeny závislostí, konfigurácie či databázy; nasadenie push na main.
+
 ## Zákaznícka v9 – 9. 11. 2026, TO DO #205–212, interné v69
 
 `app/page.tsx` pridáva medzi servis a zodpovedný prístup samostatný obrazový predel mimo zoznamu sekcií. Dodaný originál 2032 × 660 je optimalizovaný v `public/images/recycling-bins-divider.webp` (približne 188 kB); načítava sa odložene s určenými rozmermi. CSS používa plnú šírku, `object-fit: cover` a mobilný výrez. Oba upravené nadpisy používajú rovnakú desktopovú veľkosť ako hero a hrúbku 800; kartičky a svetlozelené pozadie sledujú novú predlohu. Bez závislostí, databázových zmien, konfigurácie či Secrets; nasadenie push na main.
