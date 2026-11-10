@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 10. 11. 2026, TO DO #233–236, interné v75
+
+`app/sluzby/page.tsx` nahrádza obsah sekcie `vyhody-spoluprace`, zachováva jej kotvu a pomenovanie pre prístupnosť. Nová trieda `services-tailored-benefits` dopĺňa rozloženie podľa referencie: nadpis, dodaný otáznik 580 × 922 optimalizovaný v `services-question-mark.webp` a tri textové body oddelené zvislou čiarou. Ilustrácia je dekoratívna s prázdnym alt. Existujúca minimálna výška sekcie zostáva zachovaná; responzívne pravidlá skladajú obsah do jedného stĺpca. Bez zmeny databázy, konfigurácie či závislostí; nasadenie push na main.
+
 ## Zákaznícka v9 – 9. 11. 2026, TO DO #229–232, interné v74
 
 Existujúci gradient je zdieľaný triedami `home-audience` a `home-specific-services`. Tlačidlo v zodpovednom prístupe používa existujúci komponent `Button` s odkazom `/o-nas` a vodorovným centrovaním pod opisom. Spodné odsadenie `home-service-layout` sa mení z 48 na 144 px, na mobile z 32 na 96 px. Bez zmeny databázy, konfigurácie alebo závislostí; nasadenie push na main.
