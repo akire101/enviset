@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 10. 11. 2026. Zákaznícka verzia v9, vydanie v75.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 10. 11. 2026. Zákaznícka verzia v9, vydanie v76.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v9:** Domovská stránka predstavuje celoročný servis novým nadpisom, opisom, tromi výhodami a štyrmi kartičkami služieb. Nasleduje zodpovedný prístup s motívom ruky a rastliny, kompaktný prehľad šiestich odvetví, jednorazové služby a menší postup spolupráce. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v75 – 10. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v76 – 10. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 10. 11. 2026 – ceny služieb a upravené texty výhod (TO DO #237–239)
+
+- **Vylepšené:** tri body sekcie „Čo získate“ majú nové nadpisy a opisy: prehľad vo Vašich povinnostiach, dokumentácia prispôsobená Vašej prevádzke a odborný partner počas celého roka. Rozloženie a otáznik zostávajú zachované.
+- **Pridané:** pod tri karty služieb je vložený nadpis „Aké sú ceny našich služieb?“ s dodaným vysvetlením ceny. Tlačidlo „Získať cenu“ je pod textom a otvára formulár cenovej ponuky.
+- **Celkový stav:** zákaznícka v9; funkcie, bezpečnosť, SEO a prepojenia majú stav uvedený nižšie.
+- **Overenie a limity:** kontrola typov, produkčné zostavenie a vizuálna kontrola počítača a mobilu vrátane odkazu cenovej ponuky. Doručovanie formulárov sa pri tejto úprave netestuje.
 
 ## 10. 11. 2026 – nové Čo získate na stránke Služby (TO DO #233–236)
 

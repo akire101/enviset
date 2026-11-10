@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 10. 11. 2026, TO DO #237–239, interné v76
+
+`app/sluzby/page.tsx` mení iba texty troch bodov „Čo získate“. Pôvodný samostatný obal cenového tlačidla nahrádza sekcia `ceny-sluzieb`: nadpis vľavo, opis za zvislou čiarou vpravo a existujúci `Button` pod opisom s adresou `/kontakt?ponuka=1#formular`. Mobil skladá obsah pod seba. Bez nových závislostí, databázy či konfigurácie; nasadenie push na main.
+
 ## Zákaznícka v9 – 10. 11. 2026, TO DO #233–236, interné v75
 
 `app/sluzby/page.tsx` nahrádza obsah sekcie `vyhody-spoluprace`, zachováva jej kotvu a pomenovanie pre prístupnosť. Nová trieda `services-tailored-benefits` dopĺňa rozloženie podľa referencie: nadpis, dodaný otáznik 580 × 922 optimalizovaný v `services-question-mark.webp` a tri textové body oddelené zvislou čiarou. Ilustrácia je dekoratívna s prázdnym alt. Existujúca minimálna výška sekcie zostáva zachovaná; responzívne pravidlá skladajú obsah do jedného stĺpca. Bez zmeny databázy, konfigurácie či závislostí; nasadenie push na main.

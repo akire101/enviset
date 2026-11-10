@@ -304,6 +304,12 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 @media(prefers-reduced-motion:reduce){.home-service-benefits svg{animation:none}}
 @media(max-width:760px){.home-page .hero-content,.home-page .home-service-layout,.home-page .home-responsibility>.section,.home-page .home-audience>.container,.home-page .home-specific-layout,.home-page>.process-section,.home-page>#poradna{width:calc(100% - 34px)}.home-page>.process-section{padding-top:80px}.home-responsibility>.section{grid-template-columns:1fr}.home-care-symbol{width:180px;justify-self:center}}
 .services-one-off h2{font-size:clamp(38px,4.4vw,62px);font-weight:800;line-height:1.08;letter-spacing:-.035em}
+.services-pricing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:45px;align-items:center;padding-block:70px 30px;scroll-margin-top:110px}
+.services-pricing h2{font-size:clamp(38px,4.4vw,62px);font-weight:800;line-height:1.08;margin:0;letter-spacing:-.035em}
+.services-pricing>div{border-left:2px solid #173e2e;padding-left:45px}
+.services-pricing p{font-size:18px;line-height:1.55;color:var(--ink);margin:0 0 22px}
+.services-pricing strong{font-weight:800}.services-pricing .button{margin-top:6px}
+@media(max-width:760px){.services-pricing{grid-template-columns:1fr;gap:26px;padding-block:45px 20px}.services-pricing h2{font-size:39px}.services-pricing>div{padding-left:22px}.services-pricing p{font-size:17px}}
 .services-tailored-benefits{max-width:1400px;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:36px}
 .services-benefits-intro{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:18px;align-items:center}
 .services-tailored-benefits h2{font-size:clamp(40px,4vw,60px);font-weight:800;line-height:1.08;margin:0}
