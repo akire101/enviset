@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 11. 11. 2026, TO DO #240–242, interné v77
+
+Jednorazové služby využívajú existujúce lucide ikony a komponent ServiceItems; iba pre tento zoznam sa plus/mínus mení na rotujúcu šípku. Zachované aria-expanded, aria-controls, inert aj jedna otvorená položka. Scoped CSS vytvára biely zoznam podľa predlohy. Odstránený podnadpis banneru Služby. Bez nových závislostí alebo migrácií; nasadenie push na main.
+
 ## Zákaznícka v9 – 10. 11. 2026, TO DO #237–239, interné v76
 
 `app/sluzby/page.tsx` mení iba texty troch bodov „Čo získate“. Pôvodný samostatný obal cenového tlačidla nahrádza sekcia `ceny-sluzieb`: nadpis vľavo, opis za zvislou čiarou vpravo a existujúci `Button` pod opisom s adresou `/kontakt?ponuka=1#formular`. Mobil skladá obsah pod seba. Bez nových závislostí, databázy či konfigurácie; nasadenie push na main.

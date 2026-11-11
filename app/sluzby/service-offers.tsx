@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Check, Plus, Minus } from 'lucide-react';
+import { Check, Plus, Minus, FileText, Handshake, Package, FileCheck2, Siren, Warehouse, GraduationCap, ChevronDown } from 'lucide-react';
 import { oneOffServices } from '../client-content';
 
 const groups = [
@@ -45,15 +45,13 @@ export function OneOffServices() {
  </section>;
 }
 
-function OneOffBullet({className,size=30}:{className?:string;size?:number}) {
- return <svg className={className} width={size} height={size} viewBox="0 0 32 32" aria-hidden="true"><path d="M4 3 25 16 4 29Z" fill="#376372"/><path d="M11 3 32 16 11 29Z" fill="#123e55"/></svg>;
-}
+const oneOffIcons=[FileText, Handshake, Package, FileCheck2, Siren, Warehouse, GraduationCap];
 
 function ServiceItems({id,items,oneOff=false}:{id:string;items:string[][];oneOff?:boolean}) {
  const [openItem,setOpenItem]=useState<number|null>(null);
- const Icon=oneOff?OneOffBullet:Check;
- return <>{items.map(([name,description],index)=><div key={name} className="offer-item" data-open={openItem===index}>
-   <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Icon className="offer-check" size={oneOff?30:21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true"><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></span></button>
+
+ return <>{items.map(([name,description],index)=>{const Icon=oneOff?oneOffIcons[index]:Check; return <div key={name} className="offer-item" data-open={openItem===index}>
+   <button type="button" className="offer-question" id={`${id}-question-${index}`} aria-expanded={openItem===index} aria-controls={`${id}-answer-${index}`} onClick={()=>setOpenItem(openItem===index?null:index)}><Icon className="offer-check" size={oneOff?42:21} aria-hidden="true"/><span>{name}</span><span className="offer-toggle" aria-hidden="true">{oneOff?<ChevronDown size={28}/>:<><Plus className="offer-plus" size={18}/><Minus className="offer-minus" size={18}/></>}</span></button>
    <div className="offer-answer" id={`${id}-answer-${index}`} role="region" aria-labelledby={`${id}-question-${index}`} aria-hidden={openItem!==index} inert={openItem!==index}><div><p>{description}</p></div></div>
-  </div>)}</>;
+  </div>})}</>;
 }
