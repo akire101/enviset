@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 11. 11. 2026, TO DO #244–247, interné v79
+
+Domov mení iba dodaný opis zodpovedného prístupu. Služby obaľujú benefits do plnošírkového services-benefits-surface s tieneným prechodom k bielej; druhý prechod používa rovnaké odtiene pri jednorazových službách. Zrušený border-left zoznamu benefits. Bez konfigurácie, migrácií a závislostí; nasadenie push na main.
+
 ## Zákaznícka v9 – 11. 11. 2026, TO DO #243, interné v78
 
 Scoped CSS zmenšuje existujúci zoznam jednorazových služieb. OneOffServices dopĺňa dva textové bloky pod zoznam a odkaz /kontakt#formular. Bez nových závislostí, konfigurácie alebo databázových zmien; nasadenie push na main.
