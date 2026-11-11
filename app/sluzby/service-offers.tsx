@@ -42,6 +42,7 @@ export function OneOffServices() {
  return <section id="jednorazove-sluzby" className="container services-one-off" aria-labelledby="one-off-title">
   <header><h2 id="one-off-title">Riešenia pre konkrétne potreby Vašej firmy</h2><p>Chýba Vám už len konkrétna vec? Zvoľte si to, čo aktuálne potrebujete.</p></header>
   <div className="one-off-list"><ServiceItems id="one-off" items={items} oneOff/></div>
+  <div className="one-off-guidance"><h3>Jednorazové služby</h3><p>Odpadové hospodárstvo zahŕňa viacero povinností, ktorých zabezpečenie si môže vyžadovať rôzne typy dokumentov či registrácií. Ak už máte túto oblasť v spoločnosti zabezpečenú, ale potrebujete doplniť konkrétnu vec, môžete využiť naše jednorazové služby.</p><h3>Nie ste si istí, ktorú službu potrebujete?</h3><p><a href="/kontakt#formular">Napíšte nám!</a> Radi Vám poradíme, čo je potrebné zabezpečiť, navrhneme cenovú ponuku.</p></div>
  </section>;
 }
 

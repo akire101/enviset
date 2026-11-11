@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 11. 11. 2026. Zákaznícka verzia v9, vydanie v77.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 11. 11. 2026. Zákaznícka verzia v9, vydanie v78.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v9:** Domovská stránka predstavuje celoročný servis novým nadpisom, opisom, tromi výhodami a štyrmi kartičkami služieb. Nasleduje zodpovedný prístup s motívom ruky a rastliny, kompaktný prehľad šiestich odvetví, jednorazové služby a menší postup spolupráce. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,14 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v77 – 11. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v78 – 11. 11. 2026, zákaznícka v9**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 11. 11. 2026 – kompaktnejší výber jednorazových služieb (TO DO #243)
+
+- **Vylepšené:** zoznam jednorazových služieb má menšiu šírku, písmo, ikony a výšku riadkov. Rozbaľovacie opisy zostávajú zachované.
+- **Pridané:** pod zoznamom je vysvetlenie „Jednorazové služby“ a pomoc „Nie ste si istí, ktorú službu potrebujete?“ s odkazom „Napíšte nám!“ na formulár.
+- **Celkový stav:** zákaznícka v9; funkcie, bezpečnosť, SEO a prepojenia sú rozlíšené nižšie.
+- **Overenie a limity:** kontrola typov, produkčné zostavenie, zobrazenie na počítači a mobile a prechod na formulár. Doručovanie formulárov sa pri tejto úprave netestuje.
 
 ## 11. 11. 2026 – prehľadnejšie jednorazové služby (TO DO #240–242)
 

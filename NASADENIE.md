@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 11. 11. 2026, TO DO #243, interné v78
+
+Scoped CSS zmenšuje existujúci zoznam jednorazových služieb. OneOffServices dopĺňa dva textové bloky pod zoznam a odkaz /kontakt#formular. Bez nových závislostí, konfigurácie alebo databázových zmien; nasadenie push na main.
+
 ## Zákaznícka v9 – 11. 11. 2026, TO DO #240–242, interné v77
 
 Jednorazové služby využívajú existujúce lucide ikony a komponent ServiceItems; iba pre tento zoznam sa plus/mínus mení na rotujúcu šípku. Zachované aria-expanded, aria-controls, inert aj jedna otvorená položka. Scoped CSS vytvára biely zoznam podľa predlohy. Odstránený podnadpis banneru Služby. Bez nových závislostí alebo migrácií; nasadenie push na main.
