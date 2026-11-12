@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v10 – 12. 11. 2026, TO DO #267–269, interné v84
+
+page.tsx mení nadpis #pomoc a presúva existujúci home-image-divider medzi #servis a #preco-my. modern.css obmedzuje pás výhod na 840 px a centruje ho; služby preberajú existujúcu paletu tieneného predelu s bielym koncom. Dôvody používajú rovnaké veľkosti ako postup: nadpisy 21/20 px a text 15 px; ikony a rozostupy sú primerane menšie. Bez závislostí, konfigurácie alebo databázových zmien; nasadenie push na main.
+
 ## Zákaznícka v10 – 12. 11. 2026, TO DO #260–266, interné v83
 
 page.tsx odstraňuje hero podnadpis, premenúva obaly a nahrádza dôvody spolupráce textami a ikonovým rozložením podľa dodanej predlohy. Ikony využívajú existujúci lucide-react; SVG sú dekoratívne. header.tsx mení spoločné menuServices na štyri položky pre desktop/mobile s existujúcimi adresami. modern.css mení servis na biele pozadie, zmenšuje tri výhody na 44 px ikony a 20 px text (18 px mobil), vypína ich oddeľovače a zväčšuje pulz na 1.45; reduced motion zostáva zachovaný. Bez závislostí, databázových zmien a konfigurácie; nasadenie push na main.
