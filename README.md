@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 12. 11. 2026. Zákaznícka verzia v10, vydanie v82.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 12. 11. 2026. Zákaznícka verzia v10, vydanie v83.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v10:** Domovská stránka predstavuje administratívne služby a odborné poradenstvo, prístup spoločnosti a tri výhody spolupráce. Štyri karty predstavujú ročný paušálny servis, školenie, nebezpečné odpady a obaly s priamymi odkazmi na podrobnosti. Nasledujú štyri dôvody spolupráce zoradené pod sebou, postup spolupráce a prehľad šiestich odvetví. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,15 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v82 – 12. 11. 2026, zákaznícka v10**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v83 – 12. 11. 2026, zákaznícka v10**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 12. 11. 2026 – dôvody spolupráce a navigácia služieb (TO DO #260–266)
+
+- **Vylepšené:** „Prečo spolupráca s nami“ používa texty a zvislé rozloženie podľa novej predlohy s tematickými zelenými ikonami. Sekcia služieb má biele pozadie a karta obalov názov „Obaly a neobalové výrobky“.
+- **Vylepšené:** banner zachováva hlavný nadpis a odstraňuje podnadpis. Tri výhody odbornosti majú menšie ikony a texty, výraznejšie postupné zväčšenie a sú bez zvislých čiar; obmedzenie pohybu animáciu vypína.
+- **Vylepšené:** ponuka Služby na počítači aj mobile obsahuje ročný paušálny servis, nebezpečné odpady, obaly a neobalové výrobky a školenie v oblasti odpadov s priamymi odkazmi.
+- **Celkový stav:** zákaznícka v10; funkcie, bezpečnosť, SEO a prepojenia sú rozlíšené nižšie.
+- **Overenie a limity:** 12. 11. 2026 prešli typy a zostavenie. Zobrazenie bolo skontrolované pri 1440, 768 a 390 px; desktop aj mobil sú bez vodorovného pretečenia. Menu má štyri položky na oboch zariadeniach a mobilný odkaz školenia otvorí správnu službu a zavrie menu. Vizuálny inšpektor má štýlové výhrady k existujúcemu dizajnu a dodaným predlohám; úplný audit prístupnosti sa nevykonal. Doručovanie formulárov sa pri tejto úprave netestuje.
 
 ## 12. 11. 2026 – štyri služby a zvislé dôvody spolupráce (TO DO #257–259)
 

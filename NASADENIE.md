@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v10 – 12. 11. 2026, TO DO #260–266, interné v83
+
+page.tsx odstraňuje hero podnadpis, premenúva obaly a nahrádza dôvody spolupráce textami a ikonovým rozložením podľa dodanej predlohy. Ikony využívajú existujúci lucide-react; SVG sú dekoratívne. header.tsx mení spoločné menuServices na štyri položky pre desktop/mobile s existujúcimi adresami. modern.css mení servis na biele pozadie, zmenšuje tri výhody na 44 px ikony a 20 px text (18 px mobil), vypína ich oddeľovače a zväčšuje pulz na 1.45; reduced motion zostáva zachovaný. Bez závislostí, databázových zmien a konfigurácie; nasadenie push na main.
+
 ## Zákaznícka v10 – 12. 11. 2026, TO DO #257–259, interné v82
 
 Sekcia #servis používa štyri home-option karty podľa dodanej predlohy. Ikony pochádzajú z existujúceho lucide-react, odkazy smerujú na celoročný servis, tlačidlo opisu školenia, podstránku nebezpečných odpadov a tlačidlo registrácie obalov. CSS rozdeľuje karty do 4/2/1 stĺpcov, hover scale(1.065) platí iba pre presný ukazovateľ; reduced motion ho vypína. Odstránené nepotrebné štýly predchádzajúcich dvoch kariet. Dôvody spolupráce používajú jeden stĺpec. Bez nových závislostí, databázy či konfigurácie; nasadenie push na main.

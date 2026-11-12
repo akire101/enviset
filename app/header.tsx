@@ -6,8 +6,10 @@ import {Menu,X,ChevronDown,ArrowUpRight} from 'lucide-react';
 import {Logo} from './components';
 import {brand} from './content';
 const menuServices = [
- {href:'/sluzby#celorocny-servis',title:'Paušálny servis'},
- {href:'/sluzby#jednorazove-sluzby',title:'Jednorázové služby'},
+ {href:'/sluzby#celorocny-servis',title:'Ročný paušálny servis'},
+ {href:'/sluzby/nebezpecne-odpady',title:'Nebezpečné odpady'},
+ {href:'/sluzby#one-off-question-0',title:'Obaly a neobalové výrobky'},
+ {href:'/sluzby#one-off-question-6',title:'Školenie v oblasti odpadov'},
 ];
 
 export function Header(){
