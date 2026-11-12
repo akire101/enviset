@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v9 – 12. 11. 2026, TO DO #248, interné v80
+
+Footer v app/components.tsx dopĺňa dodané externé odkazy na Instagram a LinkedIn, inline SVG ikony, target=_blank a rel=noopener noreferrer. Scoped footer-social CSS podporuje mobilné zalamovanie a fokus. Bez nových závislostí alebo konfigurácie; nasadenie push na main.
+
 ## Zákaznícka v9 – 11. 11. 2026, TO DO #244–247, interné v79
 
 Domov mení iba dodaný opis zodpovedného prístupu. Služby obaľujú benefits do plnošírkového services-benefits-surface s tieneným prechodom k bielej; druhý prechod používa rovnaké odtiene pri jednorazových službách. Zrušený border-left zoznamu benefits. Bez konfigurácie, migrácií a závislostí; nasadenie push na main.
