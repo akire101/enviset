@@ -1,14 +1,22 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 12. 11. 2026. Zákaznícka verzia v10, vydanie v81.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 12. 11. 2026. Zákaznícka verzia v10, vydanie v82.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
-**Aktuálny prehľad zákazníckej v10:** Domovská stránka predstavuje administratívne služby a odborné poradenstvo, prístup spoločnosti a tri výhody spolupráce. Dve karty rozlišujú celoročný servis a jednorazové odborné služby s priamymi odkazmi na ich podrobnosti. Nasledujú štyri dôvody spolupráce, postup spolupráce a prehľad šiestich odvetví. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
+**Aktuálny prehľad zákazníckej v10:** Domovská stránka predstavuje administratívne služby a odborné poradenstvo, prístup spoločnosti a tri výhody spolupráce. Štyri karty predstavujú ročný paušálny servis, školenie, nebezpečné odpady a obaly s priamymi odkazmi na podrobnosti. Nasledujú štyri dôvody spolupráce zoradené pod sebou, postup spolupráce a prehľad šiestich odvetví. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
 - [Otvoriť web ENVI set](https://envi-set-public.akire101.workers.dev)
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v81 – 12. 11. 2026, zákaznícka v10**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v82 – 12. 11. 2026, zákaznícka v10**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 12. 11. 2026 – štyri služby a zvislé dôvody spolupráce (TO DO #257–259)
+
+- **Vylepšené:** sekcia „Naše služby v oblasti odpadového hospodárstva“ má štyri karty podľa dodanej predlohy, s ikonami, opismi a odkazmi. Pôvodný podnadpis je odstránený.
+- **Pridané:** zväčšenie kariet pri nadídení myšou; pri zapnutom obmedzení pohybu zostávajú statické. Rozloženie má štyri stĺpce na veľkom displeji, dva na tablete a jeden na mobile.
+- **Vylepšené:** všetky štyri nadpisy s opismi v „Prečo spolupracovať s nami?“ sú pod sebou aj na počítači.
+- **Celkový stav:** zákaznícka v10; funkcie, bezpečnosť, SEO a prepojenia sú rozlíšené nižšie.
+- **Overenie a limity:** 12. 11. 2026 prešli kontrola typov a produkčné zostavenie. Snímky pri 1440, 768 a 390 px potvrdzujú rozloženie; desktop a mobil nemajú vodorovné pretečenie. Overené sú odkazy školenia, obalov a nebezpečných odpadov aj zväčšenie karty na 106,5 % pri myši. Vizuálny inšpektor má štýlové výhrady k existujúcemu dizajnu a dodaným predlohám; úplný audit prístupnosti sa nevykonal. Doručovanie formulára sa pri tejto úprave netestuje.
 
 ## 12. 11. 2026 – nová titulná stránka v10 (TO DO #249–256)
 

@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v10 – 12. 11. 2026, TO DO #257–259, interné v82
+
+Sekcia #servis používa štyri home-option karty podľa dodanej predlohy. Ikony pochádzajú z existujúceho lucide-react, odkazy smerujú na celoročný servis, tlačidlo opisu školenia, podstránku nebezpečných odpadov a tlačidlo registrácie obalov. CSS rozdeľuje karty do 4/2/1 stĺpcov, hover scale(1.065) platí iba pre presný ukazovateľ; reduced motion ho vypína. Odstránené nepotrebné štýly predchádzajúcich dvoch kariet. Dôvody spolupráce používajú jeden stĺpec. Bez nových závislostí, databázy či konfigurácie; nasadenie push na main.
+
 ## Zákaznícka v10 – 12. 11. 2026, TO DO #249–256, interné v81
 
 Domovská stránka používa nový banner a sekcie home-expertise, home-service-options a home-why. Tri výhody zachovávajú existujúce ikony aj obmedzenie pohybu. Dve karty podľa prílohy odkazujú na /sluzby#celorocny-servis a /sluzby#jednorazove-sluzby. Postup predchádza odvetviam; starý zodpovedný prístup a konkrétne povinnosti sú odstránené. Zoznam section-controls zodpovedá novému poradiu. Bez závislostí, databázových zmien a konfigurácie; nasadenie existujúcim push na main. Nové zákaznícke súhrny používajú presne **Zmeny v10 - ENVI set**; historické komentáre sa nemenia.
