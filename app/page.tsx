@@ -11,11 +11,11 @@ export const metadata = pageMetadata('Odpadové hospodárstvo pre firmy', 'Dokum
 export const dynamic = 'force-dynamic';
 function ConstructionCrane(){return <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 22V3l5 3v16M4 22h9M2 6h20v3H2zM6 3l16 3M6 10l5 4-5 4 5 4M20 9v6M18 15h4v4h-4z"/></svg>}
 export default async function Home(){const posts=await publicPosts();return <main id="main" className="home-page">
- <section id="uvod" className="hero"><HeroWind/><div className="hero-shade"/><div className="hero-content"><h1>Administratívne služby a odborné poradenstvo v oblasti odpadového hospodárstva.</h1><div className="hero-actions"><Button>Nezáväzný dopyt</Button></div></div></section>
+ <section id="uvod" className="hero"><HeroWind/><div className="hero-shade"/><div className="hero-content"><h1>Spoľahlivý partner pre zabezpečenie a odborné poradenstvo v oblasti odpadového hospodárstva</h1><div className="hero-actions"><Button>Nezáväzný dopyt</Button></div></div></section>
  <section id="pomoc" className="home-expertise"><div className="container section"><h2>Staviame na reálnych skúsenostiach.</h2><p className="home-expertise-intro">Sme spoločnosť zameraná na pomoc firmám pri povinnostiach v odpadovom hospodárstve. Využívame odborné znalosti, praktické skúsenosti a individuálny prístup, aby mali naši klienti vo svojich povinnostiach jasno a potrebnú podporu.</p><ul className="home-service-benefits">
-  <li><ClipboardCheck size={54} strokeWidth={1.7} aria-hidden="true"/><p><strong>Minimum</strong> administratívnej záťaže</p></li>
-  <li><ShieldCheck size={54} strokeWidth={1.7} aria-hidden="true"/><p><strong>Istota</strong> pri plnení zákonných povinností</p></li>
-  <li><SearchCheck size={54} strokeWidth={1.7} aria-hidden="true"/><p><strong>Minimalizácia rizika</strong> pokút pri kontrolách od SIŽP</p></li>
+  <li><span className="home-benefit-icon" aria-hidden="true"><ClipboardCheck size={44} strokeWidth={1.7}/></span><p><strong>Minimum</strong> administratívnej záťaže</p></li>
+  <li><span className="home-benefit-icon" aria-hidden="true"><ShieldCheck size={44} strokeWidth={1.7}/></span><p><strong>Istota</strong> pri plnení zákonných povinností</p></li>
+  <li><span className="home-benefit-icon" aria-hidden="true"><SearchCheck size={44} strokeWidth={1.7}/></span><p><strong>Minimalizácia rizika</strong> pokút pri kontrolách od SIŽP</p></li>
  </ul></div></section>
  <section id="servis" className="home-service-options"><div className="container section"><h2>Naše služby v oblasti odpadového hospodárstva</h2><div className="home-options-grid">{[
   {icon:CalendarCheck,title:'Ročný paušálny servis',text:'Komplexné odborné a administratívne zabezpečenie povinností v oblasti odpadov počas celého roka.',href:'/sluzby#celorocny-servis',link:'Viac o paušálnom servise'},

@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v10 – 13. 11. 2026, TO DO #270–272, interné v85
+
+page.tsx mení dodaný hero nadpis a obaľuje tri existujúce ikony dekoratívnym home-benefit-icon. modern.css kotví menšie CTA spodným flex rozložením bannera, zarovnáva pás výhod k ľavej hrane obsahu a dopĺňa kruhy a spojnice. CSS animácia postupne zvýrazňuje kruhy a vodorovné spojnice; prefers-reduced-motion ich vypína. Mobil používa zvislé spojnice a ikonu vedľa textu. Bez závislostí, konfigurácie alebo databázových zmien; nasadenie push na main.
+
 ## Zákaznícka v10 – 12. 11. 2026, TO DO #267–269, interné v84
 
 page.tsx mení nadpis #pomoc a presúva existujúci home-image-divider medzi #servis a #preco-my. modern.css obmedzuje pás výhod na 840 px a centruje ho; služby preberajú existujúcu paletu tieneného predelu s bielym koncom. Dôvody používajú rovnaké veľkosti ako postup: nadpisy 21/20 px a text 15 px; ikony a rozostupy sú primerane menšie. Bez závislostí, konfigurácie alebo databázových zmien; nasadenie push na main.

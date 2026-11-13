@@ -346,11 +346,22 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 
 /* Customer v10: supplied benefit strip and service comparison. */
 .home-page .hero-content h1{max-width:1060px;text-wrap:balance}
+.home-page .hero-content{display:flex;flex-direction:column;min-height:720px;padding-block:64px 52px}
+.home-page .hero-actions{margin-top:auto;padding-top:48px}
+.home-page .hero-actions .button{min-height:44px;padding:12px 20px;font-size:14px;gap:12px}
 .home-expertise>.container,.home-service-options>.container,.home-why>.container{max-width:var(--home-content-width);width:calc(100% - 80px);padding:80px 0;margin-inline:auto}
 .home-expertise h2,.home-service-options h2,.home-why h2{font-size:clamp(38px,4.4vw,62px);font-weight:800;line-height:1.08;letter-spacing:-.035em;margin:0 0 28px;max-width:1100px;text-wrap:balance}
 .home-expertise-intro{font-size:20px;line-height:1.6;max-width:76ch;margin:0}
-.home-expertise .home-service-benefits{max-width:840px;width:100%;margin:64px auto 0}
-.home-expertise .home-service-benefits svg{width:44px;height:44px;margin-bottom:18px}
+.home-expertise .home-service-benefits{max-width:840px;width:100%;margin:48px 0 0}
+.home-expertise .home-service-benefits svg{width:36px;height:36px;margin:0;animation:none}
+.home-benefit-icon{position:relative;z-index:1;display:grid;place-items:center;width:68px;height:68px;margin:0 auto 18px;border:1px solid #c5dcb6;border-radius:50%;background:#edf5e7;animation:home-benefit-highlight 6s ease-in-out infinite}
+.home-expertise .home-service-benefits li:nth-child(2){--benefit-delay:2s}
+.home-expertise .home-service-benefits li:nth-child(3){--benefit-delay:4s}
+.home-benefit-icon{animation-delay:var(--benefit-delay,0s)}
+.home-expertise .home-service-benefits li:not(:last-child)::after{content:"";position:absolute;left:calc(50% + 34px);top:33px;width:calc(100% - 68px);height:2px;background:#8fbc83;transform-origin:left;animation:home-benefit-connection 6s ease-in-out infinite;animation-delay:var(--benefit-delay,0s)}
+@keyframes home-benefit-highlight{0%,32%,100%{transform:scale(1);background:#edf5e7}14%,20%{transform:scale(1.12);background:#dceecf}}
+@keyframes home-benefit-connection{0%,32%,100%{opacity:.55;transform:scaleX(.9)}14%,20%{opacity:1;transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.home-benefit-icon,.home-expertise .home-service-benefits li:not(:last-child)::after{animation:none}}
 .home-expertise .home-service-benefits p{font-size:20px;line-height:1.35}
 .home-expertise .home-service-benefits li{padding-inline:30px}
 .home-expertise .home-service-benefits li+li::before{display:none}
@@ -377,11 +388,15 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 .home-why-reasons h3{font-size:21px;font-weight:800;line-height:1.2;margin:0 0 10px;max-width:none}
 .home-why-reasons p{font-size:15px;line-height:1.5;margin:0;max-width:80ch}
 @media(max-width:760px){
+ .home-page .hero-content{min-height:640px;padding-block:40px 36px}
  .home-expertise>.container,.home-service-options>.container,.home-why>.container{width:calc(100% - 34px);padding-block:48px}
  .home-expertise h2,.home-service-options h2,.home-why h2{font-size:36px;letter-spacing:-.03em}
  .home-expertise-intro{font-size:18px}
  .home-expertise .home-service-benefits{grid-template-columns:1fr;gap:24px;margin-top:40px}
- .home-expertise .home-service-benefits li{padding:0}
+ .home-expertise .home-service-benefits li{padding:0;display:grid;grid-template-columns:68px minmax(0,1fr);align-items:center;gap:20px;text-align:left}
+ .home-expertise .home-benefit-icon{margin:0}
+ .home-expertise .home-service-benefits p{margin:0;max-width:22ch}
+ .home-expertise .home-service-benefits li:not(:last-child)::after{left:33px;top:68px;width:2px;height:calc(100% - 44px);transform-origin:top;animation:none;opacity:.7}
  .home-expertise .home-service-benefits li+li::before{display:none}
  .home-expertise .home-service-benefits p{font-size:18px}
  .home-options-grid,.home-why-reasons{grid-template-columns:1fr;gap:28px;margin-top:32px}
