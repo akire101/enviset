@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v10 – 13. 11. 2026, TO DO #273–274, interné v86
+
+page.tsx rozdeľuje existujúci nadpis bannera na tri span prvky; posledná fráza je svetlozelená. header.tsx dopĺňa home-header iba pri domovskej ceste. modern.css prekrýva hlavičku s fotografiou pomocou záporného okraja hlavného obsahu na domovskej stránke, upravuje typografiu a umiestnenie nadpisu a zeleného CTA podľa predlohy. Sticky navigácia zostáva funkčná; ostatné cesty používajú pôvodné rozloženie. Bez zmeny fotografie, databázy, konfigurácie či závislostí; nasadenie push na main.
+
 ## Zákaznícka v10 – 13. 11. 2026, TO DO #270–272, interné v85
 
 page.tsx mení dodaný hero nadpis a obaľuje tri existujúce ikony dekoratívnym home-benefit-icon. modern.css kotví menšie CTA spodným flex rozložením bannera, zarovnáva pás výhod k ľavej hrane obsahu a dopĺňa kruhy a spojnice. CSS animácia postupne zvýrazňuje kruhy a vodorovné spojnice; prefers-reduced-motion ich vypína. Mobil používa zvislé spojnice a ikonu vedľa textu. Bez závislostí, konfigurácie alebo databázových zmien; nasadenie push na main.

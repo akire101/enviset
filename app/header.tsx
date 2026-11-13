@@ -40,7 +40,7 @@ export function Header(){
  }
  const active=(href:string)=>path===href||(href!=='/'&&path.startsWith(href+'/'));
  const close=()=>{setServicesOpen(false);setMobileOpen(false)};
- return <header ref={root} className="site-header container modern-header" onKeyDown={escape} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))close()}}>
+ return <header ref={root} className={`site-header container modern-header${path==='/'?' home-header':''}`} onKeyDown={escape} onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))close()}}>
   <Logo/>
   <nav id="navigation" className={`nav ${mobileOpen?'open':''}`} aria-label="Hlavná navigácia">
    <a href="/" className={active('/')?'active':''} aria-current={active('/')?'page':undefined}>Domov</a>
