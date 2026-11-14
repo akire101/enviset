@@ -1,5 +1,9 @@
 # GitHub → Cloudflare Workers + D1
 
+## Zákaznícka v10 – 14. 11. 2026, TO DO #275, interné v87
+
+modern.css vracia domovský hero do centrovaného rámu s width:min(1280px,calc(100% - 80px)), zaoblením 28 px a mobilnou šírkou calc(100% - 34px) so zaoblením 22 px. Rozmery vychádzajú z kontajnera pred historickým rozšírením v b6222e3. Aktuálne texty, fotografia a hlavička nad bannerom zostávajú zachované. Bez závislostí, databázy alebo konfigurácie; nasadenie push na main.
+
 ## Zákaznícka v10 – 13. 11. 2026, TO DO #273–274, interné v86
 
 page.tsx rozdeľuje existujúci nadpis bannera na tri span prvky; posledná fráza je svetlozelená. header.tsx dopĺňa home-header iba pri domovskej ceste. modern.css prekrýva hlavičku s fotografiou pomocou záporného okraja hlavného obsahu na domovskej stránke, upravuje typografiu a umiestnenie nadpisu a zeleného CTA podľa predlohy. Sticky navigácia zostáva funkčná; ostatné cesty používajú pôvodné rozloženie. Bez zmeny fotografie, databázy, konfigurácie či závislostí; nasadenie push na main.

@@ -1,6 +1,6 @@
 # ENVI set – funkcie webu, bezpečnosť a SEO
 
-**Posledná aktualizácia: 13. 11. 2026. Zákaznícka verzia v10, vydanie v86.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
+**Posledná aktualizácia: 14. 11. 2026. Zákaznícka verzia v10, vydanie v87.** Zoznámte sa s možnosťami webu ENVI set, správou jeho obsahu a ochranou údajov. Pri funkciách, ktoré ešte vyžadujú nastavenie, uvádzame, čo treba dokončiť pred ich používaním.
 
 **Aktuálny prehľad zákazníckej v10:** Domovská stránka predstavuje administratívne služby a odborné poradenstvo, prístup spoločnosti a tri výhody spolupráce. Štyri karty predstavujú ročný paušálny servis, školenie, nebezpečné odpady a obaly s priamymi odkazmi na podrobnosti. Nasledujú štyri dôvody spolupráce zoradené pod sebou, postup spolupráce a prehľad šiestich odvetví. Stránku Služby tvoria tri oblasti dlhodobej spolupráce s ôsmimi rozbaľovacími opismi a dodaným kancelárskym bannerom. Dopĺňajú ich tri výhody a sedem jednorazových služieb s rozbaľovacími opismi. Web obsahuje formulár s dvoma typmi záujmu, Kontakt, Blog/Novinky so správou poradia článkov, chat a administráciu. Aktuálny stav súkromia, bezpečnosti, prepojení a SEO je rozlíšený nižšie; história úprav zostáva zachovaná.
 
@@ -8,7 +8,13 @@
 - [Administrácia](https://envi-set-public.akire101.workers.dev/admin) – vyžaduje prihlásenie.
 - [GitHub repozitár](https://github.com/akire101/enviset)
 - [Technický návod na aktualizáciu, nasadenie a obnovu](NASADENIE.md)
-- Aktuálne vydanie: **v86 – 13. 11. 2026, zákaznícka v10**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+- Aktuálne vydanie: **v87 – 14. 11. 2026, zákaznícka v10**. História zdrojov je uložená v Git-e; identifikácia verzie je dostupná v `/version.json`.
+
+## 14. 11. 2026 – užší úvodný banner (TO DO #275)
+
+- **Vylepšené:** úvodná fotografia je opäť v centrovanom ráme s maximálnou šírkou 1280 px, bočnými okrajmi a zaoblenými rohmi podľa pôvodného rozloženia. Na mobile sa rám prispôsobuje šírke displeja.
+- **Celkový stav:** zákaznícka v10; aktuálny farebný nadpis, zelené tlačidlo a navigácia nad fotografiou zostávajú súčasťou bannera. Funkcie, prepojenia, bezpečnosť a SEO majú stav uvedený nižšie.
+- **Overenie a limity:** 14. 11. 2026 prešli typy, produkčné zostavenie a kontrola rozdielov. Rozmery pri 1440, 768 a 390 px sú bez vodorovného pretečenia. Doručenie formulára ani úplný audit prístupnosti sa pri tejto vizuálnej úprave nevykonali.
 
 ## 13. 11. 2026 – farebnosť a rozloženie bannera podľa predlohy (TO DO #273–274)
 

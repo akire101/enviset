@@ -166,8 +166,8 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 /* Concise audience introduction, replacing the photo grid. */
 .audience-summary{max-width:1080px;margin:0;color:var(--ink);font-size:clamp(24px,2.25vw,32px);font-weight:700;line-height:1.45;letter-spacing:-.025em}.audience-summary a{display:block;border-radius:2px}.audience-summary a:hover{color:var(--green)}
 
-/* Úvodný obrázok cez celú šírku obrazovky. */
-.hero{width:100%;border-radius:0}
+/* Úvodný obrázok v pôvodnom centrovanom ráme. */
+.home-page .hero{width:min(1280px,calc(100% - 80px));margin-inline:auto;border-radius:28px}
 
 @media(min-width:901px){.modern-header{gap:16px}.modern-header .nav{margin-left:auto}.modern-header .nav>a,.modern-header .services-trigger{font-size:18px;font-weight:600}}
 
@@ -393,6 +393,7 @@ html{scroll-padding-top:110px}section[id],#formular{scroll-margin-top:110px}body
 .home-why-reasons h3{font-size:21px;font-weight:800;line-height:1.2;margin:0 0 10px;max-width:none}
 .home-why-reasons p{font-size:15px;line-height:1.5;margin:0;max-width:80ch}
 @media(max-width:760px){
+ .home-page .hero{width:calc(100% - 34px);border-radius:22px}
  .home-header+.home-page{margin-top:-90px}
  .home-page .hero-content{min-height:700px;padding-block:140px 80px}
  .home-page .hero-content h1{font-size:36px;line-height:1.16}
